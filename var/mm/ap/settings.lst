@@ -1,0 +1,51 @@
+   1              		.file	"settings.c"
+   2              		.section	.text.settings_init,"ax",%progbits
+   3              		.align	2
+   4              		.global	settings_init
+   6              	settings_init:
+   7              		@ Function supports interworking.
+   8              		@ args = 0, pretend = 0, frame = 0
+   9              		@ frame_needed = 0, uses_anonymous_args = 0
+  10              		@ link register save eliminated.
+  11              		@ lr needed for prologue
+  12 0000 1EFF2FE1 		bx	lr
+  14              		.section	.text.settings_store,"ax",%progbits
+  15              		.align	2
+  16              		.global	settings_store
+  18              	settings_store:
+  19              		@ Function supports interworking.
+  20              		@ args = 0, pretend = 0, frame = 0
+  21              		@ frame_needed = 1, uses_anonymous_args = 0
+  22 0000 0DC0A0E1 		mov	ip, sp
+  23 0004 00D82DE9 		stmfd	sp!, {fp, ip, lr, pc}
+  24 0008 0010A0E3 		mov	r1, #0
+  25 000c 04B04CE2 		sub	fp, ip, #4
+  26 0010 08009FE5 		ldr	r0, .L4
+  27 0014 FEFFFFEB 		bl	persistent_write
+  28 0018 00689DE8 		ldmfd	sp, {fp, sp, lr}
+  29 001c 1EFF2FE1 		bx	lr
+  30              	.L5:
+  31              		.align	2
+  32              	.L4:
+  33 0020 00000000 		.word	pers_settings
+  35              		.global	settings_store_now
+  36              		.section	.bss.settings_store_now,"aw",%nobits
+  39              	settings_store_now:
+  40 0000 00       		.space	1
+  41              		.global	pers_settings
+  42              		.section	.bss.pers_settings,"aw",%nobits
+  43              		.align	2
+  46              	pers_settings:
+  47              		.ident	"GCC: (GNU) 3.4.4"
+DEFINED SYMBOLS
+                            *ABS*:00000000 settings.c
+     /tmp/ccWQEpvb.s:6      .text.settings_init:00000000 settings_init
+     /tmp/ccWQEpvb.s:12     .text.settings_init:00000000 $a
+     /tmp/ccWQEpvb.s:18     .text.settings_store:00000000 settings_store
+     /tmp/ccWQEpvb.s:22     .text.settings_store:00000000 $a
+     /tmp/ccWQEpvb.s:33     .text.settings_store:00000020 $d
+     /tmp/ccWQEpvb.s:46     .bss.pers_settings:00000000 pers_settings
+     /tmp/ccWQEpvb.s:39     .bss.settings_store_now:00000000 settings_store_now
+
+UNDEFINED SYMBOLS
+persistent_write

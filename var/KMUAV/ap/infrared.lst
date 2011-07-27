@@ -1,0 +1,49 @@
+   1              		.file	"infrared.c"
+   2              		.section	.text.infrared_struct_init,"ax",%progbits
+   3              		.align	2
+   4              		.global	infrared_struct_init
+   6              	infrared_struct_init:
+   7              		@ Function supports interworking.
+   8              		@ args = 0, pretend = 0, frame = 0
+   9              		@ frame_needed = 0, uses_anonymous_args = 0
+  10              		@ link register save eliminated.
+  11 0000 34309FE5 		ldr	r3, .L2
+  12 0004 FF25A0E3 		mov	r2, #1069547520
+  13 0008 242083E5 		str	r2, [r3, #36]	@ float
+  14 000c 2C209FE5 		ldr	r2, .L2+4
+  15 0010 082083E5 		str	r2, [r3, #8]	@ float
+  16 0014 28209FE5 		ldr	r2, .L2+8
+  17 0018 FE15A0E3 		mov	r1, #1065353216
+  18              		@ lr needed for prologue
+  19 001c 0C2083E5 		str	r2, [r3, #12]	@ float
+  20 0020 201083E5 		str	r1, [r3, #32]	@ float
+  21 0024 281083E5 		str	r1, [r3, #40]	@ float
+  22 0028 2C1083E5 		str	r1, [r3, #44]	@ float
+  23 002c 301083E5 		str	r1, [r3, #48]	@ float
+  24 0030 341083E5 		str	r1, [r3, #52]	@ float
+  25 0034 1C1083E5 		str	r1, [r3, #28]	@ float
+  26 0038 1EFF2FE1 		bx	lr
+  27              	.L3:
+  28              		.align	2
+  29              	.L2:
+  30 003c 00000000 		.word	infrared
+  31 0040 FDAD80BD 		.word	-1115640323
+  32 0044 C2B8B23D 		.word	1035122882
+  34              		.global	infrared
+  35              		.section	.bss.infrared,"aw",%nobits
+  36              		.align	2
+  39              	infrared:
+  40 0000 00000000 		.space	56
+  40      00000000 
+  40      00000000 
+  40      00000000 
+  40      00000000 
+  41              		.ident	"GCC: (GNU) 3.4.4"
+DEFINED SYMBOLS
+                            *ABS*:00000000 infrared.c
+     /tmp/ccqyu1lW.s:6      .text.infrared_struct_init:00000000 infrared_struct_init
+     /tmp/ccqyu1lW.s:11     .text.infrared_struct_init:00000000 $a
+     /tmp/ccqyu1lW.s:30     .text.infrared_struct_init:0000003c $d
+     /tmp/ccqyu1lW.s:39     .bss.infrared:00000000 infrared
+
+NO UNDEFINED SYMBOLS

@@ -1,0 +1,136 @@
+<dump>
+  <flight_plan name="Frieding_Test" lon0="11.218648" max_dist_from_home="4500" ground_alt="650" security_height="150" alt="800" lat0="48.011399">
+    <header>#include "subsystems/navigation/nav_line.h"
+#include "datalink.h"</header>
+    <waypoints>
+      <waypoint name="HOME" y="0" x="0"/>
+      <waypoint name="STDBY" y="80.1" x="49.5"/>
+      <waypoint name="PROFILE" y="100.1" x="80"/>
+      <waypoint name="1" y="189.9" x="10.1"/>
+      <waypoint name="2" y="139.1" x="132.3"/>
+      <waypoint name="MOB" y="-11.6" x="137.0"/>
+      <waypoint name="S1" y="69.6" x="-119.2"/>
+      <waypoint name="S2" y="289.5" x="274.4"/>
+      <waypoint name="CLIMB" y="162.3" x="-114.5"/>
+    </waypoints>
+    <exceptions>
+      <exception cond="estimator_z > 3600" deroute="Standby"/>
+      <exception cond="datalink_time > 30" deroute="Standby"/>
+      <exception cond="10 > PowerVoltage()" deroute="Standby"/>
+    </exceptions>
+    <blocks>
+      <block name="Wait GPS" no="0">
+        <set var="kill_throttle" value="1" no="0"/>
+        <while cond="!GpsFixValid()" no="1"/>
+      </block>
+      <block name="Geo init" no="1">
+        <while cond="LessThan(NavBlockTime(), 10)" no="0"/>
+        <call fun="NavSetGroundReferenceHere()" no="2"/>
+      </block>
+      <block name="Holding point" no="2">
+        <set var="kill_throttle" value="1" no="0"/>
+        <attitude throttle="0" roll="0" vmode="throttle" no="1"/>
+      </block>
+      <block name="Takeoff" strip_icon="takeoff.png" strip_button="Takeoff (wp CLIMB)" no="3">
+        <exception cond="estimator_z > ground_alt+25" deroute="Standby"/>
+        <set var="kill_throttle" value="0" no="0"/>
+        <set var="estimator_flight_time" value="0" no="1"/>
+        <go throttle="1.0" wp="CLIMB" from="HOME" vmode="throttle" no="2"/>
+      </block>
+      <block name="Standby" strip_icon="home.png" strip_button="Standby" no="4">
+        <circle wp="STDBY" radius="nav_radius" no="0"/>
+      </block>
+      <block name="profile_up" strip_icon="up_profile.png" strip_button="Profile Up" no="5">
+        <circle wp="PROFILE" radius="nav_radius" no="0"/>
+      </block>
+      <block name="profile_down" strip_icon="down_profile.png" strip_button="Profile Down" no="6">
+        <circle throttle="0" wp="PROFILE" pitch="RadOfDeg(-10)" radius="nav_radius" vmode="throttle" until="(ground_alt+150 > estimator_z)" no="0"/>
+        <deroute block="Standby" no="1"/>
+      </block>
+      <block name="MOB" strip_icon="mob.png" strip_button="Turn around here" no="7">
+        <call fun="NavSetWaypointHere(WP_MOB)" no="0"/>
+        <set var="nav_radius" value="DEFAULT_CIRCLE_RADIUS" no="1"/>
+        <circle wp="MOB" radius="nav_radius" no="2"/>
+      </block>
+      <block name="Line 1-2" strip_icon="line.png" strip_button="Line (wp 1-2)" no="8">
+        <exception cond="datalink_time > 22" deroute="Standby"/>
+        <call fun="nav_line_init()" no="0"/>
+        <call fun="nav_line(WP_1, WP_2, nav_radius)" no="1"/>
+      </block>
+      <block name="Survey S1-S2 NS" strip_icon="survey.png" strip_button="Survey (wp S1-S2) NS" no="9">
+        <survey_rectangle wp2="S2" grid="150" wp1="S1" no="1"/>
+      </block>
+      <block name="Survey S1-S2 WE" strip_icon="survey_we.png" strip_button="Survey (wp S1-S2) WE" no="10">
+        <survey_rectangle orientation="WE" wp2="S2" grid="150" wp1="S1" no="1"/>
+      </block>
+      <block name="HOME" no="11">
+        <home no="0"/>
+      </block>
+    </blocks>
+  </flight_plan>
+  <stages>
+    <stage block="11" block_name="HOME" stage="0">
+      <home no="0"/>
+    </stage>
+    <stage block="10" block_name="Survey S1-S2 WE" stage="1">
+      <survey_rectangle orientation="WE" wp2="S2" grid="150" wp1="S1" no="1"/>
+    </stage>
+    <stage block="9" block_name="Survey S1-S2 NS" stage="1">
+      <survey_rectangle wp2="S2" grid="150" wp1="S1" no="1"/>
+    </stage>
+    <stage block="8" block_name="Line 1-2" stage="1">
+      <call fun="nav_line(WP_1, WP_2, nav_radius)" no="1"/>
+    </stage>
+    <stage block="8" block_name="Line 1-2" stage="0">
+      <call fun="nav_line_init()" no="0"/>
+    </stage>
+    <stage block="7" block_name="MOB" stage="2">
+      <circle wp="MOB" radius="nav_radius" no="2"/>
+    </stage>
+    <stage block="7" block_name="MOB" stage="1">
+      <set var="nav_radius" value="DEFAULT_CIRCLE_RADIUS" no="1"/>
+    </stage>
+    <stage block="7" block_name="MOB" stage="0">
+      <call fun="NavSetWaypointHere(WP_MOB)" no="0"/>
+    </stage>
+    <stage block="6" block_name="profile_down" stage="1">
+      <deroute block="Standby" no="1"/>
+    </stage>
+    <stage block="6" block_name="profile_down" stage="0">
+      <circle throttle="0" wp="PROFILE" pitch="RadOfDeg(-10)" radius="nav_radius" vmode="throttle" until="(ground_alt+150 > estimator_z)" no="0"/>
+    </stage>
+    <stage block="5" block_name="profile_up" stage="0">
+      <circle wp="PROFILE" radius="nav_radius" no="0"/>
+    </stage>
+    <stage block="4" block_name="Standby" stage="0">
+      <circle wp="STDBY" radius="nav_radius" no="0"/>
+    </stage>
+    <stage block="3" block_name="Takeoff" stage="2">
+      <go throttle="1.0" wp="CLIMB" from="HOME" vmode="throttle" no="2"/>
+    </stage>
+    <stage block="3" block_name="Takeoff" stage="1">
+      <set var="estimator_flight_time" value="0" no="1"/>
+    </stage>
+    <stage block="3" block_name="Takeoff" stage="0">
+      <set var="kill_throttle" value="0" no="0"/>
+    </stage>
+    <stage block="2" block_name="Holding point" stage="1">
+      <attitude throttle="0" roll="0" vmode="throttle" no="1"/>
+    </stage>
+    <stage block="2" block_name="Holding point" stage="0">
+      <set var="kill_throttle" value="1" no="0"/>
+    </stage>
+    <stage block="1" block_name="Geo init" stage="2">
+      <call fun="NavSetGroundReferenceHere()" no="2"/>
+    </stage>
+    <stage block="1" block_name="Geo init" stage="0">
+      <while cond="LessThan(NavBlockTime(), 10)" no="0"/>
+    </stage>
+    <stage block="0" block_name="Wait GPS" stage="1">
+      <while cond="!GpsFixValid()" no="1"/>
+    </stage>
+    <stage block="0" block_name="Wait GPS" stage="0">
+      <set var="kill_throttle" value="1" no="0"/>
+    </stage>
+  </stages>
+</dump>

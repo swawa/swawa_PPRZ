@@ -1,0 +1,87 @@
+   1              		.file	"servos_4017_hw.c"
+   2              		.section	.text.actuators_init,"ax",%progbits
+   3              		.align	2
+   4              		.global	actuators_init
+   6              	actuators_init:
+   7              		@ Function supports interworking.
+   8              		@ args = 0, pretend = 0, frame = 0
+   9              		@ frame_needed = 0, uses_anonymous_args = 0
+  10              		@ link register save eliminated.
+  11 0000 A4109FE5 		ldr	r1, .L8
+  12 0004 083091E5 		ldr	r3, [r1, #8]
+  13 0008 203083E3 		orr	r3, r3, #32
+  14 000c 083081E5 		str	r3, [r1, #8]
+  15 0010 98209FE5 		ldr	r2, .L8+4
+  16 0014 003092E5 		ldr	r3, [r2, #0]
+  17 0018 023B83E3 		orr	r3, r3, #2048
+  18 001c 003082E5 		str	r3, [r2, #0]
+  19 0020 183091E5 		ldr	r3, [r1, #24]
+  20 0024 013683E3 		orr	r3, r3, #1048576
+  21 0028 183081E5 		str	r3, [r1, #24]
+  22 002c 143092E5 		ldr	r3, [r2, #20]
+  23 0030 0830C3E3 		bic	r3, r3, #8
+  24 0034 143082E5 		str	r3, [r2, #20]
+  25 0038 0136A0E3 		mov	r3, #1048576
+  26 003c 143081E5 		str	r3, [r1, #20]
+  27 0040 0A2942E2 		sub	r2, r2, #163840
+  28 0044 143092E5 		ldr	r3, [r2, #20]
+  29 0048 083083E3 		orr	r3, r3, #8
+  30 004c 143082E5 		str	r3, [r2, #20]
+  31 0050 3C3092E5 		ldr	r3, [r2, #60]
+  32 0054 0230C3E3 		bic	r3, r3, #2
+  33 0058 3C3082E5 		str	r3, [r2, #60]
+  34 005c 50309FE5 		ldr	r3, .L8+8
+  35 0060 3C1092E5 		ldr	r1, [r2, #60]
+  36 0064 0A00A0E3 		mov	r0, #10
+  37 0068 0000C3E5 		strb	r0, [r3, #0]
+  38 006c 44309FE5 		ldr	r3, .L8+12
+  39 0070 801081E3 		orr	r1, r1, #128
+  40 0074 3C1082E5 		str	r1, [r2, #60]
+  41 0078 1C3082E5 		str	r3, [r2, #28]
+  42              		@ lr needed for prologue
+  43 007c 0010A0E3 		mov	r1, #0
+  44              	.L5:
+  45 0080 013081E2 		add	r3, r1, #1
+  46 0084 8120A0E1 		mov	r2, r1, asl #1
+  47 0088 2C009FE5 		ldr	r0, .L8+16
+  48 008c FF1003E2 		and	r1, r3, #255
+  49 0090 28309FE5 		ldr	r3, .L8+20
+  50 0094 090051E3 		cmp	r1, #9
+  51 0098 B03082E1 		strh	r3, [r2, r0]	@ movhi 
+  52 009c 1E00009A 		bls	.L5
+  53 00a0 1C309FE5 		ldr	r3, .L8+24
+  54 00a4 B030C0E1 		strh	r3, [r0, #0]	@ movhi 
+  55 00a8 1EFF2FE1 		bx	lr
+  56              	.L9:
+  57              		.align	2
+  58              	.L8:
+  59 00ac 008002E0 		.word	-536707072
+  60 00b0 00C002E0 		.word	-536690688
+  61 00b4 00000000 		.word	servos_4017_idx
+  62 00b8 FFFF0000 		.word	65535
+  63 00bc 00000000 		.word	servos_values
+  64 00c0 E4570000 		.word	22500
+  65 00c4 964B0000 		.word	19350
+  67              		.global	servos_values
+  68              		.section	.bss.servos_values,"aw",%nobits
+  69              		.align	1
+  72              	servos_values:
+  73 0000 00000000 		.space	20
+  73      00000000 
+  73      00000000 
+  73      00000000 
+  73      00000000 
+  74              		.global	servos_4017_idx
+  75              		.section	.bss.servos_4017_idx,"aw",%nobits
+  78              	servos_4017_idx:
+  79 0000 00       		.space	1
+  80              		.ident	"GCC: (GNU) 3.4.4"
+DEFINED SYMBOLS
+                            *ABS*:00000000 servos_4017_hw.c
+     /tmp/ccJGky7f.s:6      .text.actuators_init:00000000 actuators_init
+     /tmp/ccJGky7f.s:11     .text.actuators_init:00000000 $a
+     /tmp/ccJGky7f.s:59     .text.actuators_init:000000ac $d
+     /tmp/ccJGky7f.s:78     .bss.servos_4017_idx:00000000 servos_4017_idx
+     /tmp/ccJGky7f.s:72     .bss.servos_values:00000000 servos_values
+
+NO UNDEFINED SYMBOLS

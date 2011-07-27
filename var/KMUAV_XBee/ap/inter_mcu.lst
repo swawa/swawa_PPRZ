@@ -1,0 +1,55 @@
+   1              		.file	"inter_mcu.c"
+   2              		.global	inter_mcu_received_ap
+   3              		.section	.data.inter_mcu_received_ap,"aw",%progbits
+   6              	inter_mcu_received_ap:
+   7 0000 00       		.byte	0
+   8              		.global	inter_mcu_received_fbw
+   9              		.section	.data.inter_mcu_received_fbw,"aw",%progbits
+  12              	inter_mcu_received_fbw:
+  13 0000 00       		.byte	0
+  14              		.global	ap_state
+  15              		.section	.data.ap_state,"aw",%progbits
+  16              		.align	2
+  19              	ap_state:
+  20 0000 00000000 		.word	_ap_state
+  21              		.global	fbw_state
+  22              		.section	.data.fbw_state,"aw",%progbits
+  23              		.align	2
+  26              	fbw_state:
+  27 0000 00000000 		.word	_fbw_state
+  28              		.global	time_since_last_ap
+  29              		.section	.bss.time_since_last_ap,"aw",%nobits
+  32              	time_since_last_ap:
+  33 0000 00       		.space	1
+  34              		.global	ap_ok
+  35              		.section	.bss.ap_ok,"aw",%nobits
+  38              	ap_ok:
+  39 0000 00       		.space	1
+  40              		.section	.bss._fbw_state,"aw",%nobits
+  41              		.align	2
+  44              	_fbw_state:
+  45 0000 00000000 		.space	24
+  45      00000000 
+  45      00000000 
+  45      00000000 
+  45      00000000 
+  46              		.section	.bss._ap_state,"aw",%nobits
+  47              		.align	2
+  50              	_ap_state:
+  51 0000 00000000 		.space	8
+  51      00000000 
+  52              		.ident	"GCC: (GNU) 3.4.4"
+DEFINED SYMBOLS
+                            *ABS*:00000000 inter_mcu.c
+     /tmp/cckFbles.s:6      .data.inter_mcu_received_ap:00000000 inter_mcu_received_ap
+     /tmp/cckFbles.s:12     .data.inter_mcu_received_fbw:00000000 inter_mcu_received_fbw
+     /tmp/cckFbles.s:19     .data.ap_state:00000000 ap_state
+     /tmp/cckFbles.s:20     .data.ap_state:00000000 $d
+     /tmp/cckFbles.s:50     .bss._ap_state:00000000 _ap_state
+     /tmp/cckFbles.s:26     .data.fbw_state:00000000 fbw_state
+     /tmp/cckFbles.s:27     .data.fbw_state:00000000 $d
+     /tmp/cckFbles.s:44     .bss._fbw_state:00000000 _fbw_state
+     /tmp/cckFbles.s:32     .bss.time_since_last_ap:00000000 time_since_last_ap
+     /tmp/cckFbles.s:38     .bss.ap_ok:00000000 ap_ok
+
+NO UNDEFINED SYMBOLS

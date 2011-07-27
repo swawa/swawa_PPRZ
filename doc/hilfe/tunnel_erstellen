@@ -1,0 +1,29 @@
+Tunnel
+
+Benötigte Kabel:
+
+    normales USB Kabel
+    USB to 8-pin Molex Picoblade Adapter (optional, can use wireless link) 
+
+Schritte:
+
+    Verbinde das USB Kabel + 8-pin Molex-USB-Adapter mit dem Labtop
+    Stecke das andere Ende in den Tiny2.11 USB-Schnittstelle
+    Power on Tiny2.11
+    Gehe ins paprazzi-Verzeichnis
+    Gebe folgendes Kommando im Terminalprogramm ein: 
+make AIRCRAFT=Microjet tunnel.upload 
+
+Ist die Sache erfolgreich, sind dies in den letzten Zeilen des Terminals angezeigt:
+
+Found USB device
+BootROM code: 2.12
+Part ID: 0x0402FF25 (LPC2148, 512k Flash, 32k+8k RAM)
+BootLoader version: 1.3
+#
+Starting software at 0x00004000
+
+Jetzt Spannung am Tiny weg, USB-Kabel weg, FTDI-Kabel hin und Spannung wieder auf den Tiny geben. Nun U-Center starten :-)
+
+Now your Tiny2.11 will tunnel UART1 from the GPS direct to the serial connector on the board. So, using the 8-pin Molex to FTDI cable adapter (or use the wireless link e.g. XBee) you can use your computer to interact with the GPS module. One example is using u-blox u-center program to configure your GPS module. Like the bootloader if you bought your Tiny2.11 assembled check with your 3rd party vendors configured your GPS. Good chance you won't need to use the tunnel or configure the GPS module.
+The required cable may included with 3rd party vendors! 

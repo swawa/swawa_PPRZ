@@ -1,0 +1,272 @@
+<!DOCTYPE airframe SYSTEM "airframe.dtd">
+
+<!-- 
+    INHALT
+	Multiplex EasyStar, using rudder
+	Tiny v2 board
+	IMU sensor
+	XBee 2.4GHz modem in transparent mode
+-->
+ 
+  <!-- Plattform --> 
+<airframe name="EasyStar_MK">
+
+  <!-- FIRMWARE UND HARDWARE DEFINITIONEN -->
+  <firmware name="fixedwing">
+    <target name="ap" 			board="tiny_2.11"/>
+    <target name="sim" 			board="pc"/>
+  
+ <!-- Serielles Protokoll -->
+    <define name="AGR_CLIMB"/>
+    <define name="LOITER_TRIM"/>
+    <define name="WIND_INFO"/>
+    <define name="ALT_KALMAN"/>
+    <define name="USE_I2C0"/>
+    <define name="USE_AIRSPEED"/>
+    <define name="USE_BARO_ETS"/>
+
+    <!-- Qualitäts-Kontrolle für PWM-Signale -->
+    <subsystem name="radio_control" type="ppm"/>
+    <subsystem name="telemetry"     type="transparent"/>
+    <subsystem name="control"/>
+    <subsystem name="attitude"      type="infrared"/>
+    <subsystem name="gps"           type="ublox_lea5h"/>
+    <subsystem name="navigation"    type="extra"/>
+    <subsystem name="i2c"/>
+  </firmware>
+
+  <firmware name="setup">
+    <target name="tunnel" 		board="tiny_2.11"/>
+    <target name="setup_actuators" 	board="tiny_2.11"/>
+  </firmware>
+
+    <!-- Definition eigener Software-Module -->
+  <modules>
+    <load name="airspeed_ets.xml"/>
+    <load name="baro_ets.xml"/>
+  </modules>
+
+<!-- commands section -->
+
+  <!-- Achsen -->
+  <commands>
+    <axis name="THROTTLE" failsafe_value="0"/> <!-- [0,9600] -->      <!-- Gas -->
+    <axis name="ROLL"     failsafe_value="0"/> <!-- [-9600,9600] -->  <!-- Bewegung um Längsachse -->
+    <axis name="PITCH"    failsafe_value="0"/> <!-- [-9600,9600] -->  <!-- Bewegung um Querachse -->
+   <!-- 
+    <axis name="YAW"      failsafe_value="0"/>      [-9600,9600]           Bewegung um Hochachse 
+   -->
+  </commands>
+
+  <!-- SERVOS -->
+  <!-- Zahl hinter "no=" entspricht der Nummer des Steckerplatzes am Autopiloten-board. Start mit "0".
+       Ausschlagsrichtungen:
+       min/max/neutral: Bewegungszeit in Millisekunden (gut ausprobieren!)
+       Bewegung invertieren: min/max-Werte vertauschen
+       Trimmung verändern: neutral-Wert entsprechend verstellen (besser: mechanisch!)
+       Absolute Bewegungslimits des Servos setzen durch beschränken der min/max-Werte (besser: mechanisch!)
+       "THROTTLE"-Servo in der Regel gleiche Einstellungen für min und neutral -->
+
+  <servos>
+    <servo name="THROTTLE"      no="0" min="1120" neutral="1120" max="1920"/> <!-- Gas -->
+    <servo name="ELEVATOR"      no="6" min="1100" neutral="1514" max="1900"/> <!-- Höhenruder -->
+    <servo name="RUDDER"        no="7" min="2050" neutral="1612" max="950"/>  <!-- Seitenruder -->
+  <!-- 
+    <servo name="AILERON"       no="8"  min="1100" neutral="1514" max="1900"/>     Querruder 
+  -->
+  </servos>
+
+  <!-- STEUERUNG / MISCHER -->
+  <!-- Verknüpfung der Servos mit ihrer Steuerung. Mischung möglich. Siehe Handbuch. -->
+  <command_laws>
+    <set servo="THROTTLE"    value="@THROTTLE"/>
+    <set servo="RUDDER"      value="@ROLL"/>
+    <set servo="ELEVATOR"    value="@PITCH"/>
+	<!-- Beispiel Mixer: 
+			1. Definition:
+    		<let var="aileron"            value="@ROLL   *  0.3"/>     30 % Roll
+    		<let var="elevator"           value="@PITCH  *  0.7"/>     70 % Pitch -> zusammen min. 100%
+	      		2. Mischung:
+    		set servo="ELEVON_LEFTSIDE"   value="$elevator + $aileron"/>
+    		set servo="ELEVON_RIGHTSIDE"  value="$elevator - $aileron"/>   
+	-->
+  </command_laws>
+
+  <!-- HANDBETRIEB -->
+  <!-- Verknüpfung Kanäle des Handsenders mit den oben definierten Kommandos unter "commands"-->
+  <rc_commands>
+    <set command="ROLL"      value="@ROLL"/>
+    <set command="PITCH"     value="@PITCH"/>
+    <set command="THROTTLE"  value="@THROTTLE"/>
+  </rc_commands>
+
+  <!-- SERVO-KONTROLLE IM AUTO-MODUS AN/AUS -->
+  <!-- Beispiel: (für keine Kontrolle im Auto-Modus: "set"-Zeile löschen)
+  <auto_rc_commands>
+    <set command="YAW" value="@YAW"/>
+  </auto_rc_commands>
+  -->
+
+  <!-- Kommandos, die NUR vom Autopiloten ausgeführt werden (z.B. Funktionen in einer bestimmten Höhe: -->
+  <!-- Beispiel:
+  <ap_only_commands>
+    <copy command="PAN"/>
+    <copy command="TILT"/>
+    <copy command="SHOOT"/>
+  </ap_only_commands>
+  -->
+
+  <!-- MAXIMUM ROLL UND PITCH für den erweiterten Stabilitäts-Modus ("augmented stability mode") -->
+  <!-- (Angabe in radians: Umrechnung: 1 rad = (360° / 2*PI) = (180°/ 1*PI) = ~ 57.3° (siehe Wert unten)-->
+  <section name="AUTO1" prefix="AUTO1_">
+    <define name="MAX_ROLL" value="RadOfDeg(50)"/>
+    <define name="MAX_PITCH" value="RadOfDeg(40)"/>
+  </section>
+
+  <!-- A/D-WANDLER-SIGNAL-EMPFANG hier angeben - nur zwei Kanäle definierbar - s. Handbuch -->
+  <!-- 
+  <modules>
+  </modules>
+  -->
+
+  <!-- INFRAROT-SENSOREN -->
+  <!--
+  <section name="INFRARED" prefix="IR_">
+    <define name="ADC_IR1_NEUTRAL" value="512"/>
+    <define name="ADC_IR2_NEUTRAL" value="510"/>
+    <define name="ADC_TOP_NEUTRAL" value="516"/>
+
+    <define name="HORIZ_SENSOR_TILTED" value="1"/>
+    <define name="IR1_SIGN" value="1"/>
+    <define name="IR2_SIGN" value="-1"/>
+    <define name="TOP_SIGN" value="1"/>
+
+    <define name="LATERAL_CORRECTION" value="0.7"/>
+    <define name="LONGITUDINAL_CORRECTION" value="0.7"/>
+    <define name="VERTICAL_CORRECTION" value="1."/>
+
+    <define name="ROLL_NEUTRAL_DEFAULT" value="-5.3" unit="deg"/>
+    <define name="PITCH_NEUTRAL_DEFAULT" value="-3" unit="deg"/>
+
+    <define name="CORRECTION_UP" value="1."/>
+    <define name="CORRECTION_DOWN" value="1."/>
+    <define name="CORRECTION_LEFT" value="1."/>
+    <define name="CORRECTION_RIGHT" value="1."/>
+  </section>
+  -->
+
+  <!-- GYRO-SENSOR -->
+  <!-- ********************************************DAS HIER MUSS NOCH AUF IMU ANGEPASST WERDEN !! **** -->
+  <section name="GYRO" prefix="GYRO_">
+   <define name="ADC_ROLL_COEFF" value="1"/>
+   <define name="ROLL_NEUTRAL" value="500"/>
+   <define name="ADC_PITCH_COEFF" value="1"/>
+   <define name="PITCH_NEUTRAL" value="500"/>
+   <define name="ADC_TEMP_NEUTRAL" value="476"/>
+   <define name="ADC_TEMP_SLOPE" value="0"/> <!-- value="0" bedeutet KEINE Temperaturkorrektur !! -->
+  </section>
+
+  <!-- Eigenschaften der ÜBERWACHUNG DER SPANNUNGSVERSORGUNG -->
+  <!-- zur Berechnung des Energieverbrauchs bei nicht installiertem Stromsensor -->
+  <!-- ********************************************DAS HIER MUSS NOCH AUF AKKU ANGEPASST WERDEN !! **** -->
+  <section name="BAT">
+    <define name="MILLIAMP_AT_FULL_THROTTLE" value="20000" unit="mA"/> <!-- Stromverbrauch bei max. Gas in mA -->
+    <!-- die folgenden kritischen Spannungen lösen Nachrichten im GCS-Fenster der Bodenstation aus: -->
+    <define name="CATASTROPHIC_BAT_LEVEL" value="10.5" unit="V"/> <!-- löst auch "kill_throttle"-Befehl aus -->
+    <define name="CRITIC_BAT_LEVEL" value="11.0" unit="V"/> <!-- "CRITIC"-Alarm -->
+    <define name="LOW_BAT_LEVEL" value="11.5" unit="V"/> <!-- "WARNING"-Alarm -->
+    <define name="MAX_BAT_LEVEL" value="12.6" unit="V"/> <!-- Max. Spannung des AKUS -->
+  </section>
+
+  <!-- Waagerechte Kontrolle (HORIZONT)  -->
+  <!-- zur Berechnung der Kurskorrektur -->
+  <!-- The graphical representation of the control loops can help you to visualize the effect of each gain. -->
+  <section name="HORIZONTAL CONTROL" prefix="H_CTL_">
+    <define name="COURSE_PGAIN" value="-0.7"/>
+    <define name="ROLL_MAX_SETPOINT" value="RadOfDeg(35)" unit="radians"/>
+    <define name="PITCH_MAX_SETPOINT" value="RadOfDeg(25)" unit="radians"/>
+    <define name="PITCH_MIN_SETPOINT" value="RadOfDeg(-25)" unit="radians"/>
+    <define name="PITCH_PGAIN" value="-20000."/>
+    <define name="PITCH_DGAIN" value="1.5"/>
+    <define name="ELEVATOR_OF_ROLL" value="2500"/>
+    <define name="ROLL_ATTITUDE_GAIN" value="-7400"/>
+    <define name="ROLL_RATE_GAIN" value="-200"/>
+  </section>
+
+  <!-- Vertikale Kontrolle (VERTIKAL)  -->
+  <!-- zur Kontrolle der Steig-/Sinkraten -->
+ <!-- The graphical representation of the control loops can help you to visualize the effect of each gain. -->
+  <section name="VERTICAL CONTROL" prefix="V_CTL_">
+    <define name="POWER_CTL_BAT_NOMINAL" value="11.0" unit="volt"/>
+    <!-- outer loop -->
+    <define name="ALTITUDE_PGAIN" value="-0.075" unit="(m/s)/m"/>
+    <define name="ALTITUDE_MAX_CLIMB" value="4." unit="m/s"/>
+    <!-- auto throttle inner loop -->
+    <define name="AUTO_THROTTLE_NOMINAL_CRUISE_THROTTLE" value="0.5" unit="%"/>
+    <define name="AUTO_THROTTLE_MIN_CRUISE_THROTTLE" value="0.4" unit="%"/>
+    <define name="AUTO_THROTTLE_MAX_CRUISE_THROTTLE" value="0.8" unit="%"/>
+    <define name="AUTO_THROTTLE_LOITER_TRIM" value="1500" unit="pprz_t"/>
+    <define name="AUTO_THROTTLE_DASH_TRIM" value="-1000" unit="pprz_t"/>
+    <define name="AUTO_THROTTLE_CLIMB_THROTTLE_INCREMENT" value="0.1" unit="%/(m/s)"/>
+    <define name="AUTO_THROTTLE_PGAIN" value="-0.02" unit="%/(m/s)"/>
+    <define name="AUTO_THROTTLE_IGAIN" value="0.1"/>
+    <define name="AUTO_THROTTLE_PITCH_OF_VZ_PGAIN" value="0.05" unit="rad/(m/s)"/>
+    <!-- auto airspeed and altitude inner loop -->
+    <define name="AUTO_AIRSPEED_SETPOINT" value="14.5" unit="m/s"/>
+    <define name="AUTO_AIRSPEED_PGAIN" value="0.060"/>
+    <define name="AUTO_AIRSPEED_IGAIN" value="0.050"/>
+    <define name="AUTO_GROUNDSPEED_SETPOINT" value="6.0" unit="m/s"/>
+    <define name="AUTO_GROUNDSPEED_PGAIN" value="0.75"/>
+    <define name="AUTO_GROUNDSPEED_IGAIN" value="0.25"/>
+    <define name="AUTO_PITCH_PGAIN" value="-0.125"/>
+    <define name="AUTO_PITCH_IGAIN" value="0.025"/>
+    <define name="AUTO_PITCH_MAX_PITCH" value="RadOfDeg(25)"/>
+    <define name="AUTO_PITCH_MIN_PITCH" value="RadOfDeg(-25)"/>
+    <define name="THROTTLE_SLEW" value="1.0"/> <!-- benötigte Zeit in s, um GAS von 0% auf 100% zu ändern -->
+  </section>
+
+  <!-- VERSCHIEDENES -->
+  <section name="MISC">
+    <define name="NOMINAL_AIRSPEED" value="15." unit="m/s"/> <!-- hauptsächlich im Simulator genutzt -->
+    <define name="CARROT" value="4." unit="s"/> <!-- Distanz zur "Karotte" (Anflug-Dreieck) -->
+    <!-- das folgende Kommando "KILL_MODE_DISTANCE" löst dann den "KILL mode" aus: def. Sinkflug ohne GAS -->
+    <define name="KILL_MODE_DISTANCE" value="(2.0*MAX_DIST_FROM_HOME)"/> 
+    <define name="CONTROL_RATE" value="60" unit="Hz"/> <!-- Abtastrate der low level-Kontroll-Schleifen -->
+    <define name="NO_XBEE_API_INIT" value="TRUE"/>
+    <define name="ALT_KALMAN_ENABLED" value="TRUE"/>
+    <define name="TRIGGER_DELAY" value="1."/>
+    <define name="DEFAULT_CIRCLE_RADIUS" value="90."/>
+  </section>
+
+<!-- SITL Simulation -->
+  <section name="SIMU">
+    <define name="WEIGHT" value ="1."/>
+    <define name="YAW_RESPONSE_FACTOR" value ="1."/>
+    <define name="ROLL_RESPONSE_FACTOR" value ="15."/>
+  </section>
+  <section name="NAV">
+    <define name="NAV_PITCH" value="0."/>
+    <define name="NAV_GLIDE_PITCH_TRIM" value="0"/>
+  </section>
+
+  <section name="AGGRESSIVE" prefix="AGR_">
+    <define name="BLEND_START" value="20"/><!-- Altitude Error to Initiate Aggressive Climb CANNOT BE ZERO!!-->
+    <define name="BLEND_END" value="10"/><!-- Altitude Error to Blend Aggressive to Regular Climb Modes  CANNOT BE ZERO!!-->
+    <define name="CLIMB_THROTTLE" value="0.70"/><!-- Gaz for Aggressive Climb -->
+    <define name="CLIMB_PITCH" value="RadOfDeg(18)"/><!-- Pitch for Aggressive Climb -->
+    <define name="DESCENT_THROTTLE" value="0.1"/><!-- Gaz for Aggressive Decent -->
+    <define name="DESCENT_PITCH" value="RadOfDeg(-20)"/><!-- Pitch for Aggressive Decent -->
+    <define name="CLIMB_NAV_RATIO" value="0.8"/><!-- Percent Navigation for Altitude Error Equal to Start Altitude -->
+    <define name="DESCENT_NAV_RATIO" value="1.0"/>
+  </section>
+
+  <!-- Failsafe -->
+  <section name="FAILSAFE" prefix="FAILSAFE_">
+    <define name="DELAY_WITHOUT_GPS" value="3" unit="s"/>
+    <define name="DEFAULT_THROTTLE" value="0.4" unit="%"/>
+    <define name="DEFAULT_ROLL" value="RadOfDeg(15)" unit="rad"/>
+    <define name="DEFAULT_PITCH" value="RadOfDeg(0)" unit="rad"/>
+    <define name="HOME_RADIUS" value="90" unit="m"/>
+  </section>
+
+</airframe>

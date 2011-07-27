@@ -1,0 +1,170 @@
+   1              		.file	"sys_time_hw.c"
+   2              		.section	.text.TIMER0_ISR,"ax",%progbits
+   3              		.align	2
+   4              		.global	TIMER0_ISR
+   6              	TIMER0_ISR:
+   7              		@ Function supports interworking.
+   8              		@ Naked Function: prologue and epilogue provided by programmer.
+   9              		@ args = 0, pretend = 0, frame = 0
+  10              		@ frame_needed = 0, uses_anonymous_args = 0
+  11 0000 04E04EE2 		 sub   lr, lr,#4
+  12 0004 FF5F2DE9 	 stmfd sp!,{r0-r12,lr}
+  13 0008 00104FE1 	 mrs   r1, spsr
+  14 000c 02002DE9 	 stmfd sp!,{r1}
+  15              	.L20:
+  16 0010 78219FE5 		ldr	r2, .L21
+  17 0014 003092E5 		ldr	r3, [r2, #0]
+  18 0018 420013E3 		tst	r3, #66
+  19 001c 5C00000A 		beq	.L17
+  20 0020 003092E5 		ldr	r3, [r2, #0]
+  21 0024 020013E3 		tst	r3, #2
+  22 0028 60019FE5 		ldr	r0, .L21
+  23 002c 2500000A 		beq	.L4
+  24 0030 5CC19FE5 		ldr	ip, .L21+4
+  25 0034 0030DCE5 		ldrb	r3, [ip, #0]	@ zero_extendqisi2
+  26 0038 090053E3 		cmp	r3, #9
+  27 003c 1700009A 		bls	.L5
+  28 0040 50219FE5 		ldr	r2, .L21+8
+  29 0044 143092E5 		ldr	r3, [r2, #20]
+  30 0048 013683E3 		orr	r3, r3, #1048576
+  31 004c 143082E5 		str	r3, [r2, #20]
+  32 0050 1C3092E5 		ldr	r3, [r2, #28]
+  33 0054 013683E3 		orr	r3, r3, #1048576
+  34 0058 1C3082E5 		str	r3, [r2, #28]
+  35 005c 0030A0E3 		mov	r3, #0
+  36 0060 0030CCE5 		strb	r3, [ip, #0]
+  37              	.L5:
+  38 0064 0020DCE5 		ldrb	r2, [ip, #0]	@ zero_extendqisi2
+  39 0068 2C319FE5 		ldr	r3, .L21+12
+  40 006c 8210A0E1 		mov	r1, r2, asl #1
+  41 0070 B31091E1 		ldrh	r1, [r1, r3]
+  42 0074 1C3090E5 		ldr	r3, [r0, #28]
+  43 0078 013083E0 		add	r3, r3, r1
+  44 007c 1C3080E5 		str	r3, [r0, #28]
+  45 0080 3C3090E5 		ldr	r3, [r0, #60]
+  46 0084 012082E2 		add	r2, r2, #1
+  47 0088 0230C3E3 		bic	r3, r3, #2
+  48 008c 0020CCE5 		strb	r2, [ip, #0]
+  49 0090 3C3080E5 		str	r3, [r0, #60]
+  50 0094 0230A0E3 		mov	r3, #2
+  51 0098 003080E5 		str	r3, [r0, #0]
+  52              	.L4:
+  53 009c EC209FE5 		ldr	r2, .L21
+  54 00a0 003092E5 		ldr	r3, [r2, #0]
+  55 00a4 400013E3 		tst	r3, #64
+  56 00a8 0200000A 		beq	.L20
+  57 00ac ECE09FE5 		ldr	lr, .L21+16
+  58 00b0 EC309FE5 		ldr	r3, .L21+20
+  59 00b4 0000DEE5 		ldrb	r0, [lr, #0]	@ zero_extendqisi2
+  60 00b8 342092E5 		ldr	r2, [r2, #52]
+  61 00bc 001093E5 		ldr	r1, [r3, #0]
+  62 00c0 FFC000E2 		and	ip, r0, #255
+  63 00c4 07005CE3 		cmp	ip, #7
+  64 00c8 002083E5 		str	r2, [r3, #0]
+  65 00cc 021061E0 		rsb	r1, r1, r2
+  66 00d0 4500001A 		bne	.L7
+  67 00d4 493B41E2 		sub	r3, r1, #74752
+  68 00d8 C8209FE5 		ldr	r2, .L21+24
+  69 00dc F93043E2 		sub	r3, r3, #249
+  70 00e0 020053E1 		cmp	r3, r2
+  71 00e4 C0109FE5 		ldr	r1, .L21+28
+  72 00e8 0030A083 		movhi	r3, #0
+  73 00ec 0030C185 		strhib	r3, [r1, #0]
+  74 00f0 5800008A 		bhi	.L11
+  75 00f4 0030D1E5 		ldrb	r3, [r1, #0]	@ zero_extendqisi2
+  76 00f8 000053E3 		cmp	r3, #0
+  77 00fc AC209F15 		ldrne	r2, .L21+32
+  78 0100 0130A013 		movne	r3, #1
+  79 0104 0030C215 		strneb	r3, [r2, #0]
+  80 0108 01304312 		subne	r3, r3, #1
+  81 010c 0030C115 		strneb	r3, [r1, #0]
+  82 0110 0030A0E3 		mov	r3, #0
+  83 0114 0030CEE5 		strb	r3, [lr, #0]
+  84 0118 580000EA 		b	.L11
+  85              	.L7:
+  86 011c 90209FE5 		ldr	r2, .L21+36
+  87 0120 D23D41E2 		sub	r3, r1, #13440
+  88 0124 3D3043E2 		sub	r3, r3, #61
+  89 0128 020053E1 		cmp	r3, r2
+  90 012c 0730A083 		movhi	r3, #7
+  91 0130 0030CE85 		strhib	r3, [lr, #0]
+  92 0134 0020A083 		movhi	r2, #0
+  93 0138 5600008A 		bhi	.L19
+  94 013c 013080E2 		add	r3, r0, #1
+  95 0140 0030CEE5 		strb	r3, [lr, #0]
+  96 0144 0030DEE5 		ldrb	r3, [lr, #0]	@ zero_extendqisi2
+  97 0148 070053E3 		cmp	r3, #7
+  98 014c 64309FE5 		ldr	r3, .L21+40
+  99 0150 8C20A0E1 		mov	r2, ip, asl #1
+ 100 0154 B31082E1 		strh	r1, [r2, r3]	@ movhi 
+ 101 0158 0120A003 		moveq	r2, #1
+ 102 015c 5800001A 		bne	.L11
+ 103              	.L19:
+ 104 0160 44309FE5 		ldr	r3, .L21+28
+ 105 0164 0020C3E5 		strb	r2, [r3, #0]
+ 106              	.L11:
+ 107 0168 20309FE5 		ldr	r3, .L21
+ 108 016c 4020A0E3 		mov	r2, #64
+ 109 0170 002083E5 		str	r2, [r3, #0]
+ 110 0174 020000EA 		b	.L20
+ 111              	.L17:
+ 112 0178 3C309FE5 		ldr	r3, .L21+44
+ 113 017c 0020A0E3 		mov	r2, #0
+ 114 0180 302083E5 		str	r2, [r3, #48]
+ 115 0184 0200BDE8 		 ldmfd sp!,{r1}
+ 116 0188 01F061E1 	 msr   spsr_c,r1
+ 117 018c FF9FFDE8 	 ldmfd sp!,{r0-r12,pc}^
+ 118              	.L22:
+ 119              		.align	2
+ 120              	.L21:
+ 121 0190 004000E0 		.word	-536854528
+ 122 0194 00000000 		.word	servos_4017_idx
+ 123 0198 008002E0 		.word	-536707072
+ 124 019c 00000000 		.word	servos_values
+ 125 01a0 00000000 		.word	ppm_cur_pulse
+ 126 01a4 00000000 		.word	ppm_last_pulse_time
+ 127 01a8 EE490200 		.word	149998
+ 128 01ac 00000000 		.word	ppm_data_valid
+ 129 01b0 00000000 		.word	ppm_frame_available
+ 130 01b4 4E460000 		.word	17998
+ 131 01b8 00000000 		.word	ppm_pulses
+ 132 01bc 00F0FFFF 		.word	-4096
+ 134              		.global	cpu_time_ticks
+ 135              		.section	.bss.cpu_time_ticks,"aw",%nobits
+ 136              		.align	2
+ 139              	cpu_time_ticks:
+ 140 0000 00000000 		.space	4
+ 141              		.global	last_periodic_event
+ 142              		.section	.bss.last_periodic_event,"aw",%nobits
+ 143              		.align	2
+ 146              	last_periodic_event:
+ 147 0000 00000000 		.space	4
+ 148              		.global	sys_time_chrono_start
+ 149              		.section	.bss.sys_time_chrono_start,"aw",%nobits
+ 150              		.align	2
+ 153              	sys_time_chrono_start:
+ 154 0000 00000000 		.space	4
+ 155              		.global	sys_time_chrono
+ 156              		.section	.bss.sys_time_chrono,"aw",%nobits
+ 157              		.align	2
+ 160              	sys_time_chrono:
+ 161 0000 00000000 		.space	4
+ 162              		.ident	"GCC: (GNU) 3.4.4"
+DEFINED SYMBOLS
+                            *ABS*:00000000 sys_time_hw.c
+     /tmp/ccQviXqI.s:6      .text.TIMER0_ISR:00000000 TIMER0_ISR
+     /tmp/ccQviXqI.s:11     .text.TIMER0_ISR:00000000 $a
+     /tmp/ccQviXqI.s:121    .text.TIMER0_ISR:00000190 $d
+     /tmp/ccQviXqI.s:139    .bss.cpu_time_ticks:00000000 cpu_time_ticks
+     /tmp/ccQviXqI.s:146    .bss.last_periodic_event:00000000 last_periodic_event
+     /tmp/ccQviXqI.s:153    .bss.sys_time_chrono_start:00000000 sys_time_chrono_start
+     /tmp/ccQviXqI.s:160    .bss.sys_time_chrono:00000000 sys_time_chrono
+
+UNDEFINED SYMBOLS
+servos_4017_idx
+servos_values
+ppm_cur_pulse
+ppm_last_pulse_time
+ppm_data_valid
+ppm_frame_available
+ppm_pulses

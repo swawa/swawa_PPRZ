@@ -1,0 +1,3005 @@
+
+    
+
+  
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <script>var NREUMQ=[];NREUMQ.push(["mark","firstbyte",new Date().getTime()]);</script>
+        <title>Commit 945f9d242905e19123d7821468936ab05859119d to Bruzzlee/paparazzi - GitHub</title>
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub" />
+    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub" />
+
+    <link href="https://d3nwyuy0nl342s.cloudfront.net/059e1b53d9a173db4944d1a371661fbc5731a88a/stylesheets/bundle_github.css" media="screen" rel="stylesheet" type="text/css" />
+    
+
+    <script type="text/javascript">
+      if (typeof console == "undefined" || typeof console.log == "undefined")
+        console = { log: function() {} }
+    </script>
+    <script type="text/javascript" charset="utf-8">
+      var GitHub = {
+        assetHost: 'https://d3nwyuy0nl342s.cloudfront.net'
+      }
+      var github_user = null
+      
+    </script>
+    <script src="https://d3nwyuy0nl342s.cloudfront.net/javascripts/jquery/jquery-1.4.2.min.js" type="text/javascript"></script>
+    <script src="https://d3nwyuy0nl342s.cloudfront.net/59832ec8fc130466f78be3988b8d8c9e76c897a1/javascripts/bundle_github.js" type="text/javascript"></script>
+
+
+    
+    <script type="text/javascript" charset="utf-8">
+      GitHub.spy({
+        repo: "Bruzzlee/paparazzi"
+      })
+    </script>
+
+    
+
+  <link rel='alternate' type='text/plain+diff' href='/Bruzzlee/paparazzi/commit/945f9d242905e19123d7821468936ab05859119d.diff'>
+  <link rel='alternate' type='text/plain+patch' href='/Bruzzlee/paparazzi/commit/945f9d242905e19123d7821468936ab05859119d.patch'>
+  <link rel='canonical' type='text/html' href='/Bruzzlee/paparazzi/commit/945f9d242905e19123d7821468936ab05859119d'>
+
+  <link href="https://github.com/Bruzzlee/paparazzi/commits/945f9d242905e19123d7821468936ab05859119d.atom" rel="alternate" title="Recent Commits to paparazzi:945f9d242905e19123d7821468936ab05859119d" type="application/atom+xml" />
+
+    <META NAME="ROBOTS" CONTENT="NOINDEX, FOLLOW">    <meta name="description" content="paparazzi - Paparazzi is a free and open-source hardware and software project for unmanned (air) vehicles. This is the main software repository." />
+    <script type="text/javascript">
+      GitHub.nameWithOwner = GitHub.nameWithOwner || "Bruzzlee/paparazzi";
+      GitHub.currentRef = '';
+      GitHub.commitSHA = "945f9d242905e19123d7821468936ab05859119d";
+      GitHub.currentPath = '';
+      GitHub.masterBranch = "master";
+
+      
+    </script>
+  
+
+        <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-3769691-2']);
+      _gaq.push(['_setDomainName', 'none']);
+      _gaq.push(['_trackPageview']);
+      _gaq.push(['_trackPageLoadTime']);
+      (function() {
+        var ga = document.createElement('script');
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        ga.setAttribute('async', 'true');
+        document.documentElement.firstChild.appendChild(ga);
+      })();
+    </script>
+
+    
+  </head>
+
+  
+
+  <body class="logged_out page-commit-show  windows env-production">
+    
+
+    
+
+    
+
+    <div class="subnavd" id="main">
+      <div id="header" class="true">
+        
+          <a class="logo boring" href="https://github.com">
+            
+            <img alt="github" class="default" height="45" src="https://d3nwyuy0nl342s.cloudfront.net/images/modules/header/logov5.png" />
+            <!--[if (gt IE 8)|!(IE)]><!-->
+            <img alt="github" class="hover" height="45" src="https://d3nwyuy0nl342s.cloudfront.net/images/modules/header/logov5-hover.png" />
+            <!--<![endif]-->
+          </a>
+        
+        
+        <div class="topsearch">
+  
+    <ul class="nav logged_out">
+      
+      <li class="pricing"><a href="/plans">Pricing and Signup</a></li>
+      
+      <li class="explore"><a href="/explore">Explore GitHub</a></li>
+      <li class="features"><a href="/features">Features</a></li>
+      
+      <li class="blog"><a href="/blog">Blog</a></li>
+      
+      <li class="login"><a href="/login?return_to=%2FBruzzlee%2Fpaparazzi%2Fcommit%2F945f9d242905e19123d7821468936ab05859119d">Login</a></li>
+    </ul>
+  
+</div>
+
+      </div>
+
+      
+      
+        
+    <div class="site">
+      <div class="pagehead repohead vis-public fork   instapaper_ignore readability-menu">
+
+      
+
+      <div class="title-actions-bar">
+        <h1>
+          <a href="/Bruzzlee">Bruzzlee</a> / <strong><a href="/Bruzzlee/paparazzi">paparazzi</a></strong>
+          
+            <span class="fork-flag">
+              
+              <span class="text">forked from <a href="/paparazzi/paparazzi">paparazzi/paparazzi</a></span>
+            </span>
+          
+          
+        </h1>
+
+        
+    <ul class="actions">
+      
+
+      
+        <li class="for-owner" style="display:none"><a href="/Bruzzlee/paparazzi/admin" class="minibutton btn-admin "><span><span class="icon"></span>Admin</span></a></li>
+        <li>
+          <a href="/Bruzzlee/paparazzi/toggle_watch" class="minibutton btn-watch " id="watch_button" onclick="var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var s = document.createElement('input'); s.setAttribute('type', 'hidden'); s.setAttribute('name', 'authenticity_token'); s.setAttribute('value', 'ae54b1c043d2c2b06fc6532c21d1ea3871323e5f'); f.appendChild(s);f.submit();return false;" style="display:none"><span><span class="icon"></span>Watch</span></a>
+          <a href="/Bruzzlee/paparazzi/toggle_watch" class="minibutton btn-watch " id="unwatch_button" onclick="var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var s = document.createElement('input'); s.setAttribute('type', 'hidden'); s.setAttribute('name', 'authenticity_token'); s.setAttribute('value', 'ae54b1c043d2c2b06fc6532c21d1ea3871323e5f'); f.appendChild(s);f.submit();return false;" style="display:none"><span><span class="icon"></span>Unwatch</span></a>
+        </li>
+        
+          
+            <li class="for-notforked" style="display:none"><a href="/Bruzzlee/paparazzi/fork" class="minibutton btn-fork " id="fork_button" onclick="var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var s = document.createElement('input'); s.setAttribute('type', 'hidden'); s.setAttribute('name', 'authenticity_token'); s.setAttribute('value', 'ae54b1c043d2c2b06fc6532c21d1ea3871323e5f'); f.appendChild(s);f.submit();return false;"><span><span class="icon"></span>Fork</span></a></li>
+            <li class="for-hasfork" style="display:none"><a href="#" class="minibutton btn-fork " id="your_fork_button"><span><span class="icon"></span>Your Fork</span></a></li>
+          
+
+          
+        
+      
+      
+      <li class="repostats">
+        <ul class="repo-stats">
+          <li class="watchers"><a href="/Bruzzlee/paparazzi/watchers" title="Watchers" class="tooltipped downwards">0</a></li>
+          <li class="forks"><a href="/Bruzzlee/paparazzi/network" title="Forks" class="tooltipped downwards">60</a></li>
+        </ul>
+      </li>
+    </ul>
+
+      </div>
+
+        
+  <ul class="tabs">
+    <li><a href="/Bruzzlee/paparazzi/tree/" highlight="repo_source">Source</a></li>
+    <li><a href="/Bruzzlee/paparazzi/commits/" class="selected" highlight="repo_commits">Commits</a></li>
+    <li><a href="/Bruzzlee/paparazzi/network" highlight="repo_network">Network</a></li>
+    <li><a href="/Bruzzlee/paparazzi/pulls" highlight="repo_pulls">Pull Requests (0)</a></li>
+
+    
+
+    
+
+            
+    <li><a href="/Bruzzlee/paparazzi/graphs" highlight="repo_graphs">Graphs</a></li>
+
+    <li class="contextswitch nochoices">
+      <span class="toggle leftwards tooltipped" title="945f9d242905e19123d7821468936ab05859119d">
+        <em>Tree:</em>
+        <code>945f9d2</code>
+      </span>
+    </li>
+  </ul>
+
+  <div style="display:none" id="pl-description"><p><em class="placeholder">click here to add a description</em></p></div>
+  <div style="display:none" id="pl-homepage"><p><em class="placeholder">click here to add a homepage</em></p></div>
+
+  
+  <div class="subnav-bar">
+  
+  <ul>
+    <li>
+      <a href="/Bruzzlee/paparazzi/branches" class="dropdown">Switch Branches (6)</a>
+      <ul>
+        
+          
+          <li><a href="/Bruzzlee/paparazzi/commits/HB">HB</a></li>
+        
+          
+          <li><a href="/Bruzzlee/paparazzi/commits/cam">cam</a></li>
+        
+          
+          <li><a href="/Bruzzlee/paparazzi/commits/campaign2010">campaign2010</a></li>
+        
+          
+          <li><a href="/Bruzzlee/paparazzi/commits/dev">dev</a></li>
+        
+          
+          <li><a href="/Bruzzlee/paparazzi/commits/master">master</a></li>
+        
+          
+          <li><a href="/Bruzzlee/paparazzi/commits/new-state-interface">new-state-interface</a></li>
+        
+      </ul>
+    </li>
+    <li>
+      <a href="#" class="dropdown defunct">Switch Tags (0)</a>
+      
+    </li>
+    
+      <li>
+        
+        <a href="/Bruzzlee/paparazzi/comments">Comments</a>
+      </li>
+    
+    <li>
+      
+      <a href="/Bruzzlee/paparazzi/contributors">Contributors</a>
+    </li>
+  </ul>
+</div>
+
+  
+  
+  
+  
+  
+
+
+
+        
+    <div id="repo_details" class="metabox clearfix">
+      <div id="repo_details_loader" class="metabox-loader" style="display:none">Sending Request&hellip;</div>
+
+        <a href="/Bruzzlee/paparazzi/downloads" class="download-source" id="download_button" title="Download source, tagged packages and binaries."><span class="icon"></span>Downloads</a>
+
+      <div id="repository_desc_wrapper">
+      <div id="repository_description" rel="repository_description_edit">
+        
+          <p>Paparazzi is a free and open-source hardware and software project for unmanned (air) vehicles. This is the main software repository.
+            <span id="read_more" style="display:none">&mdash; <a href="#readme">Read more</a></span>
+          </p>
+        
+      </div>
+
+      <div id="repository_description_edit" style="display:none;" class="inline-edit">
+        <form action="/Bruzzlee/paparazzi/admin/update" method="post"><div style="margin:0;padding:0"><input name="authenticity_token" type="hidden" value="ae54b1c043d2c2b06fc6532c21d1ea3871323e5f" /></div>
+          <input type="hidden" name="field" value="repository_description">
+          <input type="text" class="textfield" name="value" value="Paparazzi is a free and open-source hardware and software project for unmanned (air) vehicles. This is the main software repository.">
+          <div class="form-actions">
+            <button class="minibutton"><span>Save</span></button> &nbsp; <a href="#" class="cancel">Cancel</a>
+          </div>
+        </form>
+      </div>
+
+      
+      <div class="repository-homepage" id="repository_homepage" rel="repository_homepage_edit">
+        <p><a href="http://paparazzi.enac.fr" rel="nofollow">http://paparazzi.enac.fr</a></p>
+      </div>
+
+      <div id="repository_homepage_edit" style="display:none;" class="inline-edit">
+        <form action="/Bruzzlee/paparazzi/admin/update" method="post"><div style="margin:0;padding:0"><input name="authenticity_token" type="hidden" value="ae54b1c043d2c2b06fc6532c21d1ea3871323e5f" /></div>
+          <input type="hidden" name="field" value="repository_homepage">
+          <input type="text" class="textfield" name="value" value="http://paparazzi.enac.fr">
+          <div class="form-actions">
+            <button class="minibutton"><span>Save</span></button> &nbsp; <a href="#" class="cancel">Cancel</a>
+          </div>
+        </form>
+      </div>
+      </div>
+      <div class="rule "></div>
+      <div id="url_box" class="url-box">
+  
+
+  <ul class="clone-urls">
+    
+      
+      <li id="http_clone_url"><a href="https://github.com/Bruzzlee/paparazzi.git" data-permissions="Read-Only">HTTP</a></li>
+      <li id="public_clone_url"><a href="git://github.com/Bruzzlee/paparazzi.git" data-permissions="Read-Only">Git Read-Only</a></li>
+    
+    
+  </ul>
+  <input type="text" spellcheck="false" id="url_field" class="url-field" />
+        <span style="display:none" id="url_box_clippy"></span>
+      <span id="clippy_tooltip_url_box_clippy" class="clippy-tooltip tooltipped" title="copy to clipboard">
+      <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"
+              width="14"
+              height="14"
+              class="clippy"
+              id="clippy" >
+      <param name="movie" value="https://d3nwyuy0nl342s.cloudfront.net/flash/clippy.swf?v5"/>
+      <param name="allowScriptAccess" value="always" />
+      <param name="quality" value="high" />
+      <param name="scale" value="noscale" />
+      <param NAME="FlashVars" value="id=url_box_clippy&amp;copied=&amp;copyto=">
+      <param name="bgcolor" value="#FFFFFF">
+      <param name="wmode" value="opaque">
+      <embed src="https://d3nwyuy0nl342s.cloudfront.net/flash/clippy.swf?v5"
+             width="14"
+             height="14"
+             name="clippy"
+             quality="high"
+             allowScriptAccess="always"
+             type="application/x-shockwave-flash"
+             pluginspage="http://www.macromedia.com/go/getflashplayer"
+             FlashVars="id=url_box_clippy&amp;copied=&amp;copyto="
+             bgcolor="#FFFFFF"
+             wmode="opaque"
+      />
+      </object>
+      </span>
+
+  <p id="url_description"><strong>Read+Write</strong> access</p>
+</div>
+
+    </div>
+
+    <div class="frame frame-center tree-finder" style="display:none">
+      <div class="breadcrumb">
+        <b><a href="/Bruzzlee/paparazzi">paparazzi</a></b> /
+        <input class="tree-finder-input" type="text" name="query" autocomplete="off" spellcheck="false">
+      </div>
+
+      
+        <div class="octotip">
+          <p>
+            <a href="/Bruzzlee/paparazzi/dismiss-tree-finder-help" class="dismiss js-dismiss-tree-list-help" title="Hide this notice forever">Dismiss</a>
+            <strong>Octotip:</strong> You've activated the <em>file finder</em> by pressing <span class="kbd">t</span>
+            Start typing to filter the file list. Use <span class="kbd badmono">↑</span> and <span class="kbd badmono">↓</span> to navigate,
+            <span class="kbd">enter</span> to view files.
+          </p>
+        </div>
+      
+
+      <table class="tree-browser" cellpadding="0" cellspacing="0">
+        <tr class="js-header"><th>&nbsp;</th><th>name</th></tr>
+        <tr class="js-no-results no-results" style="display: none">
+          <th colspan="2">No matching files</th>
+        </tr>
+        <tbody class="js-results-list">
+        </tbody>
+      </table>
+    </div>
+
+    <div id="jump-to-line" style="display:none">
+      <h2>Jump to Line</h2>
+      <form>
+        <input class="textfield" type="text">
+        <div class="full-button">
+          <button type="submit" class="classy">
+            <span>Go</span>
+          </button>
+        </div>
+      </form>
+    </div>
+
+
+        
+
+      </div><!-- /.pagehead -->
+
+      
+
+
+
+
+
+<script type="text/javascript">
+  GitHub.downloadRepo = '/Bruzzlee/paparazzi/archives/945f9d242905e19123d7821468936ab05859119d'
+  GitHub.revType = "SHA1"
+
+  GitHub.repoName = "paparazzi"
+  GitHub.controllerName = "commit"
+  GitHub.actionName     = "show"
+  GitHub.currentAction  = "commit#show"
+
+  
+    GitHub.loggedIn = false
+  
+
+  
+</script>
+
+
+
+
+
+
+
+  
+  <div id="commit" class="single_commit">
+    <div class="group">
+        
+  <div class="envelope commit">
+    <div class="human">
+      
+        <div class="message"><pre>Funnel in Flightplan - modified Figure-8 that it is possible to fly a bigger eight. - Modified Figure-8 that "until" is usable in the flightplan - Added a circle-counter to figure-8</pre></div>
+      
+
+      <div class="actor">
+        <div class="gravatar">
+          
+          <img src="https://secure.gravatar.com/avatar/f3a23a2d34dfa9b0e115b9c010e65aa2?s=140&d=https://d3nwyuy0nl342s.cloudfront.net%2Fimages%2Fgravatars%2Fgravatar-140.png" alt="" width="30" height="30"  />
+        </div>
+        <div class="name"><a href="/Bruzzlee">Bruzzlee</a> <span>(author)</span></div>
+        <div class="date">
+          <abbr class="relatize" title="2011-06-06 10:19:58">Mon Jun 06 10:19:58 -0700 2011</abbr>
+        </div>
+      </div>
+
+      
+
+    </div>
+    <div class="machine">
+      <span>c</span>ommit&nbsp;&nbsp;945f9d242905e19123d7<br />
+      <span>t</span>ree&nbsp;&nbsp;&nbsp;&nbsp;<a href="/Bruzzlee/paparazzi/tree/945f9d242905e19123d7821468936ab05859119d" hotkey="t">8a165f58ac2c3c560480</a><br />
+      
+        <span>p</span>arent&nbsp;
+        
+        <a href="/Bruzzlee/paparazzi/commit/69fe6b5d2ec9caf966aa2b1c696b08aa63ae25a6" hotkey="p">69fe6b5d2ec9caf966aa</a>
+      
+
+    </div>
+  </div>
+
+    </div>
+  </div>
+
+  
+    <a name="diff-stat"></a>
+    <p class="explain">
+      Showing 6 changed files
+      with 62 additions
+      and 15 deletions.
+    </p>
+    <table id='toc'>
+  
+  
+  <tr>
+    <td class="status modified">
+      <span class='stat-icon' title='modified'>M</span>
+    </td>
+    <td class="path"><a href='#diff-0'>conf/%gconf.xml</a></td>
+    <td class="diffstat">
+      <a href="#diff-0" class="tooltipped leftwards" title="2 additions &amp; 2 deletions">
+        <span class="diffstat-summary">4</span>
+        <span class="diffstat-bar"><span class='plus'>&bull;</span><span class='plus'>&bull;</span><span class='minus'>&bull;</span><span class='minus'>&bull;</span></span>
+      </a>
+    </td>
+  </tr>
+  
+  
+  <tr>
+    <td class="status modified">
+      <span class='stat-icon' title='modified'>M</span>
+    </td>
+    <td class="path"><a href='#diff-1'>conf/airframes/Mentor_AF_45.xml</a></td>
+    <td class="diffstat">
+      <a href="#diff-1" class="tooltipped leftwards" title="12 additions &amp; 3 deletions">
+        <span class="diffstat-summary">15</span>
+        <span class="diffstat-bar"><span class='plus'>&bull;</span><span class='plus'>&bull;</span><span class='plus'>&bull;</span><span class='plus'>&bull;</span><span class='minus'>&bull;</span></span>
+      </a>
+    </td>
+  </tr>
+  
+  
+  <tr>
+    <td class="status modified">
+      <span class='stat-icon' title='modified'>M</span>
+    </td>
+    <td class="path"><a href='#diff-2'>conf/flight_plans/Mentor_FP_04.xml</a></td>
+    <td class="diffstat">
+      <a href="#diff-2" class="tooltipped leftwards" title="27 additions &amp; 3 deletions">
+        <span class="diffstat-summary">30</span>
+        <span class="diffstat-bar"><span class='plus'>&bull;</span><span class='plus'>&bull;</span><span class='plus'>&bull;</span><span class='plus'>&bull;</span></span>
+      </a>
+    </td>
+  </tr>
+  
+  
+  <tr>
+    <td class="status modified">
+      <span class='stat-icon' title='modified'>M</span>
+    </td>
+    <td class="path"><a href='#diff-3'>sw/airborne/subsystems/nav.c</a></td>
+    <td class="diffstat">
+      <a href="#diff-3" class="tooltipped leftwards" title="11 additions &amp; 5 deletions">
+        <span class="diffstat-summary">16</span>
+        <span class="diffstat-bar"><span class='plus'>&bull;</span><span class='plus'>&bull;</span><span class='plus'>&bull;</span><span class='minus'>&bull;</span></span>
+      </a>
+    </td>
+  </tr>
+  
+  
+  <tr>
+    <td class="status modified">
+      <span class='stat-icon' title='modified'>M</span>
+    </td>
+    <td class="path"><a href='#diff-4'>sw/airborne/subsystems/nav.h</a></td>
+    <td class="diffstat">
+      <a href="#diff-4" class="tooltipped leftwards" title="1 addition &amp; 0 deletions">
+        <span class="diffstat-summary">1</span>
+        <span class="diffstat-bar"><span class='plus'>&bull;</span></span>
+      </a>
+    </td>
+  </tr>
+  
+  
+  <tr>
+    <td class="status modified">
+      <span class='stat-icon' title='modified'>M</span>
+    </td>
+    <td class="path"><a href='#diff-5'>sw/tools/gen_flight_plan.ml</a></td>
+    <td class="diffstat">
+      <a href="#diff-5" class="tooltipped leftwards" title="9 additions &amp; 2 deletions">
+        <span class="diffstat-summary">11</span>
+        <span class="diffstat-bar"><span class='plus'>&bull;</span><span class='plus'>&bull;</span><span class='plus'>&bull;</span><span class='plus'>&bull;</span></span>
+      </a>
+    </td>
+  </tr>
+  
+</table>
+
+    
+<div id="files" class="diff-view commentable">
+  
+    
+    
+    <div id="diff-0" class="file">
+      <div class="meta" data-path="conf/%gconf.xml">
+        <div class="info">
+          <span class="icon"><img alt="Txt" height="16" src="https://d3nwyuy0nl342s.cloudfront.net/images/icons/txt.png" width="16" /></span>
+          conf/%gconf.xml
+          
+        </div>
+        <ul class="actions">
+          <li style='display:none'><label><input type="checkbox" checked="checked" class="show-inline-comments-toggle" /> show inline notes</label></li>
+          <li><a href="/Bruzzlee/paparazzi/blob/945f9d242905e19123d7821468936ab05859119d/conf/%gconf.xml">View file @ <code>945f9d2</code></a></li>
+        </ul>
+      </div>
+      
+        
+
+        <div class="data highlight"  >
+          <table cellpadding="0" cellspacing="0" width="100%">
+            
+              <tr data-position='0'>
+                <td id="L0L0" class="line_numbers linkable-line-number">...</td>
+                <td id="L0R0" class="line_numbers linkable-line-number">...</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/%gconf.xml&position=0&line=0"></b>
+                  
+                  <pre><div class='gc'>@@&nbsp;-1,7&nbsp;+1,7&nbsp;@@</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='1'>
+                <td id="L0L1" class="line_numbers linkable-line-number">1</td>
+                <td id="L0R1" class="line_numbers linkable-line-number">1</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/%gconf.xml&position=1&line=1"></b>
+                  
+                  <pre><div class=''>&nbsp;&lt;gconf&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='2'>
+                <td id="L0L2" class="line_numbers linkable-line-number">2</td>
+                <td id="L0R2" class="line_numbers linkable-line-number">2</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/%gconf.xml&position=2&line=2"></b>
+                  
+                  <pre><div class=''>&nbsp;&nbsp;&nbsp;&lt;entry&nbsp;name=&quot;left_pane_width&quot;&nbsp;value=&quot;426&quot;&nbsp;application=&quot;paparazzi&nbsp;center&quot;/&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='3'>
+                <td id="L0L3" class="line_numbers linkable-line-number">3</td>
+                <td id="L0R2" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/%gconf.xml&position=3&line=3"></b>
+                  
+                  <pre><div class='gd'>-&nbsp;&nbsp;&lt;entry&nbsp;name=&quot;height&quot;&nbsp;value=&quot;972&quot;&nbsp;application=&quot;paparazzi&nbsp;center&quot;/&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='4'>
+                <td id="L0L4" class="line_numbers linkable-line-number">4</td>
+                <td id="L0R2" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/%gconf.xml&position=4&line=4"></b>
+                  
+                  <pre><div class='gd'>-&nbsp;&nbsp;&lt;entry&nbsp;name=&quot;width&quot;&nbsp;value=&quot;1672&quot;&nbsp;application=&quot;paparazzi&nbsp;center&quot;/&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='5'>
+                <td id="L0L4" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L0R3" class="line_numbers linkable-line-number">3</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/%gconf.xml&position=5&line=3"></b>
+                  
+                  <pre><div class='gi'>+&nbsp;&nbsp;&lt;entry&nbsp;name=&quot;height&quot;&nbsp;value=&quot;825&quot;&nbsp;application=&quot;paparazzi&nbsp;center&quot;/&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='6'>
+                <td id="L0L4" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L0R4" class="line_numbers linkable-line-number">4</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/%gconf.xml&position=6&line=4"></b>
+                  
+                  <pre><div class='gi'>+&nbsp;&nbsp;&lt;entry&nbsp;name=&quot;width&quot;&nbsp;value=&quot;1440&quot;&nbsp;application=&quot;paparazzi&nbsp;center&quot;/&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='7'>
+                <td id="L0L5" class="line_numbers linkable-line-number">5</td>
+                <td id="L0R5" class="line_numbers linkable-line-number">5</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/%gconf.xml&position=7&line=5"></b>
+                  
+                  <pre><div class=''>&nbsp;&nbsp;&nbsp;&lt;entry&nbsp;name=&quot;last&nbsp;target&quot;&nbsp;value=&quot;ap&quot;&nbsp;application=&quot;paparazzi&nbsp;center&quot;/&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='8'>
+                <td id="L0L6" class="line_numbers linkable-line-number">6</td>
+                <td id="L0R6" class="line_numbers linkable-line-number">6</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/%gconf.xml&position=8&line=6"></b>
+                  
+                  <pre><div class=''>&nbsp;&nbsp;&nbsp;&lt;entry&nbsp;name=&quot;last&nbsp;session&quot;&nbsp;value=&quot;Flight&nbsp;USB-serial@9600&quot;&nbsp;application=&quot;paparazzi&nbsp;center&quot;/&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='9'>
+                <td id="L0L7" class="line_numbers linkable-line-number">7</td>
+                <td id="L0R7" class="line_numbers linkable-line-number">7</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/%gconf.xml&position=9&line=7"></b>
+                  
+                  <pre><div class=''>&nbsp;&nbsp;&nbsp;&lt;entry&nbsp;name=&quot;last&nbsp;A/C&quot;&nbsp;value=&quot;Mentor&quot;&nbsp;application=&quot;paparazzi&nbsp;center&quot;/&gt;</div></pre>
+                </td>
+              </tr>
+            
+          </table>
+        </div>
+      
+
+      <div class="file-comments-place-holder" data-path="conf/%gconf.xml"></div>
+    </div>
+  
+    
+    
+    <div id="diff-1" class="file">
+      <div class="meta" data-path="conf/airframes/Mentor_AF_45.xml">
+        <div class="info">
+          <span class="icon"><img alt="Txt" height="16" src="https://d3nwyuy0nl342s.cloudfront.net/images/icons/txt.png" width="16" /></span>
+          conf/airframes/Mentor_AF_45.xml
+          
+        </div>
+        <ul class="actions">
+          <li style='display:none'><label><input type="checkbox" checked="checked" class="show-inline-comments-toggle" /> show inline notes</label></li>
+          <li><a href="/Bruzzlee/paparazzi/blob/945f9d242905e19123d7821468936ab05859119d/conf/airframes/Mentor_AF_45.xml">View file @ <code>945f9d2</code></a></li>
+        </ul>
+      </div>
+      
+        
+
+        <div class="data highlight"  >
+          <table cellpadding="0" cellspacing="0" width="100%">
+            
+              <tr data-position='0'>
+                <td id="L1L122" class="line_numbers linkable-line-number">...</td>
+                <td id="L1R122" class="line_numbers linkable-line-number">...</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/airframes/Mentor_AF_45.xml&position=0&line=122"></b>
+                  
+                  <pre><div class='gc'>@@&nbsp;-123,13&nbsp;+123,22&nbsp;@@</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='1'>
+                <td id="L1L123" class="line_numbers linkable-line-number">123</td>
+                <td id="L1R123" class="line_numbers linkable-line-number">123</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/airframes/Mentor_AF_45.xml&position=1&line=123"></b>
+                  
+                  <pre><div class=''>&nbsp;&nbsp;&nbsp;&lt;/rc_commands&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='2'>
+                <td id="L1L124" class="line_numbers linkable-line-number">124</td>
+                <td id="L1R124" class="line_numbers linkable-line-number">124</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/airframes/Mentor_AF_45.xml&position=2&line=124"></b>
+                  
+                  <pre><div class=''>&nbsp;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='3'>
+                <td id="L1L125" class="line_numbers linkable-line-number">125</td>
+                <td id="L1R125" class="line_numbers linkable-line-number">125</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/airframes/Mentor_AF_45.xml&position=3&line=125"></b>
+                  
+                  <pre><div class=''>&nbsp;&nbsp;&nbsp;&lt;section&nbsp;name=&quot;MIXER&quot;&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='4'>
+                <td id="L1L126" class="line_numbers linkable-line-number">126</td>
+                <td id="L1R125" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/airframes/Mentor_AF_45.xml&position=4&line=126"></b>
+                  
+                  <pre><div class='gd'>-&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--define&nbsp;name=&quot;AILEVON_AILERON_RATE&quot;&nbsp;value=&quot;0.75&quot;/&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='5'>
+                <td id="L1L127" class="line_numbers linkable-line-number">127</td>
+                <td id="L1R125" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/airframes/Mentor_AF_45.xml&position=5&line=127"></b>
+                  
+                  <pre><div class='gd'>-&nbsp;&nbsp;&nbsp;&nbsp;&lt;define&nbsp;name=&quot;AILEVON_ELEVATOR_RATE&quot;&nbsp;value=&quot;1.00&quot;/--&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='6'>
+                <td id="L1L127" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L1R126" class="line_numbers linkable-line-number">126</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/airframes/Mentor_AF_45.xml&position=6&line=126"></b>
+                  
+                  <pre><div class='gi'>+&nbsp;&nbsp;&nbsp;&nbsp;&lt;define&nbsp;name=&quot;AILEVON_AILERON_RATE&quot;&nbsp;value=&quot;0.45&quot;/&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='7'>
+                <td id="L1L127" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L1R127" class="line_numbers linkable-line-number">127</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/airframes/Mentor_AF_45.xml&position=7&line=127"></b>
+                  
+                  <pre><div class='gi'>+&nbsp;&nbsp;&nbsp;&nbsp;&lt;define&nbsp;name=&quot;AILEVON_ELEVATOR_RATE&quot;&nbsp;value=&quot;0.8&quot;/&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='8'>
+                <td id="L1L128" class="line_numbers linkable-line-number">128</td>
+                <td id="L1R128" class="line_numbers linkable-line-number">128</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/airframes/Mentor_AF_45.xml&position=8&line=128"></b>
+                  
+                  <pre><div class=''>&nbsp;&nbsp;&nbsp;&lt;/section&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='9'>
+                <td id="L1L129" class="line_numbers linkable-line-number">129</td>
+                <td id="L1R129" class="line_numbers linkable-line-number">129</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/airframes/Mentor_AF_45.xml&position=9&line=129"></b>
+                  
+                  <pre><div class=''>&nbsp;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='10'>
+                <td id="L1L129" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L1R130" class="line_numbers linkable-line-number">130</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/airframes/Mentor_AF_45.xml&position=10&line=130"></b>
+                  
+                  <pre><div class='gi'>+&nbsp;&nbsp;&lt;!--command_laws&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='11'>
+                <td id="L1L129" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L1R131" class="line_numbers linkable-line-number">131</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/airframes/Mentor_AF_45.xml&position=11&line=131"></b>
+                  
+                  <pre><div class='gi'>+&nbsp;&nbsp;&nbsp;&nbsp;&lt;let&nbsp;var=&quot;aileron&quot;&nbsp;&nbsp;value=&quot;@ROLL&nbsp;&nbsp;*&nbsp;AILEVON_AILERON_RATE&quot;/&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='12'>
+                <td id="L1L129" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L1R132" class="line_numbers linkable-line-number">132</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/airframes/Mentor_AF_45.xml&position=12&line=132"></b>
+                  
+                  <pre><div class='gi'>+&nbsp;&nbsp;&nbsp;&nbsp;&lt;let&nbsp;var=&quot;elevator&quot;&nbsp;value=&quot;@PITCH&nbsp;*&nbsp;AILEVON_ELEVATOR_RATE&quot;/&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='13'>
+                <td id="L1L129" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L1R133" class="line_numbers linkable-line-number">133</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/airframes/Mentor_AF_45.xml&position=13&line=133"></b>
+                  
+                  <pre><div class='gi'>+&nbsp;&nbsp;&nbsp;&nbsp;&lt;set&nbsp;servo=&quot;MOTOR&quot;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value=&quot;@THROTTLE&quot;/&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='14'>
+                <td id="L1L129" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L1R134" class="line_numbers linkable-line-number">134</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/airframes/Mentor_AF_45.xml&position=14&line=134"></b>
+                  
+                  <pre><div class='gi'>+&nbsp;&nbsp;&nbsp;&nbsp;&lt;set&nbsp;servo=&quot;AILEVON_LEFT&quot;&nbsp;&nbsp;value=&quot;$elevator&nbsp;+&nbsp;$aileron&quot;/&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='15'>
+                <td id="L1L129" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L1R135" class="line_numbers linkable-line-number">135</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/airframes/Mentor_AF_45.xml&position=15&line=135"></b>
+                  
+                  <pre><div class='gi'>+&nbsp;&nbsp;&nbsp;&nbsp;&lt;set&nbsp;servo=&quot;AILEVON_RIGHT&quot;&nbsp;value=&quot;$elevator&nbsp;-&nbsp;$aileron&quot;/&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='16'>
+                <td id="L1L129" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L1R136" class="line_numbers linkable-line-number">136</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/airframes/Mentor_AF_45.xml&position=16&line=136"></b>
+                  
+                  <pre><div class='gi'>+&nbsp;&nbsp;&lt;/command_laws--&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='17'>
+                <td id="L1L129" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L1R137" class="line_numbers linkable-line-number">137</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/airframes/Mentor_AF_45.xml&position=17&line=137"></b>
+                  
+                  <pre><div class='gi'>+&nbsp;&nbsp;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='18'>
+                <td id="L1L130" class="line_numbers linkable-line-number">130</td>
+                <td id="L1R138" class="line_numbers linkable-line-number">138</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/airframes/Mentor_AF_45.xml&position=18&line=138"></b>
+                  
+                  <pre><div class=''>&nbsp;&nbsp;&nbsp;&lt;command_laws&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='19'>
+                <td id="L1L130" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L1R139" class="line_numbers linkable-line-number">139</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/airframes/Mentor_AF_45.xml&position=19&line=139"></b>
+                  
+                  <pre><div class='gi'>+&nbsp;&nbsp;&nbsp;&nbsp;&lt;let&nbsp;var=&quot;elevator&quot;&nbsp;value=&quot;@THROTTLE&nbsp;*&nbsp;0.25&quot;/&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='20'>
+                <td id="L1L131" class="line_numbers linkable-line-number">131</td>
+                <td id="L1R140" class="line_numbers linkable-line-number">140</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/airframes/Mentor_AF_45.xml&position=20&line=140"></b>
+                  
+                  <pre><div class=''>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;set&nbsp;servo=&quot;AILERON_LEFT&quot;&nbsp;value=&quot;@ROLL&quot;/&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='21'>
+                <td id="L1L132" class="line_numbers linkable-line-number">132</td>
+                <td id="L1R140" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/airframes/Mentor_AF_45.xml&position=21&line=132"></b>
+                  
+                  <pre><div class='gd'>-&nbsp;&nbsp;&nbsp;&nbsp;&lt;set&nbsp;servo=&quot;ELEVATOR&quot;&nbsp;value=&quot;@PITCH<span class="x"></span>&quot;/&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='22'>
+                <td id="L1L132" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L1R141" class="line_numbers linkable-line-number">141</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/airframes/Mentor_AF_45.xml&position=22&line=141"></b>
+                  
+                  <pre><div class='gi'>+&nbsp;&nbsp;&nbsp;&nbsp;&lt;set&nbsp;servo=&quot;ELEVATOR&quot;&nbsp;value=&quot;@PITCH<span class="x">&nbsp;+&nbsp;$elevator</span>&quot;/&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='23'>
+                <td id="L1L133" class="line_numbers linkable-line-number">133</td>
+                <td id="L1R142" class="line_numbers linkable-line-number">142</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/airframes/Mentor_AF_45.xml&position=23&line=142"></b>
+                  
+                  <pre><div class=''>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;set&nbsp;servo=&quot;MOTOR&quot;&nbsp;value=&quot;@THROTTLE&quot;/&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='24'>
+                <td id="L1L134" class="line_numbers linkable-line-number">134</td>
+                <td id="L1R143" class="line_numbers linkable-line-number">143</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/airframes/Mentor_AF_45.xml&position=24&line=143"></b>
+                  
+                  <pre><div class=''>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;set&nbsp;servo=&quot;RUDDER&quot;&nbsp;value=&quot;@YAW&quot;/&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='25'>
+                <td id="L1L135" class="line_numbers linkable-line-number">135</td>
+                <td id="L1R144" class="line_numbers linkable-line-number">144</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/airframes/Mentor_AF_45.xml&position=25&line=144"></b>
+                  
+                  <pre><div class=''>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;set&nbsp;servo=&quot;AILERON_RIGHT&quot;&nbsp;value=&quot;@ROLL&quot;/&gt;</div></pre>
+                </td>
+              </tr>
+            
+          </table>
+        </div>
+      
+
+      <div class="file-comments-place-holder" data-path="conf/airframes/Mentor_AF_45.xml"></div>
+    </div>
+  
+    
+    
+    <div id="diff-2" class="file">
+      <div class="meta" data-path="conf/flight_plans/Mentor_FP_04.xml">
+        <div class="info">
+          <span class="icon"><img alt="Txt" height="16" src="https://d3nwyuy0nl342s.cloudfront.net/images/icons/txt.png" width="16" /></span>
+          conf/flight_plans/Mentor_FP_04.xml
+          
+        </div>
+        <ul class="actions">
+          <li style='display:none'><label><input type="checkbox" checked="checked" class="show-inline-comments-toggle" /> show inline notes</label></li>
+          <li><a href="/Bruzzlee/paparazzi/blob/945f9d242905e19123d7821468936ab05859119d/conf/flight_plans/Mentor_FP_04.xml">View file @ <code>945f9d2</code></a></li>
+        </ul>
+      </div>
+      
+        
+
+        <div class="data highlight"  >
+          <table cellpadding="0" cellspacing="0" width="100%">
+            
+              <tr data-position='0'>
+                <td id="L2L89" class="line_numbers linkable-line-number">...</td>
+                <td id="L2R89" class="line_numbers linkable-line-number">...</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/flight_plans/Mentor_FP_04.xml&position=0&line=89"></b>
+                  
+                  <pre><div class='gc'>@@&nbsp;-90,9&nbsp;+90,33&nbsp;@@</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='1'>
+                <td id="L2L90" class="line_numbers linkable-line-number">90</td>
+                <td id="L2R90" class="line_numbers linkable-line-number">90</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/flight_plans/Mentor_FP_04.xml&position=1&line=90"></b>
+                  
+                  <pre><div class=''>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;call&nbsp;fun=&quot;nav_line_init()&quot;/&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='2'>
+                <td id="L2L91" class="line_numbers linkable-line-number">91</td>
+                <td id="L2R91" class="line_numbers linkable-line-number">91</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/flight_plans/Mentor_FP_04.xml&position=2&line=91"></b>
+                  
+                  <pre><div class=''>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;call&nbsp;fun=&quot;nav_line(WP_1,&nbsp;WP_2,&nbsp;nav_radius)&quot;/&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='3'>
+                <td id="L2L92" class="line_numbers linkable-line-number">92</td>
+                <td id="L2R92" class="line_numbers linkable-line-number">92</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/flight_plans/Mentor_FP_04.xml&position=3&line=92"></b>
+                  
+                  <pre><div class=''>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/block&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='4'>
+                <td id="L2L93" class="line_numbers linkable-line-number">93</td>
+                <td id="L2R92" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/flight_plans/Mentor_FP_04.xml&position=4&line=93"></b>
+                  
+                  <pre><div class='gd'>-&nbsp;&nbsp;&nbsp;&nbsp;&lt;block&nbsp;group=&quot;extra_pattern&quot;&nbsp;key=&quot;F8&quot;&nbsp;name=&quot;Figure&nbsp;8&nbsp;around&nbsp;wp&nbsp;1&quot;&nbsp;strip_button=&quot;Figure&nbsp;8&nbsp;(wp&nbsp;1-2)&quot;&nbsp;strip_icon=&quot;eight.png&quot;&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='5'>
+                <td id="L2L94" class="line_numbers linkable-line-number">94</td>
+                <td id="L2R92" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/flight_plans/Mentor_FP_04.xml&position=5&line=94"></b>
+                  
+                  <pre><div class='gd'>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;eight&nbsp;center=&quot;8C&quot;&nbsp;radius=&quot;nav_radius&quot;&nbsp;turn_around=&quot;8T&quot;/&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='6'>
+                <td id="L2L94" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L2R93" class="line_numbers linkable-line-number">93</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/flight_plans/Mentor_FP_04.xml&position=6&line=93"></b>
+                  
+                  <pre><div class='gi'>+&nbsp;&nbsp;&lt;block&nbsp;key=&quot;F8&quot;&nbsp;name=&quot;Figure&nbsp;8&nbsp;8T&nbsp;to&nbsp;8C&quot;&nbsp;strip_button=&quot;Figure&nbsp;8&nbsp;(wp&nbsp;1-2)&quot;&nbsp;strip_icon=&quot;eight.png&quot;&nbsp;group=&quot;base_pattern&quot;&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='7'>
+                <td id="L2L94" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L2R94" class="line_numbers linkable-line-number">94</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/flight_plans/Mentor_FP_04.xml&position=7&line=94"></b>
+                  
+                  <pre><div class='gi'>+&nbsp;&nbsp;&nbsp;&nbsp;&lt;circle&nbsp;radius=&quot;nav_radius&quot;&nbsp;wp=&quot;CLIMB&quot;&nbsp;alt=&quot;ground_alt+200&quot;&nbsp;until=&quot;ground_alt+195&nbsp;&gt;&nbsp;estimator_z&quot;/&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='8'>
+                <td id="L2L94" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L2R95" class="line_numbers linkable-line-number">95</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/flight_plans/Mentor_FP_04.xml&position=8&line=95"></b>
+                  
+                  <pre><div class='gi'>+&nbsp;&nbsp;&nbsp;&nbsp;&lt;eight&nbsp;center=&quot;8C&quot;&nbsp;radius=&quot;nav_radius&quot;&nbsp;turn_around=&quot;8T&quot;&nbsp;alt=&quot;ground_alt+200&quot;&nbsp;until=&quot;nav_eight_count&nbsp;&gt;&nbsp;0&quot;/&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='9'>
+                <td id="L2L94" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L2R96" class="line_numbers linkable-line-number">96</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/flight_plans/Mentor_FP_04.xml&position=9&line=96"></b>
+                  
+                  <pre><div class='gi'>+&nbsp;&nbsp;&nbsp;&nbsp;&lt;eight&nbsp;center=&quot;8C&quot;&nbsp;radius=&quot;nav_radius&quot;&nbsp;turn_around=&quot;8T&quot;&nbsp;alt=&quot;ground_alt+150&quot;&nbsp;until=&quot;nav_eight_count&nbsp;&gt;&nbsp;0&quot;/&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='10'>
+                <td id="L2L94" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L2R97" class="line_numbers linkable-line-number">97</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/flight_plans/Mentor_FP_04.xml&position=10&line=97"></b>
+                  
+                  <pre><div class='gi'>+&nbsp;&nbsp;&nbsp;&nbsp;&lt;eight&nbsp;center=&quot;8C&quot;&nbsp;radius=&quot;nav_radius&quot;&nbsp;turn_around=&quot;8T&quot;&nbsp;alt=&quot;ground_alt+100&quot;&nbsp;until=&quot;nav_eight_count&nbsp;&gt;&nbsp;0&quot;/&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='11'>
+                <td id="L2L94" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L2R98" class="line_numbers linkable-line-number">98</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/flight_plans/Mentor_FP_04.xml&position=11&line=98"></b>
+                  
+                  <pre><div class='gi'>+&nbsp;&nbsp;&nbsp;&nbsp;&lt;deroute&nbsp;block=&quot;Standby&quot;/&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='12'>
+                <td id="L2L94" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L2R99" class="line_numbers linkable-line-number">99</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/flight_plans/Mentor_FP_04.xml&position=12&line=99"></b>
+                  
+                  <pre><div class='gi'>+&nbsp;&nbsp;&lt;/block&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='13'>
+                <td id="L2L94" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L2R100" class="line_numbers linkable-line-number">100</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/flight_plans/Mentor_FP_04.xml&position=13&line=100"></b>
+                  
+                  <pre><div class='gi'>+&nbsp;&nbsp;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='14'>
+                <td id="L2L94" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L2R101" class="line_numbers linkable-line-number">101</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/flight_plans/Mentor_FP_04.xml&position=14&line=101"></b>
+                  
+                  <pre><div class='gi'>+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;block&nbsp;name=&quot;Funnel&quot;&nbsp;strip_button=&quot;Funnel&quot;&nbsp;strip_icon=&quot;home.png&quot;&nbsp;group=&quot;base_pattern&quot;&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='15'>
+                <td id="L2L94" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L2R102" class="line_numbers linkable-line-number">102</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/flight_plans/Mentor_FP_04.xml&position=15&line=102"></b>
+                  
+                  <pre><div class='gi'>+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;circle&nbsp;radius=&quot;nav_radius&quot;&nbsp;wp=&quot;CIRCLE&quot;&nbsp;alt=&quot;ground_alt+300&quot;&nbsp;until=&quot;estimator_z&nbsp;&gt;&nbsp;ground_alt+295&quot;/&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='16'>
+                <td id="L2L94" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L2R103" class="line_numbers linkable-line-number">103</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/flight_plans/Mentor_FP_04.xml&position=16&line=103"></b>
+                  
+                  <pre><div class='gi'>+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;circle&nbsp;radius=&quot;nav_radius+200&quot;&nbsp;wp=&quot;CIRCLE&quot;&nbsp;alt=&quot;ground_alt+300&quot;&nbsp;until=&quot;NavCircleCount()&nbsp;&gt;&nbsp;0&quot;/&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='17'>
+                <td id="L2L94" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L2R104" class="line_numbers linkable-line-number">104</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/flight_plans/Mentor_FP_04.xml&position=17&line=104"></b>
+                  
+                  <pre><div class='gi'>+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;circle&nbsp;radius=&quot;nav_radius&quot;&nbsp;wp=&quot;CIRCLE&quot;&nbsp;alt=&quot;ground_alt+250&quot;&nbsp;until=&quot;ground_alt+255&nbsp;&gt;&nbsp;estimator_z&quot;/&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='18'>
+                <td id="L2L94" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L2R105" class="line_numbers linkable-line-number">105</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/flight_plans/Mentor_FP_04.xml&position=18&line=105"></b>
+                  
+                  <pre><div class='gi'>+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;circle&nbsp;radius=&quot;nav_radius+180&quot;&nbsp;wp=&quot;CIRCLE&quot;&nbsp;alt=&quot;ground_alt+250&quot;&nbsp;until=&quot;NavCircleCount()&nbsp;&gt;&nbsp;0&quot;/&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='19'>
+                <td id="L2L94" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L2R106" class="line_numbers linkable-line-number">106</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/flight_plans/Mentor_FP_04.xml&position=19&line=106"></b>
+                  
+                  <pre><div class='gi'>+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;circle&nbsp;radius=&quot;nav_radius&quot;&nbsp;wp=&quot;CIRCLE&quot;&nbsp;alt=&quot;ground_alt+200&quot;&nbsp;until=&quot;ground_alt+205&nbsp;&gt;&nbsp;estimator_z&quot;/&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='20'>
+                <td id="L2L94" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L2R107" class="line_numbers linkable-line-number">107</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/flight_plans/Mentor_FP_04.xml&position=20&line=107"></b>
+                  
+                  <pre><div class='gi'>+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;circle&nbsp;radius=&quot;nav_radius+160&quot;&nbsp;wp=&quot;CIRCLE&quot;&nbsp;alt=&quot;ground_alt+200&quot;&nbsp;until=&quot;NavCircleCount()&nbsp;&gt;&nbsp;0&quot;/&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='21'>
+                <td id="L2L94" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L2R108" class="line_numbers linkable-line-number">108</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/flight_plans/Mentor_FP_04.xml&position=21&line=108"></b>
+                  
+                  <pre><div class='gi'>+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;circle&nbsp;radius=&quot;nav_radius&quot;&nbsp;wp=&quot;CIRCLE&quot;&nbsp;alt=&quot;ground_alt+150&quot;&nbsp;until=&quot;ground_alt+155&nbsp;&gt;&nbsp;estimator_z&quot;/&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='22'>
+                <td id="L2L94" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L2R109" class="line_numbers linkable-line-number">109</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/flight_plans/Mentor_FP_04.xml&position=22&line=109"></b>
+                  
+                  <pre><div class='gi'>+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;circle&nbsp;radius=&quot;nav_radius+140&quot;&nbsp;wp=&quot;CIRCLE&quot;&nbsp;alt=&quot;ground_alt+150&quot;&nbsp;until=&quot;NavCircleCount()&nbsp;&gt;&nbsp;0&quot;/&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='23'>
+                <td id="L2L94" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L2R110" class="line_numbers linkable-line-number">110</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/flight_plans/Mentor_FP_04.xml&position=23&line=110"></b>
+                  
+                  <pre><div class='gi'>+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;circle&nbsp;radius=&quot;nav_radius&quot;&nbsp;wp=&quot;CIRCLE&quot;&nbsp;alt=&quot;ground_alt+100&quot;&nbsp;until=&quot;ground_alt+105&nbsp;&gt;&nbsp;estimator_z&quot;/&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='24'>
+                <td id="L2L94" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L2R111" class="line_numbers linkable-line-number">111</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/flight_plans/Mentor_FP_04.xml&position=24&line=111"></b>
+                  
+                  <pre><div class='gi'>+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;circle&nbsp;radius=&quot;nav_radius+120&quot;&nbsp;wp=&quot;CIRCLE&quot;&nbsp;alt=&quot;ground_alt+100&quot;&nbsp;until=&quot;NavCircleCount()&nbsp;&gt;&nbsp;0&quot;/&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='25'>
+                <td id="L2L94" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L2R112" class="line_numbers linkable-line-number">112</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/flight_plans/Mentor_FP_04.xml&position=25&line=112"></b>
+                  
+                  <pre><div class='gi'>+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;deroute&nbsp;block=&quot;Standby&quot;/&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='26'>
+                <td id="L2L95" class="line_numbers linkable-line-number">95</td>
+                <td id="L2R113" class="line_numbers linkable-line-number">113</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/flight_plans/Mentor_FP_04.xml&position=26&line=113"></b>
+                  
+                  <pre><div class=''>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/block&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='27'>
+                <td id="L2L95" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L2R114" class="line_numbers linkable-line-number">114</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/flight_plans/Mentor_FP_04.xml&position=27&line=114"></b>
+                  
+                  <pre><div class='gi'>+&nbsp;&nbsp;&nbsp;&nbsp;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='28'>
+                <td id="L2L95" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L2R115" class="line_numbers linkable-line-number">115</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/flight_plans/Mentor_FP_04.xml&position=28&line=115"></b>
+                  
+                  <pre><div class='gi'>+&nbsp;&nbsp;&nbsp;&nbsp;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='29'>
+                <td id="L2L95" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L2R116" class="line_numbers linkable-line-number">116</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/flight_plans/Mentor_FP_04.xml&position=29&line=116"></b>
+                  
+                  <pre><div class='gi'>+&nbsp;&nbsp;&nbsp;&nbsp;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='30'>
+                <td id="L2L95" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L2R117" class="line_numbers linkable-line-number">117</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/flight_plans/Mentor_FP_04.xml&position=30&line=117"></b>
+                  
+                  <pre><div class='gi'>+&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--block&nbsp;group=&quot;extra_pattern&quot;&nbsp;key=&quot;F8&quot;&nbsp;name=&quot;Figure&nbsp;8&nbsp;around&nbsp;wp&nbsp;1&quot;&nbsp;strip_button=&quot;Figure&nbsp;8&nbsp;(wp&nbsp;1-2)&quot;&nbsp;strip_icon=&quot;eight.png&quot;&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='31'>
+                <td id="L2L95" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L2R118" class="line_numbers linkable-line-number">118</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/flight_plans/Mentor_FP_04.xml&position=31&line=118"></b>
+                  
+                  <pre><div class='gi'>+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;eight&nbsp;center=&quot;8C&quot;&nbsp;radius=&quot;nav_radius&quot;&nbsp;turn_around=&quot;8T&quot;/&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='32'>
+                <td id="L2L95" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L2R119" class="line_numbers linkable-line-number">119</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/flight_plans/Mentor_FP_04.xml&position=32&line=119"></b>
+                  
+                  <pre><div class='gi'>+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/block--&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='33'>
+                <td id="L2L96" class="line_numbers linkable-line-number">96</td>
+                <td id="L2R120" class="line_numbers linkable-line-number">120</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/flight_plans/Mentor_FP_04.xml&position=33&line=120"></b>
+                  
+                  <pre><div class=''>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;block&nbsp;group=&quot;extra_pattern&quot;&nbsp;name=&quot;Survey&nbsp;S1-S2&quot;&nbsp;strip_button=&quot;Survey&nbsp;(wp&nbsp;S1-S2)&quot;&nbsp;strip_icon=&quot;survey.png&quot;&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='34'>
+                <td id="L2L97" class="line_numbers linkable-line-number">97</td>
+                <td id="L2R121" class="line_numbers linkable-line-number">121</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/flight_plans/Mentor_FP_04.xml&position=34&line=121"></b>
+                  
+                  <pre><div class=''>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;survey_rectangle&nbsp;grid=&quot;150&quot;&nbsp;wp1=&quot;S1&quot;&nbsp;wp2=&quot;S2&quot;/&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='35'>
+                <td id="L2L98" class="line_numbers linkable-line-number">98</td>
+                <td id="L2R122" class="line_numbers linkable-line-number">122</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/flight_plans/Mentor_FP_04.xml&position=35&line=122"></b>
+                  
+                  <pre><div class=''>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/block&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='36'>
+                <td id="L2L104" class="line_numbers linkable-line-number">...</td>
+                <td id="L2R128" class="line_numbers linkable-line-number">...</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/flight_plans/Mentor_FP_04.xml&position=36&line=128"></b>
+                  
+                  <pre><div class='gc'>@@&nbsp;-105,7&nbsp;+129,7&nbsp;@@</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='37'>
+                <td id="L2L105" class="line_numbers linkable-line-number">105</td>
+                <td id="L2R129" class="line_numbers linkable-line-number">129</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/flight_plans/Mentor_FP_04.xml&position=37&line=129"></b>
+                  
+                  <pre><div class=''>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;deroute&nbsp;block=&quot;Standby&quot;/&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='38'>
+                <td id="L2L106" class="line_numbers linkable-line-number">106</td>
+                <td id="L2R130" class="line_numbers linkable-line-number">130</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/flight_plans/Mentor_FP_04.xml&position=38&line=130"></b>
+                  
+                  <pre><div class=''>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/block&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='39'>
+                <td id="L2L107" class="line_numbers linkable-line-number">107</td>
+                <td id="L2R131" class="line_numbers linkable-line-number">131</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/flight_plans/Mentor_FP_04.xml&position=39&line=131"></b>
+                  
+                  <pre><div class=''>&nbsp;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='40'>
+                <td id="L2L108" class="line_numbers linkable-line-number">108</td>
+                <td id="L2R131" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/flight_plans/Mentor_FP_04.xml&position=40&line=108"></b>
+                  
+                  <pre><div class='gd'>-&nbsp;&nbsp;&nbsp;&nbsp;&lt;block&nbsp;group=&quot;land&quot;&nbsp;name=&quot;<span class="x">P</span>ixedPitch&nbsp;Land&nbsp;Right&nbsp;AF-TD&quot;&nbsp;strip_button=&quot;FixedPitch&nbsp;Land&nbsp;right&nbsp;(wp&nbsp;AF-TD)&quot;&nbsp;strip_icon=&quot;land-right.png&quot;&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='41'>
+                <td id="L2L108" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L2R132" class="line_numbers linkable-line-number">132</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/flight_plans/Mentor_FP_04.xml&position=41&line=132"></b>
+                  
+                  <pre><div class='gi'>+&nbsp;&nbsp;&nbsp;&nbsp;&lt;block&nbsp;group=&quot;land&quot;&nbsp;name=&quot;<span class="x">F</span>ixedPitch&nbsp;Land&nbsp;Right&nbsp;AF-TD&quot;&nbsp;strip_button=&quot;FixedPitch&nbsp;Land&nbsp;right&nbsp;(wp&nbsp;AF-TD)&quot;&nbsp;strip_icon=&quot;land-right.png&quot;&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='42'>
+                <td id="L2L109" class="line_numbers linkable-line-number">109</td>
+                <td id="L2R133" class="line_numbers linkable-line-number">133</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/flight_plans/Mentor_FP_04.xml&position=42&line=133"></b>
+                  
+                  <pre><div class=''>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;call&nbsp;fun=&quot;set_approach_params()&quot;/&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='43'>
+                <td id="L2L110" class="line_numbers linkable-line-number">110</td>
+                <td id="L2R134" class="line_numbers linkable-line-number">134</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/flight_plans/Mentor_FP_04.xml&position=43&line=134"></b>
+                  
+                  <pre><div class=''>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;set&nbsp;value=&quot;DEFAULT_CIRCLE_RADIUS&quot;&nbsp;var=&quot;nav_radius&quot;/&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='44'>
+                <td id="L2L111" class="line_numbers linkable-line-number">111</td>
+                <td id="L2R135" class="line_numbers linkable-line-number">135</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=conf/flight_plans/Mentor_FP_04.xml&position=44&line=135"></b>
+                  
+                  <pre><div class=''>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;call&nbsp;fun=&quot;InitializeZHAWSkidLanding(WP_AF,&nbsp;WP_TD,&nbsp;WP_CP,&nbsp;nav_radius)&quot;/&gt;</div></pre>
+                </td>
+              </tr>
+            
+          </table>
+        </div>
+      
+
+      <div class="file-comments-place-holder" data-path="conf/flight_plans/Mentor_FP_04.xml"></div>
+    </div>
+  
+    
+    
+    <div id="diff-3" class="file">
+      <div class="meta" data-path="sw/airborne/subsystems/nav.c">
+        <div class="info">
+          <span class="icon"><img alt="Txt" height="16" src="https://d3nwyuy0nl342s.cloudfront.net/images/icons/txt.png" width="16" /></span>
+          sw/airborne/subsystems/nav.c
+          
+        </div>
+        <ul class="actions">
+          <li style='display:none'><label><input type="checkbox" checked="checked" class="show-inline-comments-toggle" /> show inline notes</label></li>
+          <li><a href="/Bruzzlee/paparazzi/blob/945f9d242905e19123d7821468936ab05859119d/sw/airborne/subsystems/nav.c">View file @ <code>945f9d2</code></a></li>
+        </ul>
+      </div>
+      
+        
+
+        <div class="data highlight"  >
+          <table cellpadding="0" cellspacing="0" width="100%">
+            
+              <tr data-position='0'>
+                <td id="L3L455" class="line_numbers linkable-line-number">...</td>
+                <td id="L3R455" class="line_numbers linkable-line-number">...</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.c&position=0&line=455"></b>
+                  
+                  <pre><div class='gc'>@@&nbsp;-456,10&nbsp;+456,12&nbsp;@@&nbsp;void&nbsp;nav_without_gps(void)&nbsp;{</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='1'>
+                <td id="L3L456" class="line_numbers linkable-line-number">456</td>
+                <td id="L3R456" class="line_numbers linkable-line-number">456</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.c&position=1&line=456"></b>
+                  
+                  <pre><div class=''>&nbsp;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='2'>
+                <td id="L3L457" class="line_numbers linkable-line-number">457</td>
+                <td id="L3R457" class="line_numbers linkable-line-number">457</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.c&position=2&line=457"></b>
+                  
+                  <pre><div class=''>&nbsp;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='3'>
+                <td id="L3L458" class="line_numbers linkable-line-number">458</td>
+                <td id="L3R458" class="line_numbers linkable-line-number">458</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.c&position=3&line=458"></b>
+                  
+                  <pre><div class=''>&nbsp;enum&nbsp;eight_status&nbsp;{&nbsp;R1T,&nbsp;RT2,&nbsp;C2,&nbsp;R2T,&nbsp;RT1,&nbsp;C1&nbsp;};</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='4'>
+                <td id="L3L458" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L3R459" class="line_numbers linkable-line-number">459</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.c&position=4&line=459"></b>
+                  
+                  <pre><div class='gi'>+uint8_t&nbsp;nav_eight_count;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='5'>
+                <td id="L3L459" class="line_numbers linkable-line-number">459</td>
+                <td id="L3R460" class="line_numbers linkable-line-number">460</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.c&position=5&line=460"></b>
+                  
+                  <pre><div class=''>&nbsp;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='6'>
+                <td id="L3L460" class="line_numbers linkable-line-number">460</td>
+                <td id="L3R461" class="line_numbers linkable-line-number">461</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.c&position=6&line=461"></b>
+                  
+                  <pre><div class=''>&nbsp;static&nbsp;enum&nbsp;eight_status&nbsp;eight_status;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='7'>
+                <td id="L3L461" class="line_numbers linkable-line-number">461</td>
+                <td id="L3R462" class="line_numbers linkable-line-number">462</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.c&position=7&line=462"></b>
+                  
+                  <pre><div class=''>&nbsp;void&nbsp;nav_eight_init(&nbsp;void&nbsp;)&nbsp;{</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='8'>
+                <td id="L3L462" class="line_numbers linkable-line-number">462</td>
+                <td id="L3R463" class="line_numbers linkable-line-number">463</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.c&position=8&line=463"></b>
+                  
+                  <pre><div class=''>&nbsp;&nbsp;&nbsp;eight_status&nbsp;=&nbsp;C1;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='9'>
+                <td id="L3L462" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L3R464" class="line_numbers linkable-line-number">464</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.c&position=9&line=464"></b>
+                  
+                  <pre><div class='gi'>+&nbsp;&nbsp;nav_eight_count&nbsp;=&nbsp;0;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='10'>
+                <td id="L3L463" class="line_numbers linkable-line-number">463</td>
+                <td id="L3R465" class="line_numbers linkable-line-number">465</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.c&position=10&line=465"></b>
+                  
+                  <pre><div class=''>&nbsp;}</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='11'>
+                <td id="L3L464" class="line_numbers linkable-line-number">464</td>
+                <td id="L3R466" class="line_numbers linkable-line-number">466</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.c&position=11&line=466"></b>
+                  
+                  <pre><div class=''>&nbsp;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='12'>
+                <td id="L3L465" class="line_numbers linkable-line-number">465</td>
+                <td id="L3R467" class="line_numbers linkable-line-number">467</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.c&position=12&line=467"></b>
+                  
+                  <pre><div class=''>&nbsp;/**&nbsp;Navigation&nbsp;along&nbsp;a&nbsp;figure&nbsp;8.&nbsp;The&nbsp;cross&nbsp;center&nbsp;is&nbsp;defined&nbsp;by&nbsp;the&nbsp;waypoint</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='13'>
+                <td id="L3L474" class="line_numbers linkable-line-number">...</td>
+                <td id="L3R476" class="line_numbers linkable-line-number">...</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.c&position=13&line=476"></b>
+                  
+                  <pre><div class='gc'>@@&nbsp;-475,17&nbsp;+477,20&nbsp;@@&nbsp;void&nbsp;nav_eight(uint8_t&nbsp;target,&nbsp;uint8_t&nbsp;c1,&nbsp;float&nbsp;radius)&nbsp;{</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='14'>
+                <td id="L3L475" class="line_numbers linkable-line-number">475</td>
+                <td id="L3R477" class="line_numbers linkable-line-number">477</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.c&position=14&line=477"></b>
+                  
+                  <pre><div class=''>&nbsp;&nbsp;&nbsp;float&nbsp;alt&nbsp;=&nbsp;waypoints[target].a;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='15'>
+                <td id="L3L476" class="line_numbers linkable-line-number">476</td>
+                <td id="L3R478" class="line_numbers linkable-line-number">478</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.c&position=15&line=478"></b>
+                  
+                  <pre><div class=''>&nbsp;&nbsp;&nbsp;waypoints[c1].a&nbsp;=&nbsp;alt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='16'>
+                <td id="L3L477" class="line_numbers linkable-line-number">477</td>
+                <td id="L3R479" class="line_numbers linkable-line-number">479</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.c&position=16&line=479"></b>
+                  
+                  <pre><div class=''>&nbsp;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='17'>
+                <td id="L3L477" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L3R480" class="line_numbers linkable-line-number">480</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.c&position=17&line=480"></b>
+                  
+                  <pre><div class='gi'>+</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='18'>
+                <td id="L3L478" class="line_numbers linkable-line-number">478</td>
+                <td id="L3R481" class="line_numbers linkable-line-number">481</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.c&position=18&line=481"></b>
+                  
+                  <pre><div class=''>&nbsp;&nbsp;&nbsp;float&nbsp;target_c1_x&nbsp;=&nbsp;waypoints[c1].x&nbsp;-&nbsp;waypoints[target].x;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='19'>
+                <td id="L3L479" class="line_numbers linkable-line-number">479</td>
+                <td id="L3R482" class="line_numbers linkable-line-number">482</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.c&position=19&line=482"></b>
+                  
+                  <pre><div class=''>&nbsp;&nbsp;&nbsp;float&nbsp;target_c1_y&nbsp;=&nbsp;waypoints[c1].y&nbsp;-&nbsp;waypoints[target].y;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='20'>
+                <td id="L3L480" class="line_numbers linkable-line-number">480</td>
+                <td id="L3R483" class="line_numbers linkable-line-number">483</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.c&position=20&line=483"></b>
+                  
+                  <pre><div class=''>&nbsp;&nbsp;&nbsp;float&nbsp;d&nbsp;=&nbsp;sqrt(target_c1_x*target_c1_x+target_c1_y*target_c1_y);</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='21'>
+                <td id="L3L481" class="line_numbers linkable-line-number">481</td>
+                <td id="L3R484" class="line_numbers linkable-line-number">484</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.c&position=21&line=484"></b>
+                  
+                  <pre><div class=''>&nbsp;&nbsp;&nbsp;d&nbsp;=&nbsp;Max(d,&nbsp;1.);&nbsp;/*&nbsp;To&nbsp;prevent&nbsp;a&nbsp;division&nbsp;by&nbsp;zero&nbsp;*/</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='22'>
+                <td id="L3L482" class="line_numbers linkable-line-number">482</td>
+                <td id="L3R485" class="line_numbers linkable-line-number">485</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.c&position=22&line=485"></b>
+                  
+                  <pre><div class=''>&nbsp;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='23'>
+                <td id="L3L482" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L3R486" class="line_numbers linkable-line-number">486</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.c&position=23&line=486"></b>
+                  
+                  <pre><div class='gi'>+//&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;float&nbsp;aShift&nbsp;=&nbsp;M_PI/2-acos(aradius/(d/2));</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='24'>
+                <td id="L3L482" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L3R487" class="line_numbers linkable-line-number">487</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.c&position=24&line=487"></b>
+                  
+                  <pre><div class='gi'>+&nbsp;&nbsp;&nbsp;&nbsp;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='25'>
+                <td id="L3L483" class="line_numbers linkable-line-number">483</td>
+                <td id="L3R488" class="line_numbers linkable-line-number">488</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.c&position=25&line=488"></b>
+                  
+                  <pre><div class=''>&nbsp;&nbsp;&nbsp;/*&nbsp;Unit&nbsp;vector&nbsp;from&nbsp;target&nbsp;to&nbsp;c1&nbsp;*/</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='26'>
+                <td id="L3L484" class="line_numbers linkable-line-number">484</td>
+                <td id="L3R489" class="line_numbers linkable-line-number">489</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.c&position=26&line=489"></b>
+                  
+                  <pre><div class=''>&nbsp;&nbsp;&nbsp;float&nbsp;u_x&nbsp;=&nbsp;target_c1_x&nbsp;/&nbsp;d;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='27'>
+                <td id="L3L485" class="line_numbers linkable-line-number">485</td>
+                <td id="L3R490" class="line_numbers linkable-line-number">490</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.c&position=27&line=490"></b>
+                  
+                  <pre><div class=''>&nbsp;&nbsp;&nbsp;float&nbsp;u_y&nbsp;=&nbsp;target_c1_y&nbsp;/&nbsp;d;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='28'>
+                <td id="L3L486" class="line_numbers linkable-line-number">486</td>
+                <td id="L3R491" class="line_numbers linkable-line-number">491</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.c&position=28&line=491"></b>
+                  
+                  <pre><div class=''>&nbsp;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='29'>
+                <td id="L3L487" class="line_numbers linkable-line-number">487</td>
+                <td id="L3R491" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.c&position=29&line=487"></b>
+                  
+                  <pre><div class='gd'>-&nbsp;&nbsp;/*&nbsp;Move&nbsp;[c1]&nbsp;closer&nbsp;if&nbsp;needed&nbsp;*/</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='30'>
+                <td id="L3L488" class="line_numbers linkable-line-number">488</td>
+                <td id="L3R491" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.c&position=30&line=488"></b>
+                  
+                  <pre><div class='gd'>-&nbsp;&nbsp;if&nbsp;(d&nbsp;&gt;&nbsp;2&nbsp;*&nbsp;aradius)&nbsp;{</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='31'>
+                <td id="L3L488" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L3R492" class="line_numbers linkable-line-number">492</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.c&position=31&line=492"></b>
+                  
+                  <pre><div class='gi'>+&nbsp;&nbsp;/*&nbsp;Move&nbsp;[c1]&nbsp;away&nbsp;if&nbsp;too&nbsp;close&nbsp;*/</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='32'>
+                <td id="L3L488" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L3R493" class="line_numbers linkable-line-number">493</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.c&position=32&line=493"></b>
+                  
+                  <pre><div class='gi'>+&nbsp;&nbsp;if&nbsp;(d&nbsp;&lt;&nbsp;2&nbsp;*&nbsp;aradius)&nbsp;{</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='33'>
+                <td id="L3L489" class="line_numbers linkable-line-number">489</td>
+                <td id="L3R494" class="line_numbers linkable-line-number">494</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.c&position=33&line=494"></b>
+                  
+                  <pre><div class=''>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d&nbsp;=&nbsp;2*aradius;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='34'>
+                <td id="L3L490" class="line_numbers linkable-line-number">490</td>
+                <td id="L3R495" class="line_numbers linkable-line-number">495</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.c&position=34&line=495"></b>
+                  
+                  <pre><div class=''>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;waypoints[c1].x&nbsp;=&nbsp;waypoints[target].x&nbsp;+&nbsp;d*u_x;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='35'>
+                <td id="L3L491" class="line_numbers linkable-line-number">491</td>
+                <td id="L3R496" class="line_numbers linkable-line-number">496</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.c&position=35&line=496"></b>
+                  
+                  <pre><div class=''>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;waypoints[c1].y&nbsp;=&nbsp;waypoints[target].y&nbsp;+&nbsp;d*u_y;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='36'>
+                <td id="L3L492" class="line_numbers linkable-line-number">...</td>
+                <td id="L3R497" class="line_numbers linkable-line-number">...</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.c&position=36&line=497"></b>
+                  
+                  <pre><div class='gc'>@@&nbsp;-493,12&nbsp;+498,12&nbsp;@@&nbsp;void&nbsp;nav_eight(uint8_t&nbsp;target,&nbsp;uint8_t&nbsp;c1,&nbsp;float&nbsp;radius)&nbsp;{</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='37'>
+                <td id="L3L493" class="line_numbers linkable-line-number">493</td>
+                <td id="L3R498" class="line_numbers linkable-line-number">498</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.c&position=37&line=498"></b>
+                  
+                  <pre><div class=''>&nbsp;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='38'>
+                <td id="L3L494" class="line_numbers linkable-line-number">494</td>
+                <td id="L3R499" class="line_numbers linkable-line-number">499</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.c&position=38&line=499"></b>
+                  
+                  <pre><div class=''>&nbsp;&nbsp;&nbsp;/*&nbsp;The&nbsp;other&nbsp;center&nbsp;*/</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='39'>
+                <td id="L3L495" class="line_numbers linkable-line-number">495</td>
+                <td id="L3R500" class="line_numbers linkable-line-number">500</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.c&position=39&line=500"></b>
+                  
+                  <pre><div class=''>&nbsp;&nbsp;&nbsp;struct&nbsp;point&nbsp;c2&nbsp;=&nbsp;{</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='40'>
+                <td id="L3L496" class="line_numbers linkable-line-number">496</td>
+                <td id="L3R500" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.c&position=40&line=496"></b>
+                  
+                  <pre><div class='gd'>-&nbsp;&nbsp;&nbsp;&nbsp;waypoints[target].x&nbsp;-&nbsp;d*u_x,</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='41'>
+                <td id="L3L497" class="line_numbers linkable-line-number">497</td>
+                <td id="L3R500" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.c&position=41&line=497"></b>
+                  
+                  <pre><div class='gd'>-&nbsp;&nbsp;&nbsp;&nbsp;waypoints[target].y&nbsp;-&nbsp;d*u_y,</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='42'>
+                <td id="L3L497" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L3R501" class="line_numbers linkable-line-number">501</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.c&position=42&line=501"></b>
+                  
+                  <pre><div class='gi'>+&nbsp;&nbsp;&nbsp;&nbsp;waypoints[target].x,</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='43'>
+                <td id="L3L497" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L3R502" class="line_numbers linkable-line-number">502</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.c&position=43&line=502"></b>
+                  
+                  <pre><div class='gi'>+&nbsp;&nbsp;&nbsp;&nbsp;waypoints[target].y,</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='44'>
+                <td id="L3L498" class="line_numbers linkable-line-number">498</td>
+                <td id="L3R503" class="line_numbers linkable-line-number">503</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.c&position=44&line=503"></b>
+                  
+                  <pre><div class=''>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alt&nbsp;};</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='45'>
+                <td id="L3L499" class="line_numbers linkable-line-number">499</td>
+                <td id="L3R504" class="line_numbers linkable-line-number">504</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.c&position=45&line=504"></b>
+                  
+                  <pre><div class=''>&nbsp;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='46'>
+                <td id="L3L500" class="line_numbers linkable-line-number">500</td>
+                <td id="L3R505" class="line_numbers linkable-line-number">505</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.c&position=46&line=505"></b>
+                  
+                  <pre><div class=''>&nbsp;&nbsp;&nbsp;struct&nbsp;point&nbsp;c1_in&nbsp;=&nbsp;{</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='47'>
+                <td id="L3L501" class="line_numbers linkable-line-number">501</td>
+                <td id="L3R505" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.c&position=47&line=501"></b>
+                  
+                  <pre><div class='gd'>-&nbsp;&nbsp;&nbsp;&nbsp;waypoints[c1].x&nbsp;+&nbsp;radius&nbsp;*&nbsp;<span class="x"></span>-u_y,</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='48'>
+                <td id="L3L501" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L3R506" class="line_numbers linkable-line-number">506</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.c&position=48&line=506"></b>
+                  
+                  <pre><div class='gi'>+&nbsp;&nbsp;&nbsp;&nbsp;waypoints[c1].x&nbsp;+&nbsp;radius&nbsp;*&nbsp;<span class="x">&nbsp;</span>-u_y,</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='49'>
+                <td id="L3L502" class="line_numbers linkable-line-number">502</td>
+                <td id="L3R507" class="line_numbers linkable-line-number">507</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.c&position=49&line=507"></b>
+                  
+                  <pre><div class=''>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;waypoints[c1].y&nbsp;+&nbsp;radius&nbsp;*&nbsp;u_x,</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='50'>
+                <td id="L3L503" class="line_numbers linkable-line-number">503</td>
+                <td id="L3R508" class="line_numbers linkable-line-number">508</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.c&position=50&line=508"></b>
+                  
+                  <pre><div class=''>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alt&nbsp;};</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='51'>
+                <td id="L3L504" class="line_numbers linkable-line-number">504</td>
+                <td id="L3R509" class="line_numbers linkable-line-number">509</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.c&position=51&line=509"></b>
+                  
+                  <pre><div class=''>&nbsp;&nbsp;&nbsp;struct&nbsp;point&nbsp;c1_out&nbsp;=&nbsp;{</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='52'>
+                <td id="L3L563" class="line_numbers linkable-line-number">...</td>
+                <td id="L3R568" class="line_numbers linkable-line-number">...</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.c&position=52&line=568"></b>
+                  
+                  <pre><div class='gc'>@@&nbsp;-564,6&nbsp;+569,7&nbsp;@@&nbsp;void&nbsp;nav_eight(uint8_t&nbsp;target,&nbsp;uint8_t&nbsp;c1,&nbsp;float&nbsp;radius)&nbsp;{</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='53'>
+                <td id="L3L564" class="line_numbers linkable-line-number">564</td>
+                <td id="L3R569" class="line_numbers linkable-line-number">569</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.c&position=53&line=569"></b>
+                  
+                  <pre><div class=''>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nav_route_xy(c2_out.x,&nbsp;c2_out.y,&nbsp;c1_in.x,&nbsp;c1_in.y);</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='54'>
+                <td id="L3L565" class="line_numbers linkable-line-number">565</td>
+                <td id="L3R570" class="line_numbers linkable-line-number">570</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.c&position=54&line=570"></b>
+                  
+                  <pre><div class=''>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(nav_approaching_xy(c1_in.x,&nbsp;c1_in.y,&nbsp;c2_out.x,&nbsp;c2_out.y,&nbsp;CARROT))&nbsp;{</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='55'>
+                <td id="L3L566" class="line_numbers linkable-line-number">566</td>
+                <td id="L3R571" class="line_numbers linkable-line-number">571</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.c&position=55&line=571"></b>
+                  
+                  <pre><div class=''>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;eight_status&nbsp;=&nbsp;C1;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='56'>
+                <td id="L3L566" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L3R572" class="line_numbers linkable-line-number">572</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.c&position=56&line=572"></b>
+                  
+                  <pre><div class='gi'>+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nav_eight_count&nbsp;++;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='57'>
+                <td id="L3L567" class="line_numbers linkable-line-number">567</td>
+                <td id="L3R573" class="line_numbers linkable-line-number">573</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.c&position=57&line=573"></b>
+                  
+                  <pre><div class=''>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;InitStage();</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='58'>
+                <td id="L3L568" class="line_numbers linkable-line-number">568</td>
+                <td id="L3R574" class="line_numbers linkable-line-number">574</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.c&position=58&line=574"></b>
+                  
+                  <pre><div class=''>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='59'>
+                <td id="L3L569" class="line_numbers linkable-line-number">569</td>
+                <td id="L3R575" class="line_numbers linkable-line-number">575</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.c&position=59&line=575"></b>
+                  
+                  <pre><div class=''>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return;</div></pre>
+                </td>
+              </tr>
+            
+          </table>
+        </div>
+      
+
+      <div class="file-comments-place-holder" data-path="sw/airborne/subsystems/nav.c"></div>
+    </div>
+  
+    
+    
+    <div id="diff-4" class="file">
+      <div class="meta" data-path="sw/airborne/subsystems/nav.h">
+        <div class="info">
+          <span class="icon"><img alt="Txt" height="16" src="https://d3nwyuy0nl342s.cloudfront.net/images/icons/txt.png" width="16" /></span>
+          sw/airborne/subsystems/nav.h
+          
+        </div>
+        <ul class="actions">
+          <li style='display:none'><label><input type="checkbox" checked="checked" class="show-inline-comments-toggle" /> show inline notes</label></li>
+          <li><a href="/Bruzzlee/paparazzi/blob/945f9d242905e19123d7821468936ab05859119d/sw/airborne/subsystems/nav.h">View file @ <code>945f9d2</code></a></li>
+        </ul>
+      </div>
+      
+        
+
+        <div class="data highlight"  >
+          <table cellpadding="0" cellspacing="0" width="100%">
+            
+              <tr data-position='0'>
+                <td id="L4L76" class="line_numbers linkable-line-number">...</td>
+                <td id="L4R76" class="line_numbers linkable-line-number">...</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.h&position=0&line=76"></b>
+                  
+                  <pre><div class='gc'>@@&nbsp;-77,6&nbsp;+77,7&nbsp;@@&nbsp;extern&nbsp;void&nbsp;fly_to_xy(float&nbsp;x,&nbsp;float&nbsp;y);</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='1'>
+                <td id="L4L77" class="line_numbers linkable-line-number">77</td>
+                <td id="L4R77" class="line_numbers linkable-line-number">77</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.h&position=1&line=77"></b>
+                  
+                  <pre><div class=''>&nbsp;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='2'>
+                <td id="L4L78" class="line_numbers linkable-line-number">78</td>
+                <td id="L4R78" class="line_numbers linkable-line-number">78</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.h&position=2&line=78"></b>
+                  
+                  <pre><div class=''>&nbsp;extern&nbsp;void&nbsp;nav_eight_init(&nbsp;void&nbsp;);</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='3'>
+                <td id="L4L79" class="line_numbers linkable-line-number">79</td>
+                <td id="L4R79" class="line_numbers linkable-line-number">79</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.h&position=3&line=79"></b>
+                  
+                  <pre><div class=''>&nbsp;extern&nbsp;void&nbsp;nav_eight(uint8_t,&nbsp;uint8_t,&nbsp;float);</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='4'>
+                <td id="L4L79" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L4R80" class="line_numbers linkable-line-number">80</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.h&position=4&line=80"></b>
+                  
+                  <pre><div class='gi'>+extern&nbsp;uint8_t&nbsp;nav_eight_count;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='5'>
+                <td id="L4L80" class="line_numbers linkable-line-number">80</td>
+                <td id="L4R81" class="line_numbers linkable-line-number">81</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.h&position=5&line=81"></b>
+                  
+                  <pre><div class=''>&nbsp;#define&nbsp;Eight(a,&nbsp;b,&nbsp;c)&nbsp;nav_eight((a),&nbsp;(b),&nbsp;(c))</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='6'>
+                <td id="L4L81" class="line_numbers linkable-line-number">81</td>
+                <td id="L4R82" class="line_numbers linkable-line-number">82</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.h&position=6&line=82"></b>
+                  
+                  <pre><div class=''>&nbsp;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='7'>
+                <td id="L4L82" class="line_numbers linkable-line-number">82</td>
+                <td id="L4R83" class="line_numbers linkable-line-number">83</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/airborne/subsystems/nav.h&position=7&line=83"></b>
+                  
+                  <pre><div class=''>&nbsp;extern&nbsp;void&nbsp;nav_oval_init(&nbsp;void&nbsp;);</div></pre>
+                </td>
+              </tr>
+            
+          </table>
+        </div>
+      
+
+      <div class="file-comments-place-holder" data-path="sw/airborne/subsystems/nav.h"></div>
+    </div>
+  
+    
+    
+    <div id="diff-5" class="file">
+      <div class="meta" data-path="sw/tools/gen_flight_plan.ml">
+        <div class="info">
+          <span class="icon"><img alt="Txt" height="16" src="https://d3nwyuy0nl342s.cloudfront.net/images/icons/txt.png" width="16" /></span>
+          sw/tools/gen_flight_plan.ml
+          
+        </div>
+        <ul class="actions">
+          <li style='display:none'><label><input type="checkbox" checked="checked" class="show-inline-comments-toggle" /> show inline notes</label></li>
+          <li><a href="/Bruzzlee/paparazzi/blob/945f9d242905e19123d7821468936ab05859119d/sw/tools/gen_flight_plan.ml">View file @ <code>945f9d2</code></a></li>
+        </ul>
+      </div>
+      
+        
+
+        <div class="data highlight"  >
+          <table cellpadding="0" cellspacing="0" width="100%">
+            
+              <tr data-position='0'>
+                <td id="L5L436" class="line_numbers linkable-line-number">...</td>
+                <td id="L5R436" class="line_numbers linkable-line-number">...</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/tools/gen_flight_plan.ml&position=0&line=436"></b>
+                  
+                  <pre><div class='gc'>@@&nbsp;-437,6&nbsp;+437,13&nbsp;@@&nbsp;let&nbsp;rec&nbsp;print_stage&nbsp;=&nbsp;fun&nbsp;index_of_waypoints&nbsp;x&nbsp;-&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='1'>
+                <td id="L5L437" class="line_numbers linkable-line-number">437</td>
+                <td id="L5R437" class="line_numbers linkable-line-number">437</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/tools/gen_flight_plan.ml&position=1&line=437"></b>
+                  
+                  <pre><div class=''>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;r&nbsp;=&nbsp;parsed_attrib&nbsp;&nbsp;x&nbsp;&quot;radius&quot;&nbsp;in</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='2'>
+                <td id="L5L438" class="line_numbers linkable-line-number">438</td>
+                <td id="L5R438" class="line_numbers linkable-line-number">438</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/tools/gen_flight_plan.ml&position=2&line=438"></b>
+                  
+                  <pre><div class=''>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;_vmode&nbsp;=&nbsp;output_vmode&nbsp;x&nbsp;center&nbsp;&quot;&quot;&nbsp;in</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='3'>
+                <td id="L5L439" class="line_numbers linkable-line-number">439</td>
+                <td id="L5R439" class="line_numbers linkable-line-number">439</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/tools/gen_flight_plan.ml&position=3&line=439"></b>
+                  
+                  <pre><div class=''>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lprintf&nbsp;&quot;Eight(%s,&nbsp;%s,&nbsp;%s);\n&quot;&nbsp;center&nbsp;turn_about&nbsp;r;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='4'>
+                <td id="L5L439" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L5R440" class="line_numbers linkable-line-number">440</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/tools/gen_flight_plan.ml&position=4&line=440"></b>
+                  
+                  <pre><div class='gi'>+&nbsp;&nbsp;&nbsp;&nbsp;begin</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='5'>
+                <td id="L5L439" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L5R441" class="line_numbers linkable-line-number">441</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/tools/gen_flight_plan.ml&position=5&line=441"></b>
+                  
+                  <pre><div class='gi'>+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='6'>
+                <td id="L5L439" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L5R442" class="line_numbers linkable-line-number">442</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/tools/gen_flight_plan.ml&position=6&line=442"></b>
+                  
+                  <pre><div class='gi'>+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;let&nbsp;c&nbsp;=&nbsp;parsed_attrib&nbsp;x&nbsp;&quot;until&quot;&nbsp;in</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='7'>
+                <td id="L5L439" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L5R443" class="line_numbers linkable-line-number">443</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/tools/gen_flight_plan.ml&position=7&line=443"></b>
+                  
+                  <pre><div class='gi'>+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lprintf&nbsp;&quot;if&nbsp;(%s)&nbsp;NextStageAndBreak();\n&quot;&nbsp;c</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='8'>
+                <td id="L5L439" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L5R444" class="line_numbers linkable-line-number">444</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/tools/gen_flight_plan.ml&position=8&line=444"></b>
+                  
+                  <pre><div class='gi'>+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;with</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='9'>
+                <td id="L5L439" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L5R445" class="line_numbers linkable-line-number">445</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/tools/gen_flight_plan.ml&position=9&line=445"></b>
+                  
+                  <pre><div class='gi'>+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ExtXml.Error&nbsp;_&nbsp;-&gt;&nbsp;()</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='10'>
+                <td id="L5L439" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L5R446" class="line_numbers linkable-line-number">446</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/tools/gen_flight_plan.ml&position=10&line=446"></b>
+                  
+                  <pre><div class='gi'>+&nbsp;&nbsp;&nbsp;&nbsp;end;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='11'>
+                <td id="L5L440" class="line_numbers linkable-line-number">440</td>
+                <td id="L5R447" class="line_numbers linkable-line-number">447</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/tools/gen_flight_plan.ml&position=11&line=447"></b>
+                  
+                  <pre><div class=''>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lprintf&nbsp;&quot;break;\n&quot;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='12'>
+                <td id="L5L441" class="line_numbers linkable-line-number">441</td>
+                <td id="L5R448" class="line_numbers linkable-line-number">448</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/tools/gen_flight_plan.ml&position=12&line=448"></b>
+                  
+                  <pre><div class=''>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&quot;oval&quot;&nbsp;-&gt;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='13'>
+                <td id="L5L442" class="line_numbers linkable-line-number">442</td>
+                <td id="L5R449" class="line_numbers linkable-line-number">449</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/tools/gen_flight_plan.ml&position=13&line=449"></b>
+                  
+                  <pre><div class=''>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;stage&nbsp;();</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='14'>
+                <td id="L5L750" class="line_numbers linkable-line-number">...</td>
+                <td id="L5R757" class="line_numbers linkable-line-number">...</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/tools/gen_flight_plan.ml&position=14&line=757"></b>
+                  
+                  <pre><div class='gc'>@@&nbsp;-751,8&nbsp;+758,8&nbsp;@@&nbsp;let&nbsp;()&nbsp;=</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='15'>
+                <td id="L5L751" class="line_numbers linkable-line-number">751</td>
+                <td id="L5R758" class="line_numbers linkable-line-number">758</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/tools/gen_flight_plan.ml&position=15&line=758"></b>
+                  
+                  <pre><div class=''>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Xml2h.define&nbsp;&quot;NAV_UTM_ZONE0&quot;&nbsp;(sprintf&nbsp;&quot;%d&quot;&nbsp;utm0.utm_zone);</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='16'>
+                <td id="L5L752" class="line_numbers linkable-line-number">752</td>
+                <td id="L5R759" class="line_numbers linkable-line-number">759</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/tools/gen_flight_plan.ml&position=16&line=759"></b>
+                  
+                  <pre><div class=''>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Xml2h.define&nbsp;&quot;NAV_LAT0&quot;&nbsp;(sprintf&nbsp;&quot;%d&nbsp;/*&nbsp;1e7deg&nbsp;*/&quot;&nbsp;(convert_angle&nbsp;wgs84.posn_lat));</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='17'>
+                <td id="L5L753" class="line_numbers linkable-line-number">753</td>
+                <td id="L5R760" class="line_numbers linkable-line-number">760</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/tools/gen_flight_plan.ml&position=17&line=760"></b>
+                  
+                  <pre><div class=''>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Xml2h.define&nbsp;&quot;NAV_LON0&quot;&nbsp;(sprintf&nbsp;&quot;%d&nbsp;/*&nbsp;1e7deg&nbsp;*/&quot;&nbsp;(convert_angle&nbsp;wgs84.posn_long));</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='18'>
+                <td id="L5L754" class="line_numbers linkable-line-number">754</td>
+                <td id="L5R760" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/tools/gen_flight_plan.ml&position=18&line=754"></b>
+                  
+                  <pre><div class='gd'>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Xml2h.define&nbsp;&quot;NAV_ALT0&quot;&nbsp;(sprintf&nbsp;&quot;%.0f&nbsp;/*&nbsp;cm&nbsp;from&nbsp;msl&nbsp;*/&quot;&nbsp;(100.&nbsp;*.&nbsp;!ground_alt));</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='19'>
+                <td id="L5L755" class="line_numbers linkable-line-number">755</td>
+                <td id="L5R760" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/tools/gen_flight_plan.ml&position=19&line=755"></b>
+                  
+                  <pre><div class='gd'>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Xml2h.define&nbsp;&quot;NAV_HMSL0&quot;&nbsp;(sprintf&nbsp;&quot;%.0f&nbsp;/*&nbsp;cm,&nbsp;msl&nbsp;from&nbsp;ellipsoid&nbsp;(EGM96)&nbsp;*/&quot;&nbsp;(100.&nbsp;*.&nbsp;Egm96.of_wgs84&nbsp;wgs84));</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='20'>
+                <td id="L5L755" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L5R761" class="line_numbers linkable-line-number">761</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/tools/gen_flight_plan.ml&position=20&line=761"></b>
+                  
+                  <pre><div class='gi'>+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Xml2h.define&nbsp;&quot;NAV_ALT0&quot;&nbsp;(sprintf&nbsp;&quot;%.0f&nbsp;/*&nbsp;mm&nbsp;above&nbsp;msl&nbsp;*/&quot;&nbsp;(1000.&nbsp;*.&nbsp;!ground_alt));</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='21'>
+                <td id="L5L755" class="line_numbers linkable-line-number">&nbsp;</td>
+                <td id="L5R762" class="line_numbers linkable-line-number">762</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/tools/gen_flight_plan.ml&position=21&line=762"></b>
+                  
+                  <pre><div class='gi'>+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Xml2h.define&nbsp;&quot;NAV_MSL0&quot;&nbsp;(sprintf&nbsp;&quot;%.0f&nbsp;/*&nbsp;mm,&nbsp;EGM96&nbsp;geoid-height&nbsp;(msl)&nbsp;over&nbsp;ellipsoid&nbsp;*/&quot;&nbsp;(1000.&nbsp;*.&nbsp;Egm96.of_wgs84&nbsp;wgs84));</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='22'>
+                <td id="L5L756" class="line_numbers linkable-line-number">756</td>
+                <td id="L5R763" class="line_numbers linkable-line-number">763</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/tools/gen_flight_plan.ml&position=22&line=763"></b>
+                  
+                  <pre><div class=''>&nbsp;</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='23'>
+                <td id="L5L757" class="line_numbers linkable-line-number">757</td>
+                <td id="L5R764" class="line_numbers linkable-line-number">764</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/tools/gen_flight_plan.ml&position=23&line=764"></b>
+                  
+                  <pre><div class=''>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Xml2h.define&nbsp;&quot;QFU&quot;&nbsp;(sprintf&nbsp;&quot;%.1f&quot;&nbsp;qfu);</div></pre>
+                </td>
+              </tr>
+            
+              <tr data-position='24'>
+                <td id="L5L758" class="line_numbers linkable-line-number">758</td>
+                <td id="L5R765" class="line_numbers linkable-line-number">765</td>
+                <td width="100%">
+                  
+                    <b class="add-bubble" remote="/Bruzzlee/paparazzi/commit_comment/form?commit_id=945f9d242905e19123d7821468936ab05859119d&path=sw/tools/gen_flight_plan.ml&position=24&line=765"></b>
+                  
+                  <pre><div class=''>&nbsp;</div></pre>
+                </td>
+              </tr>
+            
+          </table>
+        </div>
+      
+
+      <div class="file-comments-place-holder" data-path="sw/tools/gen_flight_plan.ml"></div>
+    </div>
+  
+</div>
+
+  
+
+
+<div id="all_commit_comments">
+
+  
+
+  
+  
+  <h2>
+    0 notes
+    on commit <code>945f9d2</code>
+    
+    <span class="toggle" id="inline_comments_toggle"><label><input type="checkbox">Show line notes below</label></span>
+  </h2>
+  <div id="comments" class="new-comments only-commit-comments comment-holder">
+    
+  </div>
+
+  
+    Please <a href="/login?return_to=%2FBruzzlee%2Fpaparazzi%2Fcommit%2F945f9d242905e19123d7821468936ab05859119d" rel="nofollow">log in</a> to comment.
+  
+</div>
+
+
+
+
+<!-- COMMENTS -->
+<div id='diff-comment-data' style='display:none'>
+  
+</div>
+
+
+    </div>
+  
+      
+    </div>
+
+    <div id="footer" class="clearfix">
+      <div class="site">
+        
+          <div class="sponsor">
+            <a href="http://www.rackspace.com" class="logo">
+              <img alt="Dedicated Server" height="36" src="https://d3nwyuy0nl342s.cloudfront.net/images/modules/footer/rackspace_logo.png?v2" width="38" />
+            </a>
+            Powered by the <a href="http://www.rackspace.com ">Dedicated
+            Servers</a> and<br/> <a href="http://www.rackspacecloud.com">Cloud
+            Computing</a> of Rackspace Hosting<span>&reg;</span>
+          </div>
+        
+
+        <ul class="links">
+          
+            <li class="blog"><a href="https://github.com/blog">Blog</a></li>
+            <li><a href="https://github.com/about">About</a></li>
+            <li><a href="https://github.com/contact">Contact &amp; Support</a></li>
+            <li><a href="https://github.com/training">Training</a></li>
+            <li><a href="http://jobs.github.com">Job Board</a></li>
+            <li><a href="http://shop.github.com">Shop</a></li>
+            <li><a href="http://developer.github.com">API</a></li>
+            <li><a href="http://status.github.com">Status</a></li>
+          
+        </ul>
+        <ul class="sosueme">
+          <li class="main">&copy; 2011 <span id="_rrt" title="0.04946s from fe5.rs.github.com">GitHub</span> Inc. All rights reserved.</li>
+          <li><a href="/site/terms">Terms of Service</a></li>
+          <li><a href="/site/privacy">Privacy</a></li>
+          <li><a href="https://github.com/security">Security</a></li>
+        </ul>
+      </div>
+    </div><!-- /#footer -->
+
+    <script>window._auth_token = "ae54b1c043d2c2b06fc6532c21d1ea3871323e5f"</script>
+    
+
+<div id="keyboard_shortcuts_pane" class="instapaper_ignore readability-extra" style="display:none">
+  <h2>Keyboard Shortcuts <small><a href="#" class="js-see-all-keyboard-shortcuts">(see all)</a></small></h2>
+
+  <div class="columns threecols">
+    <div class="column first">
+      <h3>Site wide shortcuts</h3>
+      <dl class="keyboard-mappings">
+        <dt>s</dt>
+        <dd>Focus site search</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>?</dt>
+        <dd>Bring up this help dialog</dd>
+      </dl>
+    </div><!-- /.column.first -->
+
+    <div class="column middle" style='display:none'>
+      <h3>Commit list</h3>
+      <dl class="keyboard-mappings">
+        <dt>j</dt>
+        <dd>Move selected down</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>k</dt>
+        <dd>Move selected up</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>t</dt>
+        <dd>Open tree</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>p</dt>
+        <dd>Open parent</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>c <em>or</em> o <em>or</em> enter</dt>
+        <dd>Open commit</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>y</dt>
+        <dd>Expand URL to its canonical form</dd>
+      </dl>
+    </div><!-- /.column.first -->
+
+    <div class="column last" style='display:none'>
+      <h3>Pull request list</h3>
+      <dl class="keyboard-mappings">
+        <dt>j</dt>
+        <dd>Move selected down</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>k</dt>
+        <dd>Move selected up</dd>
+      </dl>
+      <dl class="keyboard-mappings">
+        <dt>o <em>or</em> enter</dt>
+        <dd>Open issue</dd>
+      </dl>
+    </div><!-- /.columns.last -->
+
+  </div><!-- /.columns.equacols -->
+
+  <div style='display:none'>
+    <div class="rule"></div>
+
+    <h3>Issues</h3>
+
+    <div class="columns threecols">
+      <div class="column first">
+        <dl class="keyboard-mappings">
+          <dt>j</dt>
+          <dd>Move selected down</dd>
+        </dl>
+        <dl class="keyboard-mappings">
+          <dt>k</dt>
+          <dd>Move selected up</dd>
+        </dl>
+        <dl class="keyboard-mappings">
+          <dt>x</dt>
+          <dd>Toggle select target</dd>
+        </dl>
+        <dl class="keyboard-mappings">
+          <dt>o <em>or</em> enter</dt>
+          <dd>Open issue</dd>
+        </dl>
+      </div><!-- /.column.first -->
+      <div class="column middle">
+        <dl class="keyboard-mappings">
+          <dt>I</dt>
+          <dd>Mark selected as read</dd>
+        </dl>
+        <dl class="keyboard-mappings">
+          <dt>U</dt>
+          <dd>Mark selected as unread</dd>
+        </dl>
+        <dl class="keyboard-mappings">
+          <dt>e</dt>
+          <dd>Close selected</dd>
+        </dl>
+        <dl class="keyboard-mappings">
+          <dt>y</dt>
+          <dd>Remove selected from view</dd>
+        </dl>
+      </div><!-- /.column.middle -->
+      <div class="column last">
+        <dl class="keyboard-mappings">
+          <dt>c</dt>
+          <dd>Create issue</dd>
+        </dl>
+        <dl class="keyboard-mappings">
+          <dt>l</dt>
+          <dd>Create label</dd>
+        </dl>
+        <dl class="keyboard-mappings">
+          <dt>i</dt>
+          <dd>Back to inbox</dd>
+        </dl>
+        <dl class="keyboard-mappings">
+          <dt>u</dt>
+          <dd>Back to issues</dd>
+        </dl>
+        <dl class="keyboard-mappings">
+          <dt>/</dt>
+          <dd>Focus issues search</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+
+  <div style='display:none'>
+    <div class="rule"></div>
+
+    <h3>Network Graph</h3>
+    <div class="columns equacols">
+      <div class="column first">
+        <dl class="keyboard-mappings">
+          <dt><span class="badmono">←</span> <em>or</em> h</dt>
+          <dd>Scroll left</dd>
+        </dl>
+        <dl class="keyboard-mappings">
+          <dt><span class="badmono">→</span> <em>or</em> l</dt>
+          <dd>Scroll right</dd>
+        </dl>
+        <dl class="keyboard-mappings">
+          <dt><span class="badmono">↑</span> <em>or</em> k</dt>
+          <dd>Scroll up</dd>
+        </dl>
+        <dl class="keyboard-mappings">
+          <dt><span class="badmono">↓</span> <em>or</em> j</dt>
+          <dd>Scroll down</dd>
+        </dl>
+        <dl class="keyboard-mappings">
+          <dt>t</dt>
+          <dd>Toggle visibility of head labels</dd>
+        </dl>
+      </div><!-- /.column.first -->
+      <div class="column last">
+        <dl class="keyboard-mappings">
+          <dt>shift <span class="badmono">←</span> <em>or</em> shift h</dt>
+          <dd>Scroll all the way left</dd>
+        </dl>
+        <dl class="keyboard-mappings">
+          <dt>shift <span class="badmono">→</span> <em>or</em> shift l</dt>
+          <dd>Scroll all the way right</dd>
+        </dl>
+        <dl class="keyboard-mappings">
+          <dt>shift <span class="badmono">↑</span> <em>or</em> shift k</dt>
+          <dd>Scroll all the way up</dd>
+        </dl>
+        <dl class="keyboard-mappings">
+          <dt>shift <span class="badmono">↓</span> <em>or</em> shift j</dt>
+          <dd>Scroll all the way down</dd>
+        </dl>
+      </div><!-- /.column.last -->
+    </div>
+  </div>
+
+  <div style='display:none'>
+    <div class="rule"></div>
+    <div class="columns threecols">
+      <div class="column first" style='display:none'>
+        <h3>Source Code Browsing</h3>
+        <dl class="keyboard-mappings">
+          <dt>t</dt>
+          <dd>Activates the file finder</dd>
+        </dl>
+        <dl class="keyboard-mappings">
+          <dt>l</dt>
+          <dd>Jump to line</dd>
+        </dl>
+        <dl class="keyboard-mappings">
+          <dt>y</dt>
+          <dd>Expand URL to its canonical form</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div id="markdown-help" class="instapaper_ignore readability-extra">
+  <h2>Markdown Cheat Sheet</h2>
+
+  <div class="cheatsheet-content">
+
+  <div class="mod">
+    <div class="col">
+      <h3>Format Text</h3>
+      <p>Headers</p>
+      <pre>
+# This is an &lt;h1&gt; tag
+## This is an &lt;h2&gt; tag
+###### This is an &lt;h6&gt; tag</pre>
+     <p>Text styles</p>
+     <pre>
+*This text will be italic*
+_This will also be italic_
+**This text will be bold**
+__This will also be bold__
+
+*You **can** combine them*
+</pre>
+    </div>
+    <div class="col">
+      <h3>Lists</h3>
+      <p>Unordered</p>
+      <pre>
+* Item 1
+* Item 2
+  * Item 2a
+  * Item 2b</pre>
+     <p>Ordered</p>
+     <pre>
+1. Item 1
+2. Item 2
+3. Item 3
+   * Item 3a
+   * Item 3b</pre>
+    </div>
+    <div class="col">
+      <h3>Miscellaneous</h3>
+      <p>Images</p>
+      <pre>
+![GitHub Logo](/images/logo.png)
+Format: ![Alt Text](url)
+</pre>
+     <p>Links</p>
+     <pre>
+http://github.com - automatic!
+[GitHub](http://github.com)</pre>
+<p>Blockquotes</p>
+     <pre>
+As Kanye West said:
+> We're living the future so
+> the present is our past.
+</pre>
+    </div>
+  </div>
+  <div class="rule"></div>
+
+  <h3>Code Examples in Markdown</h3>
+  <div class="col">
+      <p>Syntax highlighting with <a href="http://github.github.com/github-flavored-markdown/" title="GitHub Flavored Markdown">GFM</a></p>
+      <pre>
+```javascript
+function fancyAlert(arg) {
+  if(arg) {
+    $.facebox({div:'#foo'})
+  }
+}
+```</pre>
+    </div>
+    <div class="col">
+      <p>Or, indent your code 4 spaces</p>
+      <pre>
+Here is a Python code example
+without syntax highlighting:
+
+    def foo:
+      if not bar:
+        return true</pre>
+    </div>
+    <div class="col">
+      <p>Inline code for comments</p>
+      <pre>
+I think you should use an
+`&lt;addr&gt;` element here instead.</pre>
+    </div>
+  </div>
+
+  </div>
+</div>
+    
+
+    <!--[if IE 8]>
+    <script type="text/javascript" charset="utf-8">
+      $(document.body).addClass("ie8")
+    </script>
+    <![endif]-->
+
+    <!--[if IE 7]>
+    <script type="text/javascript" charset="utf-8">
+      $(document.body).addClass("ie7")
+    </script>
+    <![endif]-->
+
+    
+    
+    
+    <script>(function(){var d=document;var e=d.createElement("script");e.async=true;e.src="https://d1ros97qkrwjf5.cloudfront.net/10/eum/rum.js	";var s=d.getElementsByTagName("script")[0];s.parentNode.insertBefore(e,s);})();NREUMQ.push(["nrf2","beacon-3.newrelic.com","2f94e4d8c2",64799,"dw1bEBZcX1RWRhoEClsAGhYFRA==",0.0,341,new Date().getTime()])</script>
+  </body>
+</html>
+

@@ -1,0 +1,125 @@
+   1              		.file	"gyro.c"
+   2              		.section	.text.gyro_init,"ax",%progbits
+   3              		.align	2
+   4              		.global	gyro_init
+   6              	gyro_init:
+   7              		@ Function supports interworking.
+   8              		@ args = 0, pretend = 0, frame = 0
+   9              		@ frame_needed = 1, uses_anonymous_args = 0
+  10 0000 0DC0A0E1 		mov	ip, sp
+  11 0004 00D82DE9 		stmfd	sp!, {fp, ip, lr, pc}
+  12 0008 0600A0E3 		mov	r0, #6
+  13 000c 04B04CE2 		sub	fp, ip, #4
+  14 0010 0C109FE5 		ldr	r1, .L2
+  15 0014 1020A0E3 		mov	r2, #16
+  16 0018 FEFFFFEB 		bl	adc_buf_channel
+  17 001c 00689DE8 		ldmfd	sp, {fp, sp, lr}
+  18 0020 1EFF2FE1 		bx	lr
+  19              	.L3:
+  20              		.align	2
+  21              	.L2:
+  22 0024 00000000 		.word	buf_roll
+  24              		.global	__udivsi3
+  25              		.global	__floatsidf
+  26              		.global	__muldf3
+  27              		.global	__divdf3
+  28              		.global	__truncdfsf2
+  29              		.section	.text.gyro_update,"ax",%progbits
+  30              		.align	2
+  31              		.global	gyro_update
+  33              	gyro_update:
+  34              		@ Function supports interworking.
+  35              		@ args = 0, pretend = 0, frame = 0
+  36              		@ frame_needed = 1, uses_anonymous_args = 0
+  37 0000 0DC0A0E1 		mov	ip, sp
+  38 0004 00D82DE9 		stmfd	sp!, {fp, ip, lr, pc}
+  39 0008 A4309FE5 		ldr	r3, .L5+40
+  40 000c 04B04CE2 		sub	fp, ip, #4
+  41 0010 4510D3E5 		ldrb	r1, [r3, #69]	@ zero_extendqisi2
+  42 0014 000093E5 		ldr	r0, [r3, #0]
+  43 0018 FEFFFFEB 		bl	__udivsi3
+  44 001c 94309FE5 		ldr	r3, .L5+44
+  45 0020 7D0F40E2 		sub	r0, r0, #500
+  46 0024 B000C3E1 		strh	r0, [r3, #0]	@ movhi 
+  47 0028 F000D3E1 		ldrsh	r0, [r3, #0]
+  48 002c FEFFFFEB 		bl	__floatsidf
+  49 0030 54208FE2 		adr	r2, .L5
+  50 0034 0C0092E8 		ldmia	r2, {r2-r3}
+  51 0038 FEFFFFEB 		bl	__muldf3
+  52 003c 50208FE2 		adr	r2, .L5+8
+  53 0040 0C0092E8 		ldmia	r2, {r2-r3}
+  54 0044 FEFFFFEB 		bl	__muldf3
+  55 0048 4C208FE2 		adr	r2, .L5+16
+  56 004c 0C0092E8 		ldmia	r2, {r2-r3}
+  57 0050 FEFFFFEB 		bl	__muldf3
+  58 0054 48208FE2 		adr	r2, .L5+24
+  59 0058 0C0092E8 		ldmia	r2, {r2-r3}
+  60 005c FEFFFFEB 		bl	__divdf3
+  61 0060 44208FE2 		adr	r2, .L5+32
+  62 0064 0C0092E8 		ldmia	r2, {r2-r3}
+  63 0068 FEFFFFEB 		bl	__muldf3
+  64 006c FEFFFFEB 		bl	__truncdfsf2
+  65 0070 44309FE5 		ldr	r3, .L5+48
+  66 0074 000083E5 		str	r0, [r3, #0]	@ float
+  67 0078 40309FE5 		ldr	r3, .L5+52
+  68 007c 0020A0E3 		mov	r2, #0
+  69 0080 002083E5 		str	r2, [r3, #0]	@ float
+  70 0084 00689DE8 		ldmfd	sp, {fp, sp, lr}
+  71 0088 1EFF2FE1 		bx	lr
+  72              	.L6:
+  73              		.align	2
+  74              	.L5:
+  75 008c 66660A40 		.word	1074423398
+  76 0090 66666666 		.word	1717986918
+  77 0094 00408F40 		.word	1083129856
+  78 0098 00000000 		.word	0
+  79 009c 0000503F 		.word	1062207488
+  80 00a0 00000000 		.word	0
+  81 00a4 E1E10940 		.word	1074389473
+  82 00a8 E2E1E1E1 		.word	-505290270
+  83 00ac 46DF913F 		.word	1066524486
+  84 00b0 399D52A2 		.word	-1571644103
+  85 00b4 00000000 		.word	buf_roll
+  86 00b8 00000000 		.word	roll_rate_adc
+  87 00bc 00000000 		.word	estimator_p
+  88 00c0 00000000 		.word	estimator_q
+  90              		.global	roll_rate_adc
+  91              		.section	.bss.roll_rate_adc,"aw",%nobits
+  92              		.align	1
+  95              	roll_rate_adc:
+  96 0000 0000     		.space	2
+  97              		.global	temp_comp
+  98              		.section	.bss.temp_comp,"aw",%nobits
+  99              		.align	2
+ 102              	temp_comp:
+ 103 0000 00000000 		.space	4
+ 104              		.section	.bss.buf_roll,"aw",%nobits
+ 105              		.align	2
+ 108              	buf_roll:
+ 109 0000 00000000 		.space	72
+ 109      00000000 
+ 109      00000000 
+ 109      00000000 
+ 109      00000000 
+ 110              		.ident	"GCC: (GNU) 3.4.4"
+DEFINED SYMBOLS
+                            *ABS*:00000000 gyro.c
+     /tmp/ccoFUfNp.s:6      .text.gyro_init:00000000 gyro_init
+     /tmp/ccoFUfNp.s:10     .text.gyro_init:00000000 $a
+     /tmp/ccoFUfNp.s:22     .text.gyro_init:00000024 $d
+     /tmp/ccoFUfNp.s:108    .bss.buf_roll:00000000 buf_roll
+     /tmp/ccoFUfNp.s:33     .text.gyro_update:00000000 gyro_update
+     /tmp/ccoFUfNp.s:37     .text.gyro_update:00000000 $a
+     /tmp/ccoFUfNp.s:75     .text.gyro_update:0000008c $d
+     /tmp/ccoFUfNp.s:95     .bss.roll_rate_adc:00000000 roll_rate_adc
+     /tmp/ccoFUfNp.s:102    .bss.temp_comp:00000000 temp_comp
+
+UNDEFINED SYMBOLS
+adc_buf_channel
+__udivsi3
+__floatsidf
+__muldf3
+__divdf3
+__truncdfsf2
+estimator_p
+estimator_q

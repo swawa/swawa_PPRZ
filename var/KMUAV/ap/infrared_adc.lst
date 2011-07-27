@@ -1,0 +1,197 @@
+   1              		.file	"infrared_adc.c"
+   2              		.section	.text.infrared_event,"ax",%progbits
+   3              		.align	2
+   4              		.global	infrared_event
+   6              	infrared_event:
+   7              		@ Function supports interworking.
+   8              		@ args = 0, pretend = 0, frame = 0
+   9              		@ frame_needed = 0, uses_anonymous_args = 0
+  10              		@ link register save eliminated.
+  11              		@ lr needed for prologue
+  12 0000 1EFF2FE1 		bx	lr
+  14              		.section	.text.infrared_adc_init,"ax",%progbits
+  15              		.align	2
+  16              		.global	infrared_adc_init
+  18              	infrared_adc_init:
+  19              		@ Function supports interworking.
+  20              		@ args = 0, pretend = 0, frame = 0
+  21              		@ frame_needed = 1, uses_anonymous_args = 0
+  22 0000 0DC0A0E1 		mov	ip, sp
+  23 0004 00D82DE9 		stmfd	sp!, {fp, ip, lr, pc}
+  24 0008 0F00A0E3 		mov	r0, #15
+  25 000c 04B04CE2 		sub	fp, ip, #4
+  26 0010 30109FE5 		ldr	r1, .L3
+  27 0014 1020A0E3 		mov	r2, #16
+  28 0018 FEFFFFEB 		bl	adc_buf_channel
+  29 001c 0400A0E3 		mov	r0, #4
+  30 0020 24109FE5 		ldr	r1, .L3+4
+  31 0024 1020A0E3 		mov	r2, #16
+  32 0028 FEFFFFEB 		bl	adc_buf_channel
+  33 002c 0E00A0E3 		mov	r0, #14
+  34 0030 18109FE5 		ldr	r1, .L3+8
+  35 0034 1020A0E3 		mov	r2, #16
+  36 0038 FEFFFFEB 		bl	adc_buf_channel
+  37 003c FEFFFFEB 		bl	infrared_struct_init
+  38 0040 00689DE8 		ldmfd	sp, {fp, sp, lr}
+  39 0044 1EFF2FE1 		bx	lr
+  40              	.L4:
+  41              		.align	2
+  42              	.L3:
+  43 0048 00000000 		.word	buf_ir1
+  44 004c 00000000 		.word	buf_ir2
+  45 0050 00000000 		.word	buf_ir3
+  47              		.section	.text.infrared_init,"ax",%progbits
+  48              		.align	2
+  49              		.global	infrared_init
+  51              	infrared_init:
+  52              		@ Function supports interworking.
+  53              		@ args = 0, pretend = 0, frame = 0
+  54              		@ frame_needed = 0, uses_anonymous_args = 0
+  55              		@ link register save eliminated.
+  56              		@ lr needed for prologue
+  57 0000 FEFFFFEA 		b	infrared_adc_init
+  59              		.global	__udivsi3
+  60              		.global	__floatsisf
+  61              		.global	__mulsf3
+  62              		.global	__fixsfsi
+  63              		.section	.text.infrared_adc_update,"ax",%progbits
+  64              		.align	2
+  65              		.global	infrared_adc_update
+  67              	infrared_adc_update:
+  68              		@ Function supports interworking.
+  69              		@ args = 0, pretend = 0, frame = 0
+  70              		@ frame_needed = 1, uses_anonymous_args = 0
+  71 0000 0DC0A0E1 		mov	ip, sp
+  72 0004 70D82DE9 		stmfd	sp!, {r4, r5, r6, fp, ip, lr, pc}
+  73 0008 D4309FE5 		ldr	r3, .L7
+  74 000c 04B04CE2 		sub	fp, ip, #4
+  75 0010 4510D3E5 		ldrb	r1, [r3, #69]	@ zero_extendqisi2
+  76 0014 000093E5 		ldr	r0, [r3, #0]
+  77 0018 FEFFFFEB 		bl	__udivsi3
+  78 001c C4509FE5 		ldr	r5, .L7+4
+  79 0020 C4309FE5 		ldr	r3, .L7+8
+  80 0024 022C40E2 		sub	r2, r0, #512
+  81 0028 4510D3E5 		ldrb	r1, [r3, #69]	@ zero_extendqisi2
+  82 002c B020C5E1 		strh	r2, [r5, #0]	@ movhi 
+  83 0030 000093E5 		ldr	r0, [r3, #0]
+  84 0034 FEFFFFEB 		bl	__udivsi3
+  85 0038 B0309FE5 		ldr	r3, .L7+12
+  86 003c 022C40E2 		sub	r2, r0, #512
+  87 0040 B220C5E1 		strh	r2, [r5, #2]	@ movhi 
+  88 0044 4510D3E5 		ldrb	r1, [r3, #69]	@ zero_extendqisi2
+  89 0048 000093E5 		ldr	r0, [r3, #0]
+  90 004c FEFFFFEB 		bl	__udivsi3
+  91 0050 F230D5E1 		ldrsh	r3, [r5, #2]
+  92 0054 98409FE5 		ldr	r4, .L7+16
+  93 0058 003063E2 		rsb	r3, r3, #0
+  94 005c B230C4E1 		strh	r3, [r4, #2]	@ movhi 
+  95 0060 B030D5E1 		ldrh	r3, [r5, #0]
+  96 0064 020C40E2 		sub	r0, r0, #512
+  97 0068 B400C5E1 		strh	r0, [r5, #4]	@ movhi 
+  98 006c B030C4E1 		strh	r3, [r4, #0]	@ movhi 
+  99 0070 F430D5E1 		ldrsh	r3, [r5, #4]
+ 100 0074 F060D4E1 		ldrsh	r6, [r4, #0]
+ 101 0078 F250D4E1 		ldrsh	r5, [r4, #2]
+ 102 007c 003063E2 		rsb	r3, r3, #0
+ 103 0080 050086E0 		add	r0, r6, r5
+ 104 0084 B430C4E1 		strh	r3, [r4, #4]	@ movhi 
+ 105 0088 FEFFFFEB 		bl	__floatsisf
+ 106 008c 0010A0E1 		mov	r1, r0
+ 107 0090 1C0094E5 		ldr	r0, [r4, #28]	@ float
+ 108 0094 FEFFFFEB 		bl	__mulsf3
+ 109 0098 FEFFFFEB 		bl	__fixsfsi
+ 110 009c B401C4E1 		strh	r0, [r4, #20]	@ movhi 
+ 111 00a0 050066E0 		rsb	r0, r6, r5
+ 112 00a4 FEFFFFEB 		bl	__floatsisf
+ 113 00a8 0010A0E1 		mov	r1, r0
+ 114 00ac 200094E5 		ldr	r0, [r4, #32]	@ float
+ 115 00b0 FEFFFFEB 		bl	__mulsf3
+ 116 00b4 FEFFFFEB 		bl	__fixsfsi
+ 117 00b8 B601C4E1 		strh	r0, [r4, #22]	@ movhi 
+ 118 00bc F400D4E1 		ldrsh	r0, [r4, #4]
+ 119 00c0 FEFFFFEB 		bl	__floatsisf
+ 120 00c4 0010A0E1 		mov	r1, r0
+ 121 00c8 240094E5 		ldr	r0, [r4, #36]	@ float
+ 122 00cc FEFFFFEB 		bl	__mulsf3
+ 123 00d0 FEFFFFEB 		bl	__fixsfsi
+ 124 00d4 B801C4E1 		strh	r0, [r4, #24]	@ movhi 
+ 125 00d8 FEFFFFEB 		bl	estimator_update_state_infrared
+ 126 00dc 70689DE8 		ldmfd	sp, {r4, r5, r6, fp, sp, lr}
+ 127 00e0 1EFF2FE1 		bx	lr
+ 128              	.L8:
+ 129              		.align	2
+ 130              	.L7:
+ 131 00e4 00000000 		.word	buf_ir1
+ 132 00e8 00000000 		.word	ir_adc
+ 133 00ec 00000000 		.word	buf_ir2
+ 134 00f0 00000000 		.word	buf_ir3
+ 135 00f4 00000000 		.word	infrared
+ 137              		.section	.text.infrared_update,"ax",%progbits
+ 138              		.align	2
+ 139              		.global	infrared_update
+ 141              	infrared_update:
+ 142              		@ Function supports interworking.
+ 143              		@ args = 0, pretend = 0, frame = 0
+ 144              		@ frame_needed = 0, uses_anonymous_args = 0
+ 145              		@ link register save eliminated.
+ 146              		@ lr needed for prologue
+ 147 0000 FEFFFFEA 		b	infrared_adc_update
+ 149              		.global	ir_adc
+ 150              		.section	.bss.ir_adc,"aw",%nobits
+ 151              		.align	2
+ 154              	ir_adc:
+ 155 0000 00000000 		.space	8
+ 155      00000000 
+ 156              		.section	.bss.buf_ir1,"aw",%nobits
+ 157              		.align	2
+ 160              	buf_ir1:
+ 161 0000 00000000 		.space	72
+ 161      00000000 
+ 161      00000000 
+ 161      00000000 
+ 161      00000000 
+ 162              		.section	.bss.buf_ir2,"aw",%nobits
+ 163              		.align	2
+ 166              	buf_ir2:
+ 167 0000 00000000 		.space	72
+ 167      00000000 
+ 167      00000000 
+ 167      00000000 
+ 167      00000000 
+ 168              		.section	.bss.buf_ir3,"aw",%nobits
+ 169              		.align	2
+ 172              	buf_ir3:
+ 173 0000 00000000 		.space	72
+ 173      00000000 
+ 173      00000000 
+ 173      00000000 
+ 173      00000000 
+ 174              		.ident	"GCC: (GNU) 3.4.4"
+DEFINED SYMBOLS
+                            *ABS*:00000000 infrared_adc.c
+     /tmp/cciNS1qZ.s:6      .text.infrared_event:00000000 infrared_event
+     /tmp/cciNS1qZ.s:12     .text.infrared_event:00000000 $a
+     /tmp/cciNS1qZ.s:18     .text.infrared_adc_init:00000000 infrared_adc_init
+     /tmp/cciNS1qZ.s:22     .text.infrared_adc_init:00000000 $a
+     /tmp/cciNS1qZ.s:43     .text.infrared_adc_init:00000048 $d
+     /tmp/cciNS1qZ.s:160    .bss.buf_ir1:00000000 buf_ir1
+     /tmp/cciNS1qZ.s:166    .bss.buf_ir2:00000000 buf_ir2
+     /tmp/cciNS1qZ.s:172    .bss.buf_ir3:00000000 buf_ir3
+     /tmp/cciNS1qZ.s:51     .text.infrared_init:00000000 infrared_init
+     /tmp/cciNS1qZ.s:57     .text.infrared_init:00000000 $a
+     /tmp/cciNS1qZ.s:67     .text.infrared_adc_update:00000000 infrared_adc_update
+     /tmp/cciNS1qZ.s:71     .text.infrared_adc_update:00000000 $a
+     /tmp/cciNS1qZ.s:131    .text.infrared_adc_update:000000e4 $d
+     /tmp/cciNS1qZ.s:154    .bss.ir_adc:00000000 ir_adc
+     /tmp/cciNS1qZ.s:141    .text.infrared_update:00000000 infrared_update
+     /tmp/cciNS1qZ.s:147    .text.infrared_update:00000000 $a
+
+UNDEFINED SYMBOLS
+adc_buf_channel
+infrared_struct_init
+__udivsi3
+__floatsisf
+__mulsf3
+__fixsfsi
+estimator_update_state_infrared
+infrared

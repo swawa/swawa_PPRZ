@@ -1,0 +1,66 @@
+<flight_plan NAME="Frieding_Test" LON0="11.218648" MAX_DIST_FROM_HOME="4500" GROUND_ALT="650" SECURITY_HEIGHT="25" ALT="75" LAT0="48.011399">
+  <header>#include &quot;subsystems/navigation/nav_line.h&quot;
+#include &quot;datalink.h&quot;</header>
+  <waypoints>
+    <waypoint NAME="HOME" Y="0" X="0"/>
+    <waypoint NAME="STDBY" Y="80.1" X="49.5"/>
+    <waypoint NAME="PROFILE" Y="100.1" X="80"/>
+    <waypoint NAME="1" Y="189.9" X="10.1"/>
+    <waypoint NAME="2" Y="139.1" X="132.3"/>
+    <waypoint NAME="MOB" Y="-11.6" X="137.0"/>
+    <waypoint NAME="S1" Y="69.6" X="-119.2"/>
+    <waypoint NAME="S2" Y="289.5" X="274.4"/>
+    <waypoint NAME="CLIMB" Y="162.3" X="-114.5"/>
+  </waypoints>
+  <exceptions>
+    <exception COND="estimator_z > 3600" DEROUTE="Standby"/>
+    <exception COND="datalink_time > 30" DEROUTE="Standby"/>
+    <exception COND="10 > PowerVoltage()" DEROUTE="Standby"/>
+  </exceptions>
+  <blocks>
+    <block NAME="Wait GPS">
+      <set VAR="kill_throttle" VALUE="1"/>
+      <while COND="!GpsFixValid()"/>
+    </block>
+    <block NAME="Geo init">
+      <while COND="LessThan(NavBlockTime(), 10)"/>
+      <call FUN="NavSetGroundReferenceHere()"/>
+    </block>
+    <block NAME="Holding point">
+      <set VAR="kill_throttle" VALUE="1"/>
+      <attitude THROTTLE="0" ROLL="0" VMODE="throttle"/>
+    </block>
+    <block NAME="Takeoff" STRIP_ICON="takeoff.png" STRIP_BUTTON="Takeoff (wp CLIMB)">
+      <exception COND="estimator_z > ground_alt+25" DEROUTE="Standby"/>
+      <set VAR="kill_throttle" VALUE="0"/>
+      <set VAR="estimator_flight_time" VALUE="0"/>
+      <go THROTTLE="1.0" WP="CLIMB" FROM="HOME" VMODE="throttle"/>
+    </block>
+    <block NAME="Standby" STRIP_ICON="home.png" STRIP_BUTTON="Standby">
+      <circle WP="STDBY" RADIUS="nav_radius"/>
+    </block>
+    <block NAME="profile_up" STRIP_ICON="up_profile.png" STRIP_BUTTON="Profile Up">
+      <circle WP="PROFILE" RADIUS="nav_radius"/>
+    </block>
+    <block NAME="profile_down" STRIP_ICON="down_profile.png" STRIP_BUTTON="Profile Down">
+      <circle THROTTLE="0" WP="PROFILE" PITCH="RadOfDeg(-10)" RADIUS="nav_radius" VMODE="throttle" UNTIL="(ground_alt+150 > estimator_z)"/>
+      <deroute BLOCK="Standby"/>
+    </block>
+    <block NAME="MOB" STRIP_ICON="mob.png" STRIP_BUTTON="Turn around here">
+      <call FUN="NavSetWaypointHere(WP_MOB)"/>
+      <set VAR="nav_radius" VALUE="DEFAULT_CIRCLE_RADIUS"/>
+      <circle WP="MOB" RADIUS="nav_radius"/>
+    </block>
+    <block NAME="Line 1-2" STRIP_ICON="line.png" STRIP_BUTTON="Line (wp 1-2)">
+      <exception COND="datalink_time > 22" DEROUTE="Standby"/>
+      <call FUN="nav_line_init()"/>
+      <call FUN="nav_line(WP_1, WP_2, nav_radius)"/>
+    </block>
+    <block NAME="Survey S1-S2 NS" STRIP_ICON="survey.png" STRIP_BUTTON="Survey (wp S1-S2) NS">
+      <survey_rectangle WP2="S2" GRID="150" WP1="S1"/>
+    </block>
+    <block NAME="Survey S1-S2 WE" STRIP_ICON="survey_we.png" STRIP_BUTTON="Survey (wp S1-S2) WE">
+      <survey_rectangle ORIENTATION="WE" WP2="S2" GRID="150" WP1="S1"/>
+    </block>
+  </blocks>
+</flight_plan>

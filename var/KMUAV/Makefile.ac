@@ -1,0 +1,175 @@
+# This file has been generated from /home/excelobs/paparazzi/conf/airframes/KMUAV.xml by /home/excelobs/paparazzi/sw/tools/gen_aircraft.ml
+# Please DO NOT EDIT
+
+####################################################
+# makefile firmware 'fixedwing'
+####################################################
+
+###########
+# -target: 'sim'
+ifeq ($(TARGET), sim)
+$(TARGET).CFLAGS += -DAGR_CLIMB
+$(TARGET).CFLAGS += -DLOITER_TRIM
+$(TARGET).CFLAGS += -DALT_KALMAN
+include $(PAPARAZZI_SRC)/conf/boards/pc.makefile
+include $(PAPARAZZI_SRC)/conf/autopilot/fixedwing.makefile
+# -subsystem: 'radio_control'
+ifneq ($(strip $(wildcard $(CFG_FIXEDWING)/radio_control_ppm.makefile)),)
+	include $(CFG_FIXEDWING)/radio_control_ppm.makefile
+else
+	include $(CFG_SHARED)/radio_control_ppm.makefile
+endif
+# -subsystem: 'telemetry'
+MODEM_BAUD = B9600
+ifneq ($(strip $(wildcard $(CFG_FIXEDWING)/telemetry_transparent.makefile)),)
+	include $(CFG_FIXEDWING)/telemetry_transparent.makefile
+else
+	include $(CFG_SHARED)/telemetry_transparent.makefile
+endif
+# -subsystem: 'control'
+ifneq ($(strip $(wildcard $(CFG_FIXEDWING)/control.makefile)),)
+	include $(CFG_FIXEDWING)/control.makefile
+else
+	include $(CFG_SHARED)/control.makefile
+endif
+# -subsystem: 'gyro'
+ifneq ($(strip $(wildcard $(CFG_FIXEDWING)/gyro_roll.makefile)),)
+	include $(CFG_FIXEDWING)/gyro_roll.makefile
+else
+	include $(CFG_SHARED)/gyro_roll.makefile
+endif
+# -subsystem: 'attitude'
+ifneq ($(strip $(wildcard $(CFG_FIXEDWING)/attitude_infrared.makefile)),)
+	include $(CFG_FIXEDWING)/attitude_infrared.makefile
+else
+	include $(CFG_SHARED)/attitude_infrared.makefile
+endif
+# -subsystem: 'gps'
+ifneq ($(strip $(wildcard $(CFG_FIXEDWING)/gps_ublox_lea5h.makefile)),)
+	include $(CFG_FIXEDWING)/gps_ublox_lea5h.makefile
+else
+	include $(CFG_SHARED)/gps_ublox_lea5h.makefile
+endif
+# -subsystem: 'navigation'
+ifneq ($(strip $(wildcard $(CFG_FIXEDWING)/navigation.makefile)),)
+	include $(CFG_FIXEDWING)/navigation.makefile
+else
+	include $(CFG_SHARED)/navigation.makefile
+endif
+endif
+
+
+###########
+# -target: 'jsbsim'
+ifeq ($(TARGET), jsbsim)
+$(TARGET).CFLAGS += -DAGR_CLIMB
+$(TARGET).CFLAGS += -DLOITER_TRIM
+$(TARGET).CFLAGS += -DALT_KALMAN
+include $(PAPARAZZI_SRC)/conf/boards/pc.makefile
+include $(PAPARAZZI_SRC)/conf/autopilot/fixedwing.makefile
+# -subsystem: 'radio_control'
+ifneq ($(strip $(wildcard $(CFG_FIXEDWING)/radio_control_ppm.makefile)),)
+	include $(CFG_FIXEDWING)/radio_control_ppm.makefile
+else
+	include $(CFG_SHARED)/radio_control_ppm.makefile
+endif
+# -subsystem: 'telemetry'
+MODEM_BAUD = B9600
+ifneq ($(strip $(wildcard $(CFG_FIXEDWING)/telemetry_transparent.makefile)),)
+	include $(CFG_FIXEDWING)/telemetry_transparent.makefile
+else
+	include $(CFG_SHARED)/telemetry_transparent.makefile
+endif
+# -subsystem: 'control'
+ifneq ($(strip $(wildcard $(CFG_FIXEDWING)/control.makefile)),)
+	include $(CFG_FIXEDWING)/control.makefile
+else
+	include $(CFG_SHARED)/control.makefile
+endif
+# -subsystem: 'gyro'
+ifneq ($(strip $(wildcard $(CFG_FIXEDWING)/gyro_roll.makefile)),)
+	include $(CFG_FIXEDWING)/gyro_roll.makefile
+else
+	include $(CFG_SHARED)/gyro_roll.makefile
+endif
+# -subsystem: 'attitude'
+ifneq ($(strip $(wildcard $(CFG_FIXEDWING)/attitude_infrared.makefile)),)
+	include $(CFG_FIXEDWING)/attitude_infrared.makefile
+else
+	include $(CFG_SHARED)/attitude_infrared.makefile
+endif
+# -subsystem: 'gps'
+ifneq ($(strip $(wildcard $(CFG_FIXEDWING)/gps_ublox_lea5h.makefile)),)
+	include $(CFG_FIXEDWING)/gps_ublox_lea5h.makefile
+else
+	include $(CFG_SHARED)/gps_ublox_lea5h.makefile
+endif
+# -subsystem: 'navigation'
+ifneq ($(strip $(wildcard $(CFG_FIXEDWING)/navigation.makefile)),)
+	include $(CFG_FIXEDWING)/navigation.makefile
+else
+	include $(CFG_SHARED)/navigation.makefile
+endif
+endif
+
+
+###########
+# -target: 'ap'
+ifeq ($(TARGET), ap)
+$(TARGET).CFLAGS += -DAGR_CLIMB
+$(TARGET).CFLAGS += -DLOITER_TRIM
+$(TARGET).CFLAGS += -DALT_KALMAN
+include $(PAPARAZZI_SRC)/conf/boards/tiny_2.11.makefile
+include $(PAPARAZZI_SRC)/conf/autopilot/fixedwing.makefile
+# -subsystem: 'radio_control'
+ifneq ($(strip $(wildcard $(CFG_FIXEDWING)/radio_control_ppm.makefile)),)
+	include $(CFG_FIXEDWING)/radio_control_ppm.makefile
+else
+	include $(CFG_SHARED)/radio_control_ppm.makefile
+endif
+# -subsystem: 'telemetry'
+MODEM_BAUD = B9600
+ifneq ($(strip $(wildcard $(CFG_FIXEDWING)/telemetry_transparent.makefile)),)
+	include $(CFG_FIXEDWING)/telemetry_transparent.makefile
+else
+	include $(CFG_SHARED)/telemetry_transparent.makefile
+endif
+# -subsystem: 'control'
+ifneq ($(strip $(wildcard $(CFG_FIXEDWING)/control.makefile)),)
+	include $(CFG_FIXEDWING)/control.makefile
+else
+	include $(CFG_SHARED)/control.makefile
+endif
+# -subsystem: 'gyro'
+ifneq ($(strip $(wildcard $(CFG_FIXEDWING)/gyro_roll.makefile)),)
+	include $(CFG_FIXEDWING)/gyro_roll.makefile
+else
+	include $(CFG_SHARED)/gyro_roll.makefile
+endif
+# -subsystem: 'attitude'
+ifneq ($(strip $(wildcard $(CFG_FIXEDWING)/attitude_infrared.makefile)),)
+	include $(CFG_FIXEDWING)/attitude_infrared.makefile
+else
+	include $(CFG_SHARED)/attitude_infrared.makefile
+endif
+# -subsystem: 'gps'
+ifneq ($(strip $(wildcard $(CFG_FIXEDWING)/gps_ublox_lea5h.makefile)),)
+	include $(CFG_FIXEDWING)/gps_ublox_lea5h.makefile
+else
+	include $(CFG_SHARED)/gps_ublox_lea5h.makefile
+endif
+# -subsystem: 'navigation'
+ifneq ($(strip $(wildcard $(CFG_FIXEDWING)/navigation.makefile)),)
+	include $(CFG_FIXEDWING)/navigation.makefile
+else
+	include $(CFG_SHARED)/navigation.makefile
+endif
+endif
+
+
+####################################################
+# modules makefile section
+####################################################
+
+# include modules directory for all targets
+$(TARGET).CFLAGS += -I modules -I arch/$(ARCH)/modules

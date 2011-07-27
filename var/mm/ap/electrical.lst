@@ -1,0 +1,123 @@
+   1              		.file	"electrical.c"
+   2              		.section	.text.electrical_init,"ax",%progbits
+   3              		.align	2
+   4              		.global	electrical_init
+   6              	electrical_init:
+   7              		@ Function supports interworking.
+   8              		@ args = 0, pretend = 0, frame = 0
+   9              		@ frame_needed = 1, uses_anonymous_args = 0
+  10 0000 0DC0A0E1 		mov	ip, sp
+  11 0004 10D82DE9 		stmfd	sp!, {r4, fp, ip, lr, pc}
+  12 0008 38409FE5 		ldr	r4, .L2
+  13 000c 04B04CE2 		sub	fp, ip, #4
+  14 0010 34C09FE5 		ldr	ip, .L2+4
+  15 0014 0030A0E3 		mov	r3, #0
+  16 0018 0410A0E1 		mov	r1, r4
+  17 001c 0D00A0E3 		mov	r0, #13
+  18 0020 2020A0E3 		mov	r2, #32
+  19 0024 04308CE5 		str	r3, [ip, #4]
+  20 0028 0030CCE5 		strb	r3, [ip, #0]
+  21 002c FEFFFFEB 		bl	adc_buf_channel
+  22 0030 481084E2 		add	r1, r4, #72
+  23 0034 0300A0E3 		mov	r0, #3
+  24 0038 2020A0E3 		mov	r2, #32
+  25 003c FEFFFFEB 		bl	adc_buf_channel
+  26 0040 10689DE8 		ldmfd	sp, {r4, fp, sp, lr}
+  27 0044 1EFF2FE1 		bx	lr
+  28              	.L3:
+  29              		.align	2
+  30              	.L2:
+  31 0048 00000000 		.word	electrical_priv
+  32 004c 00000000 		.word	electrical
+  34              		.global	__udivsi3
+  35              		.global	__floatsidf
+  36              		.global	__adddf3
+  37              		.global	__muldf3
+  38              		.global	__fixunsdfsi
+  39              		.section	.text.electrical_periodic,"ax",%progbits
+  40              		.align	2
+  41              		.global	electrical_periodic
+  43              	electrical_periodic:
+  44              		@ Function supports interworking.
+  45              		@ args = 0, pretend = 0, frame = 0
+  46              		@ frame_needed = 1, uses_anonymous_args = 0
+  47 0000 0DC0A0E1 		mov	ip, sp
+  48 0004 F0D82DE9 		stmfd	sp!, {r4, r5, r6, r7, fp, ip, lr, pc}
+  49 0008 94709FE5 		ldr	r7, .L6+16
+  50 000c 04B04CE2 		sub	fp, ip, #4
+  51 0010 4510D7E5 		ldrb	r1, [r7, #69]	@ zero_extendqisi2
+  52 0014 000097E5 		ldr	r0, [r7, #0]
+  53 0018 FEFFFFEB 		bl	__udivsi3
+  54 001c 004180E0 		add	r4, r0, r0, asl #2
+  55 0020 8440A0E1 		mov	r4, r4, asl #1
+  56 0024 0400A0E1 		mov	r0, r4
+  57 0028 FEFFFFEB 		bl	__floatsidf
+  58 002c 000054E3 		cmp	r4, #0
+  59 0030 0160A0E1 		mov	r6, r1
+  60 0034 0050A0E1 		mov	r5, r0
+  61 0038 54208FE2 		adr	r2, .L6
+  62 003c 0C0092E8 		ldmia	r2, {r2-r3}
+  63 0040 60409FE5 		ldr	r4, .L6+20
+  64 0044 130000AA 		bge	.L5
+  65 0048 FEFFFFEB 		bl	__adddf3
+  66 004c 0160A0E1 		mov	r6, r1
+  67 0050 0050A0E1 		mov	r5, r0
+  68              	.L5:
+  69 0054 40208FE2 		adr	r2, .L6+8
+  70 0058 0C0092E8 		ldmia	r2, {r2-r3}
+  71 005c 0610A0E1 		mov	r1, r6
+  72 0060 0500A0E1 		mov	r0, r5
+  73 0064 FEFFFFEB 		bl	__muldf3
+  74 0068 FEFFFFEB 		bl	__fixunsdfsi
+  75 006c 8D10D7E5 		ldrb	r1, [r7, #141]	@ zero_extendqisi2
+  76 0070 0000C4E5 		strb	r0, [r4, #0]
+  77 0074 480097E5 		ldr	r0, [r7, #72]
+  78 0078 FEFFFFEB 		bl	__udivsi3
+  79 007c 003180E0 		add	r3, r0, r0, asl #2
+  80 0080 830080E0 		add	r0, r0, r3, asl #1
+  81 0084 8001A0E1 		mov	r0, r0, asl #3
+  82 0088 040084E5 		str	r0, [r4, #4]
+  83 008c F0689DE8 		ldmfd	sp, {r4, r5, r6, r7, fp, sp, lr}
+  84 0090 1EFF2FE1 		bx	lr
+  85              	.L7:
+  86              		.align	2
+  87              	.L6:
+  88 0094 0000F041 		.word	1106247680
+  89 0098 00000000 		.word	0
+  90 009c 0321993F 		.word	1067000067
+  91 00a0 FE7DC685 		.word	-2050589186
+  92 00a4 00000000 		.word	electrical_priv
+  93 00a8 00000000 		.word	electrical
+  95              		.global	electrical
+  96              		.section	.bss.electrical,"aw",%nobits
+  97              		.align	2
+ 100              	electrical:
+ 101 0000 00000000 		.space	8
+ 101      00000000 
+ 102              		.section	.bss.electrical_priv,"aw",%nobits
+ 103              		.align	2
+ 106              	electrical_priv:
+ 107 0000 00000000 		.space	144
+ 107      00000000 
+ 107      00000000 
+ 107      00000000 
+ 107      00000000 
+ 108              		.ident	"GCC: (GNU) 3.4.4"
+DEFINED SYMBOLS
+                            *ABS*:00000000 electrical.c
+     /tmp/ccZaU2G2.s:6      .text.electrical_init:00000000 electrical_init
+     /tmp/ccZaU2G2.s:10     .text.electrical_init:00000000 $a
+     /tmp/ccZaU2G2.s:31     .text.electrical_init:00000048 $d
+     /tmp/ccZaU2G2.s:106    .bss.electrical_priv:00000000 electrical_priv
+     /tmp/ccZaU2G2.s:100    .bss.electrical:00000000 electrical
+     /tmp/ccZaU2G2.s:43     .text.electrical_periodic:00000000 electrical_periodic
+     /tmp/ccZaU2G2.s:47     .text.electrical_periodic:00000000 $a
+     /tmp/ccZaU2G2.s:88     .text.electrical_periodic:00000094 $d
+
+UNDEFINED SYMBOLS
+adc_buf_channel
+__udivsi3
+__floatsidf
+__adddf3
+__muldf3
+__fixunsdfsi

@@ -1,0 +1,21 @@
+   1              		.file	"commands.c"
+   2              		.global	commands_failsafe
+   3              		.section	.rodata.commands_failsafe,"a",%progbits
+   4              		.align	1
+   7              	commands_failsafe:
+   8 0000 0000     		.short	0
+   9 0002 0000     		.short	0
+  10 0004 0000     		.short	0
+  11              		.global	commands
+  12              		.section	.bss.commands,"aw",%nobits
+  13              		.align	1
+  16              	commands:
+  17 0000 00000000 		.space	6
+  17      0000
+  18              		.ident	"GCC: (GNU) 3.4.4"
+DEFINED SYMBOLS
+                            *ABS*:00000000 commands.c
+     /tmp/ccyoegzU.s:7      .rodata.commands_failsafe:00000000 commands_failsafe
+     /tmp/ccyoegzU.s:16     .bss.commands:00000000 commands
+
+NO UNDEFINED SYMBOLS

@@ -1,0 +1,581 @@
+/home/excelobs/paparazzi/var/KMUAV2/sim/mcu.o: mcu.c mcu.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/mcu_arch.h led.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/led_hw.h \
+ /usr/lib/ocaml/caml/mlvalues.h /usr/lib/ocaml/caml/compatibility.h \
+ /usr/lib/ocaml/caml/config.h /usr/lib/ocaml/caml/misc.h \
+ /usr/lib/ocaml/caml/memory.h /usr/lib/ocaml/caml/mlvalues.h \
+ /usr/lib/ocaml/caml/callback.h
+/home/excelobs/paparazzi/var/KMUAV2/sim/mcu_arch.o: arch/sim/mcu_arch.c
+/home/excelobs/paparazzi/var/KMUAV2/sim/led_hw.o: arch/sim/led_hw.c arch/sim/led_hw.h \
+ /usr/lib/ocaml/caml/mlvalues.h /usr/lib/ocaml/caml/compatibility.h \
+ /usr/lib/ocaml/caml/config.h /usr/lib/ocaml/caml/misc.h \
+ /usr/lib/ocaml/caml/memory.h /usr/lib/ocaml/caml/mlvalues.h \
+ /usr/lib/ocaml/caml/callback.h
+/home/excelobs/paparazzi/var/KMUAV2/sim/sys_time.o: sys_time.c sys_time.h boards/tiny_sim.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/sys_time_hw.h
+/home/excelobs/paparazzi/var/KMUAV2/sim/inter_mcu.o: inter_mcu.c inter_mcu.h \
+ /home/excelobs/paparazzi/sw/include/std.h paparazzi.h \
+ /home/excelobs/paparazzi/var/KMUAV2/generated/airframe.h \
+ subsystems/radio_control.h /home/excelobs/paparazzi/sw/airborne/led.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/led_hw.h \
+ /usr/lib/ocaml/caml/mlvalues.h /usr/lib/ocaml/caml/compatibility.h \
+ /usr/lib/ocaml/caml/config.h /usr/lib/ocaml/caml/misc.h \
+ /usr/lib/ocaml/caml/memory.h /usr/lib/ocaml/caml/mlvalues.h \
+ /usr/lib/ocaml/caml/callback.h \
+ /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control/ppm.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/subsystems/radio_control/ppm_arch.h \
+ /home/excelobs/paparazzi/var/KMUAV2/generated/radio.h \
+ subsystems/electrical.h firmwares/fixedwing/main_fbw.h
+/home/excelobs/paparazzi/var/KMUAV2/sim/main_fbw.o: firmwares/fixedwing/main_fbw.c \
+ /home/excelobs/paparazzi/var/KMUAV2/generated/airframe.h \
+ /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/main_fbw.h \
+ /home/excelobs/paparazzi/sw/include/std.h \
+ /home/excelobs/paparazzi/sw/airborne/mcu.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/mcu_arch.h \
+ /home/excelobs/paparazzi/sw/airborne/sys_time.h \
+ /home/excelobs/paparazzi/sw/airborne/boards/tiny_sim.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/sys_time_hw.h \
+ /home/excelobs/paparazzi/sw/airborne/commands.h \
+ /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+ /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/actuators.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/electrical.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control.h \
+ /home/excelobs/paparazzi/sw/airborne/led.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/led_hw.h \
+ /usr/lib/ocaml/caml/mlvalues.h /usr/lib/ocaml/caml/compatibility.h \
+ /usr/lib/ocaml/caml/config.h /usr/lib/ocaml/caml/misc.h \
+ /usr/lib/ocaml/caml/memory.h /usr/lib/ocaml/caml/mlvalues.h \
+ /usr/lib/ocaml/caml/callback.h \
+ /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control/ppm.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/subsystems/radio_control/ppm_arch.h \
+ /home/excelobs/paparazzi/var/KMUAV2/generated/radio.h \
+ /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/autopilot.h \
+ /home/excelobs/paparazzi/sw/airborne/fbw_downlink.h \
+ /home/excelobs/paparazzi/var/include/messages.h \
+ /home/excelobs/paparazzi/var/KMUAV2/generated/periodic.h \
+ /home/excelobs/paparazzi/sw/airborne/commands.h \
+ firmwares/fixedwing/actuators.h \
+ /home/excelobs/paparazzi/sw/airborne/mcu_periph/uart.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/mcu_periph/uart_arch.h \
+ /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/main_fbw.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/electrical.h \
+ /home/excelobs/paparazzi/sw/airborne/inter_mcu.h \
+ /home/excelobs/paparazzi/sw/airborne/downlink.h \
+ /home/excelobs/paparazzi/var/KMUAV2/generated/modules.h \
+ modules/ins/ins_arduimu.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/ivy_transport.h \
+ /home/excelobs/paparazzi/sw/airborne/inter_mcu.h
+/home/excelobs/paparazzi/var/KMUAV2/sim/electrical.o: subsystems/electrical.c \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/electrical.h \
+ /home/excelobs/paparazzi/sw/include/std.h \
+ /home/excelobs/paparazzi/sw/airborne/mcu_periph/adc.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/mcu_periph/adc_arch.h \
+ /home/excelobs/paparazzi/sw/airborne/commands.h \
+ /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+ /home/excelobs/paparazzi/var/KMUAV2/generated/airframe.h \
+ /home/excelobs/paparazzi/sw/airborne/boards/tiny_sim.h
+/home/excelobs/paparazzi/var/KMUAV2/sim/commands.o: commands.c commands.h paparazzi.h \
+ /home/excelobs/paparazzi/var/KMUAV2/generated/airframe.h
+/home/excelobs/paparazzi/var/KMUAV2/sim/main_ap.o: firmwares/fixedwing/main_ap.c \
+ /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/main_ap.h \
+ /home/excelobs/paparazzi/sw/airborne/mcu.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/mcu_arch.h \
+ /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/stabilization/stabilization_attitude.h \
+ /home/excelobs/paparazzi/sw/include/std.h \
+ /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+ /home/excelobs/paparazzi/var/KMUAV2/generated/airframe.h \
+ /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/guidance/guidance_v.h \
+ /home/excelobs/paparazzi/sw/airborne/gps.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/gps_hw.h \
+ /home/excelobs/paparazzi/sw/airborne/gyro.h \
+ /home/excelobs/paparazzi/sw/airborne/ap_downlink.h \
+ /home/excelobs/paparazzi/sw/airborne/downlink.h \
+ /home/excelobs/paparazzi/var/KMUAV2/generated/modules.h \
+ modules/ins/ins_arduimu.h \
+ /home/excelobs/paparazzi/var/include/messages.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/ivy_transport.h \
+ /home/excelobs/paparazzi/var/KMUAV2/generated/periodic.h \
+ /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/stabilization/stabilization_adaptive.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/nav.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/nav_survey_rectangle.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/common_nav.h \
+ /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/autopilot.h \
+ /home/excelobs/paparazzi/sw/airborne/sys_time.h \
+ /home/excelobs/paparazzi/sw/airborne/boards/tiny_sim.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/sys_time_hw.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control.h \
+ /home/excelobs/paparazzi/sw/airborne/led.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/led_hw.h \
+ /usr/lib/ocaml/caml/mlvalues.h /usr/lib/ocaml/caml/compatibility.h \
+ /usr/lib/ocaml/caml/config.h /usr/lib/ocaml/caml/misc.h \
+ /usr/lib/ocaml/caml/memory.h /usr/lib/ocaml/caml/mlvalues.h \
+ /usr/lib/ocaml/caml/callback.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control/ppm.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/subsystems/radio_control/ppm_arch.h \
+ /home/excelobs/paparazzi/var/KMUAV2/generated/radio.h \
+ /home/excelobs/paparazzi/sw/airborne/estimator.h \
+ /home/excelobs/paparazzi/var/KMUAV2/generated/settings.h \
+ firmwares/fixedwing/autopilot.h \
+ /home/excelobs/paparazzi/sw/airborne/downlink.h \
+ /home/excelobs/paparazzi/sw/airborne/gps_ubx.h \
+ firmwares/fixedwing/guidance/guidance_v.h \
+ firmwares/fixedwing/stabilization/stabilization_attitude.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/ahrs.h \
+ /home/excelobs/paparazzi/sw/airborne/math/pprz_algebra_int.h \
+ /home/excelobs/paparazzi/sw/airborne/math/pprz_algebra.h \
+ /home/excelobs/paparazzi/sw/airborne/math/pprz_trig_int.h \
+ /home/excelobs/paparazzi/sw/airborne/math/pprz_algebra_float.h \
+ /home/excelobs/paparazzi/sw/airborne/math/pprz_algebra.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/imu.h \
+ /home/excelobs/paparazzi/sw/airborne/link_mcu.h \
+ /home/excelobs/paparazzi/sw/airborne/inter_mcu.h \
+ /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/electrical.h \
+ /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/main_fbw.h \
+ /home/excelobs/paparazzi/var/KMUAV2/generated/flight_plan.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/nav_line.h \
+ /home/excelobs/paparazzi/sw/airborne/datalink.h \
+ /home/excelobs/paparazzi/var/include/dl_protocol.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/settings.h \
+ /home/excelobs/paparazzi/sw/airborne/xbee.h \
+ /home/excelobs/paparazzi/sw/airborne/datalink.h \
+ /home/excelobs/paparazzi/sw/airborne/xbee24.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/gpio.h \
+ /home/excelobs/paparazzi/sw/airborne/rc_settings.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/traffic_info.h
+/home/excelobs/paparazzi/var/KMUAV2/sim/estimator.o: estimator.c estimator.h \
+ /home/excelobs/paparazzi/sw/include/std.h mcu_periph/uart.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/mcu_periph/uart_arch.h \
+ ap_downlink.h /home/excelobs/paparazzi/var/KMUAV2/generated/airframe.h \
+ downlink.h /home/excelobs/paparazzi/var/KMUAV2/generated/modules.h \
+ modules/ins/ins_arduimu.h \
+ /home/excelobs/paparazzi/var/include/messages.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/ivy_transport.h \
+ /home/excelobs/paparazzi/var/KMUAV2/generated/periodic.h \
+ firmwares/fixedwing/stabilization/stabilization_adaptive.h \
+ /home/excelobs/paparazzi/sw/airborne/paparazzi.h gps.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/gps_hw.h subsystems/nav.h \
+ /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/guidance/guidance_v.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/nav_survey_rectangle.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/nav.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/common_nav.h \
+ subsystems/sensors/infrared.h \
+ /home/excelobs/paparazzi/sw/airborne/estimator.h
+/home/excelobs/paparazzi/var/KMUAV2/sim/sim_ap.o: arch/sim/sim_ap.c /home/excelobs/paparazzi/sw/include/std.h \
+ /home/excelobs/paparazzi/sw/airborne/inter_mcu.h \
+ /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+ /home/excelobs/paparazzi/var/KMUAV2/generated/airframe.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control.h \
+ /home/excelobs/paparazzi/sw/airborne/led.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/led_hw.h \
+ /usr/lib/ocaml/caml/mlvalues.h /usr/lib/ocaml/caml/compatibility.h \
+ /usr/lib/ocaml/caml/config.h /usr/lib/ocaml/caml/misc.h \
+ /usr/lib/ocaml/caml/memory.h /usr/lib/ocaml/caml/mlvalues.h \
+ /usr/lib/ocaml/caml/callback.h \
+ /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control/ppm.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/subsystems/radio_control/ppm_arch.h \
+ /home/excelobs/paparazzi/var/KMUAV2/generated/radio.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/electrical.h \
+ /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/main_fbw.h \
+ firmwares/fixedwing/autopilot.h \
+ /home/excelobs/paparazzi/sw/airborne/sys_time.h \
+ /home/excelobs/paparazzi/sw/airborne/boards/tiny_sim.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/sys_time_hw.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control.h \
+ /home/excelobs/paparazzi/sw/airborne/estimator.h \
+ /home/excelobs/paparazzi/sw/airborne/gps.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/gps_hw.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/traffic_info.h \
+ /home/excelobs/paparazzi/var/KMUAV2/generated/settings.h \
+ /home/excelobs/paparazzi/sw/airborne/downlink.h \
+ /home/excelobs/paparazzi/var/KMUAV2/generated/modules.h \
+ modules/ins/ins_arduimu.h \
+ /home/excelobs/paparazzi/var/include/messages.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/ivy_transport.h \
+ /home/excelobs/paparazzi/sw/airborne/gps_ubx.h \
+ firmwares/fixedwing/guidance/guidance_v.h \
+ firmwares/fixedwing/stabilization/stabilization_attitude.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/ahrs.h \
+ /home/excelobs/paparazzi/sw/airborne/math/pprz_algebra_int.h \
+ /home/excelobs/paparazzi/sw/airborne/math/pprz_algebra.h \
+ /home/excelobs/paparazzi/sw/airborne/math/pprz_trig_int.h \
+ /home/excelobs/paparazzi/sw/airborne/math/pprz_algebra_float.h \
+ /home/excelobs/paparazzi/sw/airborne/math/pprz_algebra.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/imu.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/nav.h \
+ /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/guidance/guidance_v.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/nav_survey_rectangle.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/common_nav.h \
+ /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/stabilization/stabilization_attitude.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/sensors/infrared.h \
+ /home/excelobs/paparazzi/sw/airborne/commands.h \
+ /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/main_ap.h \
+ /home/excelobs/paparazzi/sw/airborne/ap_downlink.h \
+ /home/excelobs/paparazzi/sw/airborne/downlink.h \
+ /home/excelobs/paparazzi/var/KMUAV2/generated/periodic.h \
+ /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/stabilization/stabilization_adaptive.h \
+ arch/sim/sim_uart.h /home/excelobs/paparazzi/sw/airborne/latlong.h \
+ /home/excelobs/paparazzi/sw/airborne/datalink.h \
+ /home/excelobs/paparazzi/var/include/dl_protocol.h \
+ /home/excelobs/paparazzi/var/KMUAV2/generated/flight_plan.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/nav_line.h
+/home/excelobs/paparazzi/var/KMUAV2/sim/downlink.o: downlink.c /home/excelobs/paparazzi/sw/include/std.h \
+ /home/excelobs/paparazzi/var/KMUAV2/generated/airframe.h
+/home/excelobs/paparazzi/var/KMUAV2/sim/datalink.o: firmwares/fixedwing/datalink.c \
+ /home/excelobs/paparazzi/sw/airborne/datalink.h \
+ /home/excelobs/paparazzi/sw/include/std.h \
+ /home/excelobs/paparazzi/var/include/dl_protocol.h \
+ /home/excelobs/paparazzi/var/KMUAV2/generated/modules.h \
+ modules/ins/ins_arduimu.h \
+ /home/excelobs/paparazzi/var/include/messages.h \
+ /home/excelobs/paparazzi/var/KMUAV2/generated/airframe.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/traffic_info.h \
+ /home/excelobs/paparazzi/sw/airborne/estimator.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/nav.h \
+ /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+ /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/guidance/guidance_v.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/nav_survey_rectangle.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/common_nav.h \
+ /home/excelobs/paparazzi/var/KMUAV2/generated/settings.h \
+ firmwares/fixedwing/autopilot.h \
+ /home/excelobs/paparazzi/sw/airborne/sys_time.h \
+ /home/excelobs/paparazzi/sw/airborne/boards/tiny_sim.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/sys_time_hw.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control.h \
+ /home/excelobs/paparazzi/sw/airborne/led.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/led_hw.h \
+ /usr/lib/ocaml/caml/mlvalues.h /usr/lib/ocaml/caml/compatibility.h \
+ /usr/lib/ocaml/caml/config.h /usr/lib/ocaml/caml/misc.h \
+ /usr/lib/ocaml/caml/memory.h /usr/lib/ocaml/caml/mlvalues.h \
+ /usr/lib/ocaml/caml/callback.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control/ppm.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/subsystems/radio_control/ppm_arch.h \
+ /home/excelobs/paparazzi/var/KMUAV2/generated/radio.h \
+ /home/excelobs/paparazzi/sw/airborne/downlink.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/ivy_transport.h \
+ /home/excelobs/paparazzi/sw/airborne/gps_ubx.h \
+ firmwares/fixedwing/guidance/guidance_v.h \
+ firmwares/fixedwing/stabilization/stabilization_attitude.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/ahrs.h \
+ /home/excelobs/paparazzi/sw/airborne/math/pprz_algebra_int.h \
+ /home/excelobs/paparazzi/sw/airborne/math/pprz_algebra.h \
+ /home/excelobs/paparazzi/sw/airborne/math/pprz_trig_int.h \
+ /home/excelobs/paparazzi/sw/airborne/math/pprz_algebra_float.h \
+ /home/excelobs/paparazzi/sw/airborne/math/pprz_algebra.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/imu.h \
+ /home/excelobs/paparazzi/sw/airborne/latlong.h \
+ /home/excelobs/paparazzi/sw/airborne/mcu_periph/uart.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/mcu_periph/uart_arch.h \
+ /home/excelobs/paparazzi/sw/airborne/ap_downlink.h \
+ /home/excelobs/paparazzi/sw/airborne/downlink.h \
+ /home/excelobs/paparazzi/var/KMUAV2/generated/periodic.h \
+ /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/stabilization/stabilization_adaptive.h
+/home/excelobs/paparazzi/var/KMUAV2/sim/sim_gps.o: arch/sim/sim_gps.c \
+ /home/excelobs/paparazzi/var/KMUAV2/generated/airframe.h \
+ /home/excelobs/paparazzi/var/KMUAV2/generated/flight_plan.h \
+ /home/excelobs/paparazzi/sw/include/std.h \
+ /home/excelobs/paparazzi/var/KMUAV2/generated/modules.h \
+ modules/ins/ins_arduimu.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/nav_line.h \
+ /home/excelobs/paparazzi/sw/airborne/datalink.h \
+ /home/excelobs/paparazzi/var/include/dl_protocol.h \
+ firmwares/fixedwing/autopilot.h \
+ /home/excelobs/paparazzi/sw/airborne/sys_time.h \
+ /home/excelobs/paparazzi/sw/airborne/boards/tiny_sim.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/sys_time_hw.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control.h \
+ /home/excelobs/paparazzi/sw/airborne/led.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/led_hw.h \
+ /usr/lib/ocaml/caml/mlvalues.h /usr/lib/ocaml/caml/compatibility.h \
+ /usr/lib/ocaml/caml/config.h /usr/lib/ocaml/caml/misc.h \
+ /usr/lib/ocaml/caml/memory.h /usr/lib/ocaml/caml/mlvalues.h \
+ /usr/lib/ocaml/caml/callback.h \
+ /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control/ppm.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/subsystems/radio_control/ppm_arch.h \
+ /home/excelobs/paparazzi/var/KMUAV2/generated/radio.h \
+ /home/excelobs/paparazzi/sw/airborne/gps.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/gps_hw.h \
+ /home/excelobs/paparazzi/sw/airborne/estimator.h \
+ /home/excelobs/paparazzi/sw/airborne/latlong.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/common_nav.h
+/home/excelobs/paparazzi/var/KMUAV2/sim/ivy_transport.o: arch/sim/ivy_transport.c
+/home/excelobs/paparazzi/var/KMUAV2/sim/sim_adc_generic.o: arch/sim/sim_adc_generic.c \
+ /usr/lib/ocaml/caml/mlvalues.h /usr/lib/ocaml/caml/compatibility.h \
+ /usr/lib/ocaml/caml/config.h /usr/lib/ocaml/caml/misc.h
+/home/excelobs/paparazzi/var/KMUAV2/sim/settings.o: subsystems/settings.c \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/settings.h \
+ /home/excelobs/paparazzi/sw/include/std.h \
+ /home/excelobs/paparazzi/var/KMUAV2/generated/settings.h \
+ firmwares/fixedwing/autopilot.h \
+ /home/excelobs/paparazzi/sw/airborne/sys_time.h \
+ /home/excelobs/paparazzi/sw/airborne/boards/tiny_sim.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/sys_time_hw.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control.h \
+ /home/excelobs/paparazzi/sw/airborne/led.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/led_hw.h \
+ /usr/lib/ocaml/caml/mlvalues.h /usr/lib/ocaml/caml/compatibility.h \
+ /usr/lib/ocaml/caml/config.h /usr/lib/ocaml/caml/misc.h \
+ /usr/lib/ocaml/caml/memory.h /usr/lib/ocaml/caml/mlvalues.h \
+ /usr/lib/ocaml/caml/callback.h \
+ /home/excelobs/paparazzi/var/KMUAV2/generated/airframe.h \
+ /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control/ppm.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/subsystems/radio_control/ppm_arch.h \
+ /home/excelobs/paparazzi/var/KMUAV2/generated/radio.h \
+ /home/excelobs/paparazzi/sw/airborne/downlink.h \
+ /home/excelobs/paparazzi/var/KMUAV2/generated/modules.h \
+ modules/ins/ins_arduimu.h \
+ /home/excelobs/paparazzi/var/include/messages.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/ivy_transport.h \
+ /home/excelobs/paparazzi/sw/airborne/estimator.h \
+ /home/excelobs/paparazzi/sw/airborne/gps_ubx.h \
+ firmwares/fixedwing/guidance/guidance_v.h \
+ firmwares/fixedwing/stabilization/stabilization_attitude.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/ahrs.h \
+ /home/excelobs/paparazzi/sw/airborne/math/pprz_algebra_int.h \
+ /home/excelobs/paparazzi/sw/airborne/math/pprz_algebra.h \
+ /home/excelobs/paparazzi/sw/airborne/math/pprz_trig_int.h \
+ /home/excelobs/paparazzi/sw/airborne/math/pprz_algebra_float.h \
+ /home/excelobs/paparazzi/sw/airborne/math/pprz_algebra.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/imu.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/nav.h \
+ /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/guidance/guidance_v.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/nav_survey_rectangle.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/common_nav.h
+/home/excelobs/paparazzi/var/KMUAV2/sim/settings_arch.o: arch/sim/subsystems/settings_arch.c \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/settings.h \
+ /home/excelobs/paparazzi/sw/include/std.h \
+ /home/excelobs/paparazzi/var/KMUAV2/generated/settings.h \
+ firmwares/fixedwing/autopilot.h \
+ /home/excelobs/paparazzi/sw/airborne/sys_time.h \
+ /home/excelobs/paparazzi/sw/airborne/boards/tiny_sim.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/sys_time_hw.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control.h \
+ /home/excelobs/paparazzi/sw/airborne/led.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/led_hw.h \
+ /usr/lib/ocaml/caml/mlvalues.h /usr/lib/ocaml/caml/compatibility.h \
+ /usr/lib/ocaml/caml/config.h /usr/lib/ocaml/caml/misc.h \
+ /usr/lib/ocaml/caml/memory.h /usr/lib/ocaml/caml/mlvalues.h \
+ /usr/lib/ocaml/caml/callback.h \
+ /home/excelobs/paparazzi/var/KMUAV2/generated/airframe.h \
+ /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control/ppm.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/subsystems/radio_control/ppm_arch.h \
+ /home/excelobs/paparazzi/var/KMUAV2/generated/radio.h \
+ /home/excelobs/paparazzi/sw/airborne/downlink.h \
+ /home/excelobs/paparazzi/var/KMUAV2/generated/modules.h \
+ modules/ins/ins_arduimu.h \
+ /home/excelobs/paparazzi/var/include/messages.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/ivy_transport.h \
+ /home/excelobs/paparazzi/sw/airborne/estimator.h \
+ /home/excelobs/paparazzi/sw/airborne/gps_ubx.h \
+ firmwares/fixedwing/guidance/guidance_v.h \
+ firmwares/fixedwing/stabilization/stabilization_attitude.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/ahrs.h \
+ /home/excelobs/paparazzi/sw/airborne/math/pprz_algebra_int.h \
+ /home/excelobs/paparazzi/sw/airborne/math/pprz_algebra.h \
+ /home/excelobs/paparazzi/sw/airborne/math/pprz_trig_int.h \
+ /home/excelobs/paparazzi/sw/airborne/math/pprz_algebra_float.h \
+ /home/excelobs/paparazzi/sw/airborne/math/pprz_algebra.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/imu.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/nav.h \
+ /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/guidance/guidance_v.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/nav_survey_rectangle.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/common_nav.h
+/home/excelobs/paparazzi/var/KMUAV2/sim/radio_control.o: subsystems/radio_control.c \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control.h \
+ /home/excelobs/paparazzi/sw/airborne/led.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/led_hw.h \
+ /usr/lib/ocaml/caml/mlvalues.h /usr/lib/ocaml/caml/compatibility.h \
+ /usr/lib/ocaml/caml/config.h /usr/lib/ocaml/caml/misc.h \
+ /usr/lib/ocaml/caml/memory.h /usr/lib/ocaml/caml/mlvalues.h \
+ /usr/lib/ocaml/caml/callback.h \
+ /home/excelobs/paparazzi/var/KMUAV2/generated/airframe.h \
+ /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control/ppm.h \
+ /home/excelobs/paparazzi/sw/include/std.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/subsystems/radio_control/ppm_arch.h \
+ /home/excelobs/paparazzi/var/KMUAV2/generated/radio.h
+/home/excelobs/paparazzi/var/KMUAV2/sim/ppm.o: subsystems/radio_control/ppm.c \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control.h \
+ /home/excelobs/paparazzi/sw/airborne/led.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/led_hw.h \
+ /usr/lib/ocaml/caml/mlvalues.h /usr/lib/ocaml/caml/compatibility.h \
+ /usr/lib/ocaml/caml/config.h /usr/lib/ocaml/caml/misc.h \
+ /usr/lib/ocaml/caml/memory.h /usr/lib/ocaml/caml/mlvalues.h \
+ /usr/lib/ocaml/caml/callback.h \
+ /home/excelobs/paparazzi/var/KMUAV2/generated/airframe.h \
+ /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control/ppm.h \
+ /home/excelobs/paparazzi/sw/include/std.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/subsystems/radio_control/ppm_arch.h \
+ /home/excelobs/paparazzi/var/KMUAV2/generated/radio.h
+/home/excelobs/paparazzi/var/KMUAV2/sim/ppm_arch.o: arch/sim/subsystems/radio_control/ppm_arch.c \
+ /home/excelobs/paparazzi/sw/airborne/sys_time.h \
+ /home/excelobs/paparazzi/sw/airborne/boards/tiny_sim.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/sys_time_hw.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control.h \
+ /home/excelobs/paparazzi/sw/airborne/led.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/led_hw.h \
+ /usr/lib/ocaml/caml/mlvalues.h /usr/lib/ocaml/caml/compatibility.h \
+ /usr/lib/ocaml/caml/config.h /usr/lib/ocaml/caml/misc.h \
+ /usr/lib/ocaml/caml/memory.h /usr/lib/ocaml/caml/mlvalues.h \
+ /usr/lib/ocaml/caml/callback.h \
+ /home/excelobs/paparazzi/var/KMUAV2/generated/airframe.h \
+ /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control/ppm.h \
+ /home/excelobs/paparazzi/sw/include/std.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/subsystems/radio_control/ppm_arch.h \
+ /home/excelobs/paparazzi/var/KMUAV2/generated/radio.h
+/home/excelobs/paparazzi/var/KMUAV2/sim/stabilization_attitude.o: \
+ firmwares/fixedwing/stabilization/stabilization_attitude.c \
+ /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/stabilization/stabilization_attitude.h \
+ /home/excelobs/paparazzi/sw/include/std.h \
+ /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+ /home/excelobs/paparazzi/var/KMUAV2/generated/airframe.h \
+ /home/excelobs/paparazzi/sw/airborne/led.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/led_hw.h \
+ /usr/lib/ocaml/caml/mlvalues.h /usr/lib/ocaml/caml/compatibility.h \
+ /usr/lib/ocaml/caml/config.h /usr/lib/ocaml/caml/misc.h \
+ /usr/lib/ocaml/caml/memory.h /usr/lib/ocaml/caml/mlvalues.h \
+ /usr/lib/ocaml/caml/callback.h \
+ /home/excelobs/paparazzi/sw/airborne/estimator.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/nav.h \
+ /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/guidance/guidance_v.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/nav_survey_rectangle.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/common_nav.h \
+ /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/autopilot.h \
+ /home/excelobs/paparazzi/sw/airborne/sys_time.h \
+ /home/excelobs/paparazzi/sw/airborne/boards/tiny_sim.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/sys_time_hw.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control/ppm.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/subsystems/radio_control/ppm_arch.h \
+ /home/excelobs/paparazzi/var/KMUAV2/generated/radio.h
+/home/excelobs/paparazzi/var/KMUAV2/sim/guidance_v.o: firmwares/fixedwing/guidance/guidance_v.c \
+ /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/guidance/guidance_v.h \
+ /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+ /home/excelobs/paparazzi/sw/airborne/estimator.h \
+ /home/excelobs/paparazzi/sw/include/std.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/nav.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/nav_survey_rectangle.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/common_nav.h \
+ /home/excelobs/paparazzi/var/KMUAV2/generated/airframe.h \
+ /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/autopilot.h \
+ /home/excelobs/paparazzi/sw/airborne/sys_time.h \
+ /home/excelobs/paparazzi/sw/airborne/boards/tiny_sim.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/sys_time_hw.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control.h \
+ /home/excelobs/paparazzi/sw/airborne/led.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/led_hw.h \
+ /usr/lib/ocaml/caml/mlvalues.h /usr/lib/ocaml/caml/compatibility.h \
+ /usr/lib/ocaml/caml/config.h /usr/lib/ocaml/caml/misc.h \
+ /usr/lib/ocaml/caml/memory.h /usr/lib/ocaml/caml/mlvalues.h \
+ /usr/lib/ocaml/caml/callback.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control/ppm.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/subsystems/radio_control/ppm_arch.h \
+ /home/excelobs/paparazzi/var/KMUAV2/generated/radio.h
+/home/excelobs/paparazzi/var/KMUAV2/sim/gps.o: gps.c gps.h /home/excelobs/paparazzi/sw/include/std.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/gps_hw.h latlong.h \
+ sys_time.h boards/tiny_sim.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/sys_time_hw.h \
+ /home/excelobs/paparazzi/var/KMUAV2/generated/airframe.h \
+ /home/excelobs/paparazzi/var/KMUAV2/generated/periodic.h \
+ /home/excelobs/paparazzi/var/include/messages.h downlink.h \
+ /home/excelobs/paparazzi/var/KMUAV2/generated/modules.h \
+ modules/ins/ins_arduimu.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/ivy_transport.h
+/home/excelobs/paparazzi/var/KMUAV2/sim/latlong.o: latlong.c /home/excelobs/paparazzi/sw/include/std.h latlong.h \
+ led.h /home/excelobs/paparazzi/sw/airborne/arch/sim/led_hw.h \
+ /usr/lib/ocaml/caml/mlvalues.h /usr/lib/ocaml/caml/compatibility.h \
+ /usr/lib/ocaml/caml/config.h /usr/lib/ocaml/caml/misc.h \
+ /usr/lib/ocaml/caml/memory.h /usr/lib/ocaml/caml/mlvalues.h \
+ /usr/lib/ocaml/caml/callback.h
+/home/excelobs/paparazzi/var/KMUAV2/sim/nav.o: subsystems/nav.c \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/nav.h \
+ /home/excelobs/paparazzi/sw/include/std.h \
+ /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+ /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/guidance/guidance_v.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/nav_survey_rectangle.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/common_nav.h \
+ /home/excelobs/paparazzi/sw/airborne/gps.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/gps_hw.h \
+ /home/excelobs/paparazzi/sw/airborne/estimator.h \
+ /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/stabilization/stabilization_attitude.h \
+ /home/excelobs/paparazzi/var/KMUAV2/generated/airframe.h \
+ /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/autopilot.h \
+ /home/excelobs/paparazzi/sw/airborne/sys_time.h \
+ /home/excelobs/paparazzi/sw/airborne/boards/tiny_sim.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/sys_time_hw.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control.h \
+ /home/excelobs/paparazzi/sw/airborne/led.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/led_hw.h \
+ /usr/lib/ocaml/caml/mlvalues.h /usr/lib/ocaml/caml/compatibility.h \
+ /usr/lib/ocaml/caml/config.h /usr/lib/ocaml/caml/misc.h \
+ /usr/lib/ocaml/caml/memory.h /usr/lib/ocaml/caml/mlvalues.h \
+ /usr/lib/ocaml/caml/callback.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control/ppm.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/subsystems/radio_control/ppm_arch.h \
+ /home/excelobs/paparazzi/var/KMUAV2/generated/radio.h \
+ /home/excelobs/paparazzi/sw/airborne/inter_mcu.h \
+ /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/electrical.h \
+ /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/main_fbw.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/traffic_info.h \
+ /home/excelobs/paparazzi/sw/airborne/latlong.h \
+ /home/excelobs/paparazzi/var/KMUAV2/generated/flight_plan.h \
+ /home/excelobs/paparazzi/var/KMUAV2/generated/modules.h \
+ modules/ins/ins_arduimu.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/nav_line.h \
+ /home/excelobs/paparazzi/sw/airborne/datalink.h \
+ /home/excelobs/paparazzi/var/include/dl_protocol.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/common_nav.c
+/home/excelobs/paparazzi/var/KMUAV2/sim/traffic_info.o: subsystems/navigation/traffic_info.c \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/traffic_info.h \
+ /home/excelobs/paparazzi/var/KMUAV2/generated/airframe.h
+/home/excelobs/paparazzi/var/KMUAV2/sim/nav_survey_rectangle.o: subsystems/navigation/nav_survey_rectangle.c \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/nav_survey_rectangle.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/nav.h \
+ /home/excelobs/paparazzi/sw/include/std.h \
+ /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+ /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/guidance/guidance_v.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/common_nav.h \
+ /home/excelobs/paparazzi/sw/airborne/estimator.h \
+ /home/excelobs/paparazzi/var/KMUAV2/generated/flight_plan.h \
+ /home/excelobs/paparazzi/var/KMUAV2/generated/modules.h \
+ modules/ins/ins_arduimu.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/nav_line.h \
+ /home/excelobs/paparazzi/sw/airborne/datalink.h \
+ /home/excelobs/paparazzi/var/include/dl_protocol.h
+/home/excelobs/paparazzi/var/KMUAV2/sim/nav_line.o: subsystems/navigation/nav_line.c \
+ /home/excelobs/paparazzi/var/KMUAV2/generated/airframe.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/nav_line.h \
+ /home/excelobs/paparazzi/sw/include/std.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/nav.h \
+ /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+ /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/guidance/guidance_v.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/nav_survey_rectangle.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/common_nav.h
+/home/excelobs/paparazzi/var/KMUAV2/sim/i2c.o: mcu_periph/i2c.c \
+ /home/excelobs/paparazzi/sw/airborne/mcu_periph/i2c.h \
+ /home/excelobs/paparazzi/sw/include/std.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/mcu_periph/i2c_arch.h
+/home/excelobs/paparazzi/var/KMUAV2/sim/i2c_arch.o: arch/sim/mcu_periph/i2c_arch.c \
+ /home/excelobs/paparazzi/sw/airborne/mcu_periph/i2c.h \
+ /home/excelobs/paparazzi/sw/include/std.h \
+ /home/excelobs/paparazzi/sw/airborne/arch/sim/mcu_periph/i2c_arch.h
+/home/excelobs/paparazzi/var/KMUAV2/sim/ins_arduimu.o: arch/sim/modules/ins/ins_arduimu.c \
+ /home/excelobs/paparazzi/var/KMUAV2/generated/airframe.h \
+ /usr/lib/ocaml/caml/mlvalues.h /usr/lib/ocaml/caml/compatibility.h \
+ /usr/lib/ocaml/caml/config.h /usr/lib/ocaml/caml/misc.h \
+ /home/excelobs/paparazzi/sw/airborne/estimator.h \
+ /home/excelobs/paparazzi/sw/include/std.h \
+ /home/excelobs/paparazzi/sw/airborne/subsystems/sensors/infrared.h \
+ /home/excelobs/paparazzi/sw/airborne/modules/ins/ins_arduimu.h

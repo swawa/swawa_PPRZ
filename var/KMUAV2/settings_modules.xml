@@ -1,0 +1,11 @@
+<!-- This file has been generated from /home/excelobs/paparazzi/conf/airframes/mm/fixed-wing/fw_ins_arduimu.xml -->
+<!-- Please DO NOT EDIT -->
+
+<settings>
+ <dl_settings>
+   <dl_settings name="Modules">
+      <dl_setting min="2" max="3" step="1" var="ins_ArduIMU_ArduIMU_periodic_status" shortname="ArduIMU_periodic" values="START|STOP"/>
+      <dl_setting min="2" max="3" step="1" var="ins_ArduIMU_ArduIMU_periodicGPS_status" shortname="ArduIMU_periodicGPS" values="START|STOP"/>
+   </dl_settings>
+ </dl_settings>
+</settings>

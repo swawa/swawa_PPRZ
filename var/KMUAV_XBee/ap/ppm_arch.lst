@@ -1,0 +1,62 @@
+   1              		.file	"ppm_arch.c"
+   2              		.section	.text.ppm_arch_init,"ax",%progbits
+   3              		.align	2
+   4              		.global	ppm_arch_init
+   6              	ppm_arch_init:
+   7              		@ Function supports interworking.
+   8              		@ args = 0, pretend = 0, frame = 0
+   9              		@ frame_needed = 0, uses_anonymous_args = 0
+  10              		@ link register save eliminated.
+  11 0000 40209FE5 		ldr	r2, .L2
+  12 0004 003092E5 		ldr	r3, [r2, #0]
+  13 0008 023A83E3 		orr	r3, r3, #8192
+  14 000c 003082E5 		str	r3, [r2, #0]
+  15 0010 34309FE5 		ldr	r3, .L2+4
+  16 0014 0720A0E3 		mov	r2, #7
+  17 0018 0020C3E5 		strb	r2, [r3, #0]
+  18 001c 2C309FE5 		ldr	r3, .L2+8
+  19 0020 052DA0E3 		mov	r2, #320
+  20 0024 282083E5 		str	r2, [r3, #40]
+  21 0028 24309FE5 		ldr	r3, .L2+12
+  22 002c 0010A0E3 		mov	r1, #0
+  23 0030 0010C3E5 		strb	r1, [r3, #0]
+  24 0034 1C309FE5 		ldr	r3, .L2+16
+  25 0038 001083E5 		str	r1, [r3, #0]
+  26 003c 18309FE5 		ldr	r3, .L2+20
+  27              		@ lr needed for prologue
+  28 0040 0010C3E5 		strb	r1, [r3, #0]
+  29 0044 1EFF2FE1 		bx	lr
+  30              	.L3:
+  31              		.align	2
+  32              	.L2:
+  33 0048 00C002E0 		.word	-536690688
+  34 004c 00000000 		.word	ppm_cur_pulse
+  35 0050 004000E0 		.word	-536854528
+  36 0054 00000000 		.word	ppm_frame_available
+  37 0058 00000000 		.word	ppm_last_pulse_time
+  38 005c 00000000 		.word	ppm_data_valid
+  40              		.global	ppm_cur_pulse
+  41              		.section	.bss.ppm_cur_pulse,"aw",%nobits
+  44              	ppm_cur_pulse:
+  45 0000 00       		.space	1
+  46              		.global	ppm_last_pulse_time
+  47              		.section	.bss.ppm_last_pulse_time,"aw",%nobits
+  48              		.align	2
+  51              	ppm_last_pulse_time:
+  52 0000 00000000 		.space	4
+  53              		.global	ppm_data_valid
+  54              		.section	.bss.ppm_data_valid,"aw",%nobits
+  57              	ppm_data_valid:
+  58 0000 00       		.space	1
+  59              		.ident	"GCC: (GNU) 3.4.4"
+DEFINED SYMBOLS
+                            *ABS*:00000000 ppm_arch.c
+     /tmp/cctcjJOK.s:6      .text.ppm_arch_init:00000000 ppm_arch_init
+     /tmp/cctcjJOK.s:11     .text.ppm_arch_init:00000000 $a
+     /tmp/cctcjJOK.s:33     .text.ppm_arch_init:00000048 $d
+     /tmp/cctcjJOK.s:44     .bss.ppm_cur_pulse:00000000 ppm_cur_pulse
+     /tmp/cctcjJOK.s:51     .bss.ppm_last_pulse_time:00000000 ppm_last_pulse_time
+     /tmp/cctcjJOK.s:57     .bss.ppm_data_valid:00000000 ppm_data_valid
+
+UNDEFINED SYMBOLS
+ppm_frame_available

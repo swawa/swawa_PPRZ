@@ -1,0 +1,688 @@
+   1              		.file	"uart_arch.c"
+   2              		.section	.text.uart0_init_param,"ax",%progbits
+   3              		.align	2
+   4              		.global	uart0_init_param
+   6              	uart0_init_param:
+   7              		@ Function supports interworking.
+   8              		@ args = 0, pretend = 0, frame = 0
+   9              		@ frame_needed = 0, uses_anonymous_args = 0
+  10 0000 10402DE9 		stmfd	sp!, {r4, lr}
+  11 0004 B0E09FE5 		ldr	lr, .L2
+  12 0008 00309EE5 		ldr	r3, [lr, #0]
+  13 000c ACC09FE5 		ldr	ip, .L2+4
+  14 0010 0F30C3E3 		bic	r3, r3, #15
+  15 0014 0040A0E3 		mov	r4, #0
+  16 0018 053083E3 		orr	r3, r3, #5
+  17 001c 00308EE5 		str	r3, [lr, #0]
+  18 0020 0440CCE5 		strb	r4, [ip, #4]
+  19 0024 0008A0E1 		mov	r0, r0, asl #16
+  20 0028 0830DCE5 		ldrb	r3, [ip, #8]	@ zero_extendqisi2
+  21 002c FF2002E2 		and	r2, r2, #255
+  22 0030 0030DCE5 		ldrb	r3, [ip, #0]	@ zero_extendqisi2
+  23 0034 20ECA0E1 		mov	lr, r0, lsr #24
+  24 0038 1430DCE5 		ldrb	r3, [ip, #20]	@ zero_extendqisi2
+  25 003c 2008A0E1 		mov	r0, r0, lsr #16
+  26 0040 7F30E0E3 		mvn	r3, #127
+  27 0044 7F1001E2 		and	r1, r1, #127
+  28 0048 0C30CCE5 		strb	r3, [ip, #12]
+  29 004c 0000CCE5 		strb	r0, [ip, #0]
+  30 0050 6C309FE5 		ldr	r3, .L2+8
+  31 0054 04E0CCE5 		strb	lr, [ip, #4]
+  32 0058 68009FE5 		ldr	r0, .L2+12
+  33 005c 0C10CCE5 		strb	r1, [ip, #12]
+  34 0060 0820CCE5 		strb	r2, [ip, #8]
+  35 0064 0C2090E5 		ldr	r2, [r0, #12]
+  36 0068 0040C3E5 		strb	r4, [r3, #0]
+  37 006c 58309FE5 		ldr	r3, .L2+16
+  38 0070 B040C3E1 		strh	r4, [r3, #0]	@ movhi 
+  39 0074 54309FE5 		ldr	r3, .L2+20
+  40 0078 4020C2E3 		bic	r2, r2, #64
+  41 007c B040C3E1 		strh	r4, [r3, #0]	@ movhi 
+  42 0080 4030A0E3 		mov	r3, #64
+  43 0084 0C2080E5 		str	r2, [r0, #12]
+  44 0088 103080E5 		str	r3, [r0, #16]
+  45 008c 40309FE5 		ldr	r3, .L2+24
+  46 0090 B040C3E1 		strh	r4, [r3, #0]	@ movhi 
+  47 0094 2630A0E3 		mov	r3, #38
+  48 0098 143280E5 		str	r3, [r0, #532]
+  49 009c 34309FE5 		ldr	r3, .L2+28
+  50 00a0 143180E5 		str	r3, [r0, #276]
+  51 00a4 0130A0E3 		mov	r3, #1
+  52 00a8 0430CCE5 		strb	r3, [ip, #4]
+  53 00ac 28309FE5 		ldr	r3, .L2+32
+  54 00b0 B040C3E1 		strh	r4, [r3, #0]	@ movhi 
+  55 00b4 1040BDE8 		ldmfd	sp!, {r4, lr}
+  56 00b8 1EFF2FE1 		bx	lr
+  57              	.L3:
+  58              		.align	2
+  59              	.L2:
+  60 00bc 00C002E0 		.word	-536690688
+  61 00c0 00C000E0 		.word	-536821760
+  62 00c4 00000000 		.word	uart0_tx_running
+  63 00c8 00F0FFFF 		.word	-4096
+  64 00cc 00000000 		.word	uart0_rx_insert_idx
+  65 00d0 00000000 		.word	uart0_tx_extract_idx
+  66 00d4 00000000 		.word	uart0_tx_insert_idx
+  67 00d8 00000000 		.word	uart0_ISR
+  68 00dc 00000000 		.word	uart0_rx_extract_idx
+  70              		.section	.text.uart0_init,"ax",%progbits
+  71              		.align	2
+  72              		.global	uart0_init
+  74              	uart0_init:
+  75              		@ Function supports interworking.
+  76              		@ args = 0, pretend = 0, frame = 0
+  77              		@ frame_needed = 0, uses_anonymous_args = 0
+  78              		@ link register save eliminated.
+  79 0000 1800A0E3 		mov	r0, #24
+  80 0004 0310A0E3 		mov	r1, #3
+  81 0008 8120A0E3 		mov	r2, #129
+  82              		@ lr needed for prologue
+  83 000c FEFFFFEA 		b	uart0_init_param
+  85              		.section	.text.uart0_check_free_space,"ax",%progbits
+  86              		.align	2
+  87              		.global	uart0_check_free_space
+  89              	uart0_check_free_space:
+  90              		@ Function supports interworking.
+  91              		@ args = 0, pretend = 0, frame = 0
+  92              		@ frame_needed = 0, uses_anonymous_args = 0
+  93              		@ link register save eliminated.
+  94 0000 40309FE5 		ldr	r3, .L7
+  95 0004 B020D3E1 		ldrh	r2, [r3, #0]
+  96 0008 3C309FE5 		ldr	r3, .L7+4
+  97 000c B030D3E1 		ldrh	r3, [r3, #0]
+  98 0010 022063E0 		rsb	r2, r3, r2
+  99 0014 0228A0E1 		mov	r2, r2, asl #16
+ 100 0018 000052E3 		cmp	r2, #0
+ 101 001c 2228A0E1 		mov	r2, r2, lsr #16
+ 102 0020 803082E2 		add	r3, r2, #128
+ 103 0024 0338A0E1 		mov	r3, r3, asl #16
+ 104 0028 2328A0D1 		movle	r2, r3, lsr #16
+ 105 002c 013042E2 		sub	r3, r2, #1
+ 106 0030 FF0000E2 		and	r0, r0, #255
+ 107 0034 0338A0E1 		mov	r3, r3, asl #16
+ 108 0038 230850E1 		cmp	r0, r3, lsr #16
+ 109 003c 0000A083 		movhi	r0, #0
+ 110 0040 0100A093 		movls	r0, #1
+ 111              		@ lr needed for prologue
+ 112 0044 1EFF2FE1 		bx	lr
+ 113              	.L8:
+ 114              		.align	2
+ 115              	.L7:
+ 116 0048 00000000 		.word	uart0_tx_extract_idx
+ 117 004c 00000000 		.word	uart0_tx_insert_idx
+ 119              		.section	.text.uart0_transmit,"ax",%progbits
+ 120              		.align	2
+ 121              		.global	uart0_transmit
+ 123              	uart0_transmit:
+ 124              		@ Function supports interworking.
+ 125              		@ args = 0, pretend = 0, frame = 0
+ 126              		@ frame_needed = 1, uses_anonymous_args = 0
+ 127 0000 0DC0A0E1 		mov	ip, sp
+ 128 0004 F0D82DE9 		stmfd	sp!, {r4, r5, r6, r7, fp, ip, lr, pc}
+ 129 0008 80509FE5 		ldr	r5, .L13
+ 130 000c 80209FE5 		ldr	r2, .L13+4
+ 131 0010 B030D5E1 		ldrh	r3, [r5, #0]
+ 132 0014 B020D2E1 		ldrh	r2, [r2, #0]
+ 133 0018 013083E2 		add	r3, r3, #1
+ 134 001c 7F7003E2 		and	r7, r3, #127
+ 135 0020 070052E1 		cmp	r2, r7
+ 136 0024 04B04CE2 		sub	fp, ip, #4
+ 137 0028 68609FE5 		ldr	r6, .L13+8
+ 138 002c FF4000E2 		and	r4, r0, #255
+ 139 0030 2000000A 		beq	.L9
+ 140 0034 FEFFFFEB 		bl	disableIRQ
+ 141 0038 0430D6E5 		ldrb	r3, [r6, #4]	@ zero_extendqisi2
+ 142 003c 0230C3E3 		bic	r3, r3, #2
+ 143 0040 0430C6E5 		strb	r3, [r6, #4]
+ 144 0044 FEFFFFEB 		bl	restoreIRQ
+ 145 0048 4C209FE5 		ldr	r2, .L13+12
+ 146 004c 0030D2E5 		ldrb	r3, [r2, #0]	@ zero_extendqisi2
+ 147 0050 000053E3 		cmp	r3, #0
+ 148 0054 B020D511 		ldrneh	r2, [r5, #0]
+ 149 0058 40309F15 		ldrne	r3, .L13+16
+ 150 005c 0130A003 		moveq	r3, #1
+ 151 0060 0030C205 		streqb	r3, [r2, #0]
+ 152 0064 0240C317 		strneb	r4, [r3, r2]
+ 153 0068 0040C605 		streqb	r4, [r6, #0]
+ 154 006c B070C511 		strneh	r7, [r5, #0]	@ movhi 
+ 155 0070 FEFFFFEB 		bl	disableIRQ
+ 156 0074 1C209FE5 		ldr	r2, .L13+8
+ 157 0078 0430D2E5 		ldrb	r3, [r2, #4]	@ zero_extendqisi2
+ 158 007c 023083E3 		orr	r3, r3, #2
+ 159 0080 0430C2E5 		strb	r3, [r2, #4]
+ 160 0084 FEFFFFEB 		bl	restoreIRQ
+ 161              	.L9:
+ 162 0088 F0689DE8 		ldmfd	sp, {r4, r5, r6, r7, fp, sp, lr}
+ 163 008c 1EFF2FE1 		bx	lr
+ 164              	.L14:
+ 165              		.align	2
+ 166              	.L13:
+ 167 0090 00000000 		.word	uart0_tx_insert_idx
+ 168 0094 00000000 		.word	uart0_tx_extract_idx
+ 169 0098 00C000E0 		.word	-536821760
+ 170 009c 00000000 		.word	uart0_tx_running
+ 171 00a0 00000000 		.word	uart0_tx_buffer
+ 173              		.section	.text.uart0_ISR,"ax",%progbits
+ 174              		.align	2
+ 175              		.global	uart0_ISR
+ 177              	uart0_ISR:
+ 178              		@ Function supports interworking.
+ 179              		@ Naked Function: prologue and epilogue provided by programmer.
+ 180              		@ args = 0, pretend = 0, frame = 0
+ 181              		@ frame_needed = 0, uses_anonymous_args = 0
+ 182 0000 04E04EE2 		 sub   lr, lr,#4
+ 183 0004 FF5F2DE9 	 stmfd sp!,{r0-r12,lr}
+ 184 0008 00104FE1 	 mrs   r1, spsr
+ 185 000c 02002DE9 	 stmfd sp!,{r1}
+ 186              	.L42:
+ 187 0010 2C319FE5 		ldr	r3, .L43
+ 188 0014 0830D3E5 		ldrb	r3, [r3, #8]	@ zero_extendqisi2
+ 189 0018 FF3003E2 		and	r3, r3, #255
+ 190 001c 010013E3 		tst	r3, #1
+ 191 0020 4900001A 		bne	.L36
+ 192 0024 0E3003E2 		and	r3, r3, #14
+ 193 0028 023043E2 		sub	r3, r3, #2
+ 194 002c 0A0053E3 		cmp	r3, #10
+ 195 0030 03F19F97 		ldrls	pc, [pc, r3, asl #2]
+ 196 0034 450000EA 		b	.L32
+ 197              		.p2align 2
+ 198              	.L33:
+ 199 0038 C0000000 		.word	.L26
+ 200 003c 1C010000 		.word	.L32
+ 201 0040 70000000 		.word	.L22
+ 202 0044 1C010000 		.word	.L32
+ 203 0048 64000000 		.word	.L19
+ 204 004c 1C010000 		.word	.L32
+ 205 0050 1C010000 		.word	.L32
+ 206 0054 1C010000 		.word	.L32
+ 207 0058 1C010000 		.word	.L32
+ 208 005c 1C010000 		.word	.L32
+ 209 0060 70000000 		.word	.L22
+ 210              	.L19:
+ 211 0064 D8309FE5 		ldr	r3, .L43
+ 212 0068 1430D3E5 		ldrb	r3, [r3, #20]	@ zero_extendqisi2
+ 213 006c 020000EA 		b	.L42
+ 214              	.L22:
+ 215 0070 D0409FE5 		ldr	r4, .L43+4
+ 216 0074 D0309FE5 		ldr	r3, .L43+8
+ 217 0078 B000D4E1 		ldrh	r0, [r4, #0]
+ 218 007c C0E09FE5 		ldr	lr, .L43
+ 219 0080 B010D3E1 		ldrh	r1, [r3, #0]
+ 220 0084 013080E2 		add	r3, r0, #1
+ 221 0088 7FC003E2 		and	ip, r3, #127
+ 222 008c 0020DEE5 		ldrb	r2, [lr, #0]	@ zero_extendqisi2
+ 223 0090 B8309FE5 		ldr	r3, .L43+12
+ 224 0094 0C0051E1 		cmp	r1, ip
+ 225 0098 B0C0C411 		strneh	ip, [r4, #0]	@ movhi 
+ 226 009c 0020C3E7 		strb	r2, [r3, r0]
+ 227 00a0 1430DEE5 		ldrb	r3, [lr, #20]	@ zero_extendqisi2
+ 228 00a4 010013E3 		tst	r3, #1
+ 229 00a8 1A00001A 		bne	.L22
+ 230 00ac 020000EA 		b	.L42
+ 231              	.L39:
+ 232 00b0 9C309FE5 		ldr	r3, .L43+16
+ 233 00b4 0020A0E3 		mov	r2, #0
+ 234 00b8 0020C3E5 		strb	r2, [r3, #0]
+ 235 00bc 020000EA 		b	.L42
+ 236              	.L26:
+ 237 00c0 7C309FE5 		ldr	r3, .L43
+ 238 00c4 1430D3E5 		ldrb	r3, [r3, #20]	@ zero_extendqisi2
+ 239 00c8 200013E3 		tst	r3, #32
+ 240              	.L41:
+ 241 00cc 0200000A 		beq	.L42
+ 242 00d0 80009FE5 		ldr	r0, .L43+20
+ 243 00d4 80209FE5 		ldr	r2, .L43+24
+ 244 00d8 B030D0E1 		ldrh	r3, [r0, #0]
+ 245 00dc B020D2E1 		ldrh	r2, [r2, #0]
+ 246 00e0 030052E1 		cmp	r2, r3
+ 247 00e4 58E09FE5 		ldr	lr, .L43
+ 248 00e8 01C083E2 		add	ip, r3, #1
+ 249 00ec 0310A0E1 		mov	r1, r3
+ 250 00f0 2A00000A 		beq	.L39
+ 251 00f4 64309FE5 		ldr	r3, .L43+28
+ 252 00f8 0130D3E7 		ldrb	r3, [r3, r1]	@ zero_extendqisi2
+ 253 00fc B0C0C0E1 		strh	ip, [r0, #0]	@ movhi 
+ 254 0100 0030CEE5 		strb	r3, [lr, #0]
+ 255 0104 1420DEE5 		ldrb	r2, [lr, #20]	@ zero_extendqisi2
+ 256 0108 B030D0E1 		ldrh	r3, [r0, #0]
+ 257 010c 200012E3 		tst	r2, #32
+ 258 0110 7F3003E2 		and	r3, r3, #127
+ 259 0114 B030C0E1 		strh	r3, [r0, #0]	@ movhi 
+ 260 0118 310000EA 		b	.L41
+ 261              	.L32:
+ 262 011c 20309FE5 		ldr	r3, .L43
+ 263 0120 1420D3E5 		ldrb	r2, [r3, #20]	@ zero_extendqisi2
+ 264 0124 0030D3E5 		ldrb	r3, [r3, #0]	@ zero_extendqisi2
+ 265 0128 020000EA 		b	.L42
+ 266              	.L36:
+ 267 012c 30309FE5 		ldr	r3, .L43+32
+ 268 0130 0020A0E3 		mov	r2, #0
+ 269 0134 302083E5 		str	r2, [r3, #48]
+ 270 0138 0200BDE8 		 ldmfd sp!,{r1}
+ 271 013c 01F061E1 	 msr   spsr_c,r1
+ 272 0140 FF9FFDE8 	 ldmfd sp!,{r0-r12,pc}^
+ 273              	.L44:
+ 274              		.align	2
+ 275              	.L43:
+ 276 0144 00C000E0 		.word	-536821760
+ 277 0148 00000000 		.word	uart0_rx_insert_idx
+ 278 014c 00000000 		.word	uart0_rx_extract_idx
+ 279 0150 00000000 		.word	uart0_rx_buffer
+ 280 0154 00000000 		.word	uart0_tx_running
+ 281 0158 00000000 		.word	uart0_tx_extract_idx
+ 282 015c 00000000 		.word	uart0_tx_insert_idx
+ 283 0160 00000000 		.word	uart0_tx_buffer
+ 284 0164 00F0FFFF 		.word	-4096
+ 286              		.section	.text.uart1_init_param,"ax",%progbits
+ 287              		.align	2
+ 288              		.global	uart1_init_param
+ 290              	uart1_init_param:
+ 291              		@ Function supports interworking.
+ 292              		@ args = 0, pretend = 0, frame = 0
+ 293              		@ frame_needed = 0, uses_anonymous_args = 0
+ 294 0000 10402DE9 		stmfd	sp!, {r4, lr}
+ 295 0004 B0E09FE5 		ldr	lr, .L46
+ 296 0008 00309EE5 		ldr	r3, [lr, #0]
+ 297 000c ACC09FE5 		ldr	ip, .L46+4
+ 298 0010 0F38C3E3 		bic	r3, r3, #983040
+ 299 0014 0040A0E3 		mov	r4, #0
+ 300 0018 053883E3 		orr	r3, r3, #327680
+ 301 001c 00308EE5 		str	r3, [lr, #0]
+ 302 0020 0440CCE5 		strb	r4, [ip, #4]
+ 303 0024 0008A0E1 		mov	r0, r0, asl #16
+ 304 0028 0830DCE5 		ldrb	r3, [ip, #8]	@ zero_extendqisi2
+ 305 002c FF2002E2 		and	r2, r2, #255
+ 306 0030 0030DCE5 		ldrb	r3, [ip, #0]	@ zero_extendqisi2
+ 307 0034 20ECA0E1 		mov	lr, r0, lsr #24
+ 308 0038 1430DCE5 		ldrb	r3, [ip, #20]	@ zero_extendqisi2
+ 309 003c 2008A0E1 		mov	r0, r0, lsr #16
+ 310 0040 7F30E0E3 		mvn	r3, #127
+ 311 0044 7F1001E2 		and	r1, r1, #127
+ 312 0048 0C30CCE5 		strb	r3, [ip, #12]
+ 313 004c 0000CCE5 		strb	r0, [ip, #0]
+ 314 0050 6C309FE5 		ldr	r3, .L46+8
+ 315 0054 04E0CCE5 		strb	lr, [ip, #4]
+ 316 0058 68009FE5 		ldr	r0, .L46+12
+ 317 005c 0C10CCE5 		strb	r1, [ip, #12]
+ 318 0060 0820CCE5 		strb	r2, [ip, #8]
+ 319 0064 0C2090E5 		ldr	r2, [r0, #12]
+ 320 0068 0040C3E5 		strb	r4, [r3, #0]
+ 321 006c 58309FE5 		ldr	r3, .L46+16
+ 322 0070 B040C3E1 		strh	r4, [r3, #0]	@ movhi 
+ 323 0074 54309FE5 		ldr	r3, .L46+20
+ 324 0078 8020C2E3 		bic	r2, r2, #128
+ 325 007c B040C3E1 		strh	r4, [r3, #0]	@ movhi 
+ 326 0080 8030A0E3 		mov	r3, #128
+ 327 0084 0C2080E5 		str	r2, [r0, #12]
+ 328 0088 103080E5 		str	r3, [r0, #16]
+ 329 008c 40309FE5 		ldr	r3, .L46+24
+ 330 0090 B040C3E1 		strh	r4, [r3, #0]	@ movhi 
+ 331 0094 2730A0E3 		mov	r3, #39
+ 332 0098 183280E5 		str	r3, [r0, #536]
+ 333 009c 34309FE5 		ldr	r3, .L46+28
+ 334 00a0 183180E5 		str	r3, [r0, #280]
+ 335 00a4 0130A0E3 		mov	r3, #1
+ 336 00a8 0430CCE5 		strb	r3, [ip, #4]
+ 337 00ac 28309FE5 		ldr	r3, .L46+32
+ 338 00b0 B040C3E1 		strh	r4, [r3, #0]	@ movhi 
+ 339 00b4 1040BDE8 		ldmfd	sp!, {r4, lr}
+ 340 00b8 1EFF2FE1 		bx	lr
+ 341              	.L47:
+ 342              		.align	2
+ 343              	.L46:
+ 344 00bc 00C002E0 		.word	-536690688
+ 345 00c0 000001E0 		.word	-536805376
+ 346 00c4 00000000 		.word	uart1_tx_running
+ 347 00c8 00F0FFFF 		.word	-4096
+ 348 00cc 00000000 		.word	uart1_rx_insert_idx
+ 349 00d0 00000000 		.word	uart1_tx_extract_idx
+ 350 00d4 00000000 		.word	uart1_tx_insert_idx
+ 351 00d8 00000000 		.word	uart1_ISR
+ 352 00dc 00000000 		.word	uart1_rx_extract_idx
+ 354              		.section	.text.uart1_init,"ax",%progbits
+ 355              		.align	2
+ 356              		.global	uart1_init
+ 358              	uart1_init:
+ 359              		@ Function supports interworking.
+ 360              		@ args = 0, pretend = 0, frame = 0
+ 361              		@ frame_needed = 0, uses_anonymous_args = 0
+ 362              		@ link register save eliminated.
+ 363 0000 6200A0E3 		mov	r0, #98
+ 364 0004 0310A0E3 		mov	r1, #3
+ 365 0008 8120A0E3 		mov	r2, #129
+ 366              		@ lr needed for prologue
+ 367 000c FEFFFFEA 		b	uart1_init_param
+ 369              		.section	.text.uart1_check_free_space,"ax",%progbits
+ 370              		.align	2
+ 371              		.global	uart1_check_free_space
+ 373              	uart1_check_free_space:
+ 374              		@ Function supports interworking.
+ 375              		@ args = 0, pretend = 0, frame = 0
+ 376              		@ frame_needed = 0, uses_anonymous_args = 0
+ 377              		@ link register save eliminated.
+ 378 0000 40309FE5 		ldr	r3, .L51
+ 379 0004 B020D3E1 		ldrh	r2, [r3, #0]
+ 380 0008 3C309FE5 		ldr	r3, .L51+4
+ 381 000c B030D3E1 		ldrh	r3, [r3, #0]
+ 382 0010 022063E0 		rsb	r2, r3, r2
+ 383 0014 0228A0E1 		mov	r2, r2, asl #16
+ 384 0018 000052E3 		cmp	r2, #0
+ 385 001c 2228A0E1 		mov	r2, r2, lsr #16
+ 386 0020 803082E2 		add	r3, r2, #128
+ 387 0024 0338A0E1 		mov	r3, r3, asl #16
+ 388 0028 2328A0D1 		movle	r2, r3, lsr #16
+ 389 002c 013042E2 		sub	r3, r2, #1
+ 390 0030 FF0000E2 		and	r0, r0, #255
+ 391 0034 0338A0E1 		mov	r3, r3, asl #16
+ 392 0038 230850E1 		cmp	r0, r3, lsr #16
+ 393 003c 0000A083 		movhi	r0, #0
+ 394 0040 0100A093 		movls	r0, #1
+ 395              		@ lr needed for prologue
+ 396 0044 1EFF2FE1 		bx	lr
+ 397              	.L52:
+ 398              		.align	2
+ 399              	.L51:
+ 400 0048 00000000 		.word	uart1_tx_extract_idx
+ 401 004c 00000000 		.word	uart1_tx_insert_idx
+ 403              		.section	.text.uart1_transmit,"ax",%progbits
+ 404              		.align	2
+ 405              		.global	uart1_transmit
+ 407              	uart1_transmit:
+ 408              		@ Function supports interworking.
+ 409              		@ args = 0, pretend = 0, frame = 0
+ 410              		@ frame_needed = 1, uses_anonymous_args = 0
+ 411 0000 0DC0A0E1 		mov	ip, sp
+ 412 0004 F0D82DE9 		stmfd	sp!, {r4, r5, r6, r7, fp, ip, lr, pc}
+ 413 0008 80509FE5 		ldr	r5, .L57
+ 414 000c 80209FE5 		ldr	r2, .L57+4
+ 415 0010 B030D5E1 		ldrh	r3, [r5, #0]
+ 416 0014 B020D2E1 		ldrh	r2, [r2, #0]
+ 417 0018 013083E2 		add	r3, r3, #1
+ 418 001c 7F7003E2 		and	r7, r3, #127
+ 419 0020 070052E1 		cmp	r2, r7
+ 420 0024 04B04CE2 		sub	fp, ip, #4
+ 421 0028 68609FE5 		ldr	r6, .L57+8
+ 422 002c FF4000E2 		and	r4, r0, #255
+ 423 0030 2000000A 		beq	.L53
+ 424 0034 FEFFFFEB 		bl	disableIRQ
+ 425 0038 0430D6E5 		ldrb	r3, [r6, #4]	@ zero_extendqisi2
+ 426 003c 0230C3E3 		bic	r3, r3, #2
+ 427 0040 0430C6E5 		strb	r3, [r6, #4]
+ 428 0044 FEFFFFEB 		bl	restoreIRQ
+ 429 0048 4C209FE5 		ldr	r2, .L57+12
+ 430 004c 0030D2E5 		ldrb	r3, [r2, #0]	@ zero_extendqisi2
+ 431 0050 000053E3 		cmp	r3, #0
+ 432 0054 B020D511 		ldrneh	r2, [r5, #0]
+ 433 0058 40309F15 		ldrne	r3, .L57+16
+ 434 005c 0130A003 		moveq	r3, #1
+ 435 0060 0030C205 		streqb	r3, [r2, #0]
+ 436 0064 0240C317 		strneb	r4, [r3, r2]
+ 437 0068 0040C605 		streqb	r4, [r6, #0]
+ 438 006c B070C511 		strneh	r7, [r5, #0]	@ movhi 
+ 439 0070 FEFFFFEB 		bl	disableIRQ
+ 440 0074 1C209FE5 		ldr	r2, .L57+8
+ 441 0078 0430D2E5 		ldrb	r3, [r2, #4]	@ zero_extendqisi2
+ 442 007c 023083E3 		orr	r3, r3, #2
+ 443 0080 0430C2E5 		strb	r3, [r2, #4]
+ 444 0084 FEFFFFEB 		bl	restoreIRQ
+ 445              	.L53:
+ 446 0088 F0689DE8 		ldmfd	sp, {r4, r5, r6, r7, fp, sp, lr}
+ 447 008c 1EFF2FE1 		bx	lr
+ 448              	.L58:
+ 449              		.align	2
+ 450              	.L57:
+ 451 0090 00000000 		.word	uart1_tx_insert_idx
+ 452 0094 00000000 		.word	uart1_tx_extract_idx
+ 453 0098 000001E0 		.word	-536805376
+ 454 009c 00000000 		.word	uart1_tx_running
+ 455 00a0 00000000 		.word	uart1_tx_buffer
+ 457              		.section	.text.uart1_ISR,"ax",%progbits
+ 458              		.align	2
+ 459              		.global	uart1_ISR
+ 461              	uart1_ISR:
+ 462              		@ Function supports interworking.
+ 463              		@ Naked Function: prologue and epilogue provided by programmer.
+ 464              		@ args = 0, pretend = 0, frame = 0
+ 465              		@ frame_needed = 0, uses_anonymous_args = 0
+ 466 0000 04E04EE2 		 sub   lr, lr,#4
+ 467 0004 FF5F2DE9 	 stmfd sp!,{r0-r12,lr}
+ 468 0008 00104FE1 	 mrs   r1, spsr
+ 469 000c 02002DE9 	 stmfd sp!,{r1}
+ 470              	.L88:
+ 471 0010 3C319FE5 		ldr	r3, .L89
+ 472 0014 0830D3E5 		ldrb	r3, [r3, #8]	@ zero_extendqisi2
+ 473 0018 FF3003E2 		and	r3, r3, #255
+ 474 001c 010013E3 		tst	r3, #1
+ 475 0020 4D00001A 		bne	.L81
+ 476 0024 0E3003E2 		and	r3, r3, #14
+ 477 0028 0C0053E3 		cmp	r3, #12
+ 478 002c 03F19F97 		ldrls	pc, [pc, r3, asl #2]
+ 479 0030 480000EA 		b	.L77
+ 480              		.p2align 2
+ 481              	.L78:
+ 482 0034 20010000 		.word	.L76
+ 483 0038 28010000 		.word	.L77
+ 484 003c C4000000 		.word	.L70
+ 485 0040 28010000 		.word	.L77
+ 486 0044 74000000 		.word	.L66
+ 487 0048 28010000 		.word	.L77
+ 488 004c 68000000 		.word	.L63
+ 489 0050 28010000 		.word	.L77
+ 490 0054 28010000 		.word	.L77
+ 491 0058 28010000 		.word	.L77
+ 492 005c 28010000 		.word	.L77
+ 493 0060 28010000 		.word	.L77
+ 494 0064 74000000 		.word	.L66
+ 495              	.L63:
+ 496 0068 E4309FE5 		ldr	r3, .L89
+ 497 006c 1430D3E5 		ldrb	r3, [r3, #20]	@ zero_extendqisi2
+ 498 0070 020000EA 		b	.L88
+ 499              	.L66:
+ 500 0074 DC409FE5 		ldr	r4, .L89+4
+ 501 0078 DC309FE5 		ldr	r3, .L89+8
+ 502 007c B000D4E1 		ldrh	r0, [r4, #0]
+ 503 0080 CCE09FE5 		ldr	lr, .L89
+ 504 0084 B010D3E1 		ldrh	r1, [r3, #0]
+ 505 0088 013080E2 		add	r3, r0, #1
+ 506 008c 7FC003E2 		and	ip, r3, #127
+ 507 0090 0020DEE5 		ldrb	r2, [lr, #0]	@ zero_extendqisi2
+ 508 0094 C4309FE5 		ldr	r3, .L89+12
+ 509 0098 0C0051E1 		cmp	r1, ip
+ 510 009c B0C0C411 		strneh	ip, [r4, #0]	@ movhi 
+ 511 00a0 0020C3E7 		strb	r2, [r3, r0]
+ 512 00a4 1430DEE5 		ldrb	r3, [lr, #20]	@ zero_extendqisi2
+ 513 00a8 010013E3 		tst	r3, #1
+ 514 00ac 1B00001A 		bne	.L66
+ 515 00b0 020000EA 		b	.L88
+ 516              	.L84:
+ 517 00b4 A8309FE5 		ldr	r3, .L89+16
+ 518 00b8 0020A0E3 		mov	r2, #0
+ 519 00bc 0020C3E5 		strb	r2, [r3, #0]
+ 520 00c0 020000EA 		b	.L88
+ 521              	.L70:
+ 522 00c4 88309FE5 		ldr	r3, .L89
+ 523 00c8 1430D3E5 		ldrb	r3, [r3, #20]	@ zero_extendqisi2
+ 524 00cc 200013E3 		tst	r3, #32
+ 525              	.L87:
+ 526 00d0 0200000A 		beq	.L88
+ 527 00d4 8C009FE5 		ldr	r0, .L89+20
+ 528 00d8 8C209FE5 		ldr	r2, .L89+24
+ 529 00dc B030D0E1 		ldrh	r3, [r0, #0]
+ 530 00e0 B020D2E1 		ldrh	r2, [r2, #0]
+ 531 00e4 030052E1 		cmp	r2, r3
+ 532 00e8 64E09FE5 		ldr	lr, .L89
+ 533 00ec 01C083E2 		add	ip, r3, #1
+ 534 00f0 0310A0E1 		mov	r1, r3
+ 535 00f4 2B00000A 		beq	.L84
+ 536 00f8 70309FE5 		ldr	r3, .L89+28
+ 537 00fc 0130D3E7 		ldrb	r3, [r3, r1]	@ zero_extendqisi2
+ 538 0100 B0C0C0E1 		strh	ip, [r0, #0]	@ movhi 
+ 539 0104 0030CEE5 		strb	r3, [lr, #0]
+ 540 0108 1420DEE5 		ldrb	r2, [lr, #20]	@ zero_extendqisi2
+ 541 010c B030D0E1 		ldrh	r3, [r0, #0]
+ 542 0110 200012E3 		tst	r2, #32
+ 543 0114 7F3003E2 		and	r3, r3, #127
+ 544 0118 B030C0E1 		strh	r3, [r0, #0]	@ movhi 
+ 545 011c 320000EA 		b	.L87
+ 546              	.L76:
+ 547 0120 2C309FE5 		ldr	r3, .L89
+ 548 0124 4B0000EA 		b	.L86
+ 549              	.L77:
+ 550 0128 24309FE5 		ldr	r3, .L89
+ 551 012c 1420D3E5 		ldrb	r2, [r3, #20]	@ zero_extendqisi2
+ 552 0130 0020D3E5 		ldrb	r2, [r3, #0]	@ zero_extendqisi2
+ 553              	.L86:
+ 554 0134 1830D3E5 		ldrb	r3, [r3, #24]	@ zero_extendqisi2
+ 555 0138 020000EA 		b	.L88
+ 556              	.L81:
+ 557 013c 30309FE5 		ldr	r3, .L89+32
+ 558 0140 0020A0E3 		mov	r2, #0
+ 559 0144 302083E5 		str	r2, [r3, #48]
+ 560 0148 0200BDE8 		 ldmfd sp!,{r1}
+ 561 014c 01F061E1 	 msr   spsr_c,r1
+ 562 0150 FF9FFDE8 	 ldmfd sp!,{r0-r12,pc}^
+ 563              	.L90:
+ 564              		.align	2
+ 565              	.L89:
+ 566 0154 000001E0 		.word	-536805376
+ 567 0158 00000000 		.word	uart1_rx_insert_idx
+ 568 015c 00000000 		.word	uart1_rx_extract_idx
+ 569 0160 00000000 		.word	uart1_rx_buffer
+ 570 0164 00000000 		.word	uart1_tx_running
+ 571 0168 00000000 		.word	uart1_tx_extract_idx
+ 572 016c 00000000 		.word	uart1_tx_insert_idx
+ 573 0170 00000000 		.word	uart1_tx_buffer
+ 574 0174 00F0FFFF 		.word	-4096
+ 576              		.global	uart0_rx_insert_idx
+ 577              		.section	.bss.uart0_rx_insert_idx,"aw",%nobits
+ 578              		.align	1
+ 581              	uart0_rx_insert_idx:
+ 582 0000 0000     		.space	2
+ 583              		.global	uart0_rx_extract_idx
+ 584              		.section	.bss.uart0_rx_extract_idx,"aw",%nobits
+ 585              		.align	1
+ 588              	uart0_rx_extract_idx:
+ 589 0000 0000     		.space	2
+ 590              		.global	uart0_rx_buffer
+ 591              		.section	.bss.uart0_rx_buffer,"aw",%nobits
+ 594              	uart0_rx_buffer:
+ 595 0000 00000000 		.space	128
+ 595      00000000 
+ 595      00000000 
+ 595      00000000 
+ 595      00000000 
+ 596              		.global	uart1_rx_insert_idx
+ 597              		.section	.bss.uart1_rx_insert_idx,"aw",%nobits
+ 598              		.align	1
+ 601              	uart1_rx_insert_idx:
+ 602 0000 0000     		.space	2
+ 603              		.global	uart1_rx_extract_idx
+ 604              		.section	.bss.uart1_rx_extract_idx,"aw",%nobits
+ 605              		.align	1
+ 608              	uart1_rx_extract_idx:
+ 609 0000 0000     		.space	2
+ 610              		.global	uart1_rx_buffer
+ 611              		.section	.bss.uart1_rx_buffer,"aw",%nobits
+ 614              	uart1_rx_buffer:
+ 615 0000 00000000 		.space	128
+ 615      00000000 
+ 615      00000000 
+ 615      00000000 
+ 615      00000000 
+ 616              		.global	uart0_tx_running
+ 617              		.section	.bss.uart0_tx_running,"aw",%nobits
+ 620              	uart0_tx_running:
+ 621 0000 00       		.space	1
+ 622              		.global	uart1_tx_running
+ 623              		.section	.bss.uart1_tx_running,"aw",%nobits
+ 626              	uart1_tx_running:
+ 627 0000 00       		.space	1
+ 628              		.global	uart0_tx_buffer
+ 629              		.section	.bss.uart0_tx_buffer,"aw",%nobits
+ 632              	uart0_tx_buffer:
+ 633 0000 00000000 		.space	128
+ 633      00000000 
+ 633      00000000 
+ 633      00000000 
+ 633      00000000 
+ 634              		.global	uart0_tx_insert_idx
+ 635              		.section	.bss.uart0_tx_insert_idx,"aw",%nobits
+ 636              		.align	1
+ 639              	uart0_tx_insert_idx:
+ 640 0000 0000     		.space	2
+ 641              		.global	uart0_tx_extract_idx
+ 642              		.section	.bss.uart0_tx_extract_idx,"aw",%nobits
+ 643              		.align	1
+ 646              	uart0_tx_extract_idx:
+ 647 0000 0000     		.space	2
+ 648              		.global	uart1_tx_buffer
+ 649              		.section	.bss.uart1_tx_buffer,"aw",%nobits
+ 652              	uart1_tx_buffer:
+ 653 0000 00000000 		.space	128
+ 653      00000000 
+ 653      00000000 
+ 653      00000000 
+ 653      00000000 
+ 654              		.global	uart1_tx_insert_idx
+ 655              		.section	.bss.uart1_tx_insert_idx,"aw",%nobits
+ 656              		.align	1
+ 659              	uart1_tx_insert_idx:
+ 660 0000 0000     		.space	2
+ 661              		.global	uart1_tx_extract_idx
+ 662              		.section	.bss.uart1_tx_extract_idx,"aw",%nobits
+ 663              		.align	1
+ 666              	uart1_tx_extract_idx:
+ 667 0000 0000     		.space	2
+ 668              		.ident	"GCC: (GNU) 3.4.4"
+DEFINED SYMBOLS
+                            *ABS*:00000000 uart_arch.c
+     /tmp/ccd3JeuK.s:6      .text.uart0_init_param:00000000 uart0_init_param
+     /tmp/ccd3JeuK.s:10     .text.uart0_init_param:00000000 $a
+     /tmp/ccd3JeuK.s:60     .text.uart0_init_param:000000bc $d
+     /tmp/ccd3JeuK.s:620    .bss.uart0_tx_running:00000000 uart0_tx_running
+     /tmp/ccd3JeuK.s:581    .bss.uart0_rx_insert_idx:00000000 uart0_rx_insert_idx
+     /tmp/ccd3JeuK.s:646    .bss.uart0_tx_extract_idx:00000000 uart0_tx_extract_idx
+     /tmp/ccd3JeuK.s:639    .bss.uart0_tx_insert_idx:00000000 uart0_tx_insert_idx
+     /tmp/ccd3JeuK.s:177    .text.uart0_ISR:00000000 uart0_ISR
+     /tmp/ccd3JeuK.s:588    .bss.uart0_rx_extract_idx:00000000 uart0_rx_extract_idx
+     /tmp/ccd3JeuK.s:74     .text.uart0_init:00000000 uart0_init
+     /tmp/ccd3JeuK.s:79     .text.uart0_init:00000000 $a
+     /tmp/ccd3JeuK.s:89     .text.uart0_check_free_space:00000000 uart0_check_free_space
+     /tmp/ccd3JeuK.s:94     .text.uart0_check_free_space:00000000 $a
+     /tmp/ccd3JeuK.s:116    .text.uart0_check_free_space:00000048 $d
+     /tmp/ccd3JeuK.s:123    .text.uart0_transmit:00000000 uart0_transmit
+     /tmp/ccd3JeuK.s:127    .text.uart0_transmit:00000000 $a
+     /tmp/ccd3JeuK.s:167    .text.uart0_transmit:00000090 $d
+     /tmp/ccd3JeuK.s:632    .bss.uart0_tx_buffer:00000000 uart0_tx_buffer
+     /tmp/ccd3JeuK.s:182    .text.uart0_ISR:00000000 $a
+     /tmp/ccd3JeuK.s:199    .text.uart0_ISR:00000038 $d
+     /tmp/ccd3JeuK.s:211    .text.uart0_ISR:00000064 $a
+     /tmp/ccd3JeuK.s:276    .text.uart0_ISR:00000144 $d
+     /tmp/ccd3JeuK.s:594    .bss.uart0_rx_buffer:00000000 uart0_rx_buffer
+     /tmp/ccd3JeuK.s:290    .text.uart1_init_param:00000000 uart1_init_param
+     /tmp/ccd3JeuK.s:294    .text.uart1_init_param:00000000 $a
+     /tmp/ccd3JeuK.s:344    .text.uart1_init_param:000000bc $d
+     /tmp/ccd3JeuK.s:626    .bss.uart1_tx_running:00000000 uart1_tx_running
+     /tmp/ccd3JeuK.s:601    .bss.uart1_rx_insert_idx:00000000 uart1_rx_insert_idx
+     /tmp/ccd3JeuK.s:666    .bss.uart1_tx_extract_idx:00000000 uart1_tx_extract_idx
+     /tmp/ccd3JeuK.s:659    .bss.uart1_tx_insert_idx:00000000 uart1_tx_insert_idx
+     /tmp/ccd3JeuK.s:461    .text.uart1_ISR:00000000 uart1_ISR
+     /tmp/ccd3JeuK.s:608    .bss.uart1_rx_extract_idx:00000000 uart1_rx_extract_idx
+     /tmp/ccd3JeuK.s:358    .text.uart1_init:00000000 uart1_init
+     /tmp/ccd3JeuK.s:363    .text.uart1_init:00000000 $a
+     /tmp/ccd3JeuK.s:373    .text.uart1_check_free_space:00000000 uart1_check_free_space
+     /tmp/ccd3JeuK.s:378    .text.uart1_check_free_space:00000000 $a
+     /tmp/ccd3JeuK.s:400    .text.uart1_check_free_space:00000048 $d
+     /tmp/ccd3JeuK.s:407    .text.uart1_transmit:00000000 uart1_transmit
+     /tmp/ccd3JeuK.s:411    .text.uart1_transmit:00000000 $a
+     /tmp/ccd3JeuK.s:451    .text.uart1_transmit:00000090 $d
+     /tmp/ccd3JeuK.s:652    .bss.uart1_tx_buffer:00000000 uart1_tx_buffer
+     /tmp/ccd3JeuK.s:466    .text.uart1_ISR:00000000 $a
+     /tmp/ccd3JeuK.s:482    .text.uart1_ISR:00000034 $d
+     /tmp/ccd3JeuK.s:496    .text.uart1_ISR:00000068 $a
+     /tmp/ccd3JeuK.s:566    .text.uart1_ISR:00000154 $d
+     /tmp/ccd3JeuK.s:614    .bss.uart1_rx_buffer:00000000 uart1_rx_buffer
+
+UNDEFINED SYMBOLS
+disableIRQ
+restoreIRQ

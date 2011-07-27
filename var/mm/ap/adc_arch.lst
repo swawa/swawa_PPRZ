@@ -1,0 +1,215 @@
+   1              		.file	"adc_arch.c"
+   2              		.global	adc1_val
+   3              		.section	.data.adc1_val,"aw",%progbits
+   4              		.align	1
+   7              	adc1_val:
+   8 0000 0900     		.short	9
+   9 0002 0A00     		.short	10
+  10 0004 0B00     		.short	11
+  11 0006 0C00     		.short	12
+  12 0008 0D00     		.short	13
+  13 000a 0E00     		.short	14
+  14 000c 0F00     		.short	15
+  15 000e 1000     		.short	16
+  16              		.global	adc0_val
+  17              		.section	.data.adc0_val,"aw",%progbits
+  18              		.align	1
+  21              	adc0_val:
+  22 0000 0100     		.short	1
+  23 0002 0200     		.short	2
+  24 0004 0300     		.short	3
+  25 0006 0400     		.short	4
+  26 0008 0500     		.short	5
+  27 000a 0600     		.short	6
+  28 000c 0700     		.short	7
+  29 000e 0800     		.short	8
+  30              		.section	.text.adc_buf_channel,"ax",%progbits
+  31              		.align	2
+  32              		.global	adc_buf_channel
+  34              	adc_buf_channel:
+  35              		@ Function supports interworking.
+  36              		@ args = 0, pretend = 0, frame = 0
+  37              		@ frame_needed = 0, uses_anonymous_args = 0
+  38              		@ link register save eliminated.
+  39 0000 0C309FE5 		ldr	r3, .L2
+  40 0004 FF0000E2 		and	r0, r0, #255
+  41 0008 001183E7 		str	r1, [r3, r0, asl #2]
+  42              		@ lr needed for prologue
+  43 000c 4520C1E5 		strb	r2, [r1, #69]
+  44 0010 1EFF2FE1 		bx	lr
+  45              	.L3:
+  46              		.align	2
+  47              	.L2:
+  48 0014 00000000 		.word	buffers
+  50              		.section	.text.adc_init,"ax",%progbits
+  51              		.align	2
+  52              		.global	adc_init
+  54              	adc_init:
+  55              		@ Function supports interworking.
+  56              		@ args = 0, pretend = 0, frame = 0
+  57              		@ frame_needed = 0, uses_anonymous_args = 0
+  58              		@ link register save eliminated.
+  59 0000 48209FE5 		ldr	r2, .L5
+  60 0004 003092E5 		ldr	r3, [r2, #0]
+  61 0008 033183E3 		orr	r3, r3, #-1073741824
+  62 000c 003082E5 		str	r3, [r2, #0]
+  63 0010 043092E5 		ldr	r3, [r2, #4]
+  64 0014 043082E5 		str	r3, [r2, #4]
+  65 0018 34209FE5 		ldr	r2, .L5+4
+  66 001c 34309FE5 		ldr	r3, .L5+8
+  67 0020 002083E5 		str	r2, [r3, #0]
+  68 0024 30209FE5 		ldr	r2, .L5+12
+  69 0028 0C3092E5 		ldr	r3, [r2, #12]
+  70 002c 0236C3E3 		bic	r3, r3, #2097152
+  71 0030 0C3082E5 		str	r3, [r2, #12]
+  72 0034 0236A0E3 		mov	r3, #2097152
+  73 0038 103082E5 		str	r3, [r2, #16]
+  74 003c 3530A0E3 		mov	r3, #53
+  75 0040 103282E5 		str	r3, [r2, #528]
+  76 0044 14309FE5 		ldr	r3, .L5+16
+  77              		@ lr needed for prologue
+  78 0048 103182E5 		str	r3, [r2, #272]
+  79 004c 1EFF2FE1 		bx	lr
+  80              	.L6:
+  81              		.align	2
+  82              	.L5:
+  83 0050 00C002E0 		.word	-536690688
+  84 0054 20FF2100 		.word	2228000
+  85 0058 000006E0 		.word	-536477696
+  86 005c 00F0FFFF 		.word	-4096
+  87 0060 00000000 		.word	adcISR1
+  89              		.section	.text.adcISR0,"ax",%progbits
+  90              		.align	2
+  91              		.global	adcISR0
+  93              	adcISR0:
+  94              		@ Function supports interworking.
+  95              		@ Naked Function: prologue and epilogue provided by programmer.
+  96              		@ args = 0, pretend = 0, frame = 0
+  97              		@ frame_needed = 0, uses_anonymous_args = 0
+  98 0000 04E04EE2 		 sub   lr, lr,#4
+  99 0004 FF5F2DE9 	 stmfd sp!,{r0-r12,lr}
+ 100 0008 00104FE1 	 mrs   r1, spsr
+ 101 000c 02002DE9 	 stmfd sp!,{r1}
+ 102 0010 7C309FE5 		ldr	r3, .L10
+ 103 0014 042093E5 		ldr	r2, [r3, #4]
+ 104 0018 78309FE5 		ldr	r3, .L10+4
+ 105 001c 221CA0E1 		mov	r1, r2, lsr #24
+ 106 0020 071001E2 		and	r1, r1, #7
+ 107 0024 01C193E7 		ldr	ip, [r3, r1, asl #2]
+ 108 0028 0228A0E1 		mov	r2, r2, asl #16
+ 109 002c 68309FE5 		ldr	r3, .L10+8
+ 110 0030 22EBA0E1 		mov	lr, r2, lsr #22
+ 111 0034 8110A0E1 		mov	r1, r1, asl #1
+ 112 0038 00005CE3 		cmp	ip, #0
+ 113 003c B3E081E1 		strh	lr, [r1, r3]	@ movhi 
+ 114 0040 1D00000A 		beq	.L8
+ 115 0044 4430DCE5 		ldrb	r3, [ip, #68]	@ zero_extendqisi2
+ 116 0048 4520DCE5 		ldrb	r2, [ip, #69]	@ zero_extendqisi2
+ 117 004c 013083E2 		add	r3, r3, #1
+ 118 0050 FF3003E2 		and	r3, r3, #255
+ 119 0054 030052E1 		cmp	r2, r3
+ 120 0058 0030A093 		movls	r3, #0
+ 121 005c 83008CE0 		add	r0, ip, r3, asl #1
+ 122 0060 00209CE5 		ldr	r2, [ip, #0]
+ 123 0064 B410D0E1 		ldrh	r1, [r0, #4]
+ 124 0068 022061E0 		rsb	r2, r1, r2
+ 125 006c 0E2082E0 		add	r2, r2, lr
+ 126 0070 4430CCE5 		strb	r3, [ip, #68]
+ 127 0074 00208CE5 		str	r2, [ip, #0]
+ 128 0078 B4E0C0E1 		strh	lr, [r0, #4]	@ movhi 
+ 129              	.L8:
+ 130 007c 1C309FE5 		ldr	r3, .L10+12
+ 131 0080 0020A0E3 		mov	r2, #0
+ 132 0084 302083E5 		str	r2, [r3, #48]
+ 133 0088 0200BDE8 		 ldmfd sp!,{r1}
+ 134 008c 01F061E1 	 msr   spsr_c,r1
+ 135 0090 FF9FFDE8 	 ldmfd sp!,{r0-r12,pc}^
+ 136              	.L11:
+ 137              		.align	2
+ 138              	.L10:
+ 139 0094 004003E0 		.word	-536657920
+ 140 0098 00000000 		.word	buffers
+ 141 009c 00000000 		.word	adc0_val
+ 142 00a0 00F0FFFF 		.word	-4096
+ 144              		.section	.text.adcISR1,"ax",%progbits
+ 145              		.align	2
+ 146              		.global	adcISR1
+ 148              	adcISR1:
+ 149              		@ Function supports interworking.
+ 150              		@ Naked Function: prologue and epilogue provided by programmer.
+ 151              		@ args = 0, pretend = 0, frame = 0
+ 152              		@ frame_needed = 0, uses_anonymous_args = 0
+ 153 0000 04E04EE2 		 sub   lr, lr,#4
+ 154 0004 FF5F2DE9 	 stmfd sp!,{r0-r12,lr}
+ 155 0008 00104FE1 	 mrs   r1, spsr
+ 156 000c 02002DE9 	 stmfd sp!,{r1}
+ 157 0010 80309FE5 		ldr	r3, .L15
+ 158 0014 042093E5 		ldr	r2, [r3, #4]
+ 159 0018 7C309FE5 		ldr	r3, .L15+4
+ 160 001c 221CA0E1 		mov	r1, r2, lsr #24
+ 161 0020 071001E2 		and	r1, r1, #7
+ 162 0024 013183E0 		add	r3, r3, r1, asl #2
+ 163 0028 20C093E5 		ldr	ip, [r3, #32]
+ 164 002c 0228A0E1 		mov	r2, r2, asl #16
+ 165 0030 68309FE5 		ldr	r3, .L15+8
+ 166 0034 22EBA0E1 		mov	lr, r2, lsr #22
+ 167 0038 8110A0E1 		mov	r1, r1, asl #1
+ 168 003c 00005CE3 		cmp	ip, #0
+ 169 0040 B3E081E1 		strh	lr, [r1, r3]	@ movhi 
+ 170 0044 1E00000A 		beq	.L13
+ 171 0048 4430DCE5 		ldrb	r3, [ip, #68]	@ zero_extendqisi2
+ 172 004c 4520DCE5 		ldrb	r2, [ip, #69]	@ zero_extendqisi2
+ 173 0050 013083E2 		add	r3, r3, #1
+ 174 0054 FF3003E2 		and	r3, r3, #255
+ 175 0058 030052E1 		cmp	r2, r3
+ 176 005c 0030A093 		movls	r3, #0
+ 177 0060 83008CE0 		add	r0, ip, r3, asl #1
+ 178 0064 00209CE5 		ldr	r2, [ip, #0]
+ 179 0068 B410D0E1 		ldrh	r1, [r0, #4]
+ 180 006c 022061E0 		rsb	r2, r1, r2
+ 181 0070 0E2082E0 		add	r2, r2, lr
+ 182 0074 4430CCE5 		strb	r3, [ip, #68]
+ 183 0078 00208CE5 		str	r2, [ip, #0]
+ 184 007c B4E0C0E1 		strh	lr, [r0, #4]	@ movhi 
+ 185              	.L13:
+ 186 0080 1C309FE5 		ldr	r3, .L15+12
+ 187 0084 0020A0E3 		mov	r2, #0
+ 188 0088 302083E5 		str	r2, [r3, #48]
+ 189 008c 0200BDE8 		 ldmfd sp!,{r1}
+ 190 0090 01F061E1 	 msr   spsr_c,r1
+ 191 0094 FF9FFDE8 	 ldmfd sp!,{r0-r12,pc}^
+ 192              	.L16:
+ 193              		.align	2
+ 194              	.L15:
+ 195 0098 000006E0 		.word	-536477696
+ 196 009c 00000000 		.word	buffers
+ 197 00a0 00000000 		.word	adc1_val
+ 198 00a4 00F0FFFF 		.word	-4096
+ 200              		.section	.bss.buffers,"aw",%nobits
+ 201              		.align	2
+ 204              	buffers:
+ 205 0000 00000000 		.space	64
+ 205      00000000 
+ 205      00000000 
+ 205      00000000 
+ 205      00000000 
+ 206              		.ident	"GCC: (GNU) 3.4.4"
+DEFINED SYMBOLS
+                            *ABS*:00000000 adc_arch.c
+     /tmp/cchZUjSp.s:7      .data.adc1_val:00000000 adc1_val
+     /tmp/cchZUjSp.s:21     .data.adc0_val:00000000 adc0_val
+     /tmp/cchZUjSp.s:34     .text.adc_buf_channel:00000000 adc_buf_channel
+     /tmp/cchZUjSp.s:39     .text.adc_buf_channel:00000000 $a
+     /tmp/cchZUjSp.s:48     .text.adc_buf_channel:00000014 $d
+     /tmp/cchZUjSp.s:204    .bss.buffers:00000000 buffers
+     /tmp/cchZUjSp.s:54     .text.adc_init:00000000 adc_init
+     /tmp/cchZUjSp.s:59     .text.adc_init:00000000 $a
+     /tmp/cchZUjSp.s:83     .text.adc_init:00000050 $d
+     /tmp/cchZUjSp.s:148    .text.adcISR1:00000000 adcISR1
+     /tmp/cchZUjSp.s:93     .text.adcISR0:00000000 adcISR0
+     /tmp/cchZUjSp.s:98     .text.adcISR0:00000000 $a
+     /tmp/cchZUjSp.s:139    .text.adcISR0:00000094 $d
+     /tmp/cchZUjSp.s:153    .text.adcISR1:00000000 $a
+     /tmp/cchZUjSp.s:195    .text.adcISR1:00000098 $d
+
+NO UNDEFINED SYMBOLS

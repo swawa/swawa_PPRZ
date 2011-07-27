@@ -1,0 +1,13 @@
+   1              		.file	"actuators.c"
+   2              		.global	actuators
+   3              		.section	.bss.actuators,"aw",%nobits
+   4              		.align	1
+   7              	actuators:
+   8 0000 00000000 		.space	8
+   8      00000000 
+   9              		.ident	"GCC: (GNU) 3.4.4"
+DEFINED SYMBOLS
+                            *ABS*:00000000 actuators.c
+     /tmp/cc6y57nX.s:7      .bss.actuators:00000000 actuators
+
+NO UNDEFINED SYMBOLS

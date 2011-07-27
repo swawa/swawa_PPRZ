@@ -1,0 +1,12 @@
+   1              		.file	"sys_time.c"
+   2              		.global	cpu_time_sec
+   3              		.section	.bss.cpu_time_sec,"aw",%nobits
+   4              		.align	1
+   7              	cpu_time_sec:
+   8 0000 0000     		.space	2
+   9              		.ident	"GCC: (GNU) 3.4.4"
+DEFINED SYMBOLS
+                            *ABS*:00000000 sys_time.c
+     /tmp/ccOehnew.s:7      .bss.cpu_time_sec:00000000 cpu_time_sec
+
+NO UNDEFINED SYMBOLS

@@ -1,0 +1,60 @@
+   1              		.file	"mcu_arch.c"
+   2              		.section	.text.mcu_arch_init,"ax",%progbits
+   3              		.align	2
+   4              		.global	mcu_arch_init
+   6              	mcu_arch_init:
+   7              		@ Function supports interworking.
+   8              		@ args = 0, pretend = 0, frame = 0
+   9              		@ frame_needed = 0, uses_anonymous_args = 0
+  10              		@ link register save eliminated.
+  11 0000 80209FE5 		ldr	r2, .L5
+  12 0004 2430A0E3 		mov	r3, #36
+  13 0008 8430C2E5 		strb	r3, [r2, #132]
+  14 000c 233043E2 		sub	r3, r3, #35
+  15 0010 8030C2E5 		strb	r3, [r2, #128]
+  16 0014 573043E2 		sub	r3, r3, #87
+  17 0018 8C30C2E5 		strb	r3, [r2, #140]
+  18 001c AB3083E2 		add	r3, r3, #171
+  19 0020 8C30C2E5 		strb	r3, [r2, #140]
+  20              		@ lr needed for prologue
+  21              	.L2:
+  22 0024 5CC09FE5 		ldr	ip, .L5
+  23 0028 B838DCE1 		ldrh	r3, [ip, #136]
+  24 002c 010B13E3 		tst	r3, #1024
+  25 0030 0700000A 		beq	.L2
+  26 0034 0320A0E3 		mov	r2, #3
+  27 0038 5530E0E3 		mvn	r3, #85
+  28 003c 8020CCE5 		strb	r2, [ip, #128]
+  29 0040 8C30CCE5 		strb	r3, [ip, #140]
+  30 0044 AB3083E2 		add	r3, r3, #171
+  31 0048 8C30CCE5 		strb	r3, [ip, #140]
+  32 004c 533043E2 		sub	r3, r3, #83
+  33 0050 0420CCE5 		strb	r2, [ip, #4]
+  34 0054 0000A0E3 		mov	r0, #0
+  35 0058 0030CCE5 		strb	r3, [ip, #0]
+  36 005c FE3083E2 		add	r3, r3, #254
+  37 0060 0300CCE7 		strb	r0, [ip, r3]
+  38 0064 20109FE5 		ldr	r1, .L5+4
+  39 0068 FF3043E2 		sub	r3, r3, #255
+  40 006c 4030CCE5 		strb	r3, [ip, #64]
+  41 0070 023043E2 		sub	r3, r3, #2
+  42 0074 143081E5 		str	r3, [r1, #20]
+  43 0078 10309FE5 		ldr	r3, .L5+8
+  44 007c 0C0081E5 		str	r0, [r1, #12]
+  45 0080 343081E5 		str	r3, [r1, #52]
+  46 0084 1EFF2FE1 		bx	lr
+  47              	.L6:
+  48              		.align	2
+  49              	.L5:
+  50 0088 00C01FE0 		.word	-534790144
+  51 008c 00F0FFFF 		.word	-4096
+  52 0090 00000000 		.word	reset
+  54              		.ident	"GCC: (GNU) 3.4.4"
+DEFINED SYMBOLS
+                            *ABS*:00000000 mcu_arch.c
+     /tmp/cchIR1h2.s:6      .text.mcu_arch_init:00000000 mcu_arch_init
+     /tmp/cchIR1h2.s:11     .text.mcu_arch_init:00000000 $a
+     /tmp/cchIR1h2.s:50     .text.mcu_arch_init:00000088 $d
+
+UNDEFINED SYMBOLS
+reset

@@ -1,0 +1,63 @@
+   1              		.file	"mcu.c"
+   2              		.section	.text.mcu_init,"ax",%progbits
+   3              		.align	2
+   4              		.global	mcu_init
+   6              	mcu_init:
+   7              		@ Function supports interworking.
+   8              		@ args = 0, pretend = 0, frame = 0
+   9              		@ frame_needed = 1, uses_anonymous_args = 0
+  10 0000 0DC0A0E1 		mov	ip, sp
+  11 0004 00D82DE9 		stmfd	sp!, {fp, ip, lr, pc}
+  12 0008 04B04CE2 		sub	fp, ip, #4
+  13 000c FEFFFFEB 		bl	mcu_arch_init
+  14 0010 7C209FE5 		ldr	r2, .L3
+  15 0014 183092E5 		ldr	r3, [r2, #24]
+  16 0018 023883E3 		orr	r3, r3, #131072
+  17 001c 183082E5 		str	r3, [r2, #24]
+  18 0020 0238A0E3 		mov	r3, #131072
+  19 0024 143082E5 		str	r3, [r2, #20]
+  20 0028 183092E5 		ldr	r3, [r2, #24]
+  21 002c 013883E3 		orr	r3, r3, #65536
+  22 0030 183082E5 		str	r3, [r2, #24]
+  23 0034 0138A0E3 		mov	r3, #65536
+  24 0038 143082E5 		str	r3, [r2, #20]
+  25 003c 183092E5 		ldr	r3, [r2, #24]
+  26 0040 023583E3 		orr	r3, r3, #8388608
+  27 0044 183082E5 		str	r3, [r2, #24]
+  28 0048 0235A0E3 		mov	r3, #8388608
+  29 004c 143082E5 		str	r3, [r2, #20]
+  30 0050 183092E5 		ldr	r3, [r2, #24]
+  31 0054 013783E3 		orr	r3, r3, #262144
+  32 0058 183082E5 		str	r3, [r2, #24]
+  33 005c 0137A0E3 		mov	r3, #262144
+  34 0060 143082E5 		str	r3, [r2, #20]
+  35 0064 183092E5 		ldr	r3, [r2, #24]
+  36 0068 013583E3 		orr	r3, r3, #4194304
+  37 006c 183082E5 		str	r3, [r2, #24]
+  38 0070 0135A0E3 		mov	r3, #4194304
+  39 0074 143082E5 		str	r3, [r2, #20]
+  40 0078 FEFFFFEB 		bl	uart0_init
+  41 007c FEFFFFEB 		bl	uart1_init
+  42 0080 FEFFFFEB 		bl	i2c0_init
+  43 0084 FEFFFFEB 		bl	i2c1_init
+  44 0088 FEFFFFEB 		bl	adc_init
+  45 008c 00689DE8 		ldmfd	sp, {fp, sp, lr}
+  46 0090 1EFF2FE1 		bx	lr
+  47              	.L4:
+  48              		.align	2
+  49              	.L3:
+  50 0094 008002E0 		.word	-536707072
+  52              		.ident	"GCC: (GNU) 3.4.4"
+DEFINED SYMBOLS
+                            *ABS*:00000000 mcu.c
+     /tmp/cc91cpSS.s:6      .text.mcu_init:00000000 mcu_init
+     /tmp/cc91cpSS.s:10     .text.mcu_init:00000000 $a
+     /tmp/cc91cpSS.s:50     .text.mcu_init:00000094 $d
+
+UNDEFINED SYMBOLS
+mcu_arch_init
+uart0_init
+uart1_init
+i2c0_init
+i2c1_init
+adc_init

@@ -1,0 +1,45 @@
+   1              		.file	"pprz_transport.c"
+   2              		.global	pprz_msg_received
+   3              		.section	.data.pprz_msg_received,"aw",%progbits
+   6              	pprz_msg_received:
+   7 0000 00       		.byte	0
+   8              		.global	ck_a
+   9              		.section	.bss.ck_a,"aw",%nobits
+  12              	ck_a:
+  13 0000 00       		.space	1
+  14              		.global	ck_b
+  15              		.section	.bss.ck_b,"aw",%nobits
+  18              	ck_b:
+  19 0000 00       		.space	1
+  20              		.global	pprz_payload
+  21              		.section	.bss.pprz_payload,"aw",%nobits
+  24              	pprz_payload:
+  25 0000 00000000 		.space	256
+  25      00000000 
+  25      00000000 
+  25      00000000 
+  25      00000000 
+  26              		.global	pprz_ovrn
+  27              		.section	.bss.pprz_ovrn,"aw",%nobits
+  30              	pprz_ovrn:
+  31 0000 00       		.space	1
+  32              		.global	pprz_error
+  33              		.section	.bss.pprz_error,"aw",%nobits
+  36              	pprz_error:
+  37 0000 00       		.space	1
+  38              		.global	pprz_payload_len
+  39              		.section	.bss.pprz_payload_len,"aw",%nobits
+  42              	pprz_payload_len:
+  43 0000 00       		.space	1
+  44              		.ident	"GCC: (GNU) 3.4.4"
+DEFINED SYMBOLS
+                            *ABS*:00000000 pprz_transport.c
+     /tmp/cc7hQqr9.s:6      .data.pprz_msg_received:00000000 pprz_msg_received
+     /tmp/cc7hQqr9.s:12     .bss.ck_a:00000000 ck_a
+     /tmp/cc7hQqr9.s:18     .bss.ck_b:00000000 ck_b
+     /tmp/cc7hQqr9.s:24     .bss.pprz_payload:00000000 pprz_payload
+     /tmp/cc7hQqr9.s:30     .bss.pprz_ovrn:00000000 pprz_ovrn
+     /tmp/cc7hQqr9.s:36     .bss.pprz_error:00000000 pprz_error
+     /tmp/cc7hQqr9.s:42     .bss.pprz_payload_len:00000000 pprz_payload_len
+
+NO UNDEFINED SYMBOLS

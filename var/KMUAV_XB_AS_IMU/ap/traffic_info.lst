@@ -1,0 +1,83 @@
+   1              		.file	"traffic_info.c"
+   2              		.section	.text.traffic_info_init,"ax",%progbits
+   3              		.align	2
+   4              		.global	traffic_info_init
+   6              	traffic_info_init:
+   7              		@ Function supports interworking.
+   8              		@ args = 0, pretend = 0, frame = 0
+   9              		@ frame_needed = 0, uses_anonymous_args = 0
+  10              		@ link register save eliminated.
+  11 0000 28309FE5 		ldr	r3, .L2
+  12 0004 0110A0E3 		mov	r1, #1
+  13 0008 0A20A0E3 		mov	r2, #10
+  14 000c 8122C3E7 		strb	r2, [r3, r1, asl #5]
+  15 0010 1C309FE5 		ldr	r3, .L2+4
+  16 0014 1C009FE5 		ldr	r0, .L2+8
+  17 0018 082042E2 		sub	r2, r2, #8
+  18 001c 0020C3E5 		strb	r2, [r3, #0]
+  19 0020 0030A0E3 		mov	r3, #0
+  20              		@ lr needed for prologue
+  21 0024 0030C0E5 		strb	r3, [r0, #0]
+  22 0028 0A10C0E5 		strb	r1, [r0, #10]
+  23 002c 1EFF2FE1 		bx	lr
+  24              	.L3:
+  25              		.align	2
+  26              	.L2:
+  27 0030 00000000 		.word	the_acs
+  28 0034 00000000 		.word	acs_idx
+  29 0038 00000000 		.word	the_acs_id
+  31              		.section	.text.get_ac_info,"ax",%progbits
+  32              		.align	2
+  33              		.global	get_ac_info
+  35              	get_ac_info:
+  36              		@ Function supports interworking.
+  37              		@ args = 0, pretend = 0, frame = 0
+  38              		@ frame_needed = 0, uses_anonymous_args = 0
+  39              		@ link register save eliminated.
+  40 0000 10309FE5 		ldr	r3, .L5
+  41 0004 FF0000E2 		and	r0, r0, #255
+  42 0008 0030D3E7 		ldrb	r3, [r3, r0]	@ zero_extendqisi2
+  43 000c 08009FE5 		ldr	r0, .L5+4
+  44 0010 830280E0 		add	r0, r0, r3, asl #5
+  45              		@ lr needed for prologue
+  46 0014 1EFF2FE1 		bx	lr
+  47              	.L6:
+  48              		.align	2
+  49              	.L5:
+  50 0018 00000000 		.word	the_acs_id
+  51 001c 00000000 		.word	the_acs
+  53              		.global	acs_idx
+  54              		.section	.bss.acs_idx,"aw",%nobits
+  57              	acs_idx:
+  58 0000 00       		.space	1
+  59              		.global	the_acs_id
+  60              		.section	.bss.the_acs_id,"aw",%nobits
+  63              	the_acs_id:
+  64 0000 00000000 		.space	256
+  64      00000000 
+  64      00000000 
+  64      00000000 
+  64      00000000 
+  65              		.global	the_acs
+  66              		.section	.bss.the_acs,"aw",%nobits
+  67              		.align	2
+  70              	the_acs:
+  71 0000 00000000 		.space	768
+  71      00000000 
+  71      00000000 
+  71      00000000 
+  71      00000000 
+  72              		.ident	"GCC: (GNU) 3.4.4"
+DEFINED SYMBOLS
+                            *ABS*:00000000 traffic_info.c
+     /tmp/ccuEcBbZ.s:6      .text.traffic_info_init:00000000 traffic_info_init
+     /tmp/ccuEcBbZ.s:11     .text.traffic_info_init:00000000 $a
+     /tmp/ccuEcBbZ.s:27     .text.traffic_info_init:00000030 $d
+     /tmp/ccuEcBbZ.s:70     .bss.the_acs:00000000 the_acs
+     /tmp/ccuEcBbZ.s:57     .bss.acs_idx:00000000 acs_idx
+     /tmp/ccuEcBbZ.s:63     .bss.the_acs_id:00000000 the_acs_id
+     /tmp/ccuEcBbZ.s:35     .text.get_ac_info:00000000 get_ac_info
+     /tmp/ccuEcBbZ.s:40     .text.get_ac_info:00000000 $a
+     /tmp/ccuEcBbZ.s:50     .text.get_ac_info:00000018 $d
+
+NO UNDEFINED SYMBOLS

@@ -1,0 +1,39 @@
+Manual Configuration
+
+(Datei vom 7.7.2011: /home/excelobs/paparazzi/doc/u_center_gps_config/MK_GPS_onTiny.sys)
+
+If you prefer to setup your receiver manually or have a model not listed above, here are instructions to configure your receiver in u-center. Open the message window (menu View->messages view) to start the configuration process by changing the following settings:
+[edit]
+LEA-4P
+
+1. Right Click on the NMEA Icon and choose disable child
+2. Choose UBX->CFG->NAV2(Navigation 2) - set it to use Airborne 4G (tells the Kalman filter to expect significant changes in direction)
+3. UBX->CFG->PRT - set USART1 to 38400bps (must match the value in your Airframe file)
+4. Change the baudrate of U-Center to 38400bps if the connection is lost at this point
+5. UBX->CFG->RXM(Receiver Manager) - change GPS Mode to 3 - Auto (Enabling faster bootup only if signal levels are very good)
+6. UBX->CFG->RATE(Rates) - change the Measurement Period to 250ms (4 Hz position updates)
+7. UBX->CFG->SBAS : Disable (SBAS appears to cause occasional severe altitude calcuation errors)
+8. UBX->NAV (not UBX->CFG->NAV): double click on POSUTM, SOL, STATUS, SVINFO, VELNED. They should change from grey to black
+9. UBX->CFG->CFG : save current config, click "send" in the lower left corner to permanently save these settings to the receiver 
+
+[edit]
+LEA-5H
+
+1. Right Click on the NMEA Text on top of the tree and choose disable child messages
+2. Choose UBX->CFG->NAV5(Navigation 5) - set it to use Airborne 8 <4G. This tells the Kalman filter to expect significant changes in direction. 
+   Note that this setting is only good for faster moving airplanes. For a fixed position hovering heli, 'pedestrian' setting is better
+3. UBX->CFG->PRT - set USART1 to 38400bps (must match the value in your Airframe file)
+4. Change the baudrate of U-Center to 38400bps if the connection is lost at this point
+5. UBX->CFG->RATE(Rates) - change the Measurement Period to 250ms This gives a 4 Hz position update since 4 x 250ms is one second.
+6. UBX->CFG->SBAS : Disable (SBAS appears to cause occasional severe altitude calcuation errors)
+7. UBX->NAV (not UBX->CFG->NAV): double click on POSLLH, SOL, STATUS, SVINFO, VELNED. They should change from grey to black
+(add the flag -DGPS_USE_LATLONG in your Airframe file) also make sure you set tiny_2_1_1.h if you have the latest boards Tiny/TinyWOG)
+8. UBX->CFG->CFG : save current config, click "send" in the lower left corner to permanently save these settings to the receiver 
+
+    Cycle the power and verify that the new configuration was saved
+    To reset the receiver to the factory defaults go to UBX->CFG->CFG, select 'Revert to default configuration', and click Send at the bottom left corner. To permanently save these values choose 'Save current configuration' and click Send.
+    To backup the configuration to a file on your PC: under the tools menu, choose GPS configuration, then click GPS>>file. This file can be re-loaded in a similar manner to configure additional identical receivers. Be sure the box 'Store configuration into BBR/Flash' is checked when reloading a configuration file to make the changes permanent.
+    To update the firmware on a LEA-5H get u-center >= 5.03, revert the GPS receiver to the default configuration, get an appropriate image from u-blox (fitting your receivers serial number), find the flash identification flash.txt file in the u-center install directory and be prepared to wait a long time. 
+
+    NOTE: If you have a Tiny with LEA-5H module you must use u-center and manually setup the parameters as shown above (at least switch to 38400 baud manually before transferring the configuration file).
+    NOTE: POSUTM is not available on LEA-5H. Instead, use POSLLH. Additionally, add the flag -DGPS_USE_LATLONG in the makefile section of the airframe xml file. 

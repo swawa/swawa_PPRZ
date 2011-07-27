@@ -1,0 +1,354 @@
+   1              		.file	"settings_arch.c"
+   2              		.section	.text.pflash_checksum,"ax",%progbits
+   3              		.align	2
+   5              	pflash_checksum:
+   6              		@ Function supports interworking.
+   7              		@ args = 0, pretend = 0, frame = 0
+   8              		@ frame_needed = 0, uses_anonymous_args = 0
+   9              		@ link register save eliminated.
+  10 0000 00C0A0E3 		mov	ip, #0
+  11              		@ lr needed for prologue
+  12 0004 01005CE1 		cmp	ip, r1
+  13 0008 0C20A0E1 		mov	r2, ip
+  14              	.L8:
+  15 000c 0700002A 		bcs	.L7
+  16 0010 0230D0E7 		ldrb	r3, [r0, r2]	@ zero_extendqisi2
+  17 0014 012082E2 		add	r2, r2, #1
+  18 0018 010052E1 		cmp	r2, r1
+  19 001c 03C08CE0 		add	ip, ip, r3
+  20 0020 010000EA 		b	.L8
+  21              	.L7:
+  22 0024 0C00A0E1 		mov	r0, ip
+  23 0028 1EFF2FE1 		bx	lr
+  25              		.section	.text.flash_detect,"ax",%progbits
+  26              		.align	2
+  28              	flash_detect:
+  29              		@ Function supports interworking.
+  30              		@ args = 0, pretend = 0, frame = 32
+  31              		@ frame_needed = 1, uses_anonymous_args = 0
+  32 0000 0DC0A0E1 		mov	ip, sp
+  33 0004 10D82DE9 		stmfd	sp!, {r4, fp, ip, lr, pc}
+  34 0008 04B04CE2 		sub	fp, ip, #4
+  35 000c 20D04DE2 		sub	sp, sp, #32
+  36 0010 3630A0E3 		mov	r3, #54
+  37 0014 0040A0E1 		mov	r4, r0
+  38 0018 24300BE5 		str	r3, [fp, #-36]
+  39 001c FEFFFFEB 		bl	disableIRQ
+  40 0020 24004BE2 		sub	r0, fp, #36
+  41 0024 30104BE2 		sub	r1, fp, #48
+  42 0028 3A31E0E3 		mvn	r3, #-2147483634
+  43 002c 0FE0A0E1 		mov	lr, pc
+  44 0030 13FF2FE1 		bx	r3
+  45 0034 FEFFFFEB 		bl	enableIRQ
+  46 0038 30001BE5 		ldr	r0, [fp, #-48]
+  47 003c 000050E3 		cmp	r0, #0
+  48 0040 2100001A 		bne	.L9
+  49 0044 2C201BE5 		ldr	r2, [fp, #-44]
+  50 0048 48309FE5 		ldr	r3, .L19
+  51 004c 030052E1 		cmp	r2, r3
+  52 0050 1900009A 		bls	.L17
+  53 0054 40309FE5 		ldr	r3, .L19+4
+  54 0058 030052E1 		cmp	r2, r3
+  55 005c 1900000A 		beq	.L17
+  56 0060 023083E2 		add	r3, r3, #2
+  57 0064 030052E1 		cmp	r2, r3
+  58 0068 1B00000A 		beq	.L16
+  59              	.L17:
+  60 006c 0000E0E3 		mvn	r0, #0
+  61 0070 210000EA 		b	.L9
+  62              	.L16:
+  63 0074 1F39A0E3 		mov	r3, #507904
+  64 0078 003084E5 		str	r3, [r4, #0]
+  65 007c 7B3A43E2 		sub	r3, r3, #503808
+  66 0080 0C3084E5 		str	r3, [r4, #12]
+  67 0084 1A30A0E3 		mov	r3, #26
+  68 0088 083084E5 		str	r3, [r4, #8]
+  69              	.L9:
+  70 008c 10D04BE2 		sub	sp, fp, #16
+  71 0090 10689DE8 		ldmfd	sp, {r4, fp, sp, lr}
+  72 0094 1EFF2FE1 		bx	lr
+  73              	.L20:
+  74              		.align	2
+  75              	.L19:
+  76 0098 12FF0204 		.word	67305234
+  77 009c 23FF0204 		.word	67305251
+  79              		.section	.text.pflash_program_array,"ax",%progbits
+  80              		.align	2
+  82              	pflash_program_array:
+  83              		@ Function supports interworking.
+  84              		@ args = 0, pretend = 0, frame = 32
+  85              		@ frame_needed = 1, uses_anonymous_args = 0
+  86 0000 0DC0A0E1 		mov	ip, sp
+  87 0004 F0D92DE9 		stmfd	sp!, {r4, r5, r6, r7, r8, fp, ip, lr, pc}
+  88 0008 3230A0E3 		mov	r3, #50
+  89 000c 04B04CE2 		sub	fp, ip, #4
+  90 0010 20D04DE2 		sub	sp, sp, #32
+  91 0014 34300BE5 		str	r3, [fp, #-52]
+  92 0018 083090E5 		ldr	r3, [r0, #8]
+  93 001c 34704BE2 		sub	r7, fp, #52
+  94 0020 40804BE2 		sub	r8, fp, #64
+  95 0024 2C300BE5 		str	r3, [fp, #-44]
+  96 0028 30300BE5 		str	r3, [fp, #-48]
+  97 002c 0250A0E1 		mov	r5, r2
+  98 0030 0140A0E1 		mov	r4, r1
+  99 0034 3A61E0E3 		mvn	r6, #-2147483634
+ 100 0038 FEFFFFEB 		bl	disableIRQ
+ 101 003c 0810A0E1 		mov	r1, r8
+ 102 0040 0700A0E1 		mov	r0, r7
+ 103 0044 0FE0A0E1 		mov	lr, pc
+ 104 0048 16FF2FE1 		bx	r6
+ 105 004c FEFFFFEB 		bl	enableIRQ
+ 106 0050 40301BE5 		ldr	r3, [fp, #-64]
+ 107 0054 000053E3 		cmp	r3, #0
+ 108 0058 0300A0E1 		mov	r0, r3
+ 109 005c 2500001A 		bne	.L21
+ 110 0060 3330A0E3 		mov	r3, #51
+ 111 0064 34300BE5 		str	r3, [fp, #-52]
+ 112 0068 CD3083E2 		add	r3, r3, #205
+ 113 006c 28300BE5 		str	r3, [fp, #-40]
+ 114 0070 30309FE5 		ldr	r3, .L24
+ 115 0074 30400BE5 		str	r4, [fp, #-48]
+ 116 0078 24300BE5 		str	r3, [fp, #-36]
+ 117 007c 2C500BE5 		str	r5, [fp, #-44]
+ 118 0080 FEFFFFEB 		bl	disableIRQ
+ 119 0084 0700A0E1 		mov	r0, r7
+ 120 0088 0810A0E1 		mov	r1, r8
+ 121 008c 0FE0A0E1 		mov	lr, pc
+ 122 0090 16FF2FE1 		bx	r6
+ 123 0094 FEFFFFEB 		bl	enableIRQ
+ 124 0098 40001BE5 		ldr	r0, [fp, #-64]
+ 125              	.L21:
+ 126 009c 20D04BE2 		sub	sp, fp, #32
+ 127 00a0 F0699DE8 		ldmfd	sp, {r4, r5, r6, r7, r8, fp, sp, lr}
+ 128 00a4 1EFF2FE1 		bx	lr
+ 129              	.L25:
+ 130              		.align	2
+ 131              	.L24:
+ 132 00a8 60EA0000 		.word	60000
+ 134              		.section	.text.persistent_write,"ax",%progbits
+ 135              		.align	2
+ 136              		.global	persistent_write
+ 138              	persistent_write:
+ 139              		@ Function supports interworking.
+ 140              		@ args = 0, pretend = 0, frame = 304
+ 141              		@ frame_needed = 1, uses_anonymous_args = 0
+ 142 0000 0DC0A0E1 		mov	ip, sp
+ 143 0004 F0DF2DE9 		stmfd	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, ip, lr, pc}
+ 144 0008 04B04CE2 		sub	fp, ip, #4
+ 145 000c 13DE4DE2 		sub	sp, sp, #304
+ 146 0010 38604BE2 		sub	r6, fp, #56
+ 147 0014 0090A0E1 		mov	r9, r0
+ 148 0018 0600A0E1 		mov	r0, r6
+ 149 001c 0150A0E1 		mov	r5, r1
+ 150 0020 FEFFFFEB 		bl	flash_detect
+ 151 0024 000050E3 		cmp	r0, #0
+ 152 0028 0000E013 		mvnne	r0, #0
+ 153 002c 8100001A 		bne	.L26
+ 154 0030 2C301BE5 		ldr	r3, [fp, #-44]
+ 155 0034 012075E2 		rsbs	r2, r5, #1
+ 156 0038 0020A033 		movcc	r2, #0
+ 157 003c 083043E2 		sub	r3, r3, #8
+ 158 0040 030055E1 		cmp	r5, r3
+ 159 0044 01208283 		orrhi	r2, r2, #1
+ 160 0048 000052E3 		cmp	r2, #0
+ 161 004c 7E00001A 		bne	.L61
+ 162 0050 0510A0E1 		mov	r1, r5
+ 163 0054 0900A0E1 		mov	r0, r9
+ 164 0058 FEFFFFEB 		bl	pflash_checksum
+ 165 005c 30201BE5 		ldr	r2, [fp, #-48]
+ 166 0060 3230A0E3 		mov	r3, #50
+ 167 0064 537F4BE2 		sub	r7, fp, #332
+ 168 0068 568F4BE2 		sub	r8, fp, #344
+ 169 006c 4C310BE5 		str	r3, [fp, #-332]
+ 170 0070 44210BE5 		str	r2, [fp, #-324]
+ 171 0074 48210BE5 		str	r2, [fp, #-328]
+ 172 0078 00A0A0E1 		mov	sl, r0
+ 173 007c 3A41E0E3 		mvn	r4, #-2147483634
+ 174 0080 FEFFFFEB 		bl	disableIRQ
+ 175 0084 0700A0E1 		mov	r0, r7
+ 176 0088 0810A0E1 		mov	r1, r8
+ 177 008c 0FE0A0E1 		mov	lr, pc
+ 178 0090 14FF2FE1 		bx	r4
+ 179 0094 FEFFFFEB 		bl	enableIRQ
+ 180 0098 58311BE5 		ldr	r3, [fp, #-344]
+ 181 009c 000053E3 		cmp	r3, #0
+ 182 00a0 3F00001A 		bne	.L31
+ 183 00a4 30201BE5 		ldr	r2, [fp, #-48]
+ 184 00a8 3430A0E3 		mov	r3, #52
+ 185 00ac 4C310BE5 		str	r3, [fp, #-332]
+ 186 00b0 44210BE5 		str	r2, [fp, #-324]
+ 187 00b4 48210BE5 		str	r2, [fp, #-328]
+ 188 00b8 FEFFFFEB 		bl	disableIRQ
+ 189 00bc 0700A0E1 		mov	r0, r7
+ 190 00c0 0810A0E1 		mov	r1, r8
+ 191 00c4 0FE0A0E1 		mov	lr, pc
+ 192 00c8 14FF2FE1 		bx	r4
+ 193 00cc FEFFFFEB 		bl	enableIRQ
+ 194 00d0 58311BE5 		ldr	r3, [fp, #-344]
+ 195 00d4 000053E3 		cmp	r3, #0
+ 196 00d8 3F00001A 		bne	.L31
+ 197 00dc 30201BE5 		ldr	r2, [fp, #-48]
+ 198 00e0 3530A0E3 		mov	r3, #53
+ 199 00e4 4C310BE5 		str	r3, [fp, #-332]
+ 200 00e8 44210BE5 		str	r2, [fp, #-324]
+ 201 00ec 48210BE5 		str	r2, [fp, #-328]
+ 202 00f0 0700A0E1 		mov	r0, r7
+ 203 00f4 0810A0E1 		mov	r1, r8
+ 204 00f8 0FE0A0E1 		mov	lr, pc
+ 205 00fc 14FF2FE1 		bx	r4
+ 206 0100 58311BE5 		ldr	r3, [fp, #-344]
+ 207              	.L31:
+ 208 0104 000053E2 		subs	r0, r3, #0
+ 209 0108 8100001A 		bne	.L26
+ 210 010c 0040A0E1 		mov	r4, r0
+ 211              	.L62:
+ 212 0110 050054E1 		cmp	r4, r5
+ 213 0114 5A00002A 		bcs	.L55
+ 214 0118 0020A0E3 		mov	r2, #0
+ 215              	.L41:
+ 216 011c 023089E0 		add	r3, r9, r2
+ 217 0120 0430D3E7 		ldrb	r3, [r3, r4]	@ zero_extendqisi2
+ 218 0124 4E1F4BE2 		sub	r1, fp, #312
+ 219 0128 0230C1E7 		strb	r3, [r1, r2]
+ 220 012c 012082E2 		add	r2, r2, #1
+ 221 0130 FF0052E3 		cmp	r2, #255
+ 222 0134 4500009A 		bls	.L41
+ 223 0138 0C3096E5 		ldr	r3, [r6, #12]
+ 224 013c 013C43E2 		sub	r3, r3, #256
+ 225 0140 030054E1 		cmp	r4, r3
+ 226 0144 40500B05 		streq	r5, [fp, #-64]
+ 227 0148 3CA00B05 		streq	sl, [fp, #-60]
+ 228 014c 001096E5 		ldr	r1, [r6, #0]
+ 229 0150 0600A0E1 		mov	r0, r6
+ 230 0154 041081E0 		add	r1, r1, r4
+ 231 0158 4E2F4BE2 		sub	r2, fp, #312
+ 232 015c FEFFFFEB 		bl	pflash_program_array
+ 233 0160 000050E3 		cmp	r0, #0
+ 234 0164 8100001A 		bne	.L26
+ 235 0168 014C84E2 		add	r4, r4, #256
+ 236 016c 420000EA 		b	.L62
+ 237              	.L55:
+ 238 0170 0C2096E5 		ldr	r2, [r6, #12]
+ 239 0174 013C42E2 		sub	r3, r2, #256
+ 240 0178 030054E1 		cmp	r4, r3
+ 241 017c 6800008A 		bhi	.L45
+ 242 0180 001096E5 		ldr	r1, [r6, #0]
+ 243 0184 021081E0 		add	r1, r1, r2
+ 244 0188 011C41E2 		sub	r1, r1, #256
+ 245 018c 4E2F4BE2 		sub	r2, fp, #312
+ 246 0190 0600A0E1 		mov	r0, r6
+ 247 0194 40500BE5 		str	r5, [fp, #-64]
+ 248 0198 3CA00BE5 		str	sl, [fp, #-60]
+ 249 019c FEFFFFEB 		bl	pflash_program_array
+ 250 01a0 000050E3 		cmp	r0, #0
+ 251 01a4 8100001A 		bne	.L26
+ 252              	.L45:
+ 253 01a8 0040A0E3 		mov	r4, #0
+ 254              	.L63:
+ 255 01ac 050054E1 		cmp	r4, r5
+ 256 01b0 7200002A 		bcs	.L59
+ 257 01b4 003096E5 		ldr	r3, [r6, #0]
+ 258 01b8 0420D3E7 		ldrb	r2, [r3, r4]	@ zero_extendqisi2
+ 259 01bc 0430D9E7 		ldrb	r3, [r9, r4]	@ zero_extendqisi2
+ 260 01c0 030052E1 		cmp	r2, r3
+ 261 01c4 014084E2 		add	r4, r4, #1
+ 262 01c8 7E00001A 		bne	.L61
+ 263 01cc 690000EA 		b	.L63
+ 264              	.L59:
+ 265 01d0 0C3096E5 		ldr	r3, [r6, #12]
+ 266 01d4 002096E5 		ldr	r2, [r6, #0]
+ 267 01d8 030082E0 		add	r0, r2, r3
+ 268 01dc 083010E5 		ldr	r3, [r0, #-8]
+ 269 01e0 050053E1 		cmp	r3, r5
+ 270 01e4 0200E013 		mvnne	r0, #2
+ 271 01e8 8100001A 		bne	.L26
+ 272 01ec 043010E5 		ldr	r3, [r0, #-4]
+ 273 01f0 0A0053E1 		cmp	r3, sl
+ 274 01f4 0300E013 		mvnne	r0, #3
+ 275 01f8 8100001A 		bne	.L26
+ 276 01fc 800000EA 		b	.L53
+ 277              	.L61:
+ 278 0200 0100E0E3 		mvn	r0, #1
+ 279 0204 810000EA 		b	.L26
+ 280              	.L53:
+ 281 0208 0000A0E3 		mov	r0, #0
+ 282              	.L26:
+ 283 020c 28D04BE2 		sub	sp, fp, #40
+ 284 0210 F06F9DE8 		ldmfd	sp, {r4, r5, r6, r7, r8, r9, sl, fp, sp, lr}
+ 285 0214 1EFF2FE1 		bx	lr
+ 287              		.section	.text.persistent_read,"ax",%progbits
+ 288              		.align	2
+ 289              		.global	persistent_read
+ 291              	persistent_read:
+ 292              		@ Function supports interworking.
+ 293              		@ args = 0, pretend = 0, frame = 16
+ 294              		@ frame_needed = 1, uses_anonymous_args = 0
+ 295 0000 0DC0A0E1 		mov	ip, sp
+ 296 0004 70D82DE9 		stmfd	sp!, {r4, r5, r6, fp, ip, lr, pc}
+ 297 0008 04B04CE2 		sub	fp, ip, #4
+ 298 000c 10D04DE2 		sub	sp, sp, #16
+ 299 0010 0060A0E1 		mov	r6, r0
+ 300 0014 28004BE2 		sub	r0, fp, #40
+ 301 0018 0140A0E1 		mov	r4, r1
+ 302 001c FEFFFFEB 		bl	flash_detect
+ 303 0020 000050E3 		cmp	r0, #0
+ 304 0024 0000E013 		mvnne	r0, #0
+ 305 0028 2A00001A 		bne	.L64
+ 306 002c 1C101BE5 		ldr	r1, [fp, #-28]
+ 307 0030 012074E2 		rsbs	r2, r4, #1
+ 308 0034 0020A033 		movcc	r2, #0
+ 309 0038 083041E2 		sub	r3, r1, #8
+ 310 003c 030054E1 		cmp	r4, r3
+ 311 0040 0250A091 		movls	r5, r2
+ 312 0044 01508283 		orrhi	r5, r2, #1
+ 313 0048 000055E3 		cmp	r5, #0
+ 314 004c 0100E013 		mvnne	r0, #1
+ 315 0050 2A00001A 		bne	.L64
+ 316 0054 28001BE5 		ldr	r0, [fp, #-40]
+ 317 0058 013080E0 		add	r3, r0, r1
+ 318 005c 083013E5 		ldr	r3, [r3, #-8]
+ 319 0060 030054E1 		cmp	r4, r3
+ 320 0064 0200E013 		mvnne	r0, #2
+ 321 0068 2A00001A 		bne	.L64
+ 322 006c 0410A0E1 		mov	r1, r4
+ 323 0070 FEFFFFEB 		bl	pflash_checksum
+ 324 0074 28301BE5 		ldr	r3, [fp, #-40]
+ 325 0078 1C201BE5 		ldr	r2, [fp, #-28]
+ 326 007c 023083E0 		add	r3, r3, r2
+ 327 0080 043013E5 		ldr	r3, [r3, #-4]
+ 328 0084 030050E1 		cmp	r0, r3
+ 329 0088 0300E013 		mvnne	r0, #3
+ 330 008c 2A00001A 		bne	.L64
+ 331 0090 0520A0E1 		mov	r2, r5
+ 332              	.L75:
+ 333 0094 040052E1 		cmp	r2, r4
+ 334 0098 28301B35 		ldrcc	r3, [fp, #-40]
+ 335 009c 0230D337 		ldrccb	r3, [r3, r2]	@ zero_extendqisi2
+ 336 00a0 0230C637 		strccb	r3, [r6, r2]
+ 337 00a4 01208232 		addcc	r2, r2, #1
+ 338 00a8 2300003A 		bcc	.L75
+ 339              	.L74:
+ 340 00ac 0000A0E3 		mov	r0, #0
+ 341              	.L64:
+ 342 00b0 18D04BE2 		sub	sp, fp, #24
+ 343 00b4 70689DE8 		ldmfd	sp, {r4, r5, r6, fp, sp, lr}
+ 344 00b8 1EFF2FE1 		bx	lr
+ 346              		.ident	"GCC: (GNU) 3.4.4"
+DEFINED SYMBOLS
+                            *ABS*:00000000 settings_arch.c
+     /tmp/ccvR0TO3.s:5      .text.pflash_checksum:00000000 pflash_checksum
+     /tmp/ccvR0TO3.s:10     .text.pflash_checksum:00000000 $a
+     /tmp/ccvR0TO3.s:28     .text.flash_detect:00000000 flash_detect
+     /tmp/ccvR0TO3.s:32     .text.flash_detect:00000000 $a
+     /tmp/ccvR0TO3.s:76     .text.flash_detect:00000098 $d
+     /tmp/ccvR0TO3.s:82     .text.pflash_program_array:00000000 pflash_program_array
+     /tmp/ccvR0TO3.s:86     .text.pflash_program_array:00000000 $a
+     /tmp/ccvR0TO3.s:132    .text.pflash_program_array:000000a8 $d
+     /tmp/ccvR0TO3.s:138    .text.persistent_write:00000000 persistent_write
+     /tmp/ccvR0TO3.s:142    .text.persistent_write:00000000 $a
+     /tmp/ccvR0TO3.s:291    .text.persistent_read:00000000 persistent_read
+     /tmp/ccvR0TO3.s:295    .text.persistent_read:00000000 $a
+
+UNDEFINED SYMBOLS
+disableIRQ
+enableIRQ

@@ -1,0 +1,16 @@
+   1              		.file	"radio_control.c"
+   2              		.global	radio_control
+   3              		.section	.bss.radio_control,"aw",%nobits
+   4              		.align	2
+   7              	radio_control:
+   8 0000 00000000 		.space	20
+   8      00000000 
+   8      00000000 
+   8      00000000 
+   8      00000000 
+   9              		.ident	"GCC: (GNU) 3.4.4"
+DEFINED SYMBOLS
+                            *ABS*:00000000 radio_control.c
+     /tmp/ccviHtYg.s:7      .bss.radio_control:00000000 radio_control
+
+NO UNDEFINED SYMBOLS

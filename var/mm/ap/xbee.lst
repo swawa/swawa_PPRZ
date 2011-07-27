@@ -1,0 +1,231 @@
+   1              		.file	"xbee.c"
+   2              		.global	__floatsidf
+   3              		.global	__adddf3
+   4              		.global	__muldf3
+   5              		.global	__fixunsdfsi
+   6              		.section	.rodata.str1.4,"aMS",%progbits,1
+   7              		.align	2
+   8              	.LC0:
+   9 0000 2B2B2B00 		.ascii	"+++\000"
+  10              		.align	2
+  11              	.LC1:
+  12 0004 41544D59 		.ascii	"ATMY\000"
+  12      00
+  13              		.section	.rodata
+  14              	.LC2:
+  15 0000 30       		.byte	48
+  16 0001 31       		.byte	49
+  17 0002 32       		.byte	50
+  18 0003 33       		.byte	51
+  19 0004 34       		.byte	52
+  20 0005 35       		.byte	53
+  21 0006 36       		.byte	54
+  22 0007 37       		.byte	55
+  23 0008 38       		.byte	56
+  24 0009 39       		.byte	57
+  25 000a 41       		.byte	65
+  26 000b 42       		.byte	66
+  27 000c 43       		.byte	67
+  28 000d 44       		.byte	68
+  29 000e 45       		.byte	69
+  30 000f 46       		.byte	70
+  31              		.section	.rodata.str1.4
+  32 0009 000000   		.align	2
+  33              	.LC3:
+  34 000c 0D00     		.ascii	"\r\000"
+  35 000e 0000     		.align	2
+  36              	.LC4:
+  37 0010 41544150 		.ascii	"ATAP1\r\000"
+  37      310D00
+  38 0017 00       		.align	2
+  39              	.LC5:
+  40 0018 4154434E 		.ascii	"ATCN\r\000"
+  40      0D00
+  41 001e 0000     		.section	.text.xbee_init,"ax",%progbits
+  42              		.align	2
+  43              		.global	xbee_init
+  45              	xbee_init:
+  46              		@ Function supports interworking.
+  47              		@ args = 0, pretend = 0, frame = 16
+  48              		@ frame_needed = 1, uses_anonymous_args = 0
+  49 0000 0DC0A0E1 		mov	ip, sp
+  50 0004 10D82DE9 		stmfd	sp!, {r4, fp, ip, lr, pc}
+  51 0008 94319FE5 		ldr	r3, .L42
+  52 000c 04B04CE2 		sub	fp, ip, #4
+  53 0010 10D04DE2 		sub	sp, sp, #16
+  54 0014 082093E5 		ldr	r2, [r3, #8]
+  55 0018 88119FE5 		ldr	r1, .L42+4
+  56              	.L3:
+  57 001c 80319FE5 		ldr	r3, .L42
+  58 0020 083093E5 		ldr	r3, [r3, #8]
+  59 0024 033062E0 		rsb	r3, r2, r3
+  60 0028 010053E1 		cmp	r3, r1
+  61 002c 0500003A 		bcc	.L3
+  62 0030 74219FE5 		ldr	r2, .L42+8
+  63 0034 0030D2E5 		ldrb	r3, [r2, #0]	@ zero_extendqisi2
+  64 0038 0040A0E3 		mov	r4, #0
+  65 003c 000053E3 		cmp	r3, #0
+  66              	.L37:
+  67 0040 1700000A 		beq	.L28
+  68 0044 0400D2E7 		ldrb	r0, [r2, r4]	@ zero_extendqisi2
+  69 0048 FEFFFFEB 		bl	uart1_transmit
+  70 004c 013084E2 		add	r3, r4, #1
+  71 0050 54219FE5 		ldr	r2, .L42+8
+  72 0054 FF4003E2 		and	r4, r3, #255
+  73 0058 0430D2E7 		ldrb	r3, [r2, r4]	@ zero_extendqisi2
+  74 005c 000053E3 		cmp	r3, #0
+  75 0060 0E0000EA 		b	.L37
+  76              	.L28:
+  77 0064 38319FE5 		ldr	r3, .L42
+  78 0068 38119FE5 		ldr	r1, .L42+4
+  79 006c 082093E5 		ldr	r2, [r3, #8]
+  80              	.L11:
+  81 0070 2C319FE5 		ldr	r3, .L42
+  82 0074 083093E5 		ldr	r3, [r3, #8]
+  83 0078 033062E0 		rsb	r3, r2, r3
+  84 007c 010053E1 		cmp	r3, r1
+  85 0080 1A00003A 		bcc	.L11
+  86 0084 24219FE5 		ldr	r2, .L42+12
+  87 0088 0030D2E5 		ldrb	r3, [r2, #0]	@ zero_extendqisi2
+  88 008c 0040A0E3 		mov	r4, #0
+  89 0090 000053E3 		cmp	r3, #0
+  90              	.L38:
+  91 0094 2C00000A 		beq	.L30
+  92 0098 0400D2E7 		ldrb	r0, [r2, r4]	@ zero_extendqisi2
+  93 009c FEFFFFEB 		bl	uart1_transmit
+  94 00a0 013084E2 		add	r3, r4, #1
+  95 00a4 04219FE5 		ldr	r2, .L42+12
+  96 00a8 FF4003E2 		and	r4, r3, #255
+  97 00ac 0430D2E7 		ldrb	r3, [r2, r4]	@ zero_extendqisi2
+  98 00b0 000053E3 		cmp	r3, #0
+  99 00b4 230000EA 		b	.L38
+ 100              	.L30:
+ 101 00b8 20404BE2 		sub	r4, fp, #32
+ 102 00bc F0109FE5 		ldr	r1, .L42+16
+ 103 00c0 1020A0E3 		mov	r2, #16
+ 104 00c4 0400A0E1 		mov	r0, r4
+ 105 00c8 FEFFFFEB 		bl	memcpy
+ 106 00cc 20005BE5 		ldrb	r0, [fp, #-32]	@ zero_extendqisi2
+ 107 00d0 FEFFFFEB 		bl	uart1_transmit
+ 108 00d4 20005BE5 		ldrb	r0, [fp, #-32]	@ zero_extendqisi2
+ 109 00d8 FEFFFFEB 		bl	uart1_transmit
+ 110 00dc 1020A0E3 		mov	r2, #16
+ 111 00e0 CC109FE5 		ldr	r1, .L42+16
+ 112 00e4 0400A0E1 		mov	r0, r4
+ 113 00e8 FEFFFFEB 		bl	memcpy
+ 114 00ec 20005BE5 		ldrb	r0, [fp, #-32]	@ zero_extendqisi2
+ 115 00f0 FEFFFFEB 		bl	uart1_transmit
+ 116 00f4 15005BE5 		ldrb	r0, [fp, #-21]	@ zero_extendqisi2
+ 117 00f8 FEFFFFEB 		bl	uart1_transmit
+ 118 00fc B4209FE5 		ldr	r2, .L42+20
+ 119 0100 0030D2E5 		ldrb	r3, [r2, #0]	@ zero_extendqisi2
+ 120 0104 0040A0E3 		mov	r4, #0
+ 121 0108 000053E3 		cmp	r3, #0
+ 122              	.L39:
+ 123 010c 4A00000A 		beq	.L32
+ 124 0110 0400D2E7 		ldrb	r0, [r2, r4]	@ zero_extendqisi2
+ 125 0114 FEFFFFEB 		bl	uart1_transmit
+ 126 0118 013084E2 		add	r3, r4, #1
+ 127 011c 94209FE5 		ldr	r2, .L42+20
+ 128 0120 FF4003E2 		and	r4, r3, #255
+ 129 0124 0430D2E7 		ldrb	r3, [r2, r4]	@ zero_extendqisi2
+ 130 0128 000053E3 		cmp	r3, #0
+ 131 012c 410000EA 		b	.L39
+ 132              	.L32:
+ 133 0130 84209FE5 		ldr	r2, .L42+24
+ 134 0134 0030D2E5 		ldrb	r3, [r2, #0]	@ zero_extendqisi2
+ 135 0138 0040A0E3 		mov	r4, #0
+ 136 013c 000053E3 		cmp	r3, #0
+ 137              	.L40:
+ 138 0140 5700000A 		beq	.L34
+ 139 0144 0400D2E7 		ldrb	r0, [r2, r4]	@ zero_extendqisi2
+ 140 0148 FEFFFFEB 		bl	uart1_transmit
+ 141 014c 013084E2 		add	r3, r4, #1
+ 142 0150 64209FE5 		ldr	r2, .L42+24
+ 143 0154 FF4003E2 		and	r4, r3, #255
+ 144 0158 0430D2E7 		ldrb	r3, [r2, r4]	@ zero_extendqisi2
+ 145 015c 000053E3 		cmp	r3, #0
+ 146 0160 4E0000EA 		b	.L40
+ 147              	.L34:
+ 148 0164 54209FE5 		ldr	r2, .L42+28
+ 149 0168 0030D2E5 		ldrb	r3, [r2, #0]	@ zero_extendqisi2
+ 150 016c 0040A0E3 		mov	r4, #0
+ 151 0170 000053E3 		cmp	r3, #0
+ 152              	.L41:
+ 153 0174 6400000A 		beq	.L36
+ 154 0178 0400D2E7 		ldrb	r0, [r2, r4]	@ zero_extendqisi2
+ 155 017c FEFFFFEB 		bl	uart1_transmit
+ 156 0180 013084E2 		add	r3, r4, #1
+ 157 0184 34209FE5 		ldr	r2, .L42+28
+ 158 0188 FF4003E2 		and	r4, r3, #255
+ 159 018c 0430D2E7 		ldrb	r3, [r2, r4]	@ zero_extendqisi2
+ 160 0190 000053E3 		cmp	r3, #0
+ 161 0194 5B0000EA 		b	.L41
+ 162              	.L36:
+ 163 0198 10D04BE2 		sub	sp, fp, #16
+ 164 019c 10689DE8 		ldmfd	sp, {r4, fp, sp, lr}
+ 165 01a0 1EFF2FE1 		bx	lr
+ 166              	.L43:
+ 167              		.align	2
+ 168              	.L42:
+ 169 01a4 004000E0 		.word	-536854528
+ 170 01a8 301A1E01 		.word	18750000
+ 171 01ac 00000000 		.word	.LC0
+ 172 01b0 04000000 		.word	.LC1
+ 173 01b4 00000000 		.word	.LC2
+ 174 01b8 0C000000 		.word	.LC3
+ 175 01bc 10000000 		.word	.LC4
+ 176 01c0 18000000 		.word	.LC5
+ 178              		.global	xbee_cs
+ 179              		.section	.bss.xbee_cs,"aw",%nobits
+ 182              	xbee_cs:
+ 183 0000 00       		.space	1
+ 184              		.global	xbee_payload
+ 185              		.section	.bss.xbee_payload,"aw",%nobits
+ 188              	xbee_payload:
+ 189 0000 00000000 		.space	256
+ 189      00000000 
+ 189      00000000 
+ 189      00000000 
+ 189      00000000 
+ 190              		.global	xbee_msg_received
+ 191              		.section	.bss.xbee_msg_received,"aw",%nobits
+ 194              	xbee_msg_received:
+ 195 0000 00       		.space	1
+ 196              		.global	xbee_payload_len
+ 197              		.section	.bss.xbee_payload_len,"aw",%nobits
+ 200              	xbee_payload_len:
+ 201 0000 00       		.space	1
+ 202              		.global	xbee_rssi
+ 203              		.section	.bss.xbee_rssi,"aw",%nobits
+ 206              	xbee_rssi:
+ 207 0000 00       		.space	1
+ 208              		.global	xbee_ovrn
+ 209              		.section	.bss.xbee_ovrn,"aw",%nobits
+ 212              	xbee_ovrn:
+ 213 0000 00       		.space	1
+ 214              		.global	xbee_error
+ 215              		.section	.bss.xbee_error,"aw",%nobits
+ 218              	xbee_error:
+ 219 0000 00       		.space	1
+ 220              		.ident	"GCC: (GNU) 3.4.4"
+DEFINED SYMBOLS
+                            *ABS*:00000000 xbee.c
+     /tmp/ccSFJfB4.s:45     .text.xbee_init:00000000 xbee_init
+     /tmp/ccSFJfB4.s:49     .text.xbee_init:00000000 $a
+     /tmp/ccSFJfB4.s:169    .text.xbee_init:000001a4 $d
+     /tmp/ccSFJfB4.s:182    .bss.xbee_cs:00000000 xbee_cs
+     /tmp/ccSFJfB4.s:188    .bss.xbee_payload:00000000 xbee_payload
+     /tmp/ccSFJfB4.s:194    .bss.xbee_msg_received:00000000 xbee_msg_received
+     /tmp/ccSFJfB4.s:200    .bss.xbee_payload_len:00000000 xbee_payload_len
+     /tmp/ccSFJfB4.s:206    .bss.xbee_rssi:00000000 xbee_rssi
+     /tmp/ccSFJfB4.s:212    .bss.xbee_ovrn:00000000 xbee_ovrn
+     /tmp/ccSFJfB4.s:218    .bss.xbee_error:00000000 xbee_error
+
+UNDEFINED SYMBOLS
+__floatsidf
+__adddf3
+__muldf3
+__fixunsdfsi
+uart1_transmit
+memcpy

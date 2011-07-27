@@ -1,0 +1,33 @@
+   1              		.file	"downlink.c"
+   2              		.global	telemetry_mode_Ap_DefaultChannel
+   3              		.section	.data.telemetry_mode_Ap_DefaultChannel,"aw",%progbits
+   6              	telemetry_mode_Ap_DefaultChannel:
+   7 0000 00       		.byte	0
+   8              		.global	telemetry_mode_Fbw_DefaultChannel
+   9              		.section	.data.telemetry_mode_Fbw_DefaultChannel,"aw",%progbits
+  12              	telemetry_mode_Fbw_DefaultChannel:
+  13 0000 00       		.byte	0
+  14              		.global	downlink_nb_ovrn
+  15              		.section	.bss.downlink_nb_ovrn,"aw",%nobits
+  18              	downlink_nb_ovrn:
+  19 0000 00       		.space	1
+  20              		.global	downlink_nb_bytes
+  21              		.section	.bss.downlink_nb_bytes,"aw",%nobits
+  22              		.align	1
+  25              	downlink_nb_bytes:
+  26 0000 0000     		.space	2
+  27              		.global	downlink_nb_msgs
+  28              		.section	.bss.downlink_nb_msgs,"aw",%nobits
+  29              		.align	1
+  32              	downlink_nb_msgs:
+  33 0000 0000     		.space	2
+  34              		.ident	"GCC: (GNU) 3.4.4"
+DEFINED SYMBOLS
+                            *ABS*:00000000 downlink.c
+     /tmp/cc20gnQf.s:6      .data.telemetry_mode_Ap_DefaultChannel:00000000 telemetry_mode_Ap_DefaultChannel
+     /tmp/cc20gnQf.s:12     .data.telemetry_mode_Fbw_DefaultChannel:00000000 telemetry_mode_Fbw_DefaultChannel
+     /tmp/cc20gnQf.s:18     .bss.downlink_nb_ovrn:00000000 downlink_nb_ovrn
+     /tmp/cc20gnQf.s:25     .bss.downlink_nb_bytes:00000000 downlink_nb_bytes
+     /tmp/cc20gnQf.s:32     .bss.downlink_nb_msgs:00000000 downlink_nb_msgs
+
+NO UNDEFINED SYMBOLS

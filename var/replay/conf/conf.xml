@@ -1,0 +1,3 @@
+<conf>
+  <aircraft name="KMUAV_XBee" ac_id="4" airframe="airframes/KMUAV_XBee_Airspeed.xml" radio="radios/cockpitSX.xml" telemetry="telemetry/default.xml" flight_plan="flight_plans/KMUAV_FP.xml" settings=" settings/basic.xml" gui_color="blue"/>
+</conf>

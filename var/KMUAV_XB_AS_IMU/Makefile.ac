@@ -1,0 +1,171 @@
+# This file has been generated from /home/excelobs/paparazzi/conf/airframes/KMUAV_XBee_Airspeed_IMU2.xml by /home/excelobs/paparazzi/sw/tools/gen_aircraft.ml
+# Please DO NOT EDIT
+
+####################################################
+# makefile firmware 'fixedwing'
+####################################################
+
+###########
+# -target: 'sim'
+ifeq ($(TARGET), sim)
+$(TARGET).CFLAGS += -DAGR_CLIMB
+$(TARGET).CFLAGS += -DLOITER_TRIM
+$(TARGET).CFLAGS += -DALT_KALMAN
+$(TARGET).CFLAGS += -DWIND_INFO
+$(TARGET).CFLAGS += -DARDUIMU_I2C_DEV=i2c1
+$(TARGET).CFLAGS += -DUSE_I2C0
+$(TARGET).CFLAGS += -DUSE_I2C1
+$(TARGET).CFLAGS += -DUSE_AIRSPEED
+$(TARGET).CFLAGS += -DAGR_CLIMB
+$(TARGET).CFLAGS += -DLOITER_TRIM
+$(TARGET).CFLAGS += -DALT_KALMAN
+$(TARGET).CFLAGS += -DWIND_INFO
+include $(PAPARAZZI_SRC)/conf/boards/pc.makefile
+include $(PAPARAZZI_SRC)/conf/autopilot/fixedwing.makefile
+# -subsystem: 'radio_control'
+ifneq ($(strip $(wildcard $(CFG_FIXEDWING)/radio_control_ppm.makefile)),)
+	include $(CFG_FIXEDWING)/radio_control_ppm.makefile
+else
+	include $(CFG_SHARED)/radio_control_ppm.makefile
+endif
+# -subsystem: 'telemetry'
+ifneq ($(strip $(wildcard $(CFG_FIXEDWING)/telemetry_transparent.makefile)),)
+	include $(CFG_FIXEDWING)/telemetry_transparent.makefile
+else
+	include $(CFG_SHARED)/telemetry_transparent.makefile
+endif
+# -subsystem: 'control'
+ifneq ($(strip $(wildcard $(CFG_FIXEDWING)/control.makefile)),)
+	include $(CFG_FIXEDWING)/control.makefile
+else
+	include $(CFG_SHARED)/control.makefile
+endif
+# -subsystem: 'gps'
+ifneq ($(strip $(wildcard $(CFG_FIXEDWING)/gps_ublox_lea5h.makefile)),)
+	include $(CFG_FIXEDWING)/gps_ublox_lea5h.makefile
+else
+	include $(CFG_SHARED)/gps_ublox_lea5h.makefile
+endif
+# -subsystem: 'i2c'
+ifneq ($(strip $(wildcard $(CFG_FIXEDWING)/i2c.makefile)),)
+	include $(CFG_FIXEDWING)/i2c.makefile
+else
+	include $(CFG_SHARED)/i2c.makefile
+endif
+# -subsystem: 'navigation'
+ifneq ($(strip $(wildcard $(CFG_FIXEDWING)/navigation.makefile)),)
+	include $(CFG_FIXEDWING)/navigation.makefile
+else
+	include $(CFG_SHARED)/navigation.makefile
+endif
+endif
+
+
+###########
+# -target: 'ap'
+ifeq ($(TARGET), ap)
+$(TARGET).CFLAGS += -DAGR_CLIMB
+$(TARGET).CFLAGS += -DLOITER_TRIM
+$(TARGET).CFLAGS += -DALT_KALMAN
+$(TARGET).CFLAGS += -DWIND_INFO
+$(TARGET).CFLAGS += -DARDUIMU_I2C_DEV=i2c1
+$(TARGET).CFLAGS += -DUSE_I2C0
+$(TARGET).CFLAGS += -DUSE_I2C1
+$(TARGET).CFLAGS += -DUSE_AIRSPEED
+$(TARGET).CFLAGS += -DAGR_CLIMB
+$(TARGET).CFLAGS += -DLOITER_TRIM
+$(TARGET).CFLAGS += -DALT_KALMAN
+$(TARGET).CFLAGS += -DWIND_INFO
+include $(PAPARAZZI_SRC)/conf/boards/tiny_2.11.makefile
+include $(PAPARAZZI_SRC)/conf/autopilot/fixedwing.makefile
+# -subsystem: 'radio_control'
+ifneq ($(strip $(wildcard $(CFG_FIXEDWING)/radio_control_ppm.makefile)),)
+	include $(CFG_FIXEDWING)/radio_control_ppm.makefile
+else
+	include $(CFG_SHARED)/radio_control_ppm.makefile
+endif
+# -subsystem: 'telemetry'
+ifneq ($(strip $(wildcard $(CFG_FIXEDWING)/telemetry_transparent.makefile)),)
+	include $(CFG_FIXEDWING)/telemetry_transparent.makefile
+else
+	include $(CFG_SHARED)/telemetry_transparent.makefile
+endif
+# -subsystem: 'control'
+ifneq ($(strip $(wildcard $(CFG_FIXEDWING)/control.makefile)),)
+	include $(CFG_FIXEDWING)/control.makefile
+else
+	include $(CFG_SHARED)/control.makefile
+endif
+# -subsystem: 'gps'
+ifneq ($(strip $(wildcard $(CFG_FIXEDWING)/gps_ublox_lea5h.makefile)),)
+	include $(CFG_FIXEDWING)/gps_ublox_lea5h.makefile
+else
+	include $(CFG_SHARED)/gps_ublox_lea5h.makefile
+endif
+# -subsystem: 'i2c'
+ifneq ($(strip $(wildcard $(CFG_FIXEDWING)/i2c.makefile)),)
+	include $(CFG_FIXEDWING)/i2c.makefile
+else
+	include $(CFG_SHARED)/i2c.makefile
+endif
+# -subsystem: 'navigation'
+ifneq ($(strip $(wildcard $(CFG_FIXEDWING)/navigation.makefile)),)
+	include $(CFG_FIXEDWING)/navigation.makefile
+else
+	include $(CFG_SHARED)/navigation.makefile
+endif
+endif
+
+
+####################################################
+# makefile firmware 'setup'
+####################################################
+
+###########
+# -target: 'tunnel'
+ifeq ($(TARGET), tunnel)
+include $(PAPARAZZI_SRC)/conf/boards/tiny_2.11.makefile
+include $(PAPARAZZI_SRC)/conf/autopilot/setup.makefile
+endif
+
+
+###########
+# -target: 'usb_tunnel_0'
+ifeq ($(TARGET), usb_tunnel_0)
+include $(PAPARAZZI_SRC)/conf/boards/tiny_2.11.makefile
+include $(PAPARAZZI_SRC)/conf/autopilot/setup.makefile
+endif
+
+
+###########
+# -target: 'usb_tunnel_1'
+ifeq ($(TARGET), usb_tunnel_1)
+include $(PAPARAZZI_SRC)/conf/boards/tiny_2.11.makefile
+include $(PAPARAZZI_SRC)/conf/autopilot/setup.makefile
+endif
+
+
+###########
+# -target: 'setup_actuators'
+ifeq ($(TARGET), setup_actuators)
+include $(PAPARAZZI_SRC)/conf/boards/tiny_2.11.makefile
+include $(PAPARAZZI_SRC)/conf/autopilot/setup.makefile
+endif
+
+
+####################################################
+# modules makefile section
+####################################################
+
+# include modules directory for all targets
+$(TARGET).CFLAGS += -I modules -I arch/$(ARCH)/modules
+INS_DIR = modules/ins
+SENSORS_DIR = modules/sensors
+
+# makefile for module airspeed_ets in modules/sensors
+ap.srcs += $(SENSORS_DIR)/airspeed_ets.c
+sim.srcs += $(SENSORS_DIR)/airspeed_ets.c
+
+# makefile for module ins_ArduIMU in modules/ins
+ap.srcs += $(INS_DIR)/ins_arduimu_basic.c
+sim.srcs += arch/$(ARCH)/$(INS_DIR)/ins_arduimu_basic.c

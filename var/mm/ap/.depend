@@ -1,0 +1,1401 @@
+/home/excelobs/paparazzi/var/mm/ap/mcu.o: mcu.c mcu.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/mcu_arch.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/armVIC.h led.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/led_hw.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.1.h \
+  arch/lpc21/include/LPC21xx.h arch/lpc21/include/lpcWD.h \
+  arch/lpc21/include/lpcTMR.h arch/lpc21/include/lpcUART.h \
+  arch/lpc21/include/lpcI2C.h arch/lpc21/include/lpcSPI.h \
+  arch/lpc21/include/lpcRTC.h arch/lpc21/include/lpcGPIO.h \
+  arch/lpc21/include/lpcPIN.h arch/lpc21/include/lpcADC.h \
+  arch/lpc21/include/lpcSCB.h arch/lpc21/include/lpcVIC.h \
+  arch/lpc21/include/lpcCAN.h /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/inttypes.h \
+  mcu_periph/uart.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/mcu_periph/uart_arch.h \
+  arch/lpc21/include/types.h arch/lpc21/include/LPC21xx.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/sw/include/std.h mcu_periph/i2c.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/mcu_periph/i2c_arch.h \
+  mcu_periph/adc.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/mcu_periph/adc_arch.h
+/home/excelobs/paparazzi/var/mm/ap/mcu_arch.o: arch/lpc21/mcu_arch.c \
+  /home/excelobs/paparazzi/sw/airborne/mcu.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/mcu_arch.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/armVIC.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/inttypes.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.1.h \
+  arch/lpc21/include/LPC21xx.h arch/lpc21/include/lpcWD.h \
+  arch/lpc21/include/lpcTMR.h arch/lpc21/include/lpcUART.h \
+  arch/lpc21/include/lpcI2C.h arch/lpc21/include/lpcSPI.h \
+  arch/lpc21/include/lpcRTC.h arch/lpc21/include/lpcGPIO.h \
+  arch/lpc21/include/lpcPIN.h arch/lpc21/include/lpcADC.h \
+  arch/lpc21/include/lpcSCB.h arch/lpc21/include/lpcVIC.h \
+  arch/lpc21/include/lpcCAN.h
+/home/excelobs/paparazzi/var/mm/ap/sys_time.o: sys_time.c sys_time.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/inttypes.h \
+  boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.1.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/sys_time_hw.h \
+  /home/excelobs/paparazzi/sw/airborne/sys_time.h \
+  /home/excelobs/paparazzi/sw/include/std.h arch/lpc21/include/LPC21xx.h \
+  arch/lpc21/include/lpcWD.h arch/lpc21/include/lpcTMR.h \
+  arch/lpc21/include/lpcUART.h arch/lpc21/include/lpcI2C.h \
+  arch/lpc21/include/lpcSPI.h arch/lpc21/include/lpcRTC.h \
+  arch/lpc21/include/lpcGPIO.h arch/lpc21/include/lpcPIN.h \
+  arch/lpc21/include/lpcADC.h arch/lpc21/include/lpcSCB.h \
+  arch/lpc21/include/lpcVIC.h arch/lpc21/include/lpcCAN.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.1.h \
+  /home/excelobs/paparazzi/sw/airborne/led.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/led_hw.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/armVIC.h
+/home/excelobs/paparazzi/var/mm/ap/inter_mcu.o: ./inter_mcu.c ./inter_mcu.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/inttypes.h \
+  /home/excelobs/paparazzi/sw/include/std.h ./paparazzi.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  ./subsystems/radio_control.h /home/excelobs/paparazzi/sw/airborne/led.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/led_hw.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.1.h \
+  arch/lpc21/include/LPC21xx.h arch/lpc21/include/lpcWD.h \
+  arch/lpc21/include/lpcTMR.h arch/lpc21/include/lpcUART.h \
+  arch/lpc21/include/lpcI2C.h arch/lpc21/include/lpcSPI.h \
+  arch/lpc21/include/lpcRTC.h arch/lpc21/include/lpcGPIO.h \
+  arch/lpc21/include/lpcPIN.h arch/lpc21/include/lpcADC.h \
+  arch/lpc21/include/lpcSCB.h arch/lpc21/include/lpcVIC.h \
+  arch/lpc21/include/lpcCAN.h /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control/ppm.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/subsystems/radio_control/ppm_arch.h \
+  arch/lpc21/include/LPC21xx.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/var/mm/generated/radio.h \
+  ./subsystems/electrical.h /home/excelobs/paparazzi/sw/include/std.h \
+  ./firmwares/fixedwing/main_fbw.h \
+  /home/excelobs/paparazzi/sw/include/std.h
+/home/excelobs/paparazzi/var/mm/ap/main_fbw.o: firmwares/fixedwing/main_fbw.c \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/main_fbw.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/inttypes.h \
+  /home/excelobs/paparazzi/sw/airborne/mcu.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/mcu_arch.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/armVIC.h \
+  /home/excelobs/paparazzi/sw/airborne/sys_time.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.1.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/sys_time_hw.h \
+  /home/excelobs/paparazzi/sw/airborne/sys_time.h \
+  /home/excelobs/paparazzi/sw/include/std.h arch/lpc21/include/LPC21xx.h \
+  arch/lpc21/include/lpcWD.h arch/lpc21/include/lpcTMR.h \
+  arch/lpc21/include/lpcUART.h arch/lpc21/include/lpcI2C.h \
+  arch/lpc21/include/lpcSPI.h arch/lpc21/include/lpcRTC.h \
+  arch/lpc21/include/lpcGPIO.h arch/lpc21/include/lpcPIN.h \
+  arch/lpc21/include/lpcADC.h arch/lpc21/include/lpcSCB.h \
+  arch/lpc21/include/lpcVIC.h arch/lpc21/include/lpcCAN.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/sw/airborne/led.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/led_hw.h \
+  /home/excelobs/paparazzi/sw/airborne/commands.h \
+  /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/actuators.h \
+  /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/servos_4017_hw.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/electrical.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control.h \
+  /home/excelobs/paparazzi/sw/airborne/led.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control/ppm.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/subsystems/radio_control/ppm_arch.h \
+  arch/lpc21/include/LPC21xx.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/var/mm/generated/radio.h \
+  /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/autopilot.h \
+  /home/excelobs/paparazzi/sw/airborne/sys_time.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control.h \
+  /home/excelobs/paparazzi/sw/airborne/fbw_downlink.h \
+  /home/excelobs/paparazzi/var/include/messages.h \
+  /home/excelobs/paparazzi/var/mm/generated/periodic.h \
+  /home/excelobs/paparazzi/sw/airborne/commands.h \
+  firmwares/fixedwing/actuators.h \
+  /home/excelobs/paparazzi/sw/airborne/mcu_periph/uart.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/mcu_periph/uart_arch.h \
+  arch/lpc21/include/types.h arch/lpc21/include/LPC21xx.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/main_fbw.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/electrical.h \
+  /home/excelobs/paparazzi/sw/airborne/inter_mcu.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/downlink.h \
+  /home/excelobs/paparazzi/var/mm/generated/modules.h \
+  /home/excelobs/paparazzi/sw/include/std.h modules/ins/ins_arduimu.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/sw/airborne/mcu_periph/i2c.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/mcu_periph/i2c_arch.h \
+  modules/sensors/baro_scp_i2c.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  modules/sensors/airspeed_ets.h \
+  /home/excelobs/paparazzi/sw/airborne/mcu_periph/i2c.h \
+  modules/meteo/humid_sht_i2c.h /home/excelobs/paparazzi/sw/include/std.h \
+  modules/meteo/ir_mlx.h \
+  /home/excelobs/paparazzi/sw/airborne/pprz_transport.h \
+  /home/excelobs/paparazzi/sw/airborne/datalink.h \
+  /home/excelobs/paparazzi/var/include/dl_protocol.h \
+  /home/excelobs/paparazzi/sw/airborne/modem.h \
+  /home/excelobs/paparazzi/sw/airborne/xbee.h \
+  /home/excelobs/paparazzi/sw/airborne/xbee24.h \
+  /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+  /home/excelobs/paparazzi/sw/airborne/inter_mcu.h
+/home/excelobs/paparazzi/var/mm/ap/electrical.o: subsystems/electrical.c \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/electrical.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/inttypes.h \
+  /home/excelobs/paparazzi/sw/airborne/mcu_periph/adc.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/mcu_periph/adc_arch.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.1.h \
+  /home/excelobs/paparazzi/sw/airborne/commands.h \
+  /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h
+/home/excelobs/paparazzi/var/mm/ap/commands.o: ./commands.c ./commands.h ./paparazzi.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/inttypes.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h
+/home/excelobs/paparazzi/var/mm/ap/main_ap.o: firmwares/fixedwing/main_ap.c \
+  /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/main_ap.h \
+  /home/excelobs/paparazzi/sw/airborne/mcu.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/mcu_arch.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/armVIC.h \
+  /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/stabilization/stabilization_attitude.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/inttypes.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/guidance/guidance_v.h \
+  /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+  /home/excelobs/paparazzi/sw/airborne/gps.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/gps_hw.h \
+  /home/excelobs/paparazzi/sw/airborne/gps_ubx.h \
+  /home/excelobs/paparazzi/sw/airborne/mcu_periph/uart.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/mcu_periph/uart_arch.h \
+  arch/lpc21/include/types.h arch/lpc21/include/LPC21xx.h \
+  arch/lpc21/include/lpcWD.h arch/lpc21/include/lpcTMR.h \
+  arch/lpc21/include/lpcUART.h arch/lpc21/include/lpcI2C.h \
+  arch/lpc21/include/lpcSPI.h arch/lpc21/include/lpcRTC.h \
+  arch/lpc21/include/lpcGPIO.h arch/lpc21/include/lpcPIN.h \
+  arch/lpc21/include/lpcADC.h arch/lpc21/include/lpcSCB.h \
+  arch/lpc21/include/lpcVIC.h arch/lpc21/include/lpcCAN.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.1.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/gyro.h \
+  /home/excelobs/paparazzi/sw/airborne/ap_downlink.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/sw/airborne/downlink.h \
+  /home/excelobs/paparazzi/var/mm/generated/modules.h \
+  /home/excelobs/paparazzi/sw/include/std.h modules/ins/ins_arduimu.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/sw/airborne/mcu_periph/i2c.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/mcu_periph/i2c_arch.h \
+  modules/sensors/baro_scp_i2c.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  modules/sensors/airspeed_ets.h \
+  /home/excelobs/paparazzi/sw/airborne/mcu_periph/i2c.h \
+  modules/meteo/humid_sht_i2c.h /home/excelobs/paparazzi/sw/include/std.h \
+  modules/meteo/ir_mlx.h /home/excelobs/paparazzi/var/include/messages.h \
+  /home/excelobs/paparazzi/sw/airborne/pprz_transport.h \
+  /home/excelobs/paparazzi/sw/airborne/datalink.h \
+  /home/excelobs/paparazzi/var/include/dl_protocol.h \
+  /home/excelobs/paparazzi/sw/airborne/modem.h \
+  /home/excelobs/paparazzi/sw/airborne/xbee.h \
+  /home/excelobs/paparazzi/sw/airborne/xbee24.h \
+  /home/excelobs/paparazzi/var/mm/generated/periodic.h \
+  /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/stabilization/stabilization_adaptive.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/nav.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+  /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/guidance/guidance_v.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/nav_survey_rectangle.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/nav.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/common_nav.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/autopilot.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/sys_time.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/sys_time_hw.h \
+  /home/excelobs/paparazzi/sw/airborne/sys_time.h \
+  /home/excelobs/paparazzi/sw/include/std.h arch/lpc21/include/LPC21xx.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/sw/airborne/led.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/led_hw.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control.h \
+  /home/excelobs/paparazzi/sw/airborne/led.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control/ppm.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/subsystems/radio_control/ppm_arch.h \
+  arch/lpc21/include/LPC21xx.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/var/mm/generated/radio.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/sw/airborne/estimator.h \
+  /home/excelobs/paparazzi/var/mm/generated/settings.h \
+  firmwares/fixedwing/autopilot.h \
+  /home/excelobs/paparazzi/sw/airborne/downlink.h \
+  /home/excelobs/paparazzi/sw/airborne/estimator.h \
+  /home/excelobs/paparazzi/sw/airborne/gps_ubx.h \
+  firmwares/fixedwing/guidance/guidance_v.h \
+  firmwares/fixedwing/stabilization/stabilization_attitude.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/ahrs.h \
+  /home/excelobs/paparazzi/sw/airborne/math/pprz_algebra_int.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/math/pprz_algebra.h \
+  /home/excelobs/paparazzi/sw/airborne/math/pprz_trig_int.h \
+  /home/excelobs/paparazzi/sw/airborne/math/pprz_algebra_int.h \
+  /home/excelobs/paparazzi/sw/airborne/math/pprz_algebra_float.h \
+  /home/excelobs/paparazzi/sw/airborne/math/pprz_algebra.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/nav.h \
+  /home/excelobs/paparazzi/var/mm/generated/modules.h \
+  /home/excelobs/paparazzi/sw/airborne/link_mcu.h \
+  /home/excelobs/paparazzi/sw/airborne/inter_mcu.h \
+  /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/electrical.h \
+  /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/main_fbw.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/link_mcu_hw.h \
+  /home/excelobs/paparazzi/sw/airborne/sys_time.h \
+  /home/excelobs/paparazzi/var/mm/generated/flight_plan.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/nav_line.h \
+  /home/excelobs/paparazzi/sw/airborne/datalink.h \
+  /home/excelobs/paparazzi/sw/airborne/datalink.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/settings.h \
+  /home/excelobs/paparazzi/var/mm/generated/settings.h \
+  /home/excelobs/paparazzi/sw/airborne/xbee.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/gpio.h \
+  /home/excelobs/paparazzi/sw/airborne/rc_settings.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/traffic_info.h \
+  /home/excelobs/paparazzi/var/mm/generated/modules.h
+/home/excelobs/paparazzi/var/mm/ap/estimator.o: ./estimator.c \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/inttypes.h \
+  ./estimator.h /home/excelobs/paparazzi/sw/include/std.h \
+  ./mcu_periph/uart.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/mcu_periph/uart_arch.h \
+  arch/lpc21/include/types.h arch/lpc21/include/LPC21xx.h \
+  arch/lpc21/include/lpcWD.h arch/lpc21/include/lpcTMR.h \
+  arch/lpc21/include/lpcUART.h arch/lpc21/include/lpcI2C.h \
+  arch/lpc21/include/lpcSPI.h arch/lpc21/include/lpcRTC.h \
+  arch/lpc21/include/lpcGPIO.h arch/lpc21/include/lpcPIN.h \
+  arch/lpc21/include/lpcADC.h arch/lpc21/include/lpcSCB.h \
+  arch/lpc21/include/lpcVIC.h arch/lpc21/include/lpcCAN.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.1.h \
+  /home/excelobs/paparazzi/sw/include/std.h ./ap_downlink.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h ./downlink.h \
+  /home/excelobs/paparazzi/var/mm/generated/modules.h \
+  /home/excelobs/paparazzi/sw/include/std.h modules/ins/ins_arduimu.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/sw/airborne/mcu_periph/i2c.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/mcu_periph/i2c_arch.h \
+  modules/sensors/baro_scp_i2c.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  modules/sensors/airspeed_ets.h \
+  /home/excelobs/paparazzi/sw/airborne/mcu_periph/i2c.h \
+  modules/meteo/humid_sht_i2c.h /home/excelobs/paparazzi/sw/include/std.h \
+  modules/meteo/ir_mlx.h /home/excelobs/paparazzi/var/include/messages.h \
+  ./pprz_transport.h ./datalink.h \
+  /home/excelobs/paparazzi/var/include/dl_protocol.h ./modem.h ./xbee.h \
+  ./xbee24.h /home/excelobs/paparazzi/var/mm/generated/periodic.h \
+  ./firmwares/fixedwing/stabilization/stabilization_adaptive.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h ./gps.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/gps_hw.h ./gps_ubx.h \
+  ./subsystems/nav.h /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+  /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/guidance/guidance_v.h \
+  /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/nav_survey_rectangle.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/nav.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/common_nav.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  ./subsystems/sensors/infrared.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/sw/airborne/estimator.h
+/home/excelobs/paparazzi/var/mm/ap/armVIC.o: arch/lpc21/armVIC.c arch/lpc21/include/types.h \
+  arch/lpc21/armVIC.h
+/home/excelobs/paparazzi/var/mm/ap/main.o: firmwares/fixedwing/main.c \
+  /home/excelobs/paparazzi/sw/airborne/sys_time.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/inttypes.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.1.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/sys_time_hw.h \
+  /home/excelobs/paparazzi/sw/airborne/sys_time.h \
+  /home/excelobs/paparazzi/sw/include/std.h arch/lpc21/include/LPC21xx.h \
+  arch/lpc21/include/lpcWD.h arch/lpc21/include/lpcTMR.h \
+  arch/lpc21/include/lpcUART.h arch/lpc21/include/lpcI2C.h \
+  arch/lpc21/include/lpcSPI.h arch/lpc21/include/lpcRTC.h \
+  arch/lpc21/include/lpcGPIO.h arch/lpc21/include/lpcPIN.h \
+  arch/lpc21/include/lpcADC.h arch/lpc21/include/lpcSCB.h \
+  arch/lpc21/include/lpcVIC.h arch/lpc21/include/lpcCAN.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/sw/airborne/led.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/led_hw.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/armVIC.h \
+  /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/main_fbw.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/main_ap.h
+/home/excelobs/paparazzi/var/mm/ap/sys_time_hw.o: arch/lpc21/sys_time_hw.c arch/lpc21/armVIC.h \
+  /home/excelobs/paparazzi/sw/airborne/sys_time.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/inttypes.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.1.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/sys_time_hw.h \
+  /home/excelobs/paparazzi/sw/airborne/sys_time.h \
+  /home/excelobs/paparazzi/sw/include/std.h arch/lpc21/include/LPC21xx.h \
+  arch/lpc21/include/lpcWD.h arch/lpc21/include/lpcTMR.h \
+  arch/lpc21/include/lpcUART.h arch/lpc21/include/lpcI2C.h \
+  arch/lpc21/include/lpcSPI.h arch/lpc21/include/lpcRTC.h \
+  arch/lpc21/include/lpcGPIO.h arch/lpc21/include/lpcPIN.h \
+  arch/lpc21/include/lpcADC.h arch/lpc21/include/lpcSCB.h \
+  arch/lpc21/include/lpcVIC.h arch/lpc21/include/lpcCAN.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/sw/airborne/led.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/led_hw.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/armVIC.h \
+  arch/lpc21/servos_4017_hw.h /home/excelobs/paparazzi/sw/include/std.h \
+  arch/lpc21/include/LPC21xx.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control.h \
+  /home/excelobs/paparazzi/sw/airborne/led.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control/ppm.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/subsystems/radio_control/ppm_arch.h \
+  arch/lpc21/include/LPC21xx.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/var/mm/generated/radio.h
+/home/excelobs/paparazzi/var/mm/ap/uart_arch.o: arch/lpc21/mcu_periph/uart_arch.c \
+  /home/excelobs/paparazzi/sw/airborne/mcu_periph/uart.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/mcu_periph/uart_arch.h \
+  arch/lpc21/include/types.h arch/lpc21/include/LPC21xx.h \
+  arch/lpc21/include/lpcWD.h arch/lpc21/include/lpcTMR.h \
+  arch/lpc21/include/lpcUART.h arch/lpc21/include/lpcI2C.h \
+  arch/lpc21/include/lpcSPI.h arch/lpc21/include/lpcRTC.h \
+  arch/lpc21/include/lpcGPIO.h arch/lpc21/include/lpcPIN.h \
+  arch/lpc21/include/lpcADC.h arch/lpc21/include/lpcSCB.h \
+  arch/lpc21/include/lpcVIC.h arch/lpc21/include/lpcCAN.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.1.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/inttypes.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/armVIC.h
+/home/excelobs/paparazzi/var/mm/ap/settings.o: subsystems/settings.c \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/settings.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/inttypes.h \
+  /home/excelobs/paparazzi/var/mm/generated/settings.h \
+  firmwares/fixedwing/autopilot.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/sys_time.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.1.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/sys_time_hw.h \
+  /home/excelobs/paparazzi/sw/airborne/sys_time.h \
+  /home/excelobs/paparazzi/sw/include/std.h arch/lpc21/include/LPC21xx.h \
+  arch/lpc21/include/lpcWD.h arch/lpc21/include/lpcTMR.h \
+  arch/lpc21/include/lpcUART.h arch/lpc21/include/lpcI2C.h \
+  arch/lpc21/include/lpcSPI.h arch/lpc21/include/lpcRTC.h \
+  arch/lpc21/include/lpcGPIO.h arch/lpc21/include/lpcPIN.h \
+  arch/lpc21/include/lpcADC.h arch/lpc21/include/lpcSCB.h \
+  arch/lpc21/include/lpcVIC.h arch/lpc21/include/lpcCAN.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/sw/airborne/led.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/led_hw.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/armVIC.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control.h \
+  /home/excelobs/paparazzi/sw/airborne/led.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control/ppm.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/subsystems/radio_control/ppm_arch.h \
+  arch/lpc21/include/LPC21xx.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/var/mm/generated/radio.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/sw/airborne/downlink.h \
+  /home/excelobs/paparazzi/var/mm/generated/modules.h \
+  /home/excelobs/paparazzi/sw/include/std.h modules/ins/ins_arduimu.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/sw/airborne/mcu_periph/i2c.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/mcu_periph/i2c_arch.h \
+  arch/lpc21/include/LPC21xx.h modules/sensors/baro_scp_i2c.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  modules/sensors/airspeed_ets.h \
+  /home/excelobs/paparazzi/sw/airborne/mcu_periph/i2c.h \
+  modules/meteo/humid_sht_i2c.h /home/excelobs/paparazzi/sw/include/std.h \
+  modules/meteo/ir_mlx.h /home/excelobs/paparazzi/var/include/messages.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/sw/airborne/pprz_transport.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/datalink.h \
+  /home/excelobs/paparazzi/var/include/dl_protocol.h \
+  /home/excelobs/paparazzi/sw/airborne/modem.h \
+  /home/excelobs/paparazzi/sw/airborne/xbee.h \
+  /home/excelobs/paparazzi/sw/airborne/xbee24.h \
+  /home/excelobs/paparazzi/sw/airborne/estimator.h \
+  /home/excelobs/paparazzi/sw/airborne/gps_ubx.h \
+  firmwares/fixedwing/guidance/guidance_v.h \
+  /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+  firmwares/fixedwing/stabilization/stabilization_attitude.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/ahrs.h \
+  /home/excelobs/paparazzi/sw/airborne/math/pprz_algebra_int.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/math/pprz_algebra.h \
+  /home/excelobs/paparazzi/sw/airborne/math/pprz_trig_int.h \
+  /home/excelobs/paparazzi/sw/airborne/math/pprz_algebra_int.h \
+  /home/excelobs/paparazzi/sw/airborne/math/pprz_algebra_float.h \
+  /home/excelobs/paparazzi/sw/airborne/math/pprz_algebra.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/nav.h \
+  /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/guidance/guidance_v.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/nav_survey_rectangle.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/nav.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/common_nav.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/var/mm/generated/modules.h
+/home/excelobs/paparazzi/var/mm/ap/settings_arch.o: arch/lpc21/subsystems/settings_arch.c \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/settings.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/inttypes.h \
+  /home/excelobs/paparazzi/var/mm/generated/settings.h \
+  firmwares/fixedwing/autopilot.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/sys_time.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.1.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/sys_time_hw.h \
+  /home/excelobs/paparazzi/sw/airborne/sys_time.h \
+  /home/excelobs/paparazzi/sw/include/std.h arch/lpc21/include/LPC21xx.h \
+  arch/lpc21/include/lpcWD.h arch/lpc21/include/lpcTMR.h \
+  arch/lpc21/include/lpcUART.h arch/lpc21/include/lpcI2C.h \
+  arch/lpc21/include/lpcSPI.h arch/lpc21/include/lpcRTC.h \
+  arch/lpc21/include/lpcGPIO.h arch/lpc21/include/lpcPIN.h \
+  arch/lpc21/include/lpcADC.h arch/lpc21/include/lpcSCB.h \
+  arch/lpc21/include/lpcVIC.h arch/lpc21/include/lpcCAN.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/sw/airborne/led.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/led_hw.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/armVIC.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control.h \
+  /home/excelobs/paparazzi/sw/airborne/led.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control/ppm.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/subsystems/radio_control/ppm_arch.h \
+  arch/lpc21/include/LPC21xx.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/var/mm/generated/radio.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/sw/airborne/downlink.h \
+  /home/excelobs/paparazzi/var/mm/generated/modules.h \
+  /home/excelobs/paparazzi/sw/include/std.h modules/ins/ins_arduimu.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/sw/airborne/mcu_periph/i2c.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/mcu_periph/i2c_arch.h \
+  arch/lpc21/include/LPC21xx.h modules/sensors/baro_scp_i2c.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  modules/sensors/airspeed_ets.h \
+  /home/excelobs/paparazzi/sw/airborne/mcu_periph/i2c.h \
+  modules/meteo/humid_sht_i2c.h /home/excelobs/paparazzi/sw/include/std.h \
+  modules/meteo/ir_mlx.h /home/excelobs/paparazzi/var/include/messages.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/sw/airborne/pprz_transport.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/datalink.h \
+  /home/excelobs/paparazzi/var/include/dl_protocol.h \
+  /home/excelobs/paparazzi/sw/airborne/modem.h \
+  /home/excelobs/paparazzi/sw/airborne/xbee.h \
+  /home/excelobs/paparazzi/sw/airborne/xbee24.h \
+  /home/excelobs/paparazzi/sw/airborne/estimator.h \
+  /home/excelobs/paparazzi/sw/airborne/gps_ubx.h \
+  firmwares/fixedwing/guidance/guidance_v.h \
+  /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+  firmwares/fixedwing/stabilization/stabilization_attitude.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/ahrs.h \
+  /home/excelobs/paparazzi/sw/airborne/math/pprz_algebra_int.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/math/pprz_algebra.h \
+  /home/excelobs/paparazzi/sw/airborne/math/pprz_trig_int.h \
+  /home/excelobs/paparazzi/sw/airborne/math/pprz_algebra_int.h \
+  /home/excelobs/paparazzi/sw/airborne/math/pprz_algebra_float.h \
+  /home/excelobs/paparazzi/sw/airborne/math/pprz_algebra.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/nav.h \
+  /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/guidance/guidance_v.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/nav_survey_rectangle.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/nav.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/common_nav.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/var/mm/generated/modules.h \
+  arch/lpc21/include/LPC21xx.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/armVIC.h
+/home/excelobs/paparazzi/var/mm/ap/adc_arch.o: arch/lpc21/mcu_periph/adc_arch.c \
+  /home/excelobs/paparazzi/sw/airborne/mcu_periph/adc.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/inttypes.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/mcu_periph/adc_arch.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.1.h \
+  arch/lpc21/include/LPC21xx.h arch/lpc21/include/lpcWD.h \
+  arch/lpc21/include/lpcTMR.h arch/lpc21/include/lpcUART.h \
+  arch/lpc21/include/lpcI2C.h arch/lpc21/include/lpcSPI.h \
+  arch/lpc21/include/lpcRTC.h arch/lpc21/include/lpcGPIO.h \
+  arch/lpc21/include/lpcPIN.h arch/lpc21/include/lpcADC.h \
+  arch/lpc21/include/lpcSCB.h arch/lpc21/include/lpcVIC.h \
+  arch/lpc21/include/lpcCAN.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/armVIC.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h
+/home/excelobs/paparazzi/var/mm/ap/servos_4017_hw.o: arch/lpc21/servos_4017_hw.c \
+  firmwares/fixedwing/actuators.h \
+  /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/inttypes.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/servos_4017_hw.h \
+  /home/excelobs/paparazzi/sw/include/std.h arch/lpc21/include/LPC21xx.h \
+  arch/lpc21/include/lpcWD.h arch/lpc21/include/lpcTMR.h \
+  arch/lpc21/include/lpcUART.h arch/lpc21/include/lpcI2C.h \
+  arch/lpc21/include/lpcSPI.h arch/lpc21/include/lpcRTC.h \
+  arch/lpc21/include/lpcGPIO.h arch/lpc21/include/lpcPIN.h \
+  arch/lpc21/include/lpcADC.h arch/lpc21/include/lpcSCB.h \
+  arch/lpc21/include/lpcVIC.h arch/lpc21/include/lpcCAN.h \
+  /home/excelobs/paparazzi/sw/airborne/sys_time.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.1.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/sys_time_hw.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/sw/airborne/led.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/led_hw.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/armVIC.h \
+  /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h
+/home/excelobs/paparazzi/var/mm/ap/actuators.o: actuators.c firmwares/fixedwing/actuators.h \
+  /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/inttypes.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/servos_4017_hw.h \
+  /home/excelobs/paparazzi/sw/include/std.h arch/lpc21/include/LPC21xx.h \
+  arch/lpc21/include/lpcWD.h arch/lpc21/include/lpcTMR.h \
+  arch/lpc21/include/lpcUART.h arch/lpc21/include/lpcI2C.h \
+  arch/lpc21/include/lpcSPI.h arch/lpc21/include/lpcRTC.h \
+  arch/lpc21/include/lpcGPIO.h arch/lpc21/include/lpcPIN.h \
+  arch/lpc21/include/lpcADC.h arch/lpc21/include/lpcSCB.h \
+  arch/lpc21/include/lpcVIC.h arch/lpc21/include/lpcCAN.h \
+  /home/excelobs/paparazzi/sw/airborne/sys_time.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.1.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/sys_time_hw.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/sw/airborne/led.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/led_hw.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/armVIC.h
+/home/excelobs/paparazzi/var/mm/ap/radio_control.o: subsystems/radio_control.c \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control.h \
+  /home/excelobs/paparazzi/sw/airborne/led.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/led_hw.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.1.h \
+  arch/lpc21/include/LPC21xx.h arch/lpc21/include/lpcWD.h \
+  arch/lpc21/include/lpcTMR.h arch/lpc21/include/lpcUART.h \
+  arch/lpc21/include/lpcI2C.h arch/lpc21/include/lpcSPI.h \
+  arch/lpc21/include/lpcRTC.h arch/lpc21/include/lpcGPIO.h \
+  arch/lpc21/include/lpcPIN.h arch/lpc21/include/lpcADC.h \
+  arch/lpc21/include/lpcSCB.h arch/lpc21/include/lpcVIC.h \
+  arch/lpc21/include/lpcCAN.h /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/inttypes.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control/ppm.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/subsystems/radio_control/ppm_arch.h \
+  arch/lpc21/include/LPC21xx.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/var/mm/generated/radio.h
+/home/excelobs/paparazzi/var/mm/ap/ppm.o: subsystems/radio_control/ppm.c \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control.h \
+  /home/excelobs/paparazzi/sw/airborne/led.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/led_hw.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.1.h \
+  arch/lpc21/include/LPC21xx.h arch/lpc21/include/lpcWD.h \
+  arch/lpc21/include/lpcTMR.h arch/lpc21/include/lpcUART.h \
+  arch/lpc21/include/lpcI2C.h arch/lpc21/include/lpcSPI.h \
+  arch/lpc21/include/lpcRTC.h arch/lpc21/include/lpcGPIO.h \
+  arch/lpc21/include/lpcPIN.h arch/lpc21/include/lpcADC.h \
+  arch/lpc21/include/lpcSCB.h arch/lpc21/include/lpcVIC.h \
+  arch/lpc21/include/lpcCAN.h /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/inttypes.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control/ppm.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/subsystems/radio_control/ppm_arch.h \
+  arch/lpc21/include/LPC21xx.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/var/mm/generated/radio.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control/ppm.h
+/home/excelobs/paparazzi/var/mm/ap/ppm_arch.o: arch/lpc21/subsystems/radio_control/ppm_arch.c \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control.h \
+  /home/excelobs/paparazzi/sw/airborne/led.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/led_hw.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.1.h \
+  arch/lpc21/include/LPC21xx.h arch/lpc21/include/lpcWD.h \
+  arch/lpc21/include/lpcTMR.h arch/lpc21/include/lpcUART.h \
+  arch/lpc21/include/lpcI2C.h arch/lpc21/include/lpcSPI.h \
+  arch/lpc21/include/lpcRTC.h arch/lpc21/include/lpcGPIO.h \
+  arch/lpc21/include/lpcPIN.h arch/lpc21/include/lpcADC.h \
+  arch/lpc21/include/lpcSCB.h arch/lpc21/include/lpcVIC.h \
+  arch/lpc21/include/lpcCAN.h /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/inttypes.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control/ppm.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/subsystems/radio_control/ppm_arch.h \
+  arch/lpc21/include/LPC21xx.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/var/mm/generated/radio.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control/ppm.h
+/home/excelobs/paparazzi/var/mm/ap/downlink.o: ./downlink.c /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/inttypes.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h
+/home/excelobs/paparazzi/var/mm/ap/datalink.o: firmwares/fixedwing/datalink.c \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/inttypes.h \
+  /home/excelobs/paparazzi/sw/airborne/datalink.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/var/include/dl_protocol.h \
+  /home/excelobs/paparazzi/var/mm/generated/modules.h \
+  /home/excelobs/paparazzi/sw/include/std.h modules/ins/ins_arduimu.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/sw/airborne/mcu_periph/i2c.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/mcu_periph/i2c_arch.h \
+  arch/lpc21/include/LPC21xx.h arch/lpc21/include/lpcWD.h \
+  arch/lpc21/include/lpcTMR.h arch/lpc21/include/lpcUART.h \
+  arch/lpc21/include/lpcI2C.h arch/lpc21/include/lpcSPI.h \
+  arch/lpc21/include/lpcRTC.h arch/lpc21/include/lpcGPIO.h \
+  arch/lpc21/include/lpcPIN.h arch/lpc21/include/lpcADC.h \
+  arch/lpc21/include/lpcSCB.h arch/lpc21/include/lpcVIC.h \
+  arch/lpc21/include/lpcCAN.h modules/sensors/baro_scp_i2c.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  modules/sensors/airspeed_ets.h \
+  /home/excelobs/paparazzi/sw/airborne/mcu_periph/i2c.h \
+  modules/meteo/humid_sht_i2c.h /home/excelobs/paparazzi/sw/include/std.h \
+  modules/meteo/ir_mlx.h /home/excelobs/paparazzi/var/include/messages.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/traffic_info.h \
+  /home/excelobs/paparazzi/sw/airborne/estimator.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/nav.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+  /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/guidance/guidance_v.h \
+  /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/nav_survey_rectangle.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/nav.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/common_nav.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/common_nav.h \
+  /home/excelobs/paparazzi/var/mm/generated/settings.h \
+  firmwares/fixedwing/autopilot.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/sys_time.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.1.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/sys_time_hw.h \
+  /home/excelobs/paparazzi/sw/airborne/sys_time.h \
+  /home/excelobs/paparazzi/sw/include/std.h arch/lpc21/include/LPC21xx.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/sw/airborne/led.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/led_hw.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/armVIC.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control.h \
+  /home/excelobs/paparazzi/sw/airborne/led.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control/ppm.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/subsystems/radio_control/ppm_arch.h \
+  arch/lpc21/include/LPC21xx.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/var/mm/generated/radio.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/sw/airborne/downlink.h \
+  /home/excelobs/paparazzi/var/mm/generated/modules.h \
+  /home/excelobs/paparazzi/var/include/messages.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/sw/airborne/pprz_transport.h \
+  /home/excelobs/paparazzi/sw/airborne/datalink.h \
+  /home/excelobs/paparazzi/sw/airborne/modem.h \
+  /home/excelobs/paparazzi/sw/airborne/xbee.h \
+  /home/excelobs/paparazzi/sw/airborne/xbee24.h \
+  /home/excelobs/paparazzi/sw/airborne/estimator.h \
+  /home/excelobs/paparazzi/sw/airborne/gps_ubx.h \
+  firmwares/fixedwing/guidance/guidance_v.h \
+  firmwares/fixedwing/stabilization/stabilization_attitude.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/ahrs.h \
+  /home/excelobs/paparazzi/sw/airborne/math/pprz_algebra_int.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/math/pprz_algebra.h \
+  /home/excelobs/paparazzi/sw/airborne/math/pprz_trig_int.h \
+  /home/excelobs/paparazzi/sw/airborne/math/pprz_algebra_int.h \
+  /home/excelobs/paparazzi/sw/airborne/math/pprz_algebra_float.h \
+  /home/excelobs/paparazzi/sw/airborne/math/pprz_algebra.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/nav.h \
+  /home/excelobs/paparazzi/var/mm/generated/modules.h \
+  /home/excelobs/paparazzi/sw/airborne/latlong.h \
+  /home/excelobs/paparazzi/sw/airborne/mcu_periph/uart.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/mcu_periph/uart_arch.h \
+  arch/lpc21/include/types.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/sw/airborne/downlink.h \
+  /home/excelobs/paparazzi/sw/airborne/ap_downlink.h \
+  /home/excelobs/paparazzi/sw/airborne/downlink.h \
+  /home/excelobs/paparazzi/var/mm/generated/periodic.h \
+  /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/stabilization/stabilization_adaptive.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h
+/home/excelobs/paparazzi/var/mm/ap/xbee.o: ./xbee.c ./sys_time.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/inttypes.h \
+  ./boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.1.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/sys_time_hw.h \
+  /home/excelobs/paparazzi/sw/airborne/sys_time.h \
+  /home/excelobs/paparazzi/sw/include/std.h arch/lpc21/include/LPC21xx.h \
+  arch/lpc21/include/lpcWD.h arch/lpc21/include/lpcTMR.h \
+  arch/lpc21/include/lpcUART.h arch/lpc21/include/lpcI2C.h \
+  arch/lpc21/include/lpcSPI.h arch/lpc21/include/lpcRTC.h \
+  arch/lpc21/include/lpcGPIO.h arch/lpc21/include/lpcPIN.h \
+  arch/lpc21/include/lpcADC.h arch/lpc21/include/lpcSCB.h \
+  arch/lpc21/include/lpcVIC.h arch/lpc21/include/lpcCAN.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.1.h \
+  /home/excelobs/paparazzi/sw/airborne/led.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/led_hw.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/armVIC.h ./print.h \
+  ./mcu_periph/uart.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/mcu_periph/uart_arch.h \
+  arch/lpc21/include/types.h arch/lpc21/include/LPC21xx.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/sw/include/std.h ./mcu_periph/usb_serial.h \
+  ./xbee.h ./datalink.h /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/var/include/dl_protocol.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h ./xbee24.h
+/home/excelobs/paparazzi/var/mm/ap/stabilization_attitude.o:  \
+ firmwares/fixedwing/stabilization/stabilization_attitude.c \
+  /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/stabilization/stabilization_attitude.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/inttypes.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/led.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/led_hw.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.1.h \
+  arch/lpc21/include/LPC21xx.h arch/lpc21/include/lpcWD.h \
+  arch/lpc21/include/lpcTMR.h arch/lpc21/include/lpcUART.h \
+  arch/lpc21/include/lpcI2C.h arch/lpc21/include/lpcSPI.h \
+  arch/lpc21/include/lpcRTC.h arch/lpc21/include/lpcGPIO.h \
+  arch/lpc21/include/lpcPIN.h arch/lpc21/include/lpcADC.h \
+  arch/lpc21/include/lpcSCB.h arch/lpc21/include/lpcVIC.h \
+  arch/lpc21/include/lpcCAN.h /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/estimator.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/nav.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+  /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/guidance/guidance_v.h \
+  /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/nav_survey_rectangle.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/nav.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/common_nav.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/guidance/guidance_v.h \
+  /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/autopilot.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/sys_time.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/sys_time_hw.h \
+  /home/excelobs/paparazzi/sw/airborne/sys_time.h \
+  /home/excelobs/paparazzi/sw/airborne/led.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/armVIC.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control.h \
+  /home/excelobs/paparazzi/sw/airborne/led.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control/ppm.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/subsystems/radio_control/ppm_arch.h \
+  arch/lpc21/include/LPC21xx.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/var/mm/generated/radio.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h
+/home/excelobs/paparazzi/var/mm/ap/guidance_v.o: firmwares/fixedwing/guidance/guidance_v.c \
+  /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/guidance/guidance_v.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/inttypes.h \
+  /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+  /home/excelobs/paparazzi/sw/airborne/estimator.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/nav.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+  /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/guidance/guidance_v.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/nav_survey_rectangle.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/nav.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/common_nav.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/autopilot.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/sys_time.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.1.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/sys_time_hw.h \
+  /home/excelobs/paparazzi/sw/airborne/sys_time.h \
+  /home/excelobs/paparazzi/sw/include/std.h arch/lpc21/include/LPC21xx.h \
+  arch/lpc21/include/lpcWD.h arch/lpc21/include/lpcTMR.h \
+  arch/lpc21/include/lpcUART.h arch/lpc21/include/lpcI2C.h \
+  arch/lpc21/include/lpcSPI.h arch/lpc21/include/lpcRTC.h \
+  arch/lpc21/include/lpcGPIO.h arch/lpc21/include/lpcPIN.h \
+  arch/lpc21/include/lpcADC.h arch/lpc21/include/lpcSCB.h \
+  arch/lpc21/include/lpcVIC.h arch/lpc21/include/lpcCAN.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/sw/airborne/led.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/led_hw.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/armVIC.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control.h \
+  /home/excelobs/paparazzi/sw/airborne/led.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control/ppm.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/subsystems/radio_control/ppm_arch.h \
+  arch/lpc21/include/LPC21xx.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/var/mm/generated/radio.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h
+/home/excelobs/paparazzi/var/mm/ap/gps_ubx.o: ./gps_ubx.c \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/inttypes.h \
+  /home/excelobs/paparazzi/var/mm/generated/flight_plan.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/var/mm/generated/modules.h \
+  modules/ins/ins_arduimu.h /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/sw/airborne/mcu_periph/i2c.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/mcu_periph/i2c_arch.h \
+  arch/lpc21/include/LPC21xx.h arch/lpc21/include/lpcWD.h \
+  arch/lpc21/include/lpcTMR.h arch/lpc21/include/lpcUART.h \
+  arch/lpc21/include/lpcI2C.h arch/lpc21/include/lpcSPI.h \
+  arch/lpc21/include/lpcRTC.h arch/lpc21/include/lpcGPIO.h \
+  arch/lpc21/include/lpcPIN.h arch/lpc21/include/lpcADC.h \
+  arch/lpc21/include/lpcSCB.h arch/lpc21/include/lpcVIC.h \
+  arch/lpc21/include/lpcCAN.h modules/sensors/baro_scp_i2c.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  modules/sensors/airspeed_ets.h \
+  /home/excelobs/paparazzi/sw/airborne/mcu_periph/i2c.h \
+  modules/meteo/humid_sht_i2c.h /home/excelobs/paparazzi/sw/include/std.h \
+  modules/meteo/ir_mlx.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/nav_line.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/datalink.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/var/include/dl_protocol.h ./mcu_periph/uart.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/mcu_periph/uart_arch.h \
+  arch/lpc21/include/types.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.1.h \
+  /home/excelobs/paparazzi/sw/include/std.h ./gps.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/gps_hw.h ./gps_ubx.h \
+  ./subsystems/nav.h /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+  /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/guidance/guidance_v.h \
+  /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/nav_survey_rectangle.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/nav.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/common_nav.h \
+  ./latlong.h /home/excelobs/paparazzi/var/include/ubx_protocol.h
+/home/excelobs/paparazzi/var/mm/ap/gps.o: ./gps.c ./gps.h /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/inttypes.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/gps_hw.h ./gps_ubx.h \
+  ./mcu_periph/uart.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/mcu_periph/uart_arch.h \
+  arch/lpc21/include/types.h arch/lpc21/include/LPC21xx.h \
+  arch/lpc21/include/lpcWD.h arch/lpc21/include/lpcTMR.h \
+  arch/lpc21/include/lpcUART.h arch/lpc21/include/lpcI2C.h \
+  arch/lpc21/include/lpcSPI.h arch/lpc21/include/lpcRTC.h \
+  arch/lpc21/include/lpcGPIO.h arch/lpc21/include/lpcPIN.h \
+  arch/lpc21/include/lpcADC.h arch/lpc21/include/lpcSCB.h \
+  arch/lpc21/include/lpcVIC.h arch/lpc21/include/lpcCAN.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.1.h \
+  /home/excelobs/paparazzi/sw/include/std.h ./latlong.h ./sys_time.h \
+  ./boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.1.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/sys_time_hw.h \
+  /home/excelobs/paparazzi/sw/airborne/sys_time.h \
+  /home/excelobs/paparazzi/sw/include/std.h arch/lpc21/include/LPC21xx.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/sw/airborne/led.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/led_hw.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/armVIC.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/var/mm/generated/periodic.h \
+  /home/excelobs/paparazzi/var/include/messages.h ./downlink.h \
+  /home/excelobs/paparazzi/var/mm/generated/modules.h \
+  /home/excelobs/paparazzi/sw/include/std.h modules/ins/ins_arduimu.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/sw/airborne/mcu_periph/i2c.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/mcu_periph/i2c_arch.h \
+  modules/sensors/baro_scp_i2c.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  modules/sensors/airspeed_ets.h \
+  /home/excelobs/paparazzi/sw/airborne/mcu_periph/i2c.h \
+  modules/meteo/humid_sht_i2c.h /home/excelobs/paparazzi/sw/include/std.h \
+  modules/meteo/ir_mlx.h ./pprz_transport.h ./datalink.h \
+  /home/excelobs/paparazzi/var/include/dl_protocol.h ./modem.h ./xbee.h \
+  ./xbee24.h
+/home/excelobs/paparazzi/var/mm/ap/latlong.o: ./latlong.c \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/inttypes.h \
+  /home/excelobs/paparazzi/sw/include/std.h ./latlong.h ./led.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/led_hw.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.1.h \
+  arch/lpc21/include/LPC21xx.h arch/lpc21/include/lpcWD.h \
+  arch/lpc21/include/lpcTMR.h arch/lpc21/include/lpcUART.h \
+  arch/lpc21/include/lpcI2C.h arch/lpc21/include/lpcSPI.h \
+  arch/lpc21/include/lpcRTC.h arch/lpc21/include/lpcGPIO.h \
+  arch/lpc21/include/lpcPIN.h arch/lpc21/include/lpcADC.h \
+  arch/lpc21/include/lpcSCB.h arch/lpc21/include/lpcVIC.h \
+  arch/lpc21/include/lpcCAN.h /home/excelobs/paparazzi/sw/include/std.h
+/home/excelobs/paparazzi/var/mm/ap/nav.o: subsystems/nav.c \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/nav.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/inttypes.h \
+  /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+  /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/guidance/guidance_v.h \
+  /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/nav_survey_rectangle.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/nav.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/common_nav.h \
+  /home/excelobs/paparazzi/sw/include/std.h subsystems/gps.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/gps_hw.h \
+  /home/excelobs/paparazzi/sw/airborne/gps_ubx.h \
+  /home/excelobs/paparazzi/sw/airborne/mcu_periph/uart.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/mcu_periph/uart_arch.h \
+  arch/lpc21/include/types.h arch/lpc21/include/LPC21xx.h \
+  arch/lpc21/include/lpcWD.h arch/lpc21/include/lpcTMR.h \
+  arch/lpc21/include/lpcUART.h arch/lpc21/include/lpcI2C.h \
+  arch/lpc21/include/lpcSPI.h arch/lpc21/include/lpcRTC.h \
+  arch/lpc21/include/lpcGPIO.h arch/lpc21/include/lpcPIN.h \
+  arch/lpc21/include/lpcADC.h arch/lpc21/include/lpcSCB.h \
+  arch/lpc21/include/lpcVIC.h arch/lpc21/include/lpcCAN.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.1.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/estimator.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/stabilization/stabilization_attitude.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/guidance/guidance_v.h \
+  /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/autopilot.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/sys_time.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/sys_time_hw.h \
+  /home/excelobs/paparazzi/sw/airborne/sys_time.h \
+  /home/excelobs/paparazzi/sw/include/std.h arch/lpc21/include/LPC21xx.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/sw/airborne/led.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/led_hw.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/armVIC.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control.h \
+  /home/excelobs/paparazzi/sw/airborne/led.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control/ppm.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/subsystems/radio_control/ppm_arch.h \
+  arch/lpc21/include/LPC21xx.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/var/mm/generated/radio.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/sw/airborne/inter_mcu.h \
+  /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/radio_control.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/electrical.h \
+  /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/main_fbw.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/traffic_info.h \
+  /home/excelobs/paparazzi/sw/airborne/latlong.h \
+  /home/excelobs/paparazzi/var/mm/generated/flight_plan.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/var/mm/generated/modules.h \
+  modules/ins/ins_arduimu.h /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/sw/airborne/mcu_periph/i2c.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/mcu_periph/i2c_arch.h \
+  modules/sensors/baro_scp_i2c.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  modules/sensors/airspeed_ets.h \
+  /home/excelobs/paparazzi/sw/airborne/mcu_periph/i2c.h \
+  modules/meteo/humid_sht_i2c.h /home/excelobs/paparazzi/sw/include/std.h \
+  modules/meteo/ir_mlx.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/nav_line.h \
+  /home/excelobs/paparazzi/sw/airborne/datalink.h \
+  /home/excelobs/paparazzi/var/include/dl_protocol.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/common_nav.c \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/common_nav.h \
+  /home/excelobs/paparazzi/sw/airborne/estimator.h \
+  /home/excelobs/paparazzi/var/mm/generated/flight_plan.h \
+  /home/excelobs/paparazzi/sw/airborne/gps.h
+/home/excelobs/paparazzi/var/mm/ap/traffic_info.o: subsystems/navigation/traffic_info.c \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/inttypes.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/traffic_info.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h
+/home/excelobs/paparazzi/var/mm/ap/nav_survey_rectangle.o: subsystems/navigation/nav_survey_rectangle.c \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/nav_survey_rectangle.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/nav.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/inttypes.h \
+  /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+  /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/guidance/guidance_v.h \
+  /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/nav_survey_rectangle.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/common_nav.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/estimator.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/var/mm/generated/flight_plan.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/var/mm/generated/modules.h \
+  modules/ins/ins_arduimu.h /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/sw/airborne/mcu_periph/i2c.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/mcu_periph/i2c_arch.h \
+  arch/lpc21/include/LPC21xx.h arch/lpc21/include/lpcWD.h \
+  arch/lpc21/include/lpcTMR.h arch/lpc21/include/lpcUART.h \
+  arch/lpc21/include/lpcI2C.h arch/lpc21/include/lpcSPI.h \
+  arch/lpc21/include/lpcRTC.h arch/lpc21/include/lpcGPIO.h \
+  arch/lpc21/include/lpcPIN.h arch/lpc21/include/lpcADC.h \
+  arch/lpc21/include/lpcSCB.h arch/lpc21/include/lpcVIC.h \
+  arch/lpc21/include/lpcCAN.h modules/sensors/baro_scp_i2c.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  modules/sensors/airspeed_ets.h \
+  /home/excelobs/paparazzi/sw/airborne/mcu_periph/i2c.h \
+  modules/meteo/humid_sht_i2c.h /home/excelobs/paparazzi/sw/include/std.h \
+  modules/meteo/ir_mlx.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/nav_line.h \
+  /home/excelobs/paparazzi/sw/airborne/datalink.h \
+  /home/excelobs/paparazzi/var/include/dl_protocol.h
+/home/excelobs/paparazzi/var/mm/ap/nav_line.o: subsystems/navigation/nav_line.c \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/nav_line.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/inttypes.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/nav.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+  /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/guidance/guidance_v.h \
+  /home/excelobs/paparazzi/sw/airborne/paparazzi.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/nav_survey_rectangle.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/nav.h \
+  /home/excelobs/paparazzi/sw/airborne/subsystems/navigation/common_nav.h
+/home/excelobs/paparazzi/var/mm/ap/i2c.o: mcu_periph/i2c.c \
+  /home/excelobs/paparazzi/sw/airborne/mcu_periph/i2c.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/inttypes.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/mcu_periph/i2c_arch.h \
+  arch/lpc21/include/LPC21xx.h arch/lpc21/include/lpcWD.h \
+  arch/lpc21/include/lpcTMR.h arch/lpc21/include/lpcUART.h \
+  arch/lpc21/include/lpcI2C.h arch/lpc21/include/lpcSPI.h \
+  arch/lpc21/include/lpcRTC.h arch/lpc21/include/lpcGPIO.h \
+  arch/lpc21/include/lpcPIN.h arch/lpc21/include/lpcADC.h \
+  arch/lpc21/include/lpcSCB.h arch/lpc21/include/lpcVIC.h \
+  arch/lpc21/include/lpcCAN.h
+/home/excelobs/paparazzi/var/mm/ap/i2c_arch.o: arch/lpc21/mcu_periph/i2c_arch.c \
+  /home/excelobs/paparazzi/sw/airborne/mcu_periph/i2c.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/inttypes.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/mcu_periph/i2c_arch.h \
+  arch/lpc21/include/LPC21xx.h arch/lpc21/include/lpcWD.h \
+  arch/lpc21/include/lpcTMR.h arch/lpc21/include/lpcUART.h \
+  arch/lpc21/include/lpcI2C.h arch/lpc21/include/lpcSPI.h \
+  arch/lpc21/include/lpcRTC.h arch/lpc21/include/lpcGPIO.h \
+  arch/lpc21/include/lpcPIN.h arch/lpc21/include/lpcADC.h \
+  arch/lpc21/include/lpcSCB.h arch/lpc21/include/lpcVIC.h \
+  arch/lpc21/include/lpcCAN.h /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/interrupt_hw.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/armVIC.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.1.h
+/home/excelobs/paparazzi/var/mm/ap/ins_arduimu.o: modules/ins/ins_arduimu.c \
+  /home/excelobs/paparazzi/sw/airborne/modules/ins/ins_arduimu.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/inttypes.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/sw/airborne/mcu_periph/i2c.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/mcu_periph/i2c_arch.h \
+  arch/lpc21/include/LPC21xx.h arch/lpc21/include/lpcWD.h \
+  arch/lpc21/include/lpcTMR.h arch/lpc21/include/lpcUART.h \
+  arch/lpc21/include/lpcI2C.h arch/lpc21/include/lpcSPI.h \
+  arch/lpc21/include/lpcRTC.h arch/lpc21/include/lpcGPIO.h \
+  arch/lpc21/include/lpcPIN.h arch/lpc21/include/lpcADC.h \
+  arch/lpc21/include/lpcSCB.h arch/lpc21/include/lpcVIC.h \
+  arch/lpc21/include/lpcCAN.h \
+  /home/excelobs/paparazzi/sw/airborne/firmwares/fixedwing/main_fbw.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/mcu_periph/i2c.h \
+  /home/excelobs/paparazzi/sw/airborne/estimator.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/gps.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/gps_hw.h \
+  /home/excelobs/paparazzi/sw/airborne/gps_ubx.h \
+  /home/excelobs/paparazzi/sw/airborne/mcu_periph/uart.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/mcu_periph/uart_arch.h \
+  arch/lpc21/include/types.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.1.h \
+  /home/excelobs/paparazzi/sw/airborne/mcu_periph/uart.h \
+  /home/excelobs/paparazzi/var/include/messages.h \
+  /home/excelobs/paparazzi/sw/airborne/downlink.h \
+  /home/excelobs/paparazzi/var/mm/generated/modules.h \
+  /home/excelobs/paparazzi/sw/include/std.h modules/ins/ins_arduimu.h \
+  modules/sensors/baro_scp_i2c.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  modules/sensors/airspeed_ets.h \
+  /home/excelobs/paparazzi/sw/airborne/mcu_periph/i2c.h \
+  modules/meteo/humid_sht_i2c.h /home/excelobs/paparazzi/sw/include/std.h \
+  modules/meteo/ir_mlx.h /home/excelobs/paparazzi/var/include/messages.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/sw/airborne/pprz_transport.h \
+  /home/excelobs/paparazzi/sw/airborne/datalink.h \
+  /home/excelobs/paparazzi/var/include/dl_protocol.h \
+  /home/excelobs/paparazzi/sw/airborne/modem.h \
+  /home/excelobs/paparazzi/sw/airborne/xbee.h \
+  /home/excelobs/paparazzi/sw/airborne/xbee24.h
+/home/excelobs/paparazzi/var/mm/ap/baro_scp_i2c.o: modules/sensors/baro_scp_i2c.c \
+  modules/sensors/baro_scp_i2c.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/inttypes.h \
+  /home/excelobs/paparazzi/sw/airborne/sys_time.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.1.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/sys_time_hw.h \
+  /home/excelobs/paparazzi/sw/airborne/sys_time.h \
+  /home/excelobs/paparazzi/sw/include/std.h arch/lpc21/include/LPC21xx.h \
+  arch/lpc21/include/lpcWD.h arch/lpc21/include/lpcTMR.h \
+  arch/lpc21/include/lpcUART.h arch/lpc21/include/lpcI2C.h \
+  arch/lpc21/include/lpcSPI.h arch/lpc21/include/lpcRTC.h \
+  arch/lpc21/include/lpcGPIO.h arch/lpc21/include/lpcPIN.h \
+  arch/lpc21/include/lpcADC.h arch/lpc21/include/lpcSCB.h \
+  arch/lpc21/include/lpcVIC.h arch/lpc21/include/lpcCAN.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/sw/airborne/led.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/led_hw.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/armVIC.h \
+  /home/excelobs/paparazzi/sw/airborne/mcu_periph/i2c.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/mcu_periph/i2c_arch.h \
+  arch/lpc21/include/LPC21xx.h /home/excelobs/paparazzi/sw/airborne/led.h \
+  /home/excelobs/paparazzi/sw/airborne/mcu_periph/uart.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/mcu_periph/uart_arch.h \
+  arch/lpc21/include/types.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/var/include/messages.h \
+  /home/excelobs/paparazzi/sw/airborne/downlink.h \
+  /home/excelobs/paparazzi/var/mm/generated/modules.h \
+  /home/excelobs/paparazzi/sw/include/std.h modules/ins/ins_arduimu.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/sw/airborne/mcu_periph/i2c.h \
+  modules/sensors/baro_scp_i2c.h modules/sensors/airspeed_ets.h \
+  modules/meteo/humid_sht_i2c.h /home/excelobs/paparazzi/sw/include/std.h \
+  modules/meteo/ir_mlx.h /home/excelobs/paparazzi/var/include/messages.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/sw/airborne/pprz_transport.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/datalink.h \
+  /home/excelobs/paparazzi/var/include/dl_protocol.h \
+  /home/excelobs/paparazzi/sw/airborne/modem.h \
+  /home/excelobs/paparazzi/sw/airborne/xbee.h \
+  /home/excelobs/paparazzi/sw/airborne/xbee24.h
+/home/excelobs/paparazzi/var/mm/ap/airspeed_ets.o: modules/sensors/airspeed_ets.c \
+  modules/sensors/airspeed_ets.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/inttypes.h \
+  /home/excelobs/paparazzi/sw/airborne/mcu_periph/i2c.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/mcu_periph/i2c_arch.h \
+  arch/lpc21/include/LPC21xx.h arch/lpc21/include/lpcWD.h \
+  arch/lpc21/include/lpcTMR.h arch/lpc21/include/lpcUART.h \
+  arch/lpc21/include/lpcI2C.h arch/lpc21/include/lpcSPI.h \
+  arch/lpc21/include/lpcRTC.h arch/lpc21/include/lpcGPIO.h \
+  arch/lpc21/include/lpcPIN.h arch/lpc21/include/lpcADC.h \
+  arch/lpc21/include/lpcSCB.h arch/lpc21/include/lpcVIC.h \
+  arch/lpc21/include/lpcCAN.h \
+  /home/excelobs/paparazzi/sw/airborne/estimator.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/mcu_periph/uart.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/mcu_periph/uart_arch.h \
+  arch/lpc21/include/types.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.1.h \
+  /home/excelobs/paparazzi/var/include/messages.h \
+  /home/excelobs/paparazzi/sw/airborne/downlink.h \
+  /home/excelobs/paparazzi/var/mm/generated/modules.h \
+  /home/excelobs/paparazzi/sw/include/std.h modules/ins/ins_arduimu.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/sw/airborne/mcu_periph/i2c.h \
+  modules/sensors/baro_scp_i2c.h modules/sensors/airspeed_ets.h \
+  modules/meteo/humid_sht_i2c.h /home/excelobs/paparazzi/sw/include/std.h \
+  modules/meteo/ir_mlx.h /home/excelobs/paparazzi/var/include/messages.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/sw/airborne/pprz_transport.h \
+  /home/excelobs/paparazzi/sw/airborne/datalink.h \
+  /home/excelobs/paparazzi/var/include/dl_protocol.h \
+  /home/excelobs/paparazzi/sw/airborne/modem.h \
+  /home/excelobs/paparazzi/sw/airborne/xbee.h \
+  /home/excelobs/paparazzi/sw/airborne/xbee24.h
+/home/excelobs/paparazzi/var/mm/ap/humid_sht_i2c.o: modules/meteo/humid_sht_i2c.c \
+  /home/excelobs/paparazzi/sw/airborne/modules/meteo/humid_sht_i2c.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/inttypes.h \
+  /home/excelobs/paparazzi/sw/airborne/mcu_periph/i2c.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/mcu_periph/i2c_arch.h \
+  arch/lpc21/include/LPC21xx.h arch/lpc21/include/lpcWD.h \
+  arch/lpc21/include/lpcTMR.h arch/lpc21/include/lpcUART.h \
+  arch/lpc21/include/lpcI2C.h arch/lpc21/include/lpcSPI.h \
+  arch/lpc21/include/lpcRTC.h arch/lpc21/include/lpcGPIO.h \
+  arch/lpc21/include/lpcPIN.h arch/lpc21/include/lpcADC.h \
+  arch/lpc21/include/lpcSCB.h arch/lpc21/include/lpcVIC.h \
+  arch/lpc21/include/lpcCAN.h \
+  /home/excelobs/paparazzi/sw/airborne/mcu_periph/uart.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/mcu_periph/uart_arch.h \
+  arch/lpc21/include/types.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.1.h \
+  /home/excelobs/paparazzi/var/include/messages.h \
+  /home/excelobs/paparazzi/sw/airborne/downlink.h \
+  /home/excelobs/paparazzi/var/mm/generated/modules.h \
+  /home/excelobs/paparazzi/sw/include/std.h modules/ins/ins_arduimu.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/sw/airborne/mcu_periph/i2c.h \
+  modules/sensors/baro_scp_i2c.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  modules/sensors/airspeed_ets.h \
+  /home/excelobs/paparazzi/sw/airborne/mcu_periph/i2c.h \
+  modules/meteo/humid_sht_i2c.h modules/meteo/ir_mlx.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/var/include/messages.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/sw/airborne/pprz_transport.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/datalink.h \
+  /home/excelobs/paparazzi/var/include/dl_protocol.h \
+  /home/excelobs/paparazzi/sw/airborne/modem.h \
+  /home/excelobs/paparazzi/sw/airborne/xbee.h \
+  /home/excelobs/paparazzi/sw/airborne/xbee24.h
+/home/excelobs/paparazzi/var/mm/ap/ir_mlx.o: modules/meteo/ir_mlx.c \
+  /home/excelobs/paparazzi/sw/airborne/modules/meteo/ir_mlx.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/inttypes.h \
+  /home/excelobs/paparazzi/sw/airborne/sys_time.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.1.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/sys_time_hw.h \
+  /home/excelobs/paparazzi/sw/airborne/sys_time.h \
+  /home/excelobs/paparazzi/sw/include/std.h arch/lpc21/include/LPC21xx.h \
+  arch/lpc21/include/lpcWD.h arch/lpc21/include/lpcTMR.h \
+  arch/lpc21/include/lpcUART.h arch/lpc21/include/lpcI2C.h \
+  arch/lpc21/include/lpcSPI.h arch/lpc21/include/lpcRTC.h \
+  arch/lpc21/include/lpcGPIO.h arch/lpc21/include/lpcPIN.h \
+  arch/lpc21/include/lpcADC.h arch/lpc21/include/lpcSCB.h \
+  arch/lpc21/include/lpcVIC.h arch/lpc21/include/lpcCAN.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/sw/airborne/led.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/led_hw.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/armVIC.h \
+  /home/excelobs/paparazzi/sw/airborne/mcu_periph/i2c.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/mcu_periph/i2c_arch.h \
+  arch/lpc21/include/LPC21xx.h /home/excelobs/paparazzi/sw/airborne/led.h \
+  /home/excelobs/paparazzi/sw/airborne/mcu_periph/uart.h \
+  /home/excelobs/paparazzi/sw/airborne/arch/lpc21/mcu_periph/uart_arch.h \
+  arch/lpc21/include/types.h \
+  /home/excelobs/paparazzi/sw/airborne/boards/tiny_2.11.h \
+  /home/excelobs/paparazzi/var/include/messages.h \
+  /home/excelobs/paparazzi/sw/airborne/downlink.h \
+  /home/excelobs/paparazzi/var/mm/generated/modules.h \
+  /home/excelobs/paparazzi/sw/include/std.h modules/ins/ins_arduimu.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/sw/airborne/mcu_periph/i2c.h \
+  modules/sensors/baro_scp_i2c.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  modules/sensors/airspeed_ets.h \
+  /home/excelobs/paparazzi/sw/airborne/mcu_periph/i2c.h \
+  modules/meteo/humid_sht_i2c.h /home/excelobs/paparazzi/sw/include/std.h \
+  modules/meteo/ir_mlx.h /home/excelobs/paparazzi/var/include/messages.h \
+  /home/excelobs/paparazzi/var/mm/generated/airframe.h \
+  /home/excelobs/paparazzi/sw/airborne/pprz_transport.h \
+  /home/excelobs/paparazzi/sw/include/std.h \
+  /home/excelobs/paparazzi/sw/airborne/datalink.h \
+  /home/excelobs/paparazzi/var/include/dl_protocol.h \
+  /home/excelobs/paparazzi/sw/airborne/modem.h \
+  /home/excelobs/paparazzi/sw/airborne/xbee.h \
+  /home/excelobs/paparazzi/sw/airborne/xbee24.h

@@ -1,0 +1,2809 @@
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!-- ViewVC :: http://www.viewvc.org/ -->
+<head>
+<title>[paparazzi] Log of /paparazzi3/conf/settings/tuning.xml</title>
+<meta name="generator" content="ViewVC 1.0.7" />
+<link rel="stylesheet" href="/viewcvs-doc/styles.css" type="text/css" />
+
+</head>
+<body>
+<div style="float: right; padding: 5px;"><a href="http://savannah.gnu.org/"><img src="http://savannah.gnu.org/images/common/floating.png" alt="Provided by GNU Savannah" width="148" height="125" /></a></div>
+<h3>Savannah CVS Surfing
+
+
+- project <a href="http://savannah.nongnu.org/projects/paparazzi">paparazzi</a></div>
+
+
+- Log of /paparazzi3/conf/settings/tuning.xml
+</h3>
+<table style="margin:0; border-spacing:0" class="vc_navheader">
+<tr>
+<td>
+<strong>
+
+<a href="/viewvc/?root=paparazzi">
+
+[paparazzi]</a>
+/
+
+<a href="/viewvc/paparazzi3/?root=paparazzi">
+
+paparazzi3</a>
+/
+
+<a href="/viewvc/paparazzi3/conf/?root=paparazzi">
+
+conf</a>
+/
+
+<a href="/viewvc/paparazzi3/conf/settings/?root=paparazzi">
+
+settings</a>
+/
+
+
+
+tuning.xml
+
+
+</strong>
+
+</td>
+</tr>
+</table>
+<!-- It would be nice to detect a "web.cvs.s*.*gnu.org vhost, and use /web instead of /sources... -->
+
+
+
+
+<code>cvs -d:pserver:anonymous@cvs.sv.gnu.org:/sources/paparazzi co paparazzi3/conf/settings/tuning.xml</code>
+
+<br />
+<span style="font-size: smaller">(to check out web pages for a project, replace /sources with /web in the path above)</span>
+
+
+
+
+
+<p style="margin:0;">
+
+<a href="/viewvc/paparazzi3/conf/settings/?root=paparazzi"><img src="/viewcvs-doc/images/back_small.png" width="16" height="16" alt="Parent Directory" /> Parent Directory</a>
+
+
+
+
+</p>
+
+<hr />
+<table class="auto">
+
+
+
+<tr>
+<td>Links to HEAD:</td>
+<td>
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;view=markup">view</a>)
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?root=paparazzi">download</a>)
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;content-type=text%2Fplain">as text</a>)
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?view=annotate&amp;root=paparazzi">annotate</a>)
+</td>
+</tr>
+
+
+
+<tr>
+<td>Sticky Tag:</td>
+<td><form method="get" action="/viewvc/paparazzi3/conf/settings/tuning.xml" style="display: inline">
+<div style="display: inline">
+<input type="hidden" name="view" value="log" /><input type="hidden" name="root" value="paparazzi" />
+
+
+<select name="pathrev" onchange="submit()">
+<option value=""></option>
+
+<optgroup label="Branches">
+
+
+<option>MAIN</option>
+
+
+</optgroup>
+
+<optgroup label="Non-branch tags">
+
+
+<option>switched2svn</option>
+
+
+
+<option>HEAD</option>
+
+
+</optgroup>
+
+</select>
+
+<input type="submit" value="Set" />
+</div>
+</form>
+
+</td>
+</tr>
+</table>
+ 
+
+
+
+
+
+
+
+
+<div>
+<hr />
+
+<a name="rev1.42"></a>
+<a name="switched2svn"></a>
+<a name="HEAD"></a>
+
+
+Revision <strong>1.42</strong> -
+
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?revision=1.42&amp;root=paparazzi&amp;view=markup">view</a>)
+
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?revision=1.42&amp;root=paparazzi">download</a>)
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;revision=1.42&amp;content-type=text%2Fplain">as text</a>)
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?annotate=1.42&amp;root=paparazzi">annotate</a>)
+
+
+
+- <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.42&amp;view=log">[select for diffs]</a>
+
+
+
+
+<br />
+
+<em>Mon Jan 19 13:41:42 2009 UTC</em> (2 years, 4 months ago) by <em>hecto</em>
+
+
+<br />Branch:
+
+<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?view=log&amp;root=paparazzi&amp;pathrev=MAIN"><strong>MAIN</strong></a>
+
+
+
+<br />CVS Tags:
+
+<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?view=log&amp;root=paparazzi&amp;pathrev=HEAD"><strong>HEAD</strong></a>,
+
+<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?view=log&amp;root=paparazzi&amp;pathrev=switched2svn"><strong>switched2svn</strong></a>
+
+
+
+
+
+
+<br />Changes since <strong>1.41: +1 -0 lines</strong>
+
+
+
+
+
+
+
+<br />Diff to <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.41&amp;r2=1.42">previous 1.41</a>
+
+
+
+
+
+
+
+
+
+
+<pre class="vc_log">fp_pitch (in deg) to control the pitch attitude from the flight plan
+</pre>
+</div>
+
+
+
+<div>
+<hr />
+
+<a name="rev1.41"></a>
+
+
+Revision <strong>1.41</strong> -
+
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?revision=1.41&amp;root=paparazzi&amp;view=markup">view</a>)
+
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?revision=1.41&amp;root=paparazzi">download</a>)
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;revision=1.41&amp;content-type=text%2Fplain">as text</a>)
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?annotate=1.41&amp;root=paparazzi">annotate</a>)
+
+
+
+- <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.41&amp;view=log">[select for diffs]</a>
+
+
+
+
+<br />
+
+<em>Wed Oct  8 10:37:21 2008 UTC</em> (2 years, 7 months ago) by <em>dewagter</em>
+
+
+<br />Branch:
+
+<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?view=log&amp;root=paparazzi&amp;pathrev=MAIN"><strong>MAIN</strong></a>
+
+
+
+
+
+
+
+<br />Changes since <strong>1.40: +5 -0 lines</strong>
+
+
+
+
+
+
+
+<br />Diff to <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.40&amp;r2=1.41">previous 1.40</a>
+
+
+
+
+
+
+
+
+
+
+<pre class="vc_log">EMAV files and icons
+</pre>
+</div>
+
+
+
+<div>
+<hr />
+
+<a name="rev1.40"></a>
+
+
+Revision <strong>1.40</strong> -
+
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?revision=1.40&amp;root=paparazzi&amp;view=markup">view</a>)
+
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?revision=1.40&amp;root=paparazzi">download</a>)
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;revision=1.40&amp;content-type=text%2Fplain">as text</a>)
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?annotate=1.40&amp;root=paparazzi">annotate</a>)
+
+
+
+- <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.40&amp;view=log">[select for diffs]</a>
+
+
+
+
+<br />
+
+<em>Sun Aug 31 20:37:46 2008 UTC</em> (2 years, 9 months ago) by <em>hecto</em>
+
+
+<br />Branch:
+
+<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?view=log&amp;root=paparazzi&amp;pathrev=MAIN"><strong>MAIN</strong></a>
+
+
+
+
+
+
+
+<br />Changes since <strong>1.39: +27 -27 lines</strong>
+
+
+
+
+
+
+
+<br />Diff to <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.39&amp;r2=1.40">previous 1.39</a>
+
+
+
+
+
+
+
+
+
+
+<pre class="vc_log">added param attributes for saving
+</pre>
+</div>
+
+
+
+<div>
+<hr />
+
+<a name="rev1.39"></a>
+
+
+Revision <strong>1.39</strong> -
+
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?revision=1.39&amp;root=paparazzi&amp;view=markup">view</a>)
+
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?revision=1.39&amp;root=paparazzi">download</a>)
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;revision=1.39&amp;content-type=text%2Fplain">as text</a>)
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?annotate=1.39&amp;root=paparazzi">annotate</a>)
+
+
+
+- <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.39&amp;view=log">[select for diffs]</a>
+
+
+
+
+<br />
+
+<em>Mon Mar 17 11:36:11 2008 UTC</em> (3 years, 2 months ago) by <em>hecto</em>
+
+
+<br />Branch:
+
+<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?view=log&amp;root=paparazzi&amp;pathrev=MAIN"><strong>MAIN</strong></a>
+
+
+
+
+
+
+
+<br />Changes since <strong>1.38: +2 -2 lines</strong>
+
+
+
+
+
+
+
+<br />Diff to <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.38&amp;r2=1.39">previous 1.38</a>
+
+
+
+
+
+
+
+
+
+
+<pre class="vc_log">*** empty log message ***
+</pre>
+</div>
+
+
+
+<div>
+<hr />
+
+<a name="rev1.38"></a>
+
+
+Revision <strong>1.38</strong> -
+
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?revision=1.38&amp;root=paparazzi&amp;view=markup">view</a>)
+
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?revision=1.38&amp;root=paparazzi">download</a>)
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;revision=1.38&amp;content-type=text%2Fplain">as text</a>)
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?annotate=1.38&amp;root=paparazzi">annotate</a>)
+
+
+
+- <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.38&amp;view=log">[select for diffs]</a>
+
+
+
+
+<br />
+
+<em>Wed Jan 30 18:35:05 2008 UTC</em> (3 years, 4 months ago) by <em>hecto</em>
+
+
+<br />Branch:
+
+<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?view=log&amp;root=paparazzi&amp;pathrev=MAIN"><strong>MAIN</strong></a>
+
+
+
+
+
+
+
+<br />Changes since <strong>1.37: +1 -1 lines</strong>
+
+
+
+
+
+
+
+<br />Diff to <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.37&amp;r2=1.38">previous 1.37</a>
+
+
+
+
+
+
+
+
+
+
+<pre class="vc_log">includes removed in datalink.c
+</pre>
+</div>
+
+
+
+<div>
+<hr />
+
+<a name="rev1.37"></a>
+
+
+Revision <strong>1.37</strong> -
+
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?revision=1.37&amp;root=paparazzi&amp;view=markup">view</a>)
+
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?revision=1.37&amp;root=paparazzi">download</a>)
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;revision=1.37&amp;content-type=text%2Fplain">as text</a>)
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?annotate=1.37&amp;root=paparazzi">annotate</a>)
+
+
+
+- <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.37&amp;view=log">[select for diffs]</a>
+
+
+
+
+<br />
+
+<em>Mon Jan 28 20:06:51 2008 UTC</em> (3 years, 4 months ago) by <em>hecto</em>
+
+
+<br />Branch:
+
+<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?view=log&amp;root=paparazzi&amp;pathrev=MAIN"><strong>MAIN</strong></a>
+
+
+
+
+
+
+
+<br />Changes since <strong>1.36: +3 -3 lines</strong>
+
+
+
+
+
+
+
+<br />Diff to <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.36&amp;r2=1.37">previous 1.36</a>
+
+
+
+
+
+
+
+
+
+
+<pre class="vc_log">cleaning datalink module to be able to reuse it
+</pre>
+</div>
+
+
+
+<div>
+<hr />
+
+<a name="rev1.36"></a>
+
+
+Revision <strong>1.36</strong> -
+
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?revision=1.36&amp;root=paparazzi&amp;view=markup">view</a>)
+
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?revision=1.36&amp;root=paparazzi">download</a>)
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;revision=1.36&amp;content-type=text%2Fplain">as text</a>)
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?annotate=1.36&amp;root=paparazzi">annotate</a>)
+
+
+
+- <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.36&amp;view=log">[select for diffs]</a>
+
+
+
+
+<br />
+
+<em>Mon Dec 10 15:21:04 2007 UTC</em> (3 years, 5 months ago) by <em>hecto</em>
+
+
+<br />Branch:
+
+<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?view=log&amp;root=paparazzi&amp;pathrev=MAIN"><strong>MAIN</strong></a>
+
+
+
+
+
+
+
+<br />Changes since <strong>1.35: +4 -6 lines</strong>
+
+
+
+
+
+
+
+<br />Diff to <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.35&amp;r2=1.36">previous 1.35</a>
+
+
+
+
+
+
+
+
+
+
+<pre class="vc_log">Infrared: dynamic estimation (LLS) and ground calibration removed. New configuration (neutrals on IR1 and IR2)
+Wavecard support removed
+</pre>
+</div>
+
+
+
+<div>
+<hr />
+
+<a name="rev1.35"></a>
+
+
+Revision <strong>1.35</strong> -
+
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?revision=1.35&amp;root=paparazzi&amp;view=markup">view</a>)
+
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?revision=1.35&amp;root=paparazzi">download</a>)
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;revision=1.35&amp;content-type=text%2Fplain">as text</a>)
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?annotate=1.35&amp;root=paparazzi">annotate</a>)
+
+
+
+- <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.35&amp;view=log">[select for diffs]</a>
+
+
+
+
+<br />
+
+<em>Sat Oct 27 06:40:48 2007 UTC</em> (3 years, 7 months ago) by <em>hecto</em>
+
+
+<br />Branch:
+
+<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?view=log&amp;root=paparazzi&amp;pathrev=MAIN"><strong>MAIN</strong></a>
+
+
+
+
+
+
+
+<br />Changes since <strong>1.34: +0 -7 lines</strong>
+
+
+
+
+
+
+
+<br />Diff to <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.34&amp;r2=1.35">previous 1.34</a>
+
+
+
+
+
+
+
+
+
+
+<pre class="vc_log">power switch moved to switch.xml
+</pre>
+</div>
+
+
+
+<div>
+<hr />
+
+<a name="rev1.34"></a>
+
+
+Revision <strong>1.34</strong> -
+
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?revision=1.34&amp;root=paparazzi&amp;view=markup">view</a>)
+
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?revision=1.34&amp;root=paparazzi">download</a>)
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;revision=1.34&amp;content-type=text%2Fplain">as text</a>)
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?annotate=1.34&amp;root=paparazzi">annotate</a>)
+
+
+
+- <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.34&amp;view=log">[select for diffs]</a>
+
+
+
+
+<br />
+
+<em>Fri Oct 26 13:48:40 2007 UTC</em> (3 years, 7 months ago) by <em>hecto</em>
+
+
+<br />Branch:
+
+<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?view=log&amp;root=paparazzi&amp;pathrev=MAIN"><strong>MAIN</strong></a>
+
+
+
+
+
+
+
+<br />Changes since <strong>1.33: +12 -1 lines</strong>
+
+
+
+
+
+
+
+<br />Diff to <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.33&amp;r2=1.34">previous 1.33</a>
+
+
+
+
+
+
+
+
+
+
+<pre class="vc_log">light_mode removed (now in light.xml), power switch
+</pre>
+</div>
+
+
+
+<div>
+<hr />
+
+<a name="rev1.33"></a>
+
+
+Revision <strong>1.33</strong> -
+
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?revision=1.33&amp;root=paparazzi&amp;view=markup">view</a>)
+
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?revision=1.33&amp;root=paparazzi">download</a>)
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;revision=1.33&amp;content-type=text%2Fplain">as text</a>)
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?annotate=1.33&amp;root=paparazzi">annotate</a>)
+
+
+
+- <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.33&amp;view=log">[select for diffs]</a>
+
+
+
+
+<br />
+
+<em>Mon Oct 22 12:34:59 2007 UTC</em> (3 years, 7 months ago) by <em>hecto</em>
+
+
+<br />Branch:
+
+<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?view=log&amp;root=paparazzi&amp;pathrev=MAIN"><strong>MAIN</strong></a>
+
+
+
+
+
+
+
+<br />Changes since <strong>1.32: +0 -4 lines</strong>
+
+
+
+
+
+
+
+<br />Diff to <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.32&amp;r2=1.33">previous 1.32</a>
+
+
+
+
+
+
+
+
+
+
+<pre class="vc_log">New strips
+</pre>
+</div>
+
+
+
+<div>
+<hr />
+
+<a name="rev1.32"></a>
+
+
+Revision <strong>1.32</strong> -
+
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?revision=1.32&amp;root=paparazzi&amp;view=markup">view</a>)
+
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?revision=1.32&amp;root=paparazzi">download</a>)
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;revision=1.32&amp;content-type=text%2Fplain">as text</a>)
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?annotate=1.32&amp;root=paparazzi">annotate</a>)
+
+
+
+- <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.32&amp;view=log">[select for diffs]</a>
+
+
+
+
+<br />
+
+<em>Wed Oct 17 16:55:06 2007 UTC</em> (3 years, 7 months ago) by <em>poine</em>
+
+
+<br />Branch:
+
+<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?view=log&amp;root=paparazzi&amp;pathrev=MAIN"><strong>MAIN</strong></a>
+
+
+
+
+
+
+
+<br />Changes since <strong>1.31: +0 -4 lines</strong>
+
+
+
+
+
+
+
+<br />Diff to <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.31&amp;r2=1.32">previous 1.31</a>
+
+
+
+
+
+
+
+
+
+
+<pre class="vc_log">removed IR_ESTIMATED_PHI_PI_4
+</pre>
+</div>
+
+
+
+<div>
+<hr />
+
+<a name="rev1.31"></a>
+
+
+Revision <strong>1.31</strong> -
+
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?revision=1.31&amp;root=paparazzi&amp;view=markup">view</a>)
+
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?revision=1.31&amp;root=paparazzi">download</a>)
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;revision=1.31&amp;content-type=text%2Fplain">as text</a>)
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?annotate=1.31&amp;root=paparazzi">annotate</a>)
+
+
+
+- <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.31&amp;view=log">[select for diffs]</a>
+
+
+
+
+<br />
+
+<em>Sat Sep 22 12:46:42 2007 UTC</em> (3 years, 8 months ago) by <em>hecto</em>
+
+
+<br />Branch:
+
+<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?view=log&amp;root=paparazzi&amp;pathrev=MAIN"><strong>MAIN</strong></a>
+
+
+
+
+
+
+
+<br />Changes since <strong>1.30: +11 -3 lines</strong>
+
+
+
+
+
+
+
+<br />Diff to <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.30&amp;r2=1.31">previous 1.30</a>
+
+
+
+
+
+
+
+
+
+
+<pre class="vc_log">light flash period setting
+</pre>
+</div>
+
+
+
+<div>
+<hr />
+
+<a name="rev1.30"></a>
+
+
+Revision <strong>1.30</strong> -
+
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?revision=1.30&amp;root=paparazzi&amp;view=markup">view</a>)
+
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?revision=1.30&amp;root=paparazzi">download</a>)
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;revision=1.30&amp;content-type=text%2Fplain">as text</a>)
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?annotate=1.30&amp;root=paparazzi">annotate</a>)
+
+
+
+- <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.30&amp;view=log">[select for diffs]</a>
+
+
+
+
+<br />
+
+<em>Thu Sep 13 10:34:14 2007 UTC</em> (3 years, 8 months ago) by <em>hecto</em>
+
+
+<br />Branch:
+
+<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?view=log&amp;root=paparazzi&amp;pathrev=MAIN"><strong>MAIN</strong></a>
+
+
+
+
+
+
+
+<br />Changes since <strong>1.29: +3 -3 lines</strong>
+
+
+
+
+
+
+
+<br />Diff to <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.29&amp;r2=1.30">previous 1.29</a>
+
+
+
+
+
+
+
+
+
+
+<pre class="vc_log">gps_reset, nav_climb added
+</pre>
+</div>
+
+
+
+<div>
+<hr />
+
+<a name="rev1.29"></a>
+
+
+Revision <strong>1.29</strong> -
+
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?revision=1.29&amp;root=paparazzi&amp;view=markup">view</a>)
+
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?revision=1.29&amp;root=paparazzi">download</a>)
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;revision=1.29&amp;content-type=text%2Fplain">as text</a>)
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?annotate=1.29&amp;root=paparazzi">annotate</a>)
+
+
+
+- <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.29&amp;view=log">[select for diffs]</a>
+
+
+
+
+<br />
+
+<em>Mon Sep 10 13:26:38 2007 UTC</em> (3 years, 8 months ago) by <em>hecto</em>
+
+
+<br />Branch:
+
+<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?view=log&amp;root=paparazzi&amp;pathrev=MAIN"><strong>MAIN</strong></a>
+
+
+
+
+
+
+
+<br />Changes since <strong>1.28: +5 -0 lines</strong>
+
+
+
+
+
+
+
+<br />Diff to <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.28&amp;r2=1.29">previous 1.28</a>
+
+
+
+
+
+
+
+
+
+
+<pre class="vc_log">lateral shift along routes
+</pre>
+</div>
+
+
+
+<div>
+<hr />
+
+<a name="rev1.28"></a>
+
+
+Revision <strong>1.28</strong> -
+
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?revision=1.28&amp;root=paparazzi&amp;view=markup">view</a>)
+
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?revision=1.28&amp;root=paparazzi">download</a>)
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;revision=1.28&amp;content-type=text%2Fplain">as text</a>)
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?annotate=1.28&amp;root=paparazzi">annotate</a>)
+
+
+
+- <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.28&amp;view=log">[select for diffs]</a>
+
+
+
+
+<br />
+
+<em>Thu Jul 19 20:16:27 2007 UTC</em> (3 years, 10 months ago) by <em>hecto</em>
+
+
+<br />Branch:
+
+<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?view=log&amp;root=paparazzi&amp;pathrev=MAIN"><strong>MAIN</strong></a>
+
+
+
+
+
+
+
+<br />Changes since <strong>1.27: +0 -1 lines</strong>
+
+
+
+
+
+
+
+<br />Diff to <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.27&amp;r2=1.28">previous 1.27</a>
+
+
+
+
+
+
+
+
+
+
+<pre class="vc_log">gpio set removed
+</pre>
+</div>
+
+
+
+<div>
+<hr />
+
+<a name="rev1.27"></a>
+
+
+Revision <strong>1.27</strong> -
+
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?revision=1.27&amp;root=paparazzi&amp;view=markup">view</a>)
+
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?revision=1.27&amp;root=paparazzi">download</a>)
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;revision=1.27&amp;content-type=text%2Fplain">as text</a>)
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?annotate=1.27&amp;root=paparazzi">annotate</a>)
+
+
+
+- <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.27&amp;view=log">[select for diffs]</a>
+
+
+
+
+<br />
+
+<em>Fri May 25 10:08:55 2007 UTC</em> (4 years ago) by <em>hecto</em>
+
+
+<br />Branch:
+
+<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?view=log&amp;root=paparazzi&amp;pathrev=MAIN"><strong>MAIN</strong></a>
+
+
+
+
+
+
+
+<br />Changes since <strong>1.26: +2 -2 lines</strong>
+
+
+
+
+
+
+
+<br />Diff to <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.26&amp;r2=1.27">previous 1.26</a>
+
+
+
+
+
+
+
+
+
+
+<pre class="vc_log">NAV-SOL gps message handling
+</pre>
+</div>
+
+
+
+<div>
+<hr />
+
+<a name="rev1.26"></a>
+
+
+Revision <strong>1.26</strong> -
+
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?revision=1.26&amp;root=paparazzi&amp;view=markup">view</a>)
+
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?revision=1.26&amp;root=paparazzi">download</a>)
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;revision=1.26&amp;content-type=text%2Fplain">as text</a>)
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?annotate=1.26&amp;root=paparazzi">annotate</a>)
+
+
+
+- <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.26&amp;view=log">[select for diffs]</a>
+
+
+
+
+<br />
+
+<em>Thu May 24 13:51:08 2007 UTC</em> (4 years ago) by <em>hecto</em>
+
+
+<br />Branch:
+
+<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?view=log&amp;root=paparazzi&amp;pathrev=MAIN"><strong>MAIN</strong></a>
+
+
+
+
+
+
+
+<br />Changes since <strong>1.25: +2 -0 lines</strong>
+
+
+
+
+
+
+
+<br />Diff to <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.25&amp;r2=1.26">previous 1.25</a>
+
+
+
+
+
+
+
+
+
+
+<pre class="vc_log">*** empty log message ***
+</pre>
+</div>
+
+
+
+<div>
+<hr />
+
+<a name="rev1.25"></a>
+
+
+Revision <strong>1.25</strong> -
+
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?revision=1.25&amp;root=paparazzi&amp;view=markup">view</a>)
+
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?revision=1.25&amp;root=paparazzi">download</a>)
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;revision=1.25&amp;content-type=text%2Fplain">as text</a>)
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?annotate=1.25&amp;root=paparazzi">annotate</a>)
+
+
+
+- <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.25&amp;view=log">[select for diffs]</a>
+
+
+
+
+<br />
+
+<em>Wed May 23 12:33:29 2007 UTC</em> (4 years ago) by <em>hecto</em>
+
+
+<br />Branch:
+
+<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?view=log&amp;root=paparazzi&amp;pathrev=MAIN"><strong>MAIN</strong></a>
+
+
+
+
+
+
+
+<br />Changes since <strong>1.24: +5 -11 lines</strong>
+
+
+
+
+
+
+
+<br />Diff to <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.24&amp;r2=1.25">previous 1.24</a>
+
+
+
+
+
+
+
+
+
+
+<pre class="vc_log">*** empty log message ***
+</pre>
+</div>
+
+
+
+<div>
+<hr />
+
+<a name="rev1.24"></a>
+
+
+Revision <strong>1.24</strong> -
+
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?revision=1.24&amp;root=paparazzi&amp;view=markup">view</a>)
+
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?revision=1.24&amp;root=paparazzi">download</a>)
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;revision=1.24&amp;content-type=text%2Fplain">as text</a>)
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?annotate=1.24&amp;root=paparazzi">annotate</a>)
+
+
+
+- <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.24&amp;view=log">[select for diffs]</a>
+
+
+
+
+<br />
+
+<em>Mon Apr 23 20:33:13 2007 UTC</em> (4 years, 1 month ago) by <em>hecto</em>
+
+
+<br />Branch:
+
+<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?view=log&amp;root=paparazzi&amp;pathrev=MAIN"><strong>MAIN</strong></a>
+
+
+
+
+
+
+
+<br />Changes since <strong>1.23: +1 -0 lines</strong>
+
+
+
+
+
+
+
+<br />Diff to <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.23&amp;r2=1.24">previous 1.23</a>
+
+
+
+
+
+
+
+
+
+
+<pre class="vc_log">nav_survey_shift added
+</pre>
+</div>
+
+
+
+<div>
+<hr />
+
+<a name="rev1.23"></a>
+
+
+Revision <strong>1.23</strong> -
+
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?revision=1.23&amp;root=paparazzi&amp;view=markup">view</a>)
+
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?revision=1.23&amp;root=paparazzi">download</a>)
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;revision=1.23&amp;content-type=text%2Fplain">as text</a>)
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?annotate=1.23&amp;root=paparazzi">annotate</a>)
+
+
+
+- <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.23&amp;view=log">[select for diffs]</a>
+
+
+
+
+<br />
+
+<em>Sun Mar 18 15:31:39 2007 UTC</em> (4 years, 2 months ago) by <em>hecto</em>
+
+
+<br />Branch:
+
+<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?view=log&amp;root=paparazzi&amp;pathrev=MAIN"><strong>MAIN</strong></a>
+
+
+
+
+
+
+
+<br />Changes since <strong>1.22: +3 -3 lines</strong>
+
+
+
+
+
+
+
+<br />Diff to <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.22&amp;r2=1.23">previous 1.22</a>
+
+
+
+
+
+
+
+
+
+
+<pre class="vc_log">*** empty log message ***
+</pre>
+</div>
+
+
+
+<div>
+<hr />
+
+<a name="rev1.22"></a>
+
+
+Revision <strong>1.22</strong> -
+
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?revision=1.22&amp;root=paparazzi&amp;view=markup">view</a>)
+
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?revision=1.22&amp;root=paparazzi">download</a>)
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;revision=1.22&amp;content-type=text%2Fplain">as text</a>)
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?annotate=1.22&amp;root=paparazzi">annotate</a>)
+
+
+
+- <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.22&amp;view=log">[select for diffs]</a>
+
+
+
+
+<br />
+
+<em>Wed Mar  7 14:37:05 2007 UTC</em> (4 years, 3 months ago) by <em>hecto</em>
+
+
+<br />Branch:
+
+<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?view=log&amp;root=paparazzi&amp;pathrev=MAIN"><strong>MAIN</strong></a>
+
+
+
+
+
+
+
+<br />Changes since <strong>1.21: +14 -0 lines</strong>
+
+
+
+
+
+
+
+<br />Diff to <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.21&amp;r2=1.22">previous 1.21</a>
+
+
+
+
+
+
+
+
+
+
+<pre class="vc_log">*** empty log message ***
+</pre>
+</div>
+
+
+
+<div>
+<hr />
+
+<a name="rev1.21"></a>
+
+
+Revision <strong>1.21</strong> -
+
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?revision=1.21&amp;root=paparazzi&amp;view=markup">view</a>)
+
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?revision=1.21&amp;root=paparazzi">download</a>)
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;revision=1.21&amp;content-type=text%2Fplain">as text</a>)
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?annotate=1.21&amp;root=paparazzi">annotate</a>)
+
+
+
+- <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.21&amp;view=log">[select for diffs]</a>
+
+
+
+
+<br />
+
+<em>Fri Mar  2 08:57:15 2007 UTC</em> (4 years, 3 months ago) by <em>hecto</em>
+
+
+<br />Branch:
+
+<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?view=log&amp;root=paparazzi&amp;pathrev=MAIN"><strong>MAIN</strong></a>
+
+
+
+
+
+
+
+<br />Changes since <strong>1.20: +3 -3 lines</strong>
+
+
+
+
+
+
+
+<br />Diff to <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.20&amp;r2=1.21">previous 1.20</a>
+
+
+
+
+
+
+
+
+
+
+<pre class="vc_log">misc typo
+</pre>
+</div>
+
+
+
+<div>
+<hr />
+
+<a name="rev1.20"></a>
+
+
+Revision <strong>1.20</strong> -
+
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?revision=1.20&amp;root=paparazzi&amp;view=markup">view</a>)
+
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?revision=1.20&amp;root=paparazzi">download</a>)
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;revision=1.20&amp;content-type=text%2Fplain">as text</a>)
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?annotate=1.20&amp;root=paparazzi">annotate</a>)
+
+
+
+- <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.20&amp;view=log">[select for diffs]</a>
+
+
+
+
+<br />
+
+<em>Fri Nov  3 04:58:42 2006 UTC</em> (4 years, 7 months ago) by <em>hecto</em>
+
+
+<br />Branch:
+
+<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?view=log&amp;root=paparazzi&amp;pathrev=MAIN"><strong>MAIN</strong></a>
+
+
+
+
+
+
+
+<br />Changes since <strong>1.19: +1 -10 lines</strong>
+
+
+
+
+
+
+
+<br />Diff to <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.19&amp;r2=1.20">previous 1.19</a>
+
+
+
+
+
+
+
+
+
+
+<pre class="vc_log">*** empty log message ***
+</pre>
+</div>
+
+
+
+<div>
+<hr />
+
+<a name="rev1.19"></a>
+
+
+Revision <strong>1.19</strong> -
+
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?revision=1.19&amp;root=paparazzi&amp;view=markup">view</a>)
+
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?revision=1.19&amp;root=paparazzi">download</a>)
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;revision=1.19&amp;content-type=text%2Fplain">as text</a>)
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?annotate=1.19&amp;root=paparazzi">annotate</a>)
+
+
+
+- <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.19&amp;view=log">[select for diffs]</a>
+
+
+
+
+<br />
+
+<em>Sat Oct 28 05:13:40 2006 UTC</em> (4 years, 7 months ago) by <em>hecto</em>
+
+
+<br />Branch:
+
+<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?view=log&amp;root=paparazzi&amp;pathrev=MAIN"><strong>MAIN</strong></a>
+
+
+
+
+
+
+
+<br />Changes since <strong>1.18: +1 -0 lines</strong>
+
+
+
+
+
+
+
+<br />Diff to <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.18&amp;r2=1.19">previous 1.18</a>
+
+
+
+
+
+
+
+
+
+
+<pre class="vc_log">*** empty log message ***
+</pre>
+</div>
+
+
+
+<div>
+<hr />
+
+<a name="rev1.18"></a>
+
+
+Revision <strong>1.18</strong> -
+
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?revision=1.18&amp;root=paparazzi&amp;view=markup">view</a>)
+
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?revision=1.18&amp;root=paparazzi">download</a>)
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;revision=1.18&amp;content-type=text%2Fplain">as text</a>)
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?annotate=1.18&amp;root=paparazzi">annotate</a>)
+
+
+
+- <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.18&amp;view=log">[select for diffs]</a>
+
+
+
+
+<br />
+
+<em>Sat Oct 28 02:06:15 2006 UTC</em> (4 years, 7 months ago) by <em>hecto</em>
+
+
+<br />Branch:
+
+<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?view=log&amp;root=paparazzi&amp;pathrev=MAIN"><strong>MAIN</strong></a>
+
+
+
+
+
+
+
+<br />Changes since <strong>1.17: +4 -3 lines</strong>
+
+
+
+
+
+
+
+<br />Diff to <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.17&amp;r2=1.18">previous 1.17</a>
+
+
+
+
+
+
+
+
+
+
+<pre class="vc_log">ready for MAV06
+</pre>
+</div>
+
+
+
+<div>
+<hr />
+
+<a name="rev1.17"></a>
+
+
+Revision <strong>1.17</strong> -
+
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?revision=1.17&amp;root=paparazzi&amp;view=markup">view</a>)
+
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?revision=1.17&amp;root=paparazzi">download</a>)
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;revision=1.17&amp;content-type=text%2Fplain">as text</a>)
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?annotate=1.17&amp;root=paparazzi">annotate</a>)
+
+
+
+- <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.17&amp;view=log">[select for diffs]</a>
+
+
+
+
+<br />
+
+<em>Fri Oct 27 16:13:00 2006 UTC</em> (4 years, 7 months ago) by <em>hecto</em>
+
+
+<br />Branch:
+
+<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?view=log&amp;root=paparazzi&amp;pathrev=MAIN"><strong>MAIN</strong></a>
+
+
+
+
+
+
+
+<br />Changes since <strong>1.16: +8 -1 lines</strong>
+
+
+
+
+
+
+
+<br />Diff to <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.16&amp;r2=1.17">previous 1.16</a>
+
+
+
+
+
+
+
+
+
+
+<pre class="vc_log">*** empty log message ***
+</pre>
+</div>
+
+
+
+<div>
+<hr />
+
+<a name="rev1.16"></a>
+
+
+Revision <strong>1.16</strong> -
+
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?revision=1.16&amp;root=paparazzi&amp;view=markup">view</a>)
+
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?revision=1.16&amp;root=paparazzi">download</a>)
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;revision=1.16&amp;content-type=text%2Fplain">as text</a>)
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?annotate=1.16&amp;root=paparazzi">annotate</a>)
+
+
+
+- <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.16&amp;view=log">[select for diffs]</a>
+
+
+
+
+<br />
+
+<em>Thu Oct 26 17:26:10 2006 UTC</em> (4 years, 7 months ago) by <em>hecto</em>
+
+
+<br />Branch:
+
+<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?view=log&amp;root=paparazzi&amp;pathrev=MAIN"><strong>MAIN</strong></a>
+
+
+
+
+
+
+
+<br />Changes since <strong>1.15: +1 -0 lines</strong>
+
+
+
+
+
+
+
+<br />Diff to <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.15&amp;r2=1.16">previous 1.15</a>
+
+
+
+
+
+
+
+
+
+
+<pre class="vc_log">pitch for glide
+</pre>
+</div>
+
+
+
+<div>
+<hr />
+
+<a name="rev1.15"></a>
+
+
+Revision <strong>1.15</strong> -
+
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?revision=1.15&amp;root=paparazzi&amp;view=markup">view</a>)
+
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?revision=1.15&amp;root=paparazzi">download</a>)
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;revision=1.15&amp;content-type=text%2Fplain">as text</a>)
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?annotate=1.15&amp;root=paparazzi">annotate</a>)
+
+
+
+- <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.15&amp;view=log">[select for diffs]</a>
+
+
+
+
+<br />
+
+<em>Thu Oct 26 07:14:11 2006 UTC</em> (4 years, 7 months ago) by <em>hecto</em>
+
+
+<br />Branch:
+
+<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?view=log&amp;root=paparazzi&amp;pathrev=MAIN"><strong>MAIN</strong></a>
+
+
+
+
+
+
+
+<br />Changes since <strong>1.14: +7 -5 lines</strong>
+
+
+
+
+
+
+
+<br />Diff to <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.14&amp;r2=1.15">previous 1.14</a>
+
+
+
+
+
+
+
+
+
+
+<pre class="vc_log">*** empty log message ***
+</pre>
+</div>
+
+
+
+<div>
+<hr />
+
+<a name="rev1.14"></a>
+
+
+Revision <strong>1.14</strong> -
+
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?revision=1.14&amp;root=paparazzi&amp;view=markup">view</a>)
+
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?revision=1.14&amp;root=paparazzi">download</a>)
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;revision=1.14&amp;content-type=text%2Fplain">as text</a>)
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?annotate=1.14&amp;root=paparazzi">annotate</a>)
+
+
+
+- <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.14&amp;view=log">[select for diffs]</a>
+
+
+
+
+<br />
+
+<em>Tue Oct 24 14:11:39 2006 UTC</em> (4 years, 7 months ago) by <em>hecto</em>
+
+
+<br />Branch:
+
+<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?view=log&amp;root=paparazzi&amp;pathrev=MAIN"><strong>MAIN</strong></a>
+
+
+
+
+
+
+
+<br />Changes since <strong>1.13: +6 -5 lines</strong>
+
+
+
+
+
+
+
+<br />Diff to <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.13&amp;r2=1.14">previous 1.13</a>
+
+
+
+
+
+
+
+
+
+
+<pre class="vc_log">*** empty log message ***
+</pre>
+</div>
+
+
+
+<div>
+<hr />
+
+<a name="rev1.13"></a>
+
+
+Revision <strong>1.13</strong> -
+
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?revision=1.13&amp;root=paparazzi&amp;view=markup">view</a>)
+
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?revision=1.13&amp;root=paparazzi">download</a>)
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;revision=1.13&amp;content-type=text%2Fplain">as text</a>)
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?annotate=1.13&amp;root=paparazzi">annotate</a>)
+
+
+
+- <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.13&amp;view=log">[select for diffs]</a>
+
+
+
+
+<br />
+
+<em>Mon Oct 23 06:59:51 2006 UTC</em> (4 years, 7 months ago) by <em>hecto</em>
+
+
+<br />Branch:
+
+<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?view=log&amp;root=paparazzi&amp;pathrev=MAIN"><strong>MAIN</strong></a>
+
+
+
+
+
+
+
+<br />Changes since <strong>1.12: +1 -1 lines</strong>
+
+
+
+
+
+
+
+<br />Diff to <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.12&amp;r2=1.13">previous 1.12</a>
+
+
+
+
+
+
+
+
+
+
+<pre class="vc_log">*** empty log message ***
+</pre>
+</div>
+
+
+
+<div>
+<hr />
+
+<a name="rev1.12"></a>
+
+
+Revision <strong>1.12</strong> -
+
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?revision=1.12&amp;root=paparazzi&amp;view=markup">view</a>)
+
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?revision=1.12&amp;root=paparazzi">download</a>)
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;revision=1.12&amp;content-type=text%2Fplain">as text</a>)
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?annotate=1.12&amp;root=paparazzi">annotate</a>)
+
+
+
+- <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.12&amp;view=log">[select for diffs]</a>
+
+
+
+
+<br />
+
+<em>Sun Oct 22 09:36:44 2006 UTC</em> (4 years, 7 months ago) by <em>hecto</em>
+
+
+<br />Branch:
+
+<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?view=log&amp;root=paparazzi&amp;pathrev=MAIN"><strong>MAIN</strong></a>
+
+
+
+
+
+
+
+<br />Changes since <strong>1.11: +8 -2 lines</strong>
+
+
+
+
+
+
+
+<br />Diff to <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.11&amp;r2=1.12">previous 1.11</a>
+
+
+
+
+
+
+
+
+
+
+<pre class="vc_log">*** empty log message ***
+</pre>
+</div>
+
+
+
+<div>
+<hr />
+
+<a name="rev1.11"></a>
+
+
+Revision <strong>1.11</strong> -
+
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?revision=1.11&amp;root=paparazzi&amp;view=markup">view</a>)
+
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?revision=1.11&amp;root=paparazzi">download</a>)
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;revision=1.11&amp;content-type=text%2Fplain">as text</a>)
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?annotate=1.11&amp;root=paparazzi">annotate</a>)
+
+
+
+- <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.11&amp;view=log">[select for diffs]</a>
+
+
+
+
+<br />
+
+<em>Sat Oct 21 06:19:17 2006 UTC</em> (4 years, 7 months ago) by <em>hecto</em>
+
+
+<br />Branch:
+
+<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?view=log&amp;root=paparazzi&amp;pathrev=MAIN"><strong>MAIN</strong></a>
+
+
+
+
+
+
+
+<br />Changes since <strong>1.10: +4 -1 lines</strong>
+
+
+
+
+
+
+
+<br />Diff to <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.10&amp;r2=1.11">previous 1.10</a>
+
+
+
+
+
+
+
+
+
+
+<pre class="vc_log">*** empty log message ***
+</pre>
+</div>
+
+
+
+<div>
+<hr />
+
+<a name="rev1.10"></a>
+
+
+Revision <strong>1.10</strong> -
+
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?revision=1.10&amp;root=paparazzi&amp;view=markup">view</a>)
+
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?revision=1.10&amp;root=paparazzi">download</a>)
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;revision=1.10&amp;content-type=text%2Fplain">as text</a>)
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?annotate=1.10&amp;root=paparazzi">annotate</a>)
+
+
+
+- <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.10&amp;view=log">[select for diffs]</a>
+
+
+
+
+<br />
+
+<em>Fri Oct 20 16:09:59 2006 UTC</em> (4 years, 7 months ago) by <em>hecto</em>
+
+
+<br />Branch:
+
+<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?view=log&amp;root=paparazzi&amp;pathrev=MAIN"><strong>MAIN</strong></a>
+
+
+
+
+
+
+
+<br />Changes since <strong>1.9: +1 -1 lines</strong>
+
+
+
+
+
+
+
+<br />Diff to <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.9&amp;r2=1.10">previous 1.9</a>
+
+
+
+
+
+
+
+
+
+
+<pre class="vc_log">flight_altitude moved to nav
+</pre>
+</div>
+
+
+
+<div>
+<hr />
+
+<a name="rev1.9"></a>
+
+
+Revision <strong>1.9</strong> -
+
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?revision=1.9&amp;root=paparazzi&amp;view=markup">view</a>)
+
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?revision=1.9&amp;root=paparazzi">download</a>)
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;revision=1.9&amp;content-type=text%2Fplain">as text</a>)
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?annotate=1.9&amp;root=paparazzi">annotate</a>)
+
+
+
+- <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.9&amp;view=log">[select for diffs]</a>
+
+
+
+
+<br />
+
+<em>Fri Oct 20 15:29:52 2006 UTC</em> (4 years, 7 months ago) by <em>hecto</em>
+
+
+<br />Branch:
+
+<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?view=log&amp;root=paparazzi&amp;pathrev=MAIN"><strong>MAIN</strong></a>
+
+
+
+
+
+
+
+<br />Changes since <strong>1.8: +4 -1 lines</strong>
+
+
+
+
+
+
+
+<br />Diff to <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.8&amp;r2=1.9">previous 1.8</a>
+
+
+
+
+
+
+
+
+
+
+<pre class="vc_log">kill_throttle added
+</pre>
+</div>
+
+
+
+<div>
+<hr />
+
+<a name="rev1.8"></a>
+
+
+Revision <strong>1.8</strong> -
+
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?revision=1.8&amp;root=paparazzi&amp;view=markup">view</a>)
+
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?revision=1.8&amp;root=paparazzi">download</a>)
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;revision=1.8&amp;content-type=text%2Fplain">as text</a>)
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?annotate=1.8&amp;root=paparazzi">annotate</a>)
+
+
+
+- <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.8&amp;view=log">[select for diffs]</a>
+
+
+
+
+<br />
+
+<em>Fri Oct 20 07:05:56 2006 UTC</em> (4 years, 7 months ago) by <em>hecto</em>
+
+
+<br />Branch:
+
+<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?view=log&amp;root=paparazzi&amp;pathrev=MAIN"><strong>MAIN</strong></a>
+
+
+
+
+
+
+
+<br />Changes since <strong>1.7: +43 -15 lines</strong>
+
+
+
+
+
+
+
+<br />Diff to <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.7&amp;r2=1.8">previous 1.7</a>
+
+
+
+
+
+
+
+
+
+
+<pre class="vc_log">variable renaming
+</pre>
+</div>
+
+
+
+<div>
+<hr />
+
+<a name="rev1.7"></a>
+
+
+Revision <strong>1.7</strong> -
+
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?revision=1.7&amp;root=paparazzi&amp;view=markup">view</a>)
+
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?revision=1.7&amp;root=paparazzi">download</a>)
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;revision=1.7&amp;content-type=text%2Fplain">as text</a>)
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?annotate=1.7&amp;root=paparazzi">annotate</a>)
+
+
+
+- <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.7&amp;view=log">[select for diffs]</a>
+
+
+
+
+<br />
+
+<em>Thu Oct 19 06:55:07 2006 UTC</em> (4 years, 7 months ago) by <em>poine</em>
+
+
+<br />Branch:
+
+<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?view=log&amp;root=paparazzi&amp;pathrev=MAIN"><strong>MAIN</strong></a>
+
+
+
+
+
+
+
+<br />Changes since <strong>1.6: +11 -11 lines</strong>
+
+
+
+
+
+
+
+<br />Diff to <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.6&amp;r2=1.7">previous 1.6</a>
+
+
+
+
+
+
+
+
+
+
+<pre class="vc_log">*** empty log message ***
+</pre>
+</div>
+
+
+
+<div>
+<hr />
+
+<a name="rev1.6"></a>
+
+
+Revision <strong>1.6</strong> -
+
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?revision=1.6&amp;root=paparazzi&amp;view=markup">view</a>)
+
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?revision=1.6&amp;root=paparazzi">download</a>)
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;revision=1.6&amp;content-type=text%2Fplain">as text</a>)
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?annotate=1.6&amp;root=paparazzi">annotate</a>)
+
+
+
+- <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.6&amp;view=log">[select for diffs]</a>
+
+
+
+
+<br />
+
+<em>Tue Oct 17 18:43:26 2006 UTC</em> (4 years, 7 months ago) by <em>hecto</em>
+
+
+<br />Branch:
+
+<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?view=log&amp;root=paparazzi&amp;pathrev=MAIN"><strong>MAIN</strong></a>
+
+
+
+
+
+
+
+<br />Changes since <strong>1.5: +0 -7 lines</strong>
+
+
+
+
+
+
+
+<br />Diff to <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.5&amp;r2=1.6">previous 1.5</a>
+
+
+
+
+
+
+
+
+
+
+<pre class="vc_log">*** empty log message ***
+</pre>
+</div>
+
+
+
+<div>
+<hr />
+
+<a name="rev1.5"></a>
+
+
+Revision <strong>1.5</strong> -
+
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?revision=1.5&amp;root=paparazzi&amp;view=markup">view</a>)
+
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?revision=1.5&amp;root=paparazzi">download</a>)
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;revision=1.5&amp;content-type=text%2Fplain">as text</a>)
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?annotate=1.5&amp;root=paparazzi">annotate</a>)
+
+
+
+- <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.5&amp;view=log">[select for diffs]</a>
+
+
+
+
+<br />
+
+<em>Tue Oct 17 16:57:47 2006 UTC</em> (4 years, 7 months ago) by <em>poine</em>
+
+
+<br />Branch:
+
+<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?view=log&amp;root=paparazzi&amp;pathrev=MAIN"><strong>MAIN</strong></a>
+
+
+
+
+
+
+
+<br />Changes since <strong>1.4: +1 -1 lines</strong>
+
+
+
+
+
+
+
+<br />Diff to <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.4&amp;r2=1.5">previous 1.4</a>
+
+
+
+
+
+
+
+
+
+
+<pre class="vc_log">some infrared and pid rewrite
+</pre>
+</div>
+
+
+
+<div>
+<hr />
+
+<a name="rev1.4"></a>
+
+
+Revision <strong>1.4</strong> -
+
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?revision=1.4&amp;root=paparazzi&amp;view=markup">view</a>)
+
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?revision=1.4&amp;root=paparazzi">download</a>)
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;revision=1.4&amp;content-type=text%2Fplain">as text</a>)
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?annotate=1.4&amp;root=paparazzi">annotate</a>)
+
+
+
+- <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.4&amp;view=log">[select for diffs]</a>
+
+
+
+
+<br />
+
+<em>Fri Oct  6 07:20:51 2006 UTC</em> (4 years, 8 months ago) by <em>hecto</em>
+
+
+<br />Branch:
+
+<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?view=log&amp;root=paparazzi&amp;pathrev=MAIN"><strong>MAIN</strong></a>
+
+
+
+
+
+
+
+<br />Changes since <strong>1.3: +1 -1 lines</strong>
+
+
+
+
+
+
+
+<br />Diff to <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.3&amp;r2=1.4">previous 1.3</a>
+
+
+
+
+
+
+
+
+
+
+<pre class="vc_log">z_contrast_mode initialized to Z_CONTRAST_MODE, default to 1
+</pre>
+</div>
+
+
+
+<div>
+<hr />
+
+<a name="rev1.3"></a>
+
+
+Revision <strong>1.3</strong> -
+
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?revision=1.3&amp;root=paparazzi&amp;view=markup">view</a>)
+
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?revision=1.3&amp;root=paparazzi">download</a>)
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;revision=1.3&amp;content-type=text%2Fplain">as text</a>)
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?annotate=1.3&amp;root=paparazzi">annotate</a>)
+
+
+
+- <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.3&amp;view=log">[select for diffs]</a>
+
+
+
+
+<br />
+
+<em>Mon Sep 25 21:07:23 2006 UTC</em> (4 years, 8 months ago) by <em>hecto</em>
+
+
+<br />Branch:
+
+<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?view=log&amp;root=paparazzi&amp;pathrev=MAIN"><strong>MAIN</strong></a>
+
+
+
+
+
+
+
+<br />Changes since <strong>1.2: +2 -0 lines</strong>
+
+
+
+
+
+
+
+<br />Diff to <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.2&amp;r2=1.3">previous 1.2</a>
+
+
+
+
+
+
+
+
+
+
+<pre class="vc_log">preparing payload deployment
+</pre>
+</div>
+
+
+
+<div>
+<hr />
+
+<a name="rev1.2"></a>
+
+
+Revision <strong>1.2</strong> -
+
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?revision=1.2&amp;root=paparazzi&amp;view=markup">view</a>)
+
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?revision=1.2&amp;root=paparazzi">download</a>)
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;revision=1.2&amp;content-type=text%2Fplain">as text</a>)
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?annotate=1.2&amp;root=paparazzi">annotate</a>)
+
+
+
+- <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.2&amp;view=log">[select for diffs]</a>
+
+
+
+
+<br />
+
+<em>Tue Aug 29 06:53:31 2006 UTC</em> (4 years, 9 months ago) by <em>hecto</em>
+
+
+<br />Branch:
+
+<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?view=log&amp;root=paparazzi&amp;pathrev=MAIN"><strong>MAIN</strong></a>
+
+
+
+
+
+
+
+<br />Changes since <strong>1.1: +0 -2 lines</strong>
+
+
+
+
+
+
+
+<br />Diff to <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.1&amp;r2=1.2">previous 1.1</a>
+
+
+
+
+
+
+
+
+
+
+<pre class="vc_log">gyro gains uncommented
+</pre>
+</div>
+
+
+
+<div>
+<hr />
+
+<a name="rev1.1"></a>
+
+
+Revision <strong>1.1</strong> -
+
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?revision=1.1&amp;root=paparazzi&amp;view=markup">view</a>)
+
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?revision=1.1&amp;root=paparazzi">download</a>)
+(<a href="/viewvc/*checkout*/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;revision=1.1&amp;content-type=text%2Fplain">as text</a>)
+(<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?annotate=1.1&amp;root=paparazzi">annotate</a>)
+
+
+
+- <a href="/viewvc/paparazzi3/conf/settings/tuning.xml?root=paparazzi&amp;r1=1.1&amp;view=log">[select for diffs]</a>
+
+
+
+
+<br />
+
+<em>Mon Jul 31 05:25:31 2006 UTC</em> (4 years, 10 months ago) by <em>hecto</em>
+
+
+<br />Branch:
+
+<a href="/viewvc/paparazzi3/conf/settings/tuning.xml?view=log&amp;root=paparazzi&amp;pathrev=MAIN"><strong>MAIN</strong></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<pre class="vc_log">*** empty log message ***
+</pre>
+</div>
+
+ 
+
+
+
+ <hr />
+<p><a name="diff"></a>
+This form allows you to request diffs between any two revisions of this file.
+For each of the two "sides" of the diff,
+
+select a symbolic revision name using the selection box, or choose
+'Use Text Field' and enter a numeric revision.
+
+</p>
+<form method="get" action="/viewvc/paparazzi3/conf/settings/tuning.xml" id="diff_select">
+<table cellpadding="2" cellspacing="0" class="auto">
+<tr>
+<td>&nbsp;</td>
+<td>
+<input type="hidden" name="root" value="paparazzi" /><input type="hidden" name="view" value="diff" />
+Diffs between
+
+<select name="r1">
+<option value="text" selected="selected">Use Text Field</option>
+
+<option value="1.42:switched2svn">switched2svn</option>
+
+<option value="1.42:MAIN">MAIN</option>
+
+<option value="1.42:HEAD">HEAD</option>
+
+</select>
+<input type="text" size="12" name="tr1"
+value="1.42"
+onchange="document.getElementById('diff_select').r1.selectedIndex=0" />
+
+and
+
+<select name="r2">
+<option value="text" selected="selected">Use Text Field</option>
+
+<option value="1.42:switched2svn">switched2svn</option>
+
+<option value="1.42:MAIN">MAIN</option>
+
+<option value="1.42:HEAD">HEAD</option>
+
+</select>
+<input type="text" size="12" name="tr2"
+value="1.1"
+onchange="document.getElementById('diff_select').r2.selectedIndex=0" />
+
+</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+Type of Diff should be a
+<select name="diff_format" onchange="submit()">
+<option value="h" selected="selected">Colored Diff</option>
+<option value="l" >Long Colored Diff</option>
+<option value="u" >Unidiff</option>
+<option value="c" >Context Diff</option>
+<option value="s" >Side by Side</option>
+</select>
+<input type="submit" value=" Get Diffs " />
+</td>
+</tr>
+</table>
+</form>
+
+
+<form method="get" action="/viewvc/paparazzi3/conf/settings/tuning.xml">
+<div>
+<hr />
+<a name="logsort"></a>
+<input type="hidden" name="root" value="paparazzi" /><input type="hidden" name="view" value="log" />
+Sort log by:
+<select name="logsort" onchange="submit()">
+<option value="cvs" >Not sorted</option>
+<option value="date" selected="selected">Commit date</option>
+<option value="rev" >Revision</option>
+</select>
+<input type="submit" value=" Sort " />
+</div>
+</form>
+
+
+<hr />
+<table>
+<tr>
+<td><address>Send suggestions and report system problems to the <a href="https://savannah.gnu.org/support/?group=administration">Savannah Hackers</a>.</address></td>
+<td style="text-align: right;"><strong><a href="/viewcvs-doc/help_log.html">ViewVC Help</a></strong></td>
+</tr>
+<tr>
+<td>Powered by <a href="http://viewvc.tigris.org/">ViewVC 1.0.7</a></td>
+<td style="text-align: right;">&nbsp;</td>
+</tr>
+</table>
+</body>
+</html>
+
+
